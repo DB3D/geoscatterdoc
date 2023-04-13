@@ -1,0 +1,431 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+  integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+<link rel="stylesheet" href="../styles.css" />
+
+<div class="troubleshoot">
+  <div class="scattering_main_title">
+    <h1 style="margin: 0px 22px;">Prerequisite</h1>
+    <p style="margin: 0px 22px;">
+      Few things you might need to know about blender itself before getting
+      started
+    </p>
+  </div>
+  <div class="small_screen_hide">
+    <div class="search-container">
+      <div class="search-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="search-box">
+        <form>
+          <div class="close-icon">
+            <i class="fa fa-arrow-left"></i>
+          </div>
+          <div class="search-input">
+            <input type="text" placeholder="Search...">
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="prerequisie_section">
+  <div class="prerequisie_cards pre_sec">
+    <img src="../img/pre1.jpg" alt="" />
+    <h3>ABC's of blender</h3>
+    <p>
+      Do you understand what is a vertex? what is a UV map and how to create
+      simple UV's? How to add/remove modifiers? What is the normal direction of
+      a face and its implications on shading? Why you can't
+      <a href="https://www.youtube.com/watch?v=pMIwthFmr-Q" target="_blank">paint a vertex group</a>
+      correctly on an N-gon? &nbsp;Great! Let's get started then!&nbsp;
+    </p>
+  </div>
+
+  <div class="prerequisie_cards pre_sec">
+    <img src="../img/pre2.jpg" alt="" />
+    <h3>Apply Scales</h3>
+    <p>
+      Let's say you created a plane in your scene, resized it, and would like to
+      start a scatter on this plane. If so, do not forget to apply the scale of
+      your object with the CTRL+A shortcut. <br />
+      This is a step that all blender users know, and that few beginners might
+      miss. Please, if you are a beginner, do not forget about applying scales!
+    </p>
+  </div>
+
+  <div class="prerequisie_cards pre_sec">
+    <img src="../img/pre3.jpg" alt="" />
+    <h3>Properties Descriptions</h3>
+    <p>
+      Did you know that you can hover on almost any blender sliders, toggles, or
+      drop down items to read their description? We pack a lot of information in
+      our properties description. Taking time to hover in order to gather
+      information is always a good reflex. If you feel that some items need more
+      or better descriptions, don't hesitate to contact us.
+    </p>
+  </div>
+
+  <div class="prerequisie_cards pre_sec">
+    <img src="../img/pre4.jpg" alt="" />
+    <h3>Compatibility Issues</h3>
+    <p>
+      Blender does not support forward compatibility! Let's say that your
+      collaborator gave you a blend file saved in blender 3.2, then please avoid
+      reading, and <b>never</b> save, this blend file in blender 3.1 or lower.
+      Please follow this simple rule, otherwise
+      <b>you will run into issues.</b> Some data structures (such as
+      shader/geometry nodes or modifiers) are relying on newly added features,
+      and will not be recognized.
+    </p>
+  </div>
+
+  <div class="prerequisie_cards pre_sec">
+    <img src="../img/pre5.jpg" alt="" />
+    <h3>Basics of Shading</h3>
+    <p>
+      Do you wish to change the color of a scattered item? Great! This can be
+      done natively in blender shader editor! To do so you will simply need to
+      select the scattered item in your scene (this can be easily done by going
+      in your instance list, and clicking on the select icon) and open a new
+      blender shader editor.
+    </p>
+    <h3>Pro Tip:</h3>
+    <p>
+      There are handy nodes available in blender shaders for your instances,
+      such as the <i>"Object info/Random"</i> for randomization effects, the
+      <i>"Geometry/Position"</i> or <i>"Object info/Location"</i> &nbsp;for
+      textures, or the "Object info/Color" if you'd like to link the<a
+        href="https://sites.google.com/view/scatter5docs/manual/optimization?authuser=0#h.wx3fxb196l65" target="_blank">
+        scatter-systems display color</a>
+      within the shaders.
+    </p>
+  </div>
+
+  <div class="prerequisie_cards pre_sec">
+    <img src="../img/pre6.jpg" alt="" />
+    <h3>What are Instances</h3>
+    <p>
+      Scattering is based on the technology of instancing! What is instancing?
+      well, it is the idea of re-using the data of your object in order to
+      vastly save on memory and performance.
+    </p>
+    <br />
+    <p>
+      It is important to understand the implication of re-using the same mesh
+      data, while it is giving us massive benefits in terms of performance, we
+      will not be able to run a physic collision or wind simulation on instanced
+      objects meshes that way unless we make each object unique.
+    </p>
+    <br />
+    <p>
+      Instances are like any other objects, they have a position, rotation, or
+      scale. In order to define an instance rotation in Scatter5, we are
+      aligning the default Z & Y axis of the instance toward a chosen axis. We
+      call the upward direction of an instance (+Z) the instance "normal", and
+      the forward direction (+Y) the instance "tangent". For example, if you'd
+      like your instance's upward direction to follow your emitting surface
+      inclination, you will need to align your instance's normals toward the
+      surface faces normals.
+    </p>
+  </div>
+
+  <div class="prerequisie_cards pre_sec">
+    <img src="../img/pre7.jpg" alt="" />
+    <h3>What to Expect from Blender & Your Computer</h3>
+    <p>
+      3D Beginners might have unrealistic expectations of what is possible to be
+      displayed in real-time in blender viewport because of their experience
+      with video games, please make sure to read the page about
+      <a href="https://sites.google.com/view/geoscatter/manual/optimization?authuser=0">optimization</a>. Geo-Scatter
+      has a lot of optimization features, however, it is still
+      important to have a good understanding of what your computer or blender is
+      capable of.&nbsp;
+    </p>
+    <br />
+    <p>
+      Please keep in mind that software such as Blender, Max, or Maya aren't
+      games! Games engines are specifically designed to stream polygons at a
+      smooth framerate thanks to many tricks happening in the background, most
+      of these tricks do <b>not</b> make sense in any 3D creation software where
+      the rendering is occurring on a dedicated step of the process, with the
+      power of the path tracing algorithm.
+    </p>
+  </div>
+
+  <div class="prerequisie_cards pre_sec">
+    <img src="../img/pre8.jpg" alt="" />
+    <h3>Large Landscape Expectations</h3>
+    <p>
+      Working on large-scale landscapes can be tricky in blender, or any other
+      3D creation suite! There are a few habits experienced environmental
+      artists acquired in their careers that perhaps beginner 3D artists do not
+      have from the get-go.
+    </p>
+    <br />
+    <p>
+      For example, the scattered tiny elements (such as grass) should only be
+      present in the foreground of your landscape shot, far-away vistas do not
+      need such detail that a good texture could provide, they will only slow
+      you down.
+    </p>
+    <br />
+    <p>
+      If you need tips on how to manage performance, please make sure to read
+      the page on
+      <a href="https://sites.google.com/view/geoscatter/manual/optimization?authuser=0">optimization</a>.&nbsp;
+    </p>
+  </div>
+
+  <div class="example_v_card">
+    <div class="video_cont_fea">
+      <embed ?autoplay="1" src="https://thumbs.gfycat.com/InformalOrneryLice-mobile.mp4" type="" />
+      <div class="video_views">
+        <span>16.9K views</span>
+        <img src="../img/v_tag.png" alt="video tag" />
+      </div>
+    </div>
+    <div class="video_log">
+      <img src="../img/video_tag.png" alt="" />
+      <div class="video_log_det">
+        <p>BD3D</p>
+        <span>@_bd3d_</span>
+      </div>
+    </div>
+    <div class="video_desc_fea">
+      <h3>Batch Operation</h3>
+      <p>
+        In Blender, properties of an active object can be batch applied to the
+        properties of the selection by pressing the
+        <abbr>LT key while tweaking the value.</abbr> This native behavior has
+        been smartly implemented in our plugin. You can batch-change the
+        selected scatter-system properties by holding ALT when adjusting your
+        settings, assigning masks or items, or enabling features!
+      </p>
+      <br />
+      <h3>Important:</h3>
+      <p>
+        Be aware that the <i>3-button mouse emulation </i> option of blender
+        will be in your way when batch-changing properties as this option will
+        make the ALT key unavailable.
+      </p>
+    </div>
+  </div>
+
+  <div class="example_v_card">
+    <div class="video_cont_fea">
+      <embed ?autoplay="1" src="https://thumbs.gfycat.com/DefenselessSimpleAfricanaugurbuzzard-mobile.mp4" type="" />
+      <div class="video_views">
+        <span>16.7K views</span>
+        <img src="../img/v_tag.png" alt="video tag" />
+      </div>
+    </div>
+    <div class="video_log">
+      <img src="../img/video_tag.png" alt="" />
+      <div class="video_log_det">
+        <p>BD3D</p>
+        <span>@_bd3d_</span>
+      </div>
+    </div>
+    <div class="video_desc_fea">
+      <h3>Vector Slide</h3>
+      <p>
+        In blender, you can drag your mouse on the bottom to change multiple
+        vector elements at the same time, this is a very well-known feature that
+        few beginners might miss.
+      </p>
+    </div>
+  </div>
+
+  <div class="example_v_card">
+    <div class="video_cont_fea">
+      <embed ?autoplay="1" src="https://thumbs.gfycat.com/SolidWaterloggedChick-mobile.mp4" type="" />
+      <div class="video_views">
+        <span>16.1K views</span>
+        <img src="../img/v_tag.png" alt="video tag" />
+      </div>
+    </div>
+    <div class="video_log">
+      <img src="../img/video_tag.png" alt="" />
+      <div class="video_log_det">
+        <p>BD3D</p>
+        <span>@_bd3d_</span>
+      </div>
+    </div>
+    <div class="video_desc_fea">
+      <h3>Collection Linking & Collection Instances</h3>
+      <p>
+        There are two things you should know about collections before getting
+        started:
+      </p>
+      <br />
+      <p>
+        1. Objects can be linked in multiple collections simultaneously, this
+        can be done by pressing CTRL while drag-and-dropping in the outliner.
+      </p>
+      <p>
+        2. You can create new "collection-instance" objects from these
+        collections, the origin of the collection-instance object is the origin
+        of the scene. These objects can be scattered.
+      </p>
+      <h3>Pro Tip:</h3>
+      <p>
+        When you add/remove an object in Scatter5 "instancing" panel, in the
+        background, Scatter5 will interact with a scatter-system instancing
+        collection, these collections are by default stored in the main
+        "Scatter5" collection, that should remain closed & untouched.
+      </p>
+      <h3>Be Careful:</h3>
+      <p>
+        If you want to move objects in the outliner that are already linked in
+        other collections, be careful! Because blender will automatically unlink
+        the object from the other collections if you do not hold CTRL. This is a
+        native behavior you need to watch for when managing your collections.
+      </p>
+    </div>
+  </div>
+
+  <div class="example_v_card">
+    <div class="video_cont_fea">
+      <embed ?autoplay="1" src="https://thumbs.gfycat.com/WeeMistyAxolotl-mobile.mp4" type="" />
+      <div class="video_views">
+        <span>16.9K views</span>
+        <img src="../img/v_tag.png" alt="video tag" />
+      </div>
+    </div>
+    <div class="video_log">
+      <img src="../img/video_tag.png" alt="" />
+      <div class="video_log_det">
+        <p>BD3D</p>
+        <span>@_bd3d_</span>
+      </div>
+    </div>
+    <div class="video_desc_fea">
+      <h3>Bounding Boxes</h3>
+      <p>
+        Blender beginners are often confused with this native blender feature.
+        In blender, it is possible to display your object as a bounding box only
+        in the rasterized viewport, not in the render ( this is a per-object
+        property located in
+        <i>Properties Editor > Object > viewport display > Display As ).</i>
+      </p>
+      <p>
+        This is useful for trees for example, where we do not want to see the
+        full resolution object within the rasterized viewport, as they often
+        come with way too many polygons and it might slow us down while working,
+        as you may know, rasterized viewport performances slowdowns when dealing
+        with a lot of triangles!
+      </p>
+      <h3 style="margin: 10px">Reminder:</h3>
+      <ul style="margin-left: 15px">
+        <li style="list-style-type: square; padding: 6px">
+          If you scattered an item with a bounding box, you can easily select
+          the scattered item in the instance subpanel, by clicking on the select
+          icon. It will select the item stored in the scatter-system instancing
+          collection.
+        </li>
+        <li style="list-style-type: square; padding: 6px">
+          Don't forget about the ALT feature, it works everywhere in blender.
+        </li>
+        <li style="list-style-type: square; padding: 6px">
+          This is also explained
+          <a href="https://sites.google.com/view/scatter5docs/manual/optimization?authuser=0#h.7ncwc0ag66us"
+            target="_blank">here</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="example_v_card">
+    <div class="video_cont_fea">
+      <embed ?autoplay="1" src="https://thumbs.gfycat.com/RecklessCreepyAfricanelephant-mobile.mp4" type="" />
+      <div class="video_views">
+        <span>16.9K views</span>
+        <img src="../img/v_tag.png" alt="video tag" />
+      </div>
+    </div>
+    <div class="video_log">
+      <img src="../img/video_tag.png" alt="" />
+      <div class="video_log_det">
+        <p>BD3D</p>
+        <span>@_bd3d_</span>
+      </div>
+    </div>
+    <div class="video_desc_fea">
+      <h3>Flowmaps</h3>
+      <p>
+        Flowmaps are directional informations (vectors) contained in an image
+        texture or in a vertex-color layer. The Red/Green channels are
+        representing directions in the tangent XY space. The vectors ranging
+        from -1 to 1 are remapped between 0 & 1 in order to fit into a color
+        information.
+      </p>
+      <p>
+        Flowmaps cannot be painted natively in blender, the
+        <a href="https://clemensbeute.gumroad.com/l/heZDT" target="_blank">flowmap painter addon</a>
+        by Clemens Beute is needed. When you use this plugin with Scatter5, make
+        sure to use the UV space color theme. <br />As the blue channel is
+        unused, there are options in scatter to use the blue channel as a
+        strength factor.
+      </p>
+    </div>
+  </div>
+
+  <div class="example_v_card card_hide">
+    <div class="video_cont_fea">
+      <embed ?autoplay="1" src="https://thumbs.gfycat.com/WeeMistyAxolotl-mobile.mp4" type="" />
+      <div class="video_views">
+        <span>16.9K views</span>
+        <img src="../img/v_tag.png" alt="video tag" />
+      </div>
+    </div>
+    <div class="video_log">
+      <img src="../img/video_tag.png" alt="" />
+      <div class="video_log_det">
+        <p>BD3D</p>
+        <span>@_bd3d_</span>
+      </div>
+    </div>
+    <div class="video_desc_fea">
+      <h3>Flowmaps</h3>
+      <p>
+        Flowmaps are directional informations (vectors) contained in an image
+        texture or in a vertex-color layer. The Red/Green channels are
+        representing directions in the tangent XY space. The vectors ranging
+        from -1 to 1 are remapped between 0 & 1 in order to fit into a color
+        information.
+      </p>
+      <p>
+        Flowmaps cannot be painted natively in blender, the
+        <a href="https://clemensbeute.gumroad.com/l/heZDT" target="_blank">flowmap painter addon</a>
+        by Clemens Beute is needed. When you use this plugin with Scatter5, make
+        sure to use the UV space color theme. <br />As the blue channel is
+        unused, there are options in scatter to use the blue channel as a
+        strength factor.
+      </p>
+    </div>
+  </div>
+
+</div>
+
+
+<script>
+  // seach bar code
+  var searchIcon = document.querySelector('.search-icon');
+  var searchBox = document.querySelector('.search-box');
+  var closeIcon = document.querySelector('.close-icon');
+
+  searchIcon.addEventListener('click', function () {
+    searchBox.classList.toggle('active');
+    closeIcon.classList.toggle('active');
+  });
+
+  closeIcon.addEventListener('click', function () {
+    searchBox.classList.remove('active');
+    closeIcon.classList.remove('active');
+  });
+</script>

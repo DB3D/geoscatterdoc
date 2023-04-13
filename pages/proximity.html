@@ -1,0 +1,249 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+  integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+<link rel="stylesheet" href="../styles.css" />
+
+<div class="troubleshoot">
+  <div class="proximity_main_titles">
+    <h1 style="margin-left: 23px;">Repel</h1>
+  </div>
+  <div class="small_screen_hide">
+    <div class="search-container">
+      <div class="search-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="search-box">
+        <form>
+          <div class="close-icon">
+            <i class="fa fa-arrow-left"></i>
+          </div>
+          <div class="search-input">
+            <input type="text" placeholder="Search...">
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="repel_v_section">
+  <div class="example_v_card">
+    <div class="video_cont">
+      <embed ?autoplay="1" src="https://thumbs.gfycat.com/SparklingIncompleteBunny-mobile.mp4" type="" />
+      <div class="video_views">
+        <span>16.9K views</span>
+        <img src="../img/v_tag.png" alt="video tag" />
+      </div>
+    </div>
+    <div class="video_log">
+      <img src="../img/video_tag.png" alt="" />
+      <div class="video_log_det">
+        <p>BD3D</p>
+        <span>@_bd3d_</span>
+      </div>
+    </div>
+    <div class="repel_video_cont">
+      <p>
+        Assuming your repel object possesses a volume, you can use the
+        <i>'Consider Volume'</i> option if you'd like to also cull instances
+        located inside or outside the volume.
+      </p>
+      <h3>Reminder:</h3>
+      <p>
+        If you only care about the volume feature, we have a more simplistic
+        culling mask available.
+      </p>
+    </div>
+  </div>
+
+  <div class="example_v_card">
+    <div class="video_cont">
+      <embed height="194" width="370" ?autoplay="1"
+        src="https://thumbs.gfycat.com/LonelySelfishAustraliancurlew-mobile.mp4" type="" />
+      <div class="video_views">
+        <span>16.9K views</span>
+        <img src="../img/v_tag.png" alt="video tag" />
+      </div>
+    </div>
+    <div class="video_log">
+      <img src="../img/video_tag.png" alt="" />
+      <div class="video_log_det">
+        <p>BD3D</p>
+        <span>@_bd3d_</span>
+      </div>
+    </div>
+    <div class="repel_video_cont">
+      <h3>Consider Volume Option</h3>
+      <p>
+        The <i>"Repel"</i> feature will procedurally remove and/or adjust
+        instances scales/rotations near a defined distance threshold from the
+        objects linked to the chosen collection.
+      </p>
+      <p>
+        By default, the proximity contact will be the faces of the objects
+        meshe. If your assets are too high poly it might be a good idea to
+        change the proximity contact option.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="instance_sec">
+  <div class="instance_v_card">
+    <div class="example_v_card">
+      <div class="video_cont">
+        <embed ?autoplay="1" src="https://thumbs.gfycat.com/MatureCanineInchworm-mobile.mp4" type="" />
+        <div class="video_views">
+          <span>16.9K views</span>
+          <img src="../img/v_tag.png" alt="video tag" />
+        </div>
+      </div>
+      <div class="video_log">
+        <img src="../img/video_tag.png" alt="" />
+        <div class="video_log_det">
+          <p>BD3D</p>
+          <span>@_bd3d_</span>
+        </div>
+      </div>
+    </div>
+    <div class="wind_v_desc prox_vide_dex">
+      <h3>Pro Tip:</h3>
+      <p>
+        To generate a clean grass scatter near pavements, assuming you have a
+        clump model to cover the large areas and a tiny grass model to fill the
+        gaps, here's the most memory-efficient technique you can use:
+      </p>
+      <ul>
+        <li>
+          1. On the large clump system, enable the Proximity → Repel feature and
+          choose your pavement collision collection
+        </li>
+        <li>
+          2. Do the same for the tiny system but reverse the influence and use
+          the 'consider volume' option to also cull points located within the
+          object volume.
+        </li>
+      </ul>
+      <a class="blend_downlod_btn"
+        href="https://drive.google.com/file/d/1wo64fwcfV6mia1SFAm6M3f87gaW6uzx7/view?usp=sharing">Example avaialabe</a>
+    </div>
+  </div>
+</div>
+
+<div class="troubleshoot">
+  <div class="proximity_main_titles">
+    <h1 style="margin-left: 20px;">Lean Near Objects</h1>
+  </div>
+</div>
+
+<div class="offset_v_card">
+  <div class="video_desc_lean">
+    <p>
+      The Repel feature is also able to procedurally orient the instances near a
+      given distance threshold from the chosen objects inside the linked
+      collection.
+    </p>
+    <p>
+      By default, the proximity contact will be the faces of your objects
+      meshes. If your assets are too high poly it might be a good idea to change
+      the contact option.
+    </p> <br>
+
+    <h3 style="margin-top: 5px">Use Case:</h3>
+    <p>
+      Useful if you'd like to fake interaction with objects without doing
+      destructive time-consuming soft-bodies simulation. If a more precise
+      simulation is needed, you will need to export your scatter-systems as a
+      mesh in order to use the the simulation method of your choice (soft-bodies
+      simulations are out of the scope of a scattering tool relying on the
+      technology of instancing).
+    </p> <br>
+    <h3>Beginner Misconception:</h3>
+    <p>
+      Achieving physically accurate collisions between, let say, your individual
+      hundreds of thousands blades of grass with your crowd animation, is not a
+      realistic expectation of what scattering is supposed to do, it breaks the
+      principle of instancing! What is needed in this case is a soft-body
+      simulation with the exported instances, merged as one single object!
+    </p>
+  </div>
+
+  <div class="example_v_card">
+    <div class="video_cont">
+      <embed ?autoplay="1" src="https://thumbs.gfycat.com/InformalEqualGnu-mobile.mp4" type="" />
+      <div class="video_views">
+        <span>16.9K views</span>
+        <img src="../img/v_tag.png" alt="video tag" />
+      </div>
+    </div>
+    <div class="video_log">
+      <img src="../img/video_tag.png" alt="" />
+      <div class="video_log_det">
+        <p>BD3D</p>
+        <span>@_bd3d_</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="troubleshoot">
+  <div class="proximity_main_titles">
+    <h1 style="margin-left: 15px;">Outskirt Effects</h1>
+  </div>
+</div>
+
+<div class="Outskirt">
+  <div class="offset_v_card" style="padding: 0px 20px;">
+
+
+
+    <div class="example_v_card">
+      <div class="video_cont">
+        <embed ?autoplay="1" src="https://thumbs.gfycat.com/ClearcutFatLarva-mobile.mp4" type="" />
+        <div class="video_views">
+          <span>12.1K views</span>
+          <img src="../img/v_tag.png" alt="video tag" />
+        </div>
+      </div>
+      <div class="video_log">
+        <img src="../img/video_tag.png" alt="" />
+        <div class="video_log_det">
+          <p>BD3D</p>
+          <span>@_bd3d_</span>
+        </div>
+      </div>
+    </div>
+    <div class="video_desc_culling Outskirt_desc">
+      <p>
+        The <i>"Outskirt" </i> feature will procedurally find the delimitation of your scatter from the given threshold
+        value in order to create a transition effect.
+      </p><br>
+      <h3>Use Case:</h3>
+      <p>Useful for many scenarios, such as creating rugs, or imitating nature behaviors! Plants/trees located on the
+        outskirt of a densely populated area will always have a lower size and are slightly tilted in the outward
+        direction of thepack.</p> <br>
+      <img src="../img/prox.jpg" alt="">
+    </div>
+  </div>
+</div>
+
+
+<script>
+  // seach bar code
+  var searchIcon = document.querySelector('.search-icon');
+  var searchBox = document.querySelector('.search-box');
+  var closeIcon = document.querySelector('.close-icon');
+
+  searchIcon.addEventListener('click', function () {
+    searchBox.classList.toggle('active');
+    closeIcon.classList.toggle('active');
+  });
+
+  closeIcon.addEventListener('click', function () {
+    searchBox.classList.remove('active');
+    closeIcon.classList.remove('active');
+  });
+</script>

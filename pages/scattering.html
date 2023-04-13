@@ -1,0 +1,885 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+  integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+<link rel="stylesheet" href="../styles.css" />
+
+<div class="troubleshoot">
+  <div class="scattering_main_title">
+    <h1 style="margin-left: 15px;">Emitter</h1>
+    <p style="margin-left: 15px;">
+      Before scattering anything, you will need to define your emitter object.
+    </p>
+  </div>
+  <div class="small_screen_hide">
+    <div class="search-container">
+      <div class="search-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="search-box">
+        <form>
+          <div class="close-icon">
+            <i class="fa fa-arrow-left"></i>
+          </div>
+          <div class="search-input">
+            <input type="text" placeholder="Search...">
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="emitter_section">
+  <div class="emitter_cards">
+    <img src="../img/scat1.jpg" alt="" />
+    <h3>What is an Emitter?</h3>
+    <p>
+      When using Geo-Scatter, the plugin will first ask you to define your
+      emitter-object in order to be able to create or tweak a scatter. This
+      object main purpose is to hold datablocks of all the scatter-system(s) and
+      their properties.
+    </p>
+    <br />
+    <p>
+      By default, every creation operator will use this emitter object as the
+      scattering surface, however, the surface(s) can be picked independently.
+    </p>
+    <p>
+      If you'd like to switch from one emitter to another, just click on the
+      little icon on the top right of any panels. This process is not
+      destructive, the settings will all be saved unless you delete one of these
+      emitter object(s).
+    </p>
+  </div>
+
+  <div class="emitter_cards">
+    <img src="../img/scat2.jpg" alt="" />
+    <h3>Emitter Switching Workflow</h3>
+    <p>
+      In the plugin manager, there are alternative ways to switch from one
+      emitter to another, for example, you can change the emitter with a
+      pin/unpin action, or directly set the active object as an emitter target.
+    </p>
+    <br />
+    <p>
+      Note that the statistic panel (in the plugin manager) is also an efficient
+      way to change between existing emitters quickly.
+    </p>
+    <br />
+    <h3>Reminder:</h3>
+    <p>
+      The plugin manager is the place where your biome library is located, you
+      can find it in blender preferences, search <i>"Scatter"</i> and click on
+      the <i>"Enter Manager"</i> button.
+    </p>
+  </div>
+</div>
+
+
+<div class="troubleshoot">
+  <div class="scattering_main_title">
+
+    <h1 style="margin-left: 12px;">Surfaces</h1>
+    <p style="margin-left: 12px;">
+      Then optionally pick the surface(s) upon which the scattered points will be
+      generated (introduced in update 5.3)
+    </p>
+  </div>
+</div>
+
+<div class="surface_scatering">
+  <div class="emitter_section">
+    <div class="emitter_cards">
+      <img src="../img/scat3.jpg" alt="" />
+      <h3>Pick your Surface(s)</h3>
+      <p>
+        By default, any new scatter will use the chosen emitter as the
+        distribution surface.
+      </p>
+      <br />
+      <p>
+        Since
+        <a href="https://sites.google.com/view/scatter5docs/changelogs?authuser=0#h.htsims2am8cw"
+          target="_blank">Geo-Scatter 5.3</a>
+        you are able to pick any surface(s) of your choice independently from the
+        emitter object:
+      </p>
+      <ul>
+        <li>
+          For already created system(s), in the new surface sub-panel in the
+          tweaking panel
+        </li>
+        <li>
+          For system(s) soon to be created, in the operator's popovers located in
+          the creation panel.
+        </li>
+      </ul>
+    </div>
+
+    <div class="emitter_cards">
+      <img src="../img/scat4.jpg" alt="" />
+      <h3>Large & Highpoly Surfaces</h3>
+      <p>
+        Be careful when scattering on enormous terrains, the scattering density is
+        based on the surface-area and displaying too many instances will slow-down
+        or sometimes freeze your computer, and some features such as abiotic
+        curvature or mask painting might be slower with heavy -polycount surfaces.
+      </p>
+      <br />
+      <p>
+        If you intend to scatter on a large area, please read the
+        <a href="https://sites.google.com/view/geoscatter/manual/optimization?authuser=0">optimization</a>
+        page. The "on creation" settings might help too!
+      </p>
+    </div>
+
+    <div class="emitter_cards">
+      <img src="../img/scat5.jpg" alt="" />
+      <h3>Non-linear workflow</h3>
+      <p>
+        The native scattering experience in blender consists of adding a
+        particle-system data-block on a single emitter object, then repeat the
+        process for other objects. While this makes a lot of sense when working
+        with individual objects at the time, from the point of view of scenery
+        creation, this linear process is unnecessarily slow & repetitive.
+      </p>
+      <br />
+      <p>
+        Rest assured this linear workflow is still available in Scatter5 simply by
+        swapping emitter objects. However since the multi-surface feature has been
+        implemented in our pipeline, users are able to de-centralize their
+        scatter-system(s) from their emitters by choosing alternative surface(s).
+        If doing so, it might make sense to create a dummy object whose only
+        purpose is to hold the scatter-system(s) & their settings. We propose to
+        create such a dummy object in the initial define-emitter panel.
+      </p>
+    </div>
+
+    <div class="emitter_cards">
+      <img src="../img/scat6.jpg" alt="" />
+      <h3>About Multi-surface Implementation</h3>
+      <p>
+        This multi-surface workflow has been rigorously implemented in our
+        scattering pipeline, here are a few implementation examples:
+      </p>
+      <br />
+      <ul>
+        <li>
+          It is possible to scatter locally on many surfaces simultaneously.
+          Meaning that the distribution density will stay stable, even when your
+          surface(s) scales are animated for example.
+        </li>
+        <li>
+          All procedural-features will still work as expected, individually per
+          surface local space, or in your scene global space.
+        </li>
+        <li>
+          Some inputs will be highlighted in red if an attribute (vertex group/
+          vertex color/uv layer) is not shared across all of your surfaces.
+        </li>
+        <li>
+          The creation operators now have a "future surfaces" option in their
+          creation popovers.
+        </li>
+        <li>
+          Manual mode also accepts many surfaces as one large painting canvas. The
+          scattered points will stick to each parent-surface automatically.
+          Swapping surfaces won't remove the created points.
+        </li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+<div class="troubleshoot">
+  <div class="scattering_main_title">
+    <h1 style="margin-left: 13px;">Add New</h1>
+    <p style="margin-left: 13px;">The simplest way to add a new scatter-system</p>
+  </div>
+</div>
+
+<div class="add_new_sec">
+  <div class="offset_v_card">
+    <div class="video_cont_offset">
+      <embed height="246" width="470" ?autoplay="1" src="https://thumbs.gfycat.com/GrimyOrderlyCoypu-mobile.mp4"
+        type="" />
+      <div class="video_views">
+        <span>8.6K views</span>
+        <img src="../img/v_tag.png" alt="video tag" />
+      </div>
+      <div class="offset_video_log">
+        <img src="../img/video_tag.png" alt="" />
+        <div class="video_log_det">
+          <p>BD3D</p>
+          <span>@_bd3d_</span>
+        </div>
+      </div>
+    </div>
+  
+  </div>
+
+  <div class="add_new_desc">
+    <p>
+      The fastest and simplest way to create a new scatter-system is by clicking
+      on the add icon next to your system list. This will generate a simple
+      random distribution with a density of 0.2 instance /m² and no features
+      enabled on the defined emitter surface.
+    </p>
+    <br />
+    <p>
+      If you have objects selected in your viewport it will link them in the
+      instance collection, if not, it will activate the default display as a
+      point feature.
+    </p>
+    <br />
+
+    <h3>Beware:</h3>
+    <p>
+      Please use the remove operator to delete a scatter-systems, do not delete
+      Scatter5 collections directly from the outliner, this will lead to issues.
+    </p>
+    <br />
+
+    <h3>Pro-Tip:</h3>
+    <p>
+      Hold the ALT key to consider the selection as your future surface(s) with
+      un-defined instances instead.
+    </p>
+  </div>
+</div>
+
+<div class="troubleshoot">
+  <div class="scattering_main_title">
+    <h1 style="margin-left: 12px;">Density Scatter</h1>
+    <p style="margin-left: 12px;">2nd simplest way to do a scattering</p>
+  </div>
+</div>
+
+<div class="add_new_sec2">
+  <img src="../img/beero1.png" class="add_new_desc_img" alt="sssssssssssssssss" />
+  <div class="add_new_desc2">
+    <p>
+      The second fastest way to scatter the selected objects from the viewport
+      or the asset browser is by using the density scatter operator. Quite
+      straightforward, choose your Particles /m², cm², ha, or km² ratio, an
+      estimation will be made in real-time, then click on the scatter button.
+    </p>
+    <br />
+    <p>
+      A new scatter system will appear in your system list. Note that the all
+      system(s) created will always use the m² unit.
+    </p>
+    <br />
+  </div>
+</div>
+
+<div class="troubleshoot">
+  <div class="scattering_main_title">
+    <h1 style="margin-left: 13px;">Preset Scatter</h1>
+    <p style="margin-left: 13px;">an easy to use 3-click process</p>
+  </div>
+</div>
+
+<div class="add_new_sec">
+  <div class="offset_v_card">
+    <div class="video_cont_offset">
+      <embed height="246" width="470" ?autoplay="1"
+        src="https://thumbs.gfycat.com/HeartyEverlastingHumpbackwhale-mobile.mp4" type="" />
+      <div class="video_views">
+        <span>8.6K views</span>
+        <img src="../img/v_tag.png" alt="video tag" />
+      </div>
+      <div class="offset_video_log">
+        <img src="../img/video_tag.png" alt="" />
+        <div class="video_log_det">
+          <p>BD3D</p>
+          <span>@_bd3d_</span>
+        </div>
+      </div>
+    </div>
+   
+  </div>
+
+  <div class="add_new_desc">
+    <h3>Usage:</h3>
+    <p>
+      One of the most important features of the Scatter plugin is the
+      <i>"Scatter Object With Preset" </i> concept. Quite easy to understand ,
+      it goes like this:
+    </p>
+    <br />
+    <ul>
+      <li>1.&nbsp; &nbsp;Select your future instance(s)</li>
+      <li>2.&nbsp; &nbsp;Select your preset</li>
+      <li>
+        3.&nbsp; &nbsp;Click on 'Scatter', and it will scatter the selection on
+        your emitter <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;surface by default.
+      </li>
+    </ul>
+    <br />
+    <h3>Pro Tip:</h3>
+    <p>
+      You are able to automatically generate the name or color of your future
+      scatter-system by enabling the options in the header menu.
+    </p>
+    <br />
+  </div>
+</div>
+
+<div class="add_new_sec">
+  <div class="offset_v_card">
+    <div class="video_cont_offset">
+      <embed height="246" width="470" ?autoplay="1" src="https://thumbs.gfycat.com/EagerLastingKakarikis-mobile.mp4"
+        type="" />
+      <div class="video_views">
+        <span>8.6K views</span>
+        <img src="../img/v_tag.png" alt="video tag" />
+      </div>
+      <div class="offset_video_log">
+        <img src="../img/video_tag.png" alt="" />
+        <div class="video_log_det">
+          <p>BD3D</p>
+          <span>@_bd3d_</span>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+  <div class="add_new_desc">
+    <h3>Asset Browser Support</h3>
+    <p>
+      With the release of blender 3.0, we wanted to implement the new fantastic
+      asset browser within the Scatter plugin right away!
+    </p>
+    <br />
+    <p>
+      Above your <i>"Scatter Object(s)"</i> button you're able to choose if you
+      will scatter the selection from the viewport, or from the asset browser.
+    </p>
+  </div>
+</div>
+
+<div class="features_border"></div>
+
+<div class="preset_section">
+  <div class="presets_img_sec">
+    <img src="../img/scat21.jpg" alt="" /> <br />
+    <p>
+      <i>These presets are parts of the scatter-library scatpack, shipped with
+        the plugin.</i>
+    </p>
+    <br />
+    <h3>Pro Tip:</h3>
+    <p>
+      Note that these presets can be applied directly to the selected-system(s)
+      in the lister side menu, or per settings in the gear-icon header popover
+      menu.
+    </p>
+  </div>
+
+  <div class="presets_desc">
+    <h3>The Presets</h3>
+    <br />
+    <p>
+      A preset is a '.preset' text file assigned to an icon and encoded with
+      settings. Presets are of course completely customizable, you can create
+      your own presets, save them and share them with your friends or
+      collaborator.
+    </p>
+    <br />
+    <p>Here is a quick description of the presets, by their order:</p>
+    <ul>
+      <li>
+        <p><b>Dark Blue:</b> Simple Random Distribution&nbsp;</p>
+      </li>
+      <li>
+        <p>
+          <b>Clear Blue:</b> Random Distribution with limit collision enabled
+        </p>
+      </li>
+      <li>
+        <p><b>Red:</b> Random Distribution with unique noise patterns.</p>
+      </li>
+      <li>
+        <p><b>Pink:</b> Same as above, but with wave patterns.</p>
+      </li>
+      <li>
+        <p>
+          <b>Orange:</b> Random Distribution with multi-user patterns via RGB
+          channels.
+        </p>
+      </li>
+      <li>
+        <p>
+          <b>Brown:</b> Random Distribution with multi-user patterns via color
+          ID.
+        </p>
+      </li>
+      <li>
+        <p>
+          b MultiColor: Random Distribution with 'Cluster' instancing pick
+          method.
+        </p>
+      </li>
+      <li>
+        <p><b>Grey:</b> Clump Distribution</p>
+      </li>
+      <li>
+        <p>
+          <b>Greyish Blue:</b> Random Distribution with generated rotation tilt
+          flowmaps.
+        </p>
+      </li>
+      <li>
+        <p>
+          <b>Desaturated Blue: </b> Random Distribution with generated rotation
+          tangent flowmaps
+        </p>
+      </li>
+      <li>
+        <p><b>Greens:</b> Forest Presets</p>
+      </li>
+      <li>
+        <p>
+          <b>Camo:</b> Forest Presets with 'Cluster' instancing pick method.
+        </p>
+      </li>
+      <li>
+        <p>
+          <b>Purple:</b> Special examples, such as per face, offset, 45d snap,
+          or billboards.
+        </p>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="troubleshoot">
+  <div class="scattering_main_title">
+    <h1 style="margin-left: 13px;">Biome Scatter</h1>
+    <p style="margin-left: 13px;">Relax! with only and all the work is done for you.</p>
+  </div>
+</div>
+
+
+<div class="plugin_ins_slider1">
+  <div class="image-container1">
+    <img src="../img/scat_img1.png" id="content1" class="slider_active" alt="image 1" />s
+    <img src="../img/ins_carousel2.jpg" id="content2" alt="image 2">
+    <img src="../img/ins_carousel3.jpg" id="content3" alt="image 3">
+  </div>
+  <div class="dot-container1">
+    <button onclick="dot(1)"></button>
+    <button onclick="dot(2)"></button>
+    <button onclick="dot(3)"></button>
+  </div>
+  <button id="prev" onclick="prev()">&lt;</button>
+  <button id="next" onclick="next()">&gt;</button>
+</div>
+
+
+<div class="add_new_sec">
+  <div class="offset_v_card">
+    <div class="video_cont_offset">
+      <embed height="246" width="470" ?autoplay="1" src="https://thumbs.gfycat.com/ThoughtfulNauticalLeopard-mobile.mp4"
+        type="" />
+      <div class="video_views">
+        <span>8.6K views</span>
+        <img src="../img/v_tag.png" alt="video tag" />
+      </div>
+      <div class="offset_video_log">
+        <img src="../img/video_tag.png" alt="" />
+        <div class="video_log_det">
+          <p>BD3D</p>
+          <span>@_bd3d_</span>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+  <div class="add_new_desc">
+    <h3>Usage</h3>
+    <p>
+      When we first invented the biome system for blender back in 2019 we knew
+      that it would quickly become an all-time fan favorite!
+    </p>
+    <br />
+    <p>
+      Our biome system grants you the ability to append a whole pre-made
+      multi-layered ecosystem with only one click! The assets will first be
+      loaded into the file, then the scattering will be done automatically,
+      layer by layer, in front of your eyes.
+    </p>
+    <br />
+    <p>
+      You can access the biomes in the scatter manager editor, by default it
+      will open a new floating window, however, it is also accessible from the
+      blender addon preferences editor, search for scatter and click on
+      <i>'Enter Manager'.</i>
+    </p>
+  </div>
+</div>
+
+<div class="preset_section">
+  <div class="presets_img_sec"><img src="../img/men1.jpg" alt="" /> <br /></div>
+
+  <div class="presets_desc">
+    <h3>Biome Library</h3>
+    <br />
+    <p>
+      Geo-Scatter is shipped with a default
+      <a href="https://drive.google.com/file/d/18t29FIY0N3PhXrh-tg6vfVfLPCeJlPmD/view?usp=sharing"
+        target="_blank">library of 80+ biomes</a>, varying from classic grasses, to autumn, winter, desert, or even
+      forests! We got you covered with a variety of moods, great to start your
+      scattering journey.&nbsp;
+    </p>
+    <br />
+    <p>
+      However, be aware that assets are not our focus! We want to work with
+      talented assets creators, not compete with them. Therefore, do not expect
+      free updates with new vegetation biomes coming in the future, we'd much
+      rather want to motivate you to create your own biome library and share it
+      with the community, or use the biomes of the community directly of course.
+      (you can check out what is available, free or paid, in the 'Scatpack'
+      category in the manager)
+    </p>
+    <br />
+    <p>
+      Creating new biomes can be done with very few clicks. To do so, go in the
+      biome manager, in the header>file, click on 'create a new biome', then
+      follow the instructions, and you'll be good to go. Biomes icons can also
+      be generated on the fly.
+    </p>
+  </div>
+</div>
+
+<div class="troubleshoot">
+  <div class="scattering_main_title">
+    <h1 style="margin-left: 12px;">Manual Scatter</h1>
+    <p style="margin-left: 12px;">Directly enter in manual mode after a scatter</p>
+  </div>
+</div>
+
+<div class="manual_scatter">
+  <img src="../img/manu.png" alt="" />
+  <p>
+    Geo-Scatter is shipped with a default
+    <a href="https://drive.google.com/file/d/18t29FIY0N3PhXrh-tg6vfVfLPCeJlPmD/view?usp=sharing" target="_blank">library
+      of 80+ biomes</a>, varying from classic grasses, to autumn, winter, desert, or even forests!
+    We got you covered with a variety of moods, great to start your scattering
+    journey.&nbsp;
+  </p>
+</div>
+
+<div class="troubleshoot">
+  <div class="scattering_main_title">
+    <h1 style="margin-left: 10px;">Quick Scatter</h1>
+    <p style="margin-left: 10px;">Scatter faster than ever with pie and shortcuts</p>
+  </div>
+</div>
+
+<div class="add_new_sec">
+  <div class="offset_v_card">
+    <div class="video_cont_offset">
+      <embed height="246" width="470" ?autoplay="1"
+        src="https://thumbs.gfycat.com/HeartyEverlastingHumpbackwhale-mobile.mp4" type="" />
+      <div class="video_views">
+        <span>8.6K views</span>
+        <img src="../img/v_tag.png" alt="video tag" />
+      </div>
+      <div class="offset_video_log">
+        <img src="../img/video_tag.png" alt="" />
+        <div class="video_log_det">
+          <p>BD3D</p>
+          <span>@_bd3d_</span>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+  <div class="add_new_desc">
+    <p>
+      In Geo-Scatter 5.1 we added a new shortcut based workflow where you''ll be
+      able to create and directly tweak scatter-system(s) faster than ever.
+    </p>
+    <br />
+    <ul class="quick_scat">
+      <li>
+        <p>
+          The default shortcut to call the operator is 'SHIFT CTRL ALT W'
+          however it's best if you assign a shortcut of your preference in the
+          operator behavior panel.&nbsp;
+        </p>
+      </li>
+      <li>
+        <p>
+          Dependeing on where the operator was called, it will use the selected
+          objects from the viewport or asset browser as instances.
+        </p>
+      </li>
+      <li>
+        <p>
+          The default density of this operator can be tweaked in the popover
+          menu.
+        </p>
+      </li>
+      <li>
+        <p>
+          This operator is non-destructive, when using the tweaking shortcuts,
+          it will interact with Geo-Scatter distribution density/
+          cullingmasks/default scale/and the first pattern slot.
+        </p>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="troubleshoot">
+  <div class="scattering_main_title">
+    <h1 style="margin-left: 12px;">Operator Popover</h1>
+    <p style="margin-left: 12px;">Control how scattering operators behave!</p>
+  </div>
+</div>
+
+<div class="operator_sec">
+  <img src="../img/pope.png" alt="" />
+
+  <div class="add_new_desc" style="margin-left: 20px">
+    <p>
+      In Geo-Scatter 5.1 we added a new shortcut based workflow where you''ll be
+      able to create and directly tweak scatter-system(s) faster than ever.
+    </p>
+    <br />
+    <ul class="quick_scat">
+      <li>
+        <p>
+          The default shortcut to call the operator is 'SHIFT CTRL ALT W'
+          however it's best if you assign a shortcut of your preference in the
+          operator behavior panel.&nbsp;
+        </p>
+      </li>
+      <li>
+        <p>
+          Dependeing on where the operator was called, it will use the selected
+          objects from the viewport or asset browser as instances.
+        </p>
+      </li>
+      <li>
+        <p>
+          The default density of this operator can be tweaked in the popover
+          menu.
+        </p>
+      </li>
+      <li>
+        <p>
+          This operator is non-destructive, when using the tweaking shortcuts,
+          it will interact with Geo-Scatter distribution density/
+          cullingmasks/default scale/and the first pattern slot.
+        </p>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="troubleshoot">
+  <div class="scattering_main_title">
+    <h1 style="margin-left: 13px;">System List</h1>
+    <p style="margin-left: 13px;">
+      This is the place where you will define the active and selected system(s)
+    </p>
+  </div>
+</div>
+
+<div class="add_new_sec">
+  <div class="offset_v_card">
+    <div class="video_cont_offset">
+      <embed height="246" width="470" ?autoplay="1" src="https://thumbs.gfycat.com/ScratchyDisfiguredHuia-mobile.mp4"
+        type="" />
+      <div class="video_views">
+        <span>8.6K views</span>
+        <img src="../img/v_tag.png" alt="video tag" />
+      </div>
+      <div class="offset_video_log">
+        <img src="../img/video_tag.png" alt="" />
+        <div class="video_log_det">
+          <p>BD3D</p>
+          <span>@_bd3d_</span>
+        </div>
+      </div>
+    </div>
+   
+  </div>
+
+  <div class="add_new_desc">
+    <h3>Main Lister Interface</h3>
+    <p>
+      The main system list interface is located in the tweaking panel. The
+      selection is mainly used for
+      <a href="https://sites.google.com/view/geoscatter/manual/prerequisite?authuser=0">batch operations</a>. &nbsp
+    </p>
+    <br />
+    <p>While clicking on a system:</p>
+    <ul style="padding: 5px; margin-left: 10px">
+      <li style="padding: 4px 0px; list-style-type: square">
+        press <b>ALT</b> to isolate.
+      </li>
+      <li style="padding: 4px 0px; list-style-type: square">
+        press <b>SHIFT</b> to add to the selection.
+      </li>
+      <li style="padding: 4px 0px; list-style-type: square">
+        press <b>ALT+SHIFT</b> to isolate the selection.
+      </li>
+    </ul>
+    <br />
+  </div>
+</div>
+
+<div class="operator_sec">
+  <img src="../img/quick.png" alt="" />
+
+  <div class="add_new_desc" style="margin-left: 20px">
+    <h3>Quick Lister Shortcut</h3>
+    <p>
+      Use the shortcut <b>CTRL+SHIFT+Q</b> to quickly append a lister interface.
+      Best to avoid constantly going up & down in the tweaking interface.
+    </p>
+    <br />
+    <p>
+      Note that you are able to customize this shortcut in the plugin manager.
+    </p>
+  </div>
+</div>
+
+<div class="operator_sec">
+  <img src="../img/large.jpg" alt="" />
+
+  <div class="add_new_desc" style="margin-left: 20px">
+    <h3>Large Lister Interface</h3>
+    <p>
+      In the plugin preference, a large lister is available. This interface will
+      regroup all the scatter-system(s) existing in your scene.
+    </p>
+    <br />
+    <p>
+      In the header right next to the exit button, you are able to
+      <b>filter</b> what is displayed in this interface. Some information, such
+      as the instance-count statistics, is hidden by default.
+    </p>
+    <p>
+      Operations to hide, remove or refresh scatter-system(s) statistics are
+      also available in the header.
+    </p>
+  </div>
+</div>
+
+<div class="troubleshoot">
+  <div class="scattering_main_title">
+    <h1 style="margin-left: 13px;">Settings Category Menu</h1>
+    <p style="margin-left: 13px;">Click on the gear icon to access the popover category settings</p>
+  </div>
+</div>
+
+<div class="operator_sec">
+  <img src="../img/settting.jpg" class="setting_cate" alt="" />
+
+  <div class="add_new_desc" style="margin-left: 20px">
+    <p>
+      In Scatter5, the settings of your scatter-system(s) are organized per
+      category, each category has its own header menu (gear icon) where you are
+      able to Copy/Paste, Reset, Apply the active settings to the selection,
+      Apply a preset to the settings, or Lock/Unlock the settings.
+    </p>
+    <br />
+    <p>
+      <b>Reminder: </b> Perhaps you'd like to copy/paste an entire system? This
+      feature is available in the lister interface right menu.
+    </p>
+    <br />
+    <p>
+      <b>Pro-Tip:</b> The gear icon will contextually change to a lock icon if
+      the settings are locked, or a sync icon if these settings are
+      synchronized.
+    </p>
+  </div>
+</div>
+
+
+<script>
+  // seach bar code
+  var searchIcon = document.querySelector('.search-icon');
+  var searchBox = document.querySelector('.search-box');
+  var closeIcon = document.querySelector('.close-icon');
+
+  searchIcon.addEventListener('click', function () {
+    searchBox.classList.toggle('active');
+    closeIcon.classList.toggle('active');
+  });
+
+  closeIcon.addEventListener('click', function () {
+    searchBox.classList.remove('active');
+    closeIcon.classList.remove('active');
+  });
+  // images carousel javascript
+
+  const images = document.querySelectorAll('.image-container1 img');
+  const dots = document.querySelectorAll('.dot-container1 button');
+  const prevBtn = document.querySelector('#prev');
+  const nextBtn = document.querySelector('#next');
+  let currentImage = 0;
+
+  // Function to change image and dot on button click
+  function changeImage(index) {
+    // Set all images to display none
+    images.forEach(image => {
+      image.classList.remove('slider_active');
+    });
+    // Set current image to display block
+    images[index].classList.add('slider_active');
+
+    // Set all dots to lightgrey
+    dots.forEach(dot => {
+      dot.style.backgroundColor = 'lightgrey';
+    });
+    // Set current dot to #303033
+    dots[index].style.backgroundColor = '#303033';
+
+    // Update currentImage variable
+    currentImage = index;
+  }
+
+  // Function for next button
+  function next() {
+    currentImage++;
+    if (currentImage >= images.length) {
+      currentImage = 0;
+    }
+    changeImage(currentImage);
+  }
+
+  // Function for prev button
+  function prev() {
+    currentImage--;
+    if (currentImage < 0) {
+      currentImage = images.length - 1;
+    }
+    changeImage(currentImage);
+  }
+
+  // Add event listeners to buttons
+  nextBtn.addEventListener('click', next);
+  prevBtn.addEventListener('click', prev);
+
+  // Add event listeners to dots
+  dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+      changeImage(index);
+    });
+  });
+</script>

@@ -1,0 +1,2163 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+  integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+<link rel="stylesheet" href="../styles.css" />
+
+<div class="troubleshoot">
+  <div class="trouble_main_title">
+  <h1>Latest Version</h1>
+  </div>
+  <div class="small_screen_hide">
+    <div class="search-container">
+      <div class="search-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="search-box">
+        <form>
+          <div class="close-icon">
+            <i class="fa fa-arrow-left"></i>
+          </div>
+          <div class="search-input">
+            <input type="text" placeholder="Search...">
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="trouble_all_faqs">
+<div class="ts_dropdowns">
+  <div class="faq-item">
+    <div class="border_hr">
+      <h1 class="faq-question">5.3.2 <i>28 February 2023</i></h1>
+      <i class="faq-icon fa fa-angle-down"></i>
+    </div>
+    <ul class="faq-answer">
+      <p>
+        <i><b>Blender Compatibility:</b> Blender 3.3 LTS & Blender 3.4</i>
+      </p>
+      <br />
+      <li>
+        release-notes: This relatively small update fixes a few bugs, a crash,
+        and improves some features. <br />
+        With this update also comes an important platform improvement consisting
+        of the following:
+      </li>
+      <li class="nested_li">We launched www.geoscatter.com</li>
+      <li class="nested_li">
+        All biomes available are now elegantly displayed within
+        www.geoscatter.com/biomes take a peek!
+      </li>
+      <li class="nested_li">
+        Change in our licensing: Our scripts are indeed released under GNU GPL,
+        however, our geometry-node engine is released under a license similar to
+        royalty-free,
+        <b>with the added benefit granting licensees the ability to freely share
+          a scene containing the engine, and the added restriction to prohibit
+          interaction with our nodes through scripts coming from unknown
+          sources.</b>
+        Please read www.geoscatter.com/legal for the complete legal agreement.
+        If you have questions regarding this license, don't hesitate to reach
+        us.
+      </li>
+      <li class="nested_li">
+        We released our free "Biome-Reader" plugin, a dumbed-down version of
+        Geo-Scatter available for all b3d users. Users will be able to install,
+        read, and scatter biomes freely. Biome-Reader can be downloaded for free
+        at www.geoscatter.com/download/. Please do not install both plugins
+        simultaneously.
+      </li>
+      <li class="nested_li">
+        The old "starter library" that used to be shipped with our plugin has
+        been improved:
+      </li>
+      <li class="nested_li">
+        <b>
+          We reworked most assets and textures to create a higher-quality
+          collection of plants. It's now standalone and rebranded as "The Plant
+          Library"</b>, it's free and accessible to all blender users! Why? We do not want to
+        sell vegetation, this library was always meant to be a demonstration of
+        the capabilities of our plugin, and now it serves as a very good
+        introduction to our Biome system. Checkout the differences!
+      </li>
+      <li class="nested_li">
+        The old library will now be considered as "Legacy", rest assured it will
+        still be available for download within the new product page. Both on the
+        blender-market or gumroad.
+      </li>
+      <li class="nested_li">
+        The Winter and Tree assets are currently missing from this rework, we
+        intend to update them later on.
+      </li>
+      <li class="nested_li">
+        The biomes also have been reworked, there are fewer, but they are much
+        better in terms of quality. Compare by yourself: old biomes vs new
+        biomes. <br />
+        Both can be installed simultaneously.
+      </li>
+      <li>
+        <b>mprovement: </b> You'll no longer see "Scatter5" in the plugin name
+        or in your collections.
+        <b>Please make sure to uninstall older "Scatter5" plugins first. </b>
+      </li>
+      <li>
+        <b>improvement:</b> New notification system, a new panel will appear if
+        context informations are needed.
+      </li>
+      <li>
+        <b>improvement: </b> better viewlayers management system, the plugin
+        will not change viewlayers automatically, the viewlayers will stay
+        intact per scenes.
+      </li>
+      <li>
+        <b>improvement:</b> now we have four various ways users can switch
+        emitters in each panels headers. We added an "emitter-switch menu".
+      </li>
+      <li>
+        <b>improvement: </b> You'll be also able to switch emitters from the
+        quick lister menu (CTRL+SHIFT+Q by default)
+      </li>
+      <li>
+        <b>improvement:</b> Quick scatter pie menu is back, users didn't like
+        the shortcut-based operator we introduced recently.
+      </li>
+      <li>
+        <b>improvement:</b> Better security behavior warnings will now let you
+        the ability to undo default behavior.
+      </li>
+      <li>
+        <b>improvement:</b> Licenses written within the plugin preferences, &
+        extra indication if the user is holding Individual/Team/Studio variants.
+      </li>
+      <li>
+        <b>bugfix:</b> Inaccurate rendering view states for optimization
+        features.
+      </li>
+      <li><b>bugfix:</b> Manual mode instances disappearance.</li>
+      <li><b>bugfix:</b> Camera clipping stops working.</li>
+      <li>
+        <b>bugfix:</b> Bounding box security message not appearing for the biome
+        loading operator.
+      </li>
+      <li><b>bugfix:</b> Procedural watershed mask not working.</li>
+      <li><b>bugfix:</b> Keyframing vectorial values didn't work.</li>
+      <li>
+        <b>bugfix:</b> Crash on keyframes animations & other animation crashes.
+      </li>
+      <li>
+        <b>bugfix:</b> Snow animation playback even if all scatter-system(s) of
+        your scene are hidden .
+      </li>
+      <li>
+        <b>bugfix:</b> Fixed the need to constantly reload your biome-library
+        when opening new .blends.
+      </li>
+    </ul>
+  </div>
+
+  <div class="faq-item">
+    <div class="border_hr">
+      <h2 class="faq-question">5.3.1 <i>15 November 2022</i></h2>
+      <i class="faq-icon fa fa-angle-down"></i>
+    </div>
+    <ul class="faq-answer">
+      <p>
+        <i><b>Blender Compatibility:</b> Blender 3.3 LTS & Blender 3.4</i>
+      </p>
+      <br />
+      <li>
+        <p>
+          <b>release-notes:</b> Important Bugfix Release, and smaller feature
+          improvements, please prefer using 5.3.1 over 5.3. Refer to version 5.3
+          for requirements. Did you know that we are the first scattering plugin
+          for blender? Back then we simply chose to name our plugin "Scatter".
+          <b> We will now call ourselves "Geo-Scatter"</b>. Why "Geo"? Because
+          of the act of scattering 3D geometry, and the fact that our plugin is
+          built on a powerful geometry-node pipeline! We sincerely hope that you
+          like our new name.
+        </p>
+      </li>
+      <li>
+        <p>
+          <b>new-feature:</b> New operator that can convert all .blend files in
+          the selected folder to an asset-browser compatible format. This option
+          is located in the plugin manager &gt; preferences.&nbsp;
+        </p>
+      </li>
+      <li>
+        <p>
+          <b>improvement:</b> Greatly improved the biome environment path
+          behavior, added a new "search in asset libraries" option.
+        </p>
+      </li>
+      <li>
+        <p>
+          <b>improvement:</b> &nbsp;Previously, biomes were forced to store all
+          their assets in a single .blend per layer, it is no longer the case.
+          Now, a single biome layer can contain many assets from many different
+          .blend files. This version will be a <b>requirement</b> for all
+          upcoming biomes pack releases,
+          <b>newer biome packs will probably not be readable in older versions
+            of our plugin.</b>
+        </p>
+      </li>
+      <li>
+        <p>
+          <b>improvement:</b> Security-actions overhaul. The plugin will now ask
+          you if you would like to enable some optimization features instead of
+          simply warning you.
+        </p>
+      </li>
+      <li>
+        <p>
+          <b>improvement:</b> Ability to export biomes that are using many
+          .blend files as assets sources.
+        </p>
+      </li>
+      <li>
+        <p>
+          <b>improvement:</b> The camera fov-boost option is now also available
+          in the scattering operators behavior menu.&nbsp;
+        </p>
+      </li>
+      <li>
+        <p>
+          <b>improvement:</b> Ability to batch add/remove objects from our
+          collection interface with the alt key.
+        </p>
+      </li>
+      <li>
+        <p><b>bugfix:</b> &nbsp;Blender crash on rendering an animation.</p>
+      </li>
+      <li>
+        <p><b>bugfix:</b> Impossible to render animated plugin properties.</p>
+      </li>
+      <li>
+        <p>
+          <b>bugfix:</b> &nbsp;Inaccurate render-states options for the display/
+          visibility features (this fix will be available only for newer
+          files).&nbsp;
+        </p>
+      </li>
+      <li>
+        <p>
+          <b>bugfix:</b> &nbsp;Falloff revert button not working for the camera
+          distance-culling feature.
+        </p>
+      </li>
+      <li>
+        <p><b>bugfix:</b> Export as mesh bug.</p>
+      </li>
+      <li>
+        <p>
+          <b>bugfix:</b> Asset browser areas located in non-active windows not
+          being recognized properly.
+        </p>
+      </li>
+      <li>
+        <p>
+          <b>bugfix:</b> &nbsp;Repulsion feature enabled for some biomes, even
+          tho all pointers are empty.
+        </p>
+      </li>
+      <li>
+        <p>
+          <b>bugfix:</b> &nbsp;Removed the hard limit on the clump density
+          property.
+        </p>
+      </li>
+      <li>
+        <p>
+          <b>bugfix:</b> &nbsp;Missing copy/paste functionalities for some of
+          the display properties.
+        </p>
+      </li>
+    </ul>
+  </div>
+
+  <div class="faq-item">
+    <div class="border_hr">
+      <h2 class="faq-question">5.3 <i>4 October 2022</i></h2>
+      <i class="faq-icon fa fa-angle-down"></i>
+    </div>
+    <ul class="faq-answer">
+      <img src="../img/drop3.jpg" alt="" />
+      <br />
+      <p>
+        <i><b>Blender Compatibility:</b> Blender 3.3 LTS & Blender 3.4</i>
+      </p>
+      <p>
+        <i><b>Retro Compatibility: </b> Accepts system(s) made with Scatter
+          <b> 5.0/5.1/5.2/5.3</b>
+        </i>
+      </p>
+      <p>
+        <i><b>Credit: </b> Hero Artwork by Megatecture </i>
+      </p>
+      <p>
+        <i><b>Important Information: </b> Some settings have changed, there is
+          no guarantee that your scatter systems will stay intact when
+          converting from an older version.</i>
+      </p>
+      <br />
+
+      <li>
+        <p>
+          <b>release-notes:</b> This update consists of major improvements to
+          our plugin features, interface, and pipeline. Most importantly, the
+          multi-surface scattering implementation.
+        </p>
+      </li>
+      <li>
+        <p>
+          <b>new-feature:</b> One of the most ambitious features we worked on so
+          far, is the integration of a
+          <b>multi-surface scattering ability,</b> which we rigorously
+          implemented deep into our scattering workflow! That's a first for
+          blender plugins, here are a few implementation examples:
+        </p>
+        <ul style="margin-left: 15px">
+          <li>
+            <p>
+              All our features have been adapted in order to work in the global
+              world-space, or per individual surface space.
+            </p>
+          </li>
+          <li>
+            <p>
+              The ability to distribute in local <b> 𝗼𝗿 </b> global space has
+              been preserved! Working with <b>animated surfaces</b> is possible,
+              as we'll keep the density stable with the local space option.
+            </p>
+          </li>
+          <li>
+            <p>
+              Some inputs will be highlighted in red if a mesh-attribute (vertex
+              group/ vertex color/uv layer) is not shared across all of your
+              surfaces.
+            </p>
+          </li>
+          <li>
+            <p>
+              We made sure painting vertex masks on many surfaces is a smooth
+              experience. When creating or painting masks, the plugin will
+              ensure that the attribute is shared across all of your chosen
+              surfaces &amp; will be set as active automatically.
+            </p>
+          </li>
+          <li>
+            <p>
+              The creation operators now have a "future surfaces" option in
+              their creation popovers.
+            </p>
+          </li>
+          <li>
+            <p>
+              Manual mode also accepts many surfaces as one large painting
+              canvas. The scattered points will be automatically attached to
+              each parent-surface. Swapping surfaces won't remove the created
+              points.
+            </p>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p>
+          <b>new-feature:</b> &nbsp;We implemented new
+          <b>transition falloff controls</b>
+          everywhere in our toolset. This implementation consists of two new
+          functionalities:
+        </p>
+        <ul style="margin-left: 15px">
+          <li>
+            <p>
+              Transition-graph, useful for defining user-defined transitions
+              falloff. &nbsp;When interacting with the graph, we do support
+              the<a href="https://sites.google.com/view/scatter5docs/manual/prerequisite?authuser=0#h.oq92j12mnt2u"
+                target="_blank">
+                ALT-for-bach </a>&amp;
+              <a href="https://sites.google.com/view/scatter5docs/manual/extra?authuser=0#h.tpzx6md6kk5m"
+                target="_blank">settings-synchronization</a>
+              features.
+            </p>
+          </li>
+          <li>
+            <p>
+              Transition-noise, blend your transition with a noise pattern. This
+              effect is quite overlooked in most scattering plugins, even in
+              other 3d software, and it is quite essential in order to reach a
+              more natural-looking transition in our opinion!&nbsp;
+            </p>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p><b>new-feature:</b> Instance count.</p>
+        <ul style="margin-left: 15px">
+          <li>
+            <p>
+              You are now able to distribute instances based on a density
+              (/m&sup2;) or by a total instance count slider.
+            </p>
+          </li>
+          <li>
+            <p>
+              Calculate the total number of instances shown on screen/render in
+              the visibility category, or in the plugin manager lister
+              interface.
+            </p>
+          </li>
+          <li>
+            <p>
+              New "Max amount" visibility feature. Automatically prevent your
+              scatter to reach a given instance count threshold.&nbsp;
+            </p>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p>
+          <b>new-feature:</b> We added a new "display as point cloud" option,
+          this display method is quite promising and very useful to understand
+          the final shape of your distribution while taking advantage of the
+          very fast point drawing. Note that
+          <a href="https://developer.blender.org/T93245" target="_blank">T93245</a>
+          &amp;
+          <a href="https://developer.blender.org/T92963" target="_blank">T92963</a>
+          are important issues that need to be solved by the blender developers.
+        </p>
+      </li>
+      <li>
+        <p><b>improvement:</b> Better Camera Optimization.</p>
+        <ul style="margin-left: 15px">
+          <li>
+            <p>The camera frustum will adapt automatically, by default.</p>
+          </li>
+          <li>
+            <p>&nbsp;An occlusion culling method is now available.</p>
+          </li>
+          <li>
+            <p>
+              If you'd like your settings to be unique per camera, please toggle
+              "Per Cam Settings".
+            </p>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p>
+          <b>new-feature:</b> It is now possible to sample alpha channels in
+          color-masks or pattern features.
+        </p>
+      </li>
+      <li>
+        <p>
+          <b>new-feature:</b> New boolean density-mask, mask inside/outside
+          volumes of objects in a given collection.
+        </p>
+      </li>
+      <li>
+        <p><b>new-feature:</b> New rotation features.</p>
+        <ul style="margin-left: 15px">
+          <li>
+            <p>New normal alignment methods: "random" and "surface origin".</p>
+          </li>
+          <li>
+            <p>New tangent alignment method: "surface origin".</p>
+          </li>
+          <li>
+            <p>The rotation &gt; tilt feature has a new "noise" method.</p>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p><b>improvement:</b> Better proximity features.</p>
+        <ul style="margin-left: 15px">
+          <li>
+            <p>
+              The "remove near" and "lean near" features have been merged into a
+              single "repel" feature. Two repel slots are available.
+            </p>
+          </li>
+          <li>
+            <p>
+              The "outskirt" feature is much faster (be aware that it is still
+              relatively heavy to compute than the usual settings).
+            </p>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p>
+          <b>new-feature:</b> The Altitude abiotic feature now supports meters
+          or percentage units.&nbsp;
+        </p>
+      </li>
+      <li>
+        <p><b>new-feature:</b> Patterns:</p>
+        <ul style="margin-left: 15px">
+          <li>
+            <p>A 3rd pattern slot is now available.</p>
+          </li>
+          <li>
+            <p>A new object texture projection method is available.</p>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p>
+          <b>improvement:</b> Wind animations now have clip length controls for
+          loop-able or fixed animations.
+        </p>
+      </li>
+      <li>
+        <p>
+          <b>improvement:</b> Easily open the geometry node engine of the active
+          system (in the side menu next to system-lister interface).
+        </p>
+      </li>
+      <li>
+        <p><b>improvement:</b> Better interface.</p>
+        <ul style="margin-left: 15px">
+          <li>
+            <p>We no longer have a double-panel structure.</p>
+          </li>
+          <li>
+            <p>Each feature has collapse arrows.</p>
+          </li>
+          <li>
+            <p>
+              The collapsable arrows of panels &amp; features can be
+              opened/closed with a sliding gesture, just like native blender.
+            </p>
+          </li>
+          <li>
+            <p>
+              Collection pointers now have popover interfaces for quickly
+              adding/removing/selecting objects.
+            </p>
+          </li>
+          <li>
+            <p>
+              The per-settings gear icon will contextually change if the
+              settings category is locked or synched.
+            </p>
+          </li>
+          <li>
+            <p>
+              There are new toggles to enable/disable settings per category in
+              the header.
+            </p>
+          </li>
+          <li>
+            <p>
+              There is a new "apply to selected" operator right next to the
+              per-category copy/paste options.
+            </p>
+          </li>
+          <li>
+            <p>
+              The "viewport/rendered/render" states of the visibility &amp;
+              display optimization features now use icons instead of drop-downs
+              for a clearer UX.
+            </p>
+          </li>
+          <li>
+            <p>New icons for our distribution methods.</p>
+          </li>
+          <li>
+            <p>
+              The system lister interface of our plugin manager has been
+              improved.&nbsp;
+            </p>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p><b>improvement:</b> Biomes are now loading much faster!</p>
+      </li>
+      <li>
+        <p>
+          <b>new-feature:</b> use CTRL+SHIFT+Q to quickly open a small
+          system-lister interface
+        </p>
+      </li>
+      <li>
+        <p><b>improvement:</b> Better Presets Handling</p>
+        <ul style="margin-left: 15px">
+          <li>
+            <p>
+              Applying a preset to the selected scatter-systems or to a settings
+              category is clearer with the new drop-down menu.
+            </p>
+          </li>
+          <li>
+            <p>
+              New per-category presets if you'd like to quickly save &amp;
+              re-use settings combinations. The presets will be saved in your
+              scatter-library.
+            </p>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p>
+          <b>new-feature:</b> Scale fading. Force the scenery perspective by
+          scaling up/down your instances depending on how far/close they are
+          from the active camera.
+        </p>
+      </li>
+      <li>
+        <p>
+          <b>new-feature:</b> Convert your scatter to one large merged mesh.
+          Please be aware of the large polycount it might produce.
+        </p>
+      </li>
+      <li>
+        <p>
+          <b>new-feature:</b> "Bounding-box" &amp; "Point_cloud" proximity
+          contact methods are now available for the ecosystems &amp; proximity
+          repel features.
+        </p>
+      </li>
+      <li>
+        <p>Manual Mode rewrite:</p>
+        <ul style="margin-left: 20px">
+          <li>
+            <ul>
+              <li>
+                <p>
+                  <b>improvement:</b> New on-screen drawing cursor (using
+                  blender gpu module).
+                </p>
+              </li>
+              <li>
+                <p><b>improvement:</b> New tool visual hints while drawing.</p>
+              </li>
+              <li>
+                <p>
+                  <b>improvement:</b> New gesture widgets for various tool
+                  property types.
+                </p>
+              </li>
+              <li>
+                <p>
+                  <b>new-feature:</b> Non-destructive multi-surface support.
+                </p>
+              </li>
+              <li>
+                <p>
+                  <b>new-feature:</b> Reorganized tool drop-down menus in the
+                  header.
+                </p>
+              </li>
+              <li>
+                <p>
+                  <b>new-feature:</b> Optional unified tool settings (for
+                  per-tool properties).
+                </p>
+              </li>
+              <li>
+                <p>
+                  <b>new-feature:</b> Optional exponential scaling for radius
+                  gesture.
+                </p>
+              </li>
+              <li>
+                <p>
+                  <b>new-feature:</b> Tools can use falloff to fade their
+                  effect.
+                </p>
+              </li>
+              <li>
+                <p>
+                  <b>new-feature:</b> Tools can use surface normal interpolation
+                  (averaging face normals in tool radius) and direction
+                  interpolation (averaging mouse surface or screen movement
+                  direction).
+                </p>
+              </li>
+              <li>
+                <p>
+                  <b>new-feature:</b> Tools that use radius can use scene or
+                  screen relative sizes for it.
+                </p>
+              </li>
+              <li>
+                <p><b>improvement:</b> Better key config in preferences.</p>
+              </li>
+              <li>
+                <p>
+                  <b>improvement:</b> Shortcut for Enter Manual Mode (can be
+                  executed in 3d viewport).
+                </p>
+              </li>
+              <li>
+                <p>
+                  <b>improvement:</b> Tools can define more gesture shortcuts.
+                </p>
+              </li>
+              <li>
+                <p>
+                  <b>improvement:</b> Color theme for all on screen drawing
+                  available in preferences.
+                </p>
+              </li>
+              <li>
+                <p><b>improvement:</b> Dot Brush</p>
+                <ul>
+                  <li class="nested_li">
+                    <p>
+                      Created instance can be moved (on mouse move), rotated,
+                      and scaled (mouse wheel) while mouse button is pressed
+                      down.
+                    </p>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <p><b>improvement:</b> Spray and Spray Aligned Brush</p>
+                <ul>
+                  <li class="nested_li">
+                    <p>
+                      New Uniform Sampling option: uniformly distributed random
+                      points in spray radius.
+                    </p>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <p><b>improvement:</b> Lasso Fill Brush</p>
+                <ul>
+                  <li class="nested_li">
+                    <p>
+                      New Omit Backfacing option: do not create points on
+                      polygons facing away from view.
+                    </p>
+                  </li>
+                  <li class="nested_li">
+                    <p>
+                      New High Precision option: high resolution for drawn area.
+                    </p>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <p><b>new-feature:</b> New Clone Brush</p>
+                <ul>
+                  <li class="nested_li">
+                    <p>
+                      Sample points under cursor and clone to a new location.
+                      points can be rotated and scaled. rotation and scale can
+                      be aplied on sampled instances as well. rotation and scale
+                      can be randomized after each use.
+                    </p>
+                  </li>
+                  <li class="nested_li">
+                    <p>Sampled points are kept until the end of session.</p>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <p><b>improvement:</b> Move Brush</p>
+                <ul>
+                  <li class="nested_li">
+                    <p>New Proportional Mode.</p>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <p><b>improvement:</b> Relax Brush</p>
+                <ul>
+                  <li class="nested_li">
+                    <p>New Update Surface Normal option.</p>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <p><b>improvement:</b> Drop-Down Brush</p>
+                <ul>
+                  <li class="nested_li">
+                    <p>
+                      Optionally can drop to ground plane if no other surface is
+                      bellow instance.
+                    </p>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <p><b>improvement:</b> Eraser Brush</p>
+                <ul>
+                  <li class="nested_li">
+                    <p>
+                      New Screen mode to erase points away from any surface.
+                    </p>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <p><b>improvement:</b> Dilute Brush</p>
+                <ul>
+                  <li class="nested_li">
+                    <p>New algorithm with a more even result.</p>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <p><b>improvement:</b> Operators</p>
+                <ul>
+                  <li class="nested_li">
+                    <p>
+                      New Convert From Procedural option to Preserve Appearance
+                      of system being converted. will use Instance &gt; Spawn
+                      &gt; Manual Index to preserve instance assignments to
+                      points.
+                    </p>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p><b>bugfix:</b> Camera related features not rendering properly</p>
+      </li>
+      <li>
+        <p><b>bugfix:</b> Various manual mode bugs</p>
+      </li>
+      <li>
+        <p>
+          <b>change:</b> The quick scatter operator now calls a shortcut-based
+          modal menu instead of the old pie menu. A new dynamic selection
+          process for future instances is also available within this modal
+          state. If you do not like this change please let us know, we are
+          looking to improve the quick scatter experience and your feedback is
+          welcome.&nbsp;
+        </p>
+      </li>
+      <li>
+        <p>
+          <b>change:</b> In the side menu next to the system lister, the "remove
+          selected system" operator has been replaced by a "remove all"
+          operator. Now in order to remove the selected system(s) please hold
+          the ALT key while pressing the remove button (subtract icon).
+        </p>
+      </li>
+    </ul>
+  </div>
+</div>
+</div>
+
+<div class="troubleshoot">
+  <div class="trouble_main_title">
+  <h1>Compatibility Advices</h1>
+</div>
+</div>
+
+
+
+<div class="trouble_all_faqs">
+<div class="latest_v_content">
+  <p>
+    ✅ Please verify your blender &amp; plugin compatibility before installing
+    anything. Plugins are not compatible with any blender versions.<br />
+    <br />
+    ✅ The best demeanor with any software is to stick working on your projects
+    on the same version from start to end.<br />
+    <br />
+    ⛔ Never read a blend file from a higher version in a lower version of
+    blender. It's called forward compatibility, saving might corrupt your file
+    forever.
+  </p>
+</div>
+</div>
+
+<div class="troubleshoot">
+  <div class="trouble_main_title">
+  <h1>Older Versions</h1>
+</div>
+</div>
+
+
+<div class="trouble_all_faqs">
+<div class="ts_dropdowns">
+  <div class="faq-item">
+    <div class="border_hr">
+      <h2 class="faq-question">5.2.1 <i>03 September 2022</i></h2>
+      <i class="faq-icon fa fa-angle-down"></i>
+    </div>
+    <ul class="faq-answer">
+      <p>
+        <i><b>Blender Compatibility: </b>Blender 3.2</i>
+      </p>
+      <ul style="margin-left: 15px">
+        <li><b>release-note:</b> Small bugfix release</li>
+
+        <li>
+          <b>bugfix:</b> Blender 3.2.2 broke our shortcuts (ALT behavior),
+          please use Scatter 5.2.1 for blender 3.2.2+
+        </li>
+      </ul>
+    </ul>
+  </div>
+
+  <div class="faq-item">
+    <div class="border_hr">
+      <h2 class="faq-question">5.2 <i>13 June 2022</i></h2>
+      <i class="faq-icon fa fa-angle-down"></i>
+    </div>
+    <ul class="faq-answer">
+      <img src="../img/drop4.jpg" alt="" />
+      <br />
+      <p>
+        <i><b>Blender Compatibility:</b> Blender 3.3 LTS & Blender 3.4</i>
+      </p>
+      <p>
+        <i><b>Retro Compatibility: </b> Accepts system(s) made with Scatter
+          <b> 5.0/5.1/5.2/5.3</b>
+        </i>
+      </p>
+      <p>
+        <i><b>Credit: </b> Hero Artwork by Megatecture </i>
+      </p>
+      <p>
+        <i><b>Important Information: </b> Some settings have changed, there is
+          no guarantee that your scatter systems will stay intact when
+          converting from an older version.</i>
+      </p>
+      <br />
+
+      <li>
+        <p>
+          note: We updated the scatter5 geometry node engine to blender 3.2.<br />
+          please run the "update node-tree" operator in order to convert your
+          scatter system(s) first.&nbsp;
+        </p>
+      </li>
+      <li>
+        <p>
+          note: There is a new biome collaboration available:
+          <a href="https://www.blendermarket.com/products/forestation?ref=113" target="_blank">Forestation </a>by
+          bproduction.
+        </p>
+      </li>
+      <li>
+        <p>improvement: Manual mode has new features:</p>
+        <ul>
+          <li>
+            <ul class="july_logs_ul">
+              <li>
+                <p>
+                  new-feature: New 2.5d "relax" brush, useful for smoothing out
+                  points positions.
+                </p>
+              </li>
+              <li>
+                <p>
+                  new-feature: Surface move brush now supports rotation &amp;
+                  scale operations with the mouse roll hotkey.
+                </p>
+              </li>
+              <li>
+                <p>
+                  new-feature: New "intersect points" operator, useful to update
+                  the position of your manually distributed points on a new
+                  surface.&nbsp;
+                </p>
+              </li>
+              <li>
+                <p>
+                  improvement: Manual mode now supports Vgroup's/Vcol's or UV's
+                  related features. please run the "Refresh Attribute" operator
+                  in order to transfer the attributes on the scatter-object mesh
+                  first.&nbsp;
+                </p>
+              </li>
+              <li>
+                <p>
+                  improvement: Like blender native behavior, the CTRL shortcut
+                  to quickly access the erase brush when using creation brushes.
+                </p>
+              </li>
+              <li>
+                <p>
+                  improvement: Manual mode now supports custom navigation
+                  shortcuts.
+                </p>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p>improvement: More seeds options:</p>
+        <ul>
+          <li>
+            <ul class="july_logs_ul">
+              <li>
+                <p>
+                  new-feature: The scatter-textures data, used by the pattern
+                  features, now include a random transform option based on
+                  chosen seed.
+                </p>
+              </li>
+              <li>
+                <p>
+                  new-feature: The 'noise' universal features mask now includes
+                  a random transform seed slider.
+                </p>
+              </li>
+              <li>
+                <p>
+                  new-feature: We implemented a master seed in the extra panel
+                  that has an influence on every other scatter5 seed of your
+                  blend file. <br />Changing this seed is a fast way to iterate
+                  on your environment design (Pro tip: you can animate this seed
+                  with the '#frame' driver, and run an animation).
+                </p>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p>improvement: 3 new distribution modes:</p>
+        <ul>
+          <li>
+            <ul class="july_logs_ul">
+              <li>
+                <p>
+                  new-feature: New "Stable deform" distribution mode. This
+                  distribution method is based on UV space and is ideal when you
+                  are actively deforming/animating your emitting surface, as the
+                  location of instances will stay stable.
+                </p>
+              </li>
+              <li>
+                <p>new-feature: New "Volume" distribution mode.</p>
+              </li>
+              <li>
+                <p>
+                  new-feature: New "Per Edge" distribution mode. Either choose
+                  to place your instance per edges center or align the instance
+                  following the edge direction. An extra "edge length influence"
+                  feature is available in the scale category.&nbsp;
+                </p>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p>improvement: Wind features improvements:</p>
+        <ul>
+          <li>
+            <ul class="july_logs_ul">
+              <li>
+                <p>
+                  improvement: The wind-wave feature is now loop-able by
+                  default, it will automatically adapt depending on your scene
+                  start/end frames.
+                </p>
+              </li>
+              <li>
+                <p>
+                  improvement: We exposed the 'distortion" slider of the
+                  wind-wave pattern.
+                </p>
+              </li>
+              <li>
+                <p>
+                  improvement: The turbulence feature is now optionally
+                  loop-able, it will automatically adapt depending on your scene
+                  start/end frames.
+                </p>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p>improvement: "Per Face" distribution mode improvements:</p>
+        <ul>
+          <li>
+            <ul class="july_logs_ul">
+              <li>
+                <p>
+                  improvement: The default tangent that stays stable even when
+                  rotating a face.
+                </p>
+              </li>
+              <li>
+                <p>
+                  new-feature: New "face size influence" feature is available in
+                  the scale category.&nbsp;
+                </p>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p>
+          new-feature: Scatter5 can automatically hide the system(s) when hiding
+          the emitter. <br />This update behavior is available on the 'Extra'
+          panel, it will be turned off by default.
+        </p>
+      </li>
+      <li>
+        <p>
+          new-feature: The placeholders now have preview icons and we added 10
+          new placeholder objects. This means you might need to re-select your
+          previous placeholder object when converting a scatter system from 5.0
+          or 5.1.
+        </p>
+      </li>
+      <li>
+        <p>
+          new-feature: New "Boundary" tangent alignment feature, ideal for
+          hard-surface scatter where instances should stay aligned according to
+          the surface boundary edges.
+        </p>
+      </li>
+      <li>
+        <p>
+          new-feature: All Scatter5 properties now partially support
+          keyframes/drivers. Be aware that blender will store this animation
+          data depending on your scatter system list order, this is sadly a
+          blender limitation that we cannot change.
+        </p>
+      </li>
+      <li>
+        <p>
+          new-feature: New "Face Preview" visibility feature. Useful when
+          working with large emitter surfaces, as you are able to sample a
+          preview area on the viewport and render the full area on render.
+        </p>
+      </li>
+      <li>
+        <p>
+          new-feature: The "Remove Near" feature now has an extra "Consider
+          Volume" option.
+        </p>
+      </li>
+      <li>
+        <p>
+          improvement: The curvature/border abiotic features are now calculated
+          in real-time.
+        </p>
+      </li>
+      <li>
+        <p>
+          improvement: The camera update dependencies are now set on the 'halt'
+          mode by default. It is now also possible to set a custom update rate.
+        </p>
+      </li>
+      <li>
+        <p>
+          improvement: The collections pointer properties now have an "Add"
+          operator to quickly create a collection containing the selected
+          objects.
+        </p>
+      </li>
+      <li>
+        <p>
+          improvement: Clearly comprehend which categories of settings are being
+          activated with the new sub panels icons.
+        </p>
+      </li>
+      <li>
+        <p>
+          improvement: All our modal operators now have a new info box interface
+          to display shortcuts or other information.
+        </p>
+      </li>
+      <li>
+        <p>
+          improvement: The enter manual mode operator now retains the last
+          brushes used.
+        </p>
+      </li>
+      <li>
+        <p>improvement: Better performance when hiding scatter system(s).</p>
+      </li>
+      <li>
+        <p>
+          improvement: A new warning message subpanel will appear when needed in
+          the tweaking panel.
+        </p>
+      </li>
+      <li>
+        <p>
+          improvement: Working on multiple unique scenes is now fully supported.
+        </p>
+      </li>
+      <li>
+        <p>
+          improvement: Linking a scatter_obj from another file is now fully
+          supported.
+        </p>
+      </li>
+      <li>
+        <p>
+          improvement: The property math operation is now also supported on
+          other distribution modes, and on the default scale feature.
+        </p>
+      </li>
+      <li>
+        <p>
+          bugfix: Error message when using the draw bezier area operator from
+          the quick scatter mode.
+        </p>
+      </li>
+      <li>
+        <p>bugfix: Error with manual mode shortcuts.</p>
+      </li>
+    </ul>
+  </div>
+
+  <div class="faq-item">
+    <div class="border_hr">
+      <h2 class="faq-question">5.1 <i>13 April 2022</i></h2>
+      <i class="faq-icon fa fa-angle-down"></i>
+    </div>
+    <ul class="faq-answer">
+      <img src="../img/drop5.jpg" alt="" />
+      <br />
+      <p>
+        <i><b>Blender Compatibility:</b> Blender 3.3 LTS & Blender 3.4</i>
+      </p>
+      <p>
+        <i><b>Retro Compatibility: </b> Accepts system(s) made with Scatter
+          <b> 5.0/5.1/5.2/5.3</b>
+        </i>
+      </p>
+      <p>
+        <i><b>Credit: </b> Hero Artwork by Megatecture </i>
+      </p>
+      <p>
+        <i><b>Important Information: </b> Some settings have changed, there is
+          no guarantee that your scatter systems will stay intact when
+          converting from an older version.</i>
+      </p>
+      <br />
+
+      <li>
+        <p>
+          <b>important note:</b> We updated the scatter5 geometry node engine to
+          blender 3.2.<br />
+          please run the "update node-tree" operator in order to convert your
+          scatter system(s) first.&nbsp;
+        </p>
+      </li>
+      <li>
+        <p>
+          <b> note:</b> There is a new biome collaboration available:
+          <a href="https://www.blendermarket.com/products/forestation?ref=113" target="_blank">Forestation </a>by
+          bproduction.
+        </p>
+      </li>
+      <li>
+        <p><b>improvement:</b> Manual mode has new features:</p>
+        <ul>
+          <li>
+            <ul class="july_logs_ul">
+              <li>
+                <p>
+                  <b>new-feature:</b> New 2.5d "relax" brush, useful for smoothing out
+                  points positions.
+                </p>
+              </li>
+              <li>
+                <p>
+                  <b>new-feature:</b> Surface move brush now supports rotation &amp;
+                  scale operations with the mouse roll hotkey.
+                </p>
+              </li>
+              <li>
+                <p>
+                  <b>new-feature:</b> New "intersect points" operator, useful to update
+                  the position of your manually distributed points on a new
+                  surface.&nbsp;
+                </p>
+              </li>
+              <li>
+                <p>
+                  <b>improvement:</b> Manual mode now supports Vgroup's/Vcol's or UV's
+                  related features. please run the "Refresh Attribute" operator
+                  in order to transfer the attributes on the scatter-object mesh
+                  first.&nbsp;
+                </p>
+              </li>
+              <li>
+                <p>
+                  <b>improvement:</b>Like blender native behavior, the CTRL shortcut
+                  to quickly access the erase brush when using creation brushes.
+                </p>
+              </li>
+              <li>
+                <p>
+                  <b>improvement:</b> Manual mode now supports custom navigation
+                  shortcuts.
+                </p>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p><b>improvement:</b> More seeds options:</p>
+        <ul>
+          <li>
+            <ul class="july_logs_ul">
+              <li>
+                <p>
+                  <b>new-feature:</b The scatter-textures data, used by the pattern features, now include a random
+                    transform option based on chosen seed. </p>
+              </li>
+              <li>
+                <p>
+                  <b>new-feature:</b>The 'noise' universal features mask now includes
+                  a random transform seed slider.
+                </p>
+              </li>
+              <li>
+                <p>
+                  <b>new-feature:</b> We implemented a master seed in the extra panel
+                  that has an influence on every other scatter5 seed of your
+                  blend file. <br />Changing this seed is a fast way to iterate
+                  on your environment design (Pro tip: you can animate this seed
+                  with the '#frame' driver, and run an animation).
+                </p>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p><b>improvement:</b> 3 new distribution modes:</p>
+        <ul>
+          <li>
+            <ul class="july_logs_ul">
+              <li>
+                <p>
+                  <b>new-feature:</b> New "Stable deform" distribution mode. This
+                  distribution method is based on UV space and is ideal when you
+                  are actively deforming/animating your emitting surface, as the
+                  location of instances will stay stable.
+                </p>
+              </li>
+              <li>
+                <p><b>new-feature:</b> New "Volume" distribution mode.</p>
+              </li>
+              <li>
+                <p>
+                  <b>new-feature:</b> New "Per Edge" distribution mode. Either choose
+                  to place your instance per edges center or align the instance
+                  following the edge direction. An extra "edge length influence"
+                  feature is available in the scale category.&nbsp;
+                </p>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p><b> improvement:</b> Wind features improvements:</p>
+        <ul>
+          <li>
+            <ul class="july_logs_ul">
+              <li>
+                <p>
+                  <b> improvement:</b> The wind-wave feature is now loop-able by
+                  default, it will automatically adapt depending on your scene
+                  start/end frames.
+                </p>
+              </li>
+              <li>
+                <p>
+                  <b> improvement:</b> We exposed the 'distortion" slider of the
+                  wind-wave pattern.
+                </p>
+              </li>
+              <li>
+                <p>
+                  <b> improvement:</b> The turbulence feature is now optionally
+                  loop-able, it will automatically adapt depending on your scene
+                  start/end frames.
+                </p>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p><b> improvement:</b> <i>"Per Face"</i> distribution mode improvements:</p>
+        <ul>
+          <li>
+            <ul class="july_logs_ul">
+              <li>
+                <p>
+                  <b> improvement:</b> The default tangent that stays stable even when
+                  rotating a face.
+                </p>
+              </li>
+              <li>
+                <p>
+                  <b>new-feature:</b> New "face size influence" feature is available in
+                  the scale category.&nbsp;
+                </p>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p>
+          <b>new-feature:</b> Scatter5 can automatically hide the system(s) when hiding
+          the emitter. <br />This update behavior is available on the 'Extra'
+          panel, it will be turned off by default.
+        </p>
+      </li>
+      <li>
+        <p>
+          <b>new-feature:</b> The placeholders now have preview icons and we added 10
+          new placeholder objects. This means you might need to re-select your
+          previous placeholder object when converting a scatter system from 5.0
+          or 5.1.
+        </p>
+      </li>
+      <li>
+        <p>
+          <b>new-feature:</b> New "Boundary" tangent alignment feature, ideal for
+          hard-surface scatter where instances should stay aligned according to
+          the surface boundary edges.
+        </p>
+      </li>
+      <li>
+        <p>
+          <b>new-feature:</b> All Scatter5 properties now partially support
+          keyframes/drivers. Be aware that blender will store this animation
+          data depending on your scatter system list order, this is sadly a
+          blender limitation that we cannot change.
+        </p>
+      </li>
+      <li>
+        <p>
+          <b>new-feature:</b>: New "Face Preview" visibility feature. Useful when
+          working with large emitter surfaces, as you are able to sample a
+          preview area on the viewport and render the full area on render.
+        </p>
+      </li>
+      <li>
+        <p>
+          <b>new-feature:</b> The "Remove Near" feature now has an extra "Consider
+          Volume" option.
+        </p>
+      </li>
+      <li>
+        <p>
+          <b>improvement:</b> The curvature/border abiotic features are now calculated
+          in real-time.
+        </p>
+      </li>
+      <li>
+        <p>
+          <b>improvement:</b> The camera update dependencies are now set on the 'halt'
+          mode by default. It is now also possible to set a custom update rate.
+        </p>
+      </li>
+      <li>
+        <p>
+          <b>improvement:</b> The collections pointer properties now have an "Add"
+          operator to quickly create a collection containing the selected
+          objects.
+        </p>
+      </li>
+      <li>
+        <p>
+          <b>improvement:</b> Clearly comprehend which categories of settings are being
+          activated with the new sub panels icons.
+        </p>
+      </li>
+      <li>
+        <p>
+          <b>improvement:</b>: All our modal operators now have a new info box interface
+          to display shortcuts or other information.
+        </p>
+      </li>
+      <li>
+        <p>
+          <b>improvement:</b> The enter manual mode operator now retains the last
+          brushes used.
+        </p>
+      </li>
+      <li>
+        <p><b>improvement:</b>: Better performance when hiding scatter system(s).</p>
+      </li>
+      <li>
+        <p>
+          <b>improvement:</b> A new warning message subpanel will appear when needed in
+          the tweaking panel.
+        </p>
+      </li>
+      <li>
+        <p>
+          <b>improvement:</b> Working on multiple unique scenes is now fully supported.
+        </p>
+      </li>
+      <li>
+        <p>
+          <b>improvement:</b> Linking a scatter_obj from another file is now fully
+          supported.
+        </p>
+      </li>
+      <li>
+        <p>
+          <b>improvement:</b> The property math operation is now also supported on
+          other distribution modes, and on the default scale feature.
+        </p>
+      </li>
+      <li>
+        <p>
+          <b>bugfix:</b> Error message when using the draw bezier area operator from
+          the quick scatter mode.
+        </p>
+      </li>
+      <li>
+        <p><b>bugfix:</b> Error with manual mode shortcuts.</p>
+      </li>
+    </ul>
+  </div>
+
+  <div class="faq-item">
+    <div class="border_hr">
+      <h2 class="faq-question">5.0 <i>17 December 2021</i></h2>
+      <i class="faq-icon fa fa-angle-down"></i>
+    </div>
+    <ul class="faq-answer">
+      <img src="../img/drop6.jpg" alt="" />
+      <br />
+      <p>
+        <i><b>Blender Compatibility:</b> Blender 3.0 </i>
+      </p>
+      <p>
+        <i><b>Retro Compatibility: </b> Accepts system(s) made with Scatter
+          <b> 5.0/5.1 </b>
+        </i>
+      </p>
+      <p>
+        <i><b>Credit: </b> Hero Artwork by Florent Lebrun </i>
+      </p>
+      <br />
+
+      <li>
+        <p>
+          <b>important note: </b> We updated the scatter5 geometry node engine
+          to blender 3.2.<br />
+          please run the "update node-tree" operator in order to convert your
+          scatter system(s) first.&nbsp;
+        </p>
+      </li>
+    </ul>
+  </div>
+
+  <div class="faq-item">
+    <div class="border_hr">
+      <h2 class="faq-question">4.1 <i>20 August 2021</i></h2>
+      <i class="faq-icon fa fa-angle-down"></i>
+    </div>
+    <ul class="faq-answer">
+      <p>
+        <i><b>Blender Compatibility:</b> Blender 3.0 </i>
+      </p>
+      <p>
+        <i><b>Retro Compatibility: </b> Accepts system(s) made with Scatter
+          <b> 5.0/5.1 </b>
+        </i>
+      </p>
+      <br />
+
+      <li>
+        <p>
+          <b>important note: </b> Terrascape packages no longer install as a
+          plugin, as blender 2.93 plugin zip file installation process changed,
+          you will need to drag&drop them in your library manually.
+        </p>
+      </li>
+      <li>
+        <p>
+          <b>important note: </b> There are few Issues with the standalone addon
+          Lodify, that we shall correct soon.
+        </p>
+      </li>
+      <li>
+        <p>
+          <b>important note: </b> The TerraScape biomes are being converted to
+          the new Scatter5 Platform.
+        </p>
+      </li>
+      <li>
+        <p>
+          <b>bugfix: </b> fixing the biome manager window no longer opening
+          correctly due to a 2.93 issue.
+        </p>
+      </li>
+    </ul>
+  </div>
+
+  <div class="faq-item">
+    <div class="border_hr">
+      <h2 class="faq-question">4.0 <i>24 November 2020</i></h2>
+      <i class="faq-icon fa fa-angle-down"></i>
+    </div>
+    <ul class="faq-answer">
+      <p>
+        <i><b>Blender Compatibility:</b> Blender 3.0 </i>
+      </p>
+      <p>
+        <i><b>Retro Compatibility: </b> Accepts system(s) made with Scatter
+          <b> 5.0/5.1 </b>
+        </i>
+      </p>
+      <br />
+
+      <li>
+        <p>
+          <b>improvement:</b> Simpler installation with Lodify, it is shipped inside
+          the .zip and you can enable it directly inside the Scatter
+          addonpref.&nbsp;
+        </p>
+      </li>
+      <li>
+        <p>
+          <b>improvement:</b> The particles per square meters/kilometers operator now
+          will take masked areas into consideration (optional).&nbsp;
+        </p>
+      </li>
+      <li>
+        <p><b>improvement:</b> Apply Object Scale automatically when scattering.</p>
+      </li>
+      <li>
+        <p>
+          <b>improvement:</b> New warning message on masks panel if your terrain
+          doesn't have enough vertices.
+        </p>
+      </li>
+      <li>
+        <p><b>improvement:</b> New export panel:</p>
+        <ul class="july_logs_ul">
+          <li>
+            <ul>
+              <li>
+                <p>
+                  <b>improvement:</b> moved the "export scattering masks to
+                  vertex-colors" in this new panel.
+                </p>
+              </li>
+              <li>
+                <p>
+                  <b>new-feature:</b> New "convert particles as objects/meshes"
+                  operator.
+                </p>
+              </li>
+              <li>
+                <p>
+                  <b>new-feature:</b> New "export visible particles as .json" operator
+                  for Game Developers.
+                </p>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p><b>new-feature:</b> New Scattering Masks:</p>
+        <ul class="july_logs_ul">
+          <li>
+            <ul>
+              <li>
+                <p>
+                  <b>new-feature:</b> particle proximity Mask (add/remove particles
+                  near other particles).&nbsp;
+                </p>
+              </li>
+              <li>
+                <p>
+                  <b>new-feature:</b> shadow Mask (distribute particles by shadow).
+                </p>
+              </li>
+              <li>
+                <p>
+                  <b>new-feature:</b> 2d bezier area Mask (remove particles
+                  inside/outside the area of a closed bezier curve).
+                </p>
+              </li>
+              <li>
+                <p>
+                  <b>new-feature:</b> Object-Collision Mask (remove particles
+                  inside/outside mesh-object within chosen collection).
+                </p>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p>
+          <b>new-feature:</b> Duplicate the Selected particle systems with the new
+          duplication operator.
+        </p>
+      </li>
+      <li>
+        <p>
+          <b>new-feature:</b> Lodify got new batch operators to automatically set-up
+          and also generate LOD's on the fly.&nbsp;
+        </p>
+      </li>
+      <li>
+        <p>
+          <b>new-feature:</b> Implemented a new 2D remesher to remesh ugly ngons more
+          easily (location: 'Scatter Panel&gt;Creation&gt;Terrain Creation').
+        </p>
+      </li>
+      <li>
+        <p>
+          <b>new-feature:</b> New operator in the mask option header to reset all
+          Scatter System(s) base vertex-group to full weight (useful if
+          terrain-mesh changed).
+        </p>
+      </li>
+      <li>
+        <p>
+          <b>bugfix:</b> apply displacement button broken due to blender new drag-and
+          drop modifiers system introduced in 2.90.
+        </p>
+      </li>
+      <li>
+        <p>
+          <b>bugfix:</b> migration to a new library folder from "Scatter Asset Library"
+          to "Asset Library".
+        </p>
+      </li>
+      <li>
+        <p>
+          <b>bugfix:</b> Removal of Terrascape packages due to circulation of
+          deprecated content.
+        </p>
+      </li>
+      <li>
+        <p><b>bugfix:</b> adjusted a few materials for eevee transparency.&nbsp;</p>
+      </li>
+    </ul>
+  </div>
+
+  <div class="faq-item">
+    <div class="border_hr">
+      <h2 class="faq-question">3.1 <i>10 September 2020</i></h2>
+      <i class="faq-icon fa fa-angle-down"></i>
+    </div>
+    <ul class="faq-answer">
+      <p>
+        <i><b>Blender Compatibility:</b> 2.83 LTS to 2.93 LTS [Outdated] </i>
+      </p>
+      <p>
+        <i><b>Retro Compatibility: </b> Accepts particle system(s) made in lower
+          versions.
+        </i>
+      </p>
+      <br />
+
+      <li>
+        <p>
+          <b>bugfix: </b> Batch particle delete operator deleting wrong particle
+          system.
+        </p>
+      </li>
+    </ul>
+  </div>
+
+  <div class="faq-item">
+    <div class="border_hr">
+      <h2 class="faq-question">3.0 <i>17 July 2020</i></h2>
+      <i class="faq-icon fa fa-angle-down"></i>
+    </div>
+    <ul class="faq-answer">
+      <p>
+        <i><b>Blender Compatibility:</b> 2.83 LTS to 2.93 LTS [Outdated] </i>
+      </p>
+      <p>
+        <i><b>Retro Compatibility: </b> Accepts particle system(s) made in lower
+          versions.
+        </i>
+      </p>
+      <br />
+
+      <li>
+        <p>
+          <b>improvement:</b> Simpler installation with Lodify, it is shipped inside
+          the .zip and you can enable it directly inside the Scatter
+          addonpref.&nbsp;
+        </p>
+      </li>
+      <li>
+        <p>
+          <b>improvement:</b> The particles per square meters/kilometers operator now
+          will take masked areas into consideration (optional).&nbsp;
+        </p>
+      </li>
+      <li>
+        <p><b>improvement:</b> Apply Object Scale automatically when scattering.</p>
+      </li>
+      <li>
+        <p>
+          <b>improvement:</b> New warning message on masks panel if your terrain
+          doesn't have enough vertices.
+        </p>
+      </li>
+      <li>
+        <p><b>improvement:</b> New export panel:</p>
+        <ul class="july_logs_ul">
+          <li>
+            <ul>
+              <li>
+                <p>
+                  <b>improvement:</b>moved the "export scattering masks to
+                  vertex-colors" in this new panel.
+                </p>
+              </li>
+              <li>
+                <p>
+                  New "convert particles as objects/meshes"
+                  operator.
+                </p>
+              </li>
+              <li>
+                <p>
+                  <b>new-feature:</b> New "export visible particles as .json" operator
+                  for Game Developers.
+                </p>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p><b>new-feature:</b> New Scattering Masks:</p>
+        <ul class="july_logs_ul">
+          <li>
+            <ul>
+              <li>
+                <p>
+                  <b>new-feature:</b> particle proximity Mask (add/remove particles
+                  near other particles).&nbsp;
+                </p>
+              </li>
+              <li>
+                <p>
+                  <b>new-feature:</b> shadow Mask (distribute particles by shadow).
+                </p>
+              </li>
+              <li>
+                <p>
+                  <b>new-feature:</b> 2d bezier area Mask (remove particles
+                  inside/outside the area of a closed bezier curve).
+                </p>
+              </li>
+              <li>
+                <p>
+                  <b>new-feature:</b> Object-Collision Mask (remove particles
+                  inside/outside mesh-object within chosen collection).
+                </p>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p>
+          <b>new-feature:</b> Duplicate the Selected particle systems with the new
+          duplication operator.
+        </p>
+      </li>
+      <li>
+        <p>
+          <b>new-feature:</b> : Lodify got new batch operators to automatically set-up
+          and also generate LOD's on the fly.&nbsp;
+        </p>
+      </li>
+      <li>
+        <p>
+          <b>new-feature:</b> Implemented a new 2D remesher to remesh ugly ngons more
+          easily (location: 'Scatter Panel&gt;Creation&gt;Terrain Creation').
+        </p>
+      </li>
+      <li>
+        <p>
+          <b>new-feature:</b> New operator in the mask option header to reset all
+          Scatter System(s) base vertex-group to full weight (useful if
+          terrain-mesh changed).
+        </p>
+      </li>
+      <li>
+        <p>
+          <b> bugfix:</b> apply displacement button broken due to blender new drag-and
+          drop modifiers system introduced in 2.90.
+        </p>
+      </li>
+      <li>
+        <p>
+          <b> bugfix:</b> migration to a new library folder from "Scatter Asset Library"
+          to "Asset Library".
+        </p>
+      </li>
+      <li>
+        <p>
+          <b> bugfix:</b> Removal of Terrascape packages due to circulation of
+          deprecated content.
+        </p>
+      </li>
+      <li>
+        <p> <b> bugfix:</b> adjusted a few materials for eevee transparency.&nbsp;</p>
+      </li>
+    </ul>
+  </div>
+
+  <div class="faq-item">
+    <div class="border_hr">
+      <h2 class="faq-question">2.1 <i>02 May 2020</i></h2>
+      <i class="faq-icon fa fa-angle-down"></i>
+    </div>
+    <ul class="faq-answer">
+      <p>
+        <i><b>Blender Compatibility:</b> 2.83 LTS to 2.93 LTS [Outdated] </i>
+      </p>
+      <p>
+        <i><b>Retro Compatibility: </b> Accepts particle system(s) made in lower
+          versions.
+        </i>
+      </p>
+      <br />
+
+      <li>
+        <p><b> improvement:</b> faster assets appending.</p>
+      </li>
+      <li>
+        <p>
+          <b>bugfix: </b> Displacement features replacing random texture of
+          user.
+        </p>
+      </li>
+      <li>
+        <p>
+          <b>bugfix: </b> Broken preset creation due to wrong encoding (UTF-8)
+          format.
+        </p>
+      </li>
+    </ul>
+  </div>
+
+  <div class="faq-item">
+    <div class="border_hr">
+      <h2 class="faq-question">2.0 <i>26 April 2020</i></h2>
+      <i class="faq-icon fa fa-angle-down"></i>
+    </div>
+    <ul class="faq-answer">
+      <p>
+        <i><b>Blender Compatibility:</b> 2.83 LTS to 2.93 LTS [Outdated] </i>
+      </p>
+      <p>
+        <i><b>Retro Compatibility: </b> Accepts particle system(s) made in lower
+          versions.
+        </i>
+      </p>
+      <br />
+
+      <li>
+        <p>
+          <b>improvement:</b> Installation is much more simple, install Scatter as zip
+          and it&rsquo;s done.
+        </p>
+      </li>
+      <li>
+        <p>
+          <b>improvement:</b> General UI reworks with a clear header/sub-header system
+          + custom dedicated icons.
+        </p>
+      </li>
+      <li>
+        <p>
+          <b>improvement:</b> The texture feature got it&rsquo;s own panel now, called
+          &ldquo;Clustering&rdquo;, with a better workflow, randomization
+          options and batch operations.
+        </p>
+      </li>
+      <li>
+        <p>
+          <b>improvement:</b> Performance boost for features that are managing
+          modifiers (painting/boolean curves/slope/altitude/border/clipping).
+        </p>
+      </li>
+      <li>
+        <p>
+          <b>improvement:</b> The main particle-list/selection area where all p-systems
+          are located got an overhaul with new handy shortcuts and selection
+          props.
+        </p>
+      </li>
+      <li>
+        <p><b>improvement:</b>Custom user preset and Biome creation got a rework.</p>
+      </li>
+      <li>
+        <p><b>improvement:</b> The batch panel now got active sliders.</p>
+      </li>
+      <li>
+        <p><b>improvement:</b> Better user message delivery system.</p>
+      </li>
+      <li>
+        <p>
+          <b>improvement:</b> &ldquo;On Creation Options&rdquo; got a workflow/GUI
+          rework with new settings.
+        </p>
+      </li>
+      <li>
+        <p>
+          <b>new-feature:</b> Replaced &ldquo;Proxify&rdquo; "with
+          &ldquo;Lodify&rdquo;, a custom universal free LOD system.
+        </p>
+      </li>
+      <li>
+        <p><b>new-feature:</b> New Point Cloud (beta) Feature.</p>
+      </li>
+      <li>
+        <p>
+          <b>new-feature:</b> In each sub-header, for each feature of Scatter,
+          there&rsquo;s a new documentation operator, that will show you infos
+          and tips about the concerned feature.
+        </p>
+      </li>
+      <li>
+        <p><b>new-feature:</b> New custom user biome category.</p>
+      </li>
+      <li>
+        <p><b>new-feature:</b> New Altitude feature.</p>
+      </li>
+      <li>
+        <p><b>new-feature:</b> New Slope feature.</p>
+      </li>
+      <li>
+        <p><b>new-feature:</b> New Border feature.</p>
+      </li>
+      <li>
+        <p>
+          <b>new-feature:</b> New &ldquo;hide all particles&rdquo; operator available
+          in the operator search menu.
+        </p>
+      </li>
+      <li>
+        <p><b>new-feature:</b> New Curve mapping presets/functions.</p>
+      </li>
+      <li>
+        <p>
+          <b>new-feature:</b> Each painting layer have it's own reverse influence
+          ability.
+        </p>
+      </li>
+      <li>
+        <p>
+          <b>new-feature:</b> Upgraded the Boolean Curve system, have full control over
+          the curve falloff.
+        </p>
+      </li>
+      <li>
+        <p>
+          <b>new-feature:</b> The statistic panel got a huge upgrade, it&rsquo;s now
+          real-time and more precise.
+        </p>
+      </li>
+      <li>
+        <p>
+          <b>bugfix:</b> Fixed some bugs due to default name data translation if
+          enabled
+        </p>
+      </li>
+    </ul>
+  </div>
+
+  <div class="faq-item">
+    <div class="border_hr">
+      <h2 class="faq-question">1.0 <i>03 January 2020</i></h2>
+      <i class="faq-icon fa fa-angle-down"></i>
+    </div>
+    <ul class="faq-answer">
+      <p>
+        <i><b>Blender Compatibility:</b> 2.83 LTS to 2.93 LTS [Outdated] </i>
+      </p>
+      <p>
+        <i><b>Retro Compatibility: </b> Accepts particle system(s) made in lower
+          versions.
+        </i>
+      </p>
+      <br />
+
+      <li>
+        <p>
+          <b> Initial release</b>
+        </p>
+      </li>
+    </ul>
+  </div>
+</div>
+</div>
+
+
+<script>
+  // seach bar code
+  var searchIcon = document.querySelector('.search-icon');
+  var searchBox = document.querySelector('.search-box');
+  var closeIcon = document.querySelector('.close-icon');
+
+  searchIcon.addEventListener('click', function () {
+    searchBox.classList.toggle('active');
+    closeIcon.classList.toggle('active');
+  });
+
+  closeIcon.addEventListener('click', function () {
+    searchBox.classList.remove('active');
+    closeIcon.classList.remove('active');
+  });
+
+
+  /// faq javascript
+  var faqItems = document.querySelectorAll(".faq-item");
+
+faqItems.forEach(function (item) {
+  var question = item.querySelector(".faq-question");
+  var icon = item.querySelector(".faq-icon");
+  var answer = item.querySelector(".faq-answer");
+
+  if (!answer.style.display || answer.style.display === "none") {
+    answer.style.display = "none";
+  }
+
+  // Add a click event listener to the whole border_hr div
+  var borderHr = item.querySelector(".border_hr");
+  borderHr.addEventListener("click", function (event) {
+    if (answer.style.display === "none") {
+      answer.style.display = "block";
+      icon.classList.remove("fa-angle-down");
+      icon.classList.add("fa-angle-up");
+    } else {
+      answer.style.display = "none";
+      icon.classList.remove("fa-angle-up");
+      icon.classList.add("fa-angle-down");
+    }
+  });
+});
+
+</script>

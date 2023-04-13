@@ -1,0 +1,836 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+  integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+<link rel="stylesheet" href="../styles.css" />
+
+<div class="troubleshoot">
+  <div class="scattering_main_title">
+    <h1 style="padding-left: 20px">Random Distribution</h1>
+    <p style="padding-left: 20px">The simplest distribution method available</p>
+  </div>
+  <div class="small_screen_hide">
+    <div class="search-container">
+      <div class="search-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="search-box">
+        <form>
+          <div class="close-icon">
+            <i class="fa fa-arrow-left"></i>
+          </div>
+          <div class="search-input">
+            <input type="text" placeholder="Search...">
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="prerequisie_section">
+  <div class="example_v_card">
+    <div class="video_cont_fea">
+      <embed height="246" width="470" ?autoplay="1" src="https://thumbs.gfycat.com/EducatedAlarmingAnchovy-mobile.mp4"
+        type="" />
+      <div class="video_views">
+        <span>16.9K views</span>
+        <img src="../img/v_tag.png" alt="video tag" />
+      </div>
+    </div>
+    <div class="video_log">
+      <img src="../img/video_tag.png" alt="" />
+      <div class="video_log_det">
+        <p>BD3D</p>
+        <span>@_bd3d_</span>
+      </div>
+    </div>
+    <div class="video_desc_fea">
+      <h3>Random Distribution</h3>
+      <p>
+        The random distribution method is the simplest method available, it will
+        distribute instances randomly on the designated surface(s) until
+        reaching the defined density per square meter area threshold.
+      </p>
+      <br />
+      <p>
+        Right below the density and seed properties is the
+        <i>"Operation Coefficient"</i> layout, these settings will let you
+        quickly multiply/ divide/ add/ subtract the density by a given factor.
+      </p>
+      <h3>Default Alignment:</h3>
+      <p>
+        The default normal/tangent alignments of instances for this distribution
+        method will be the surfaces Z and Y axis.
+      </p>
+    </div>
+  </div>
+
+  <div class="example_v_card">
+    <div class="video_cont_fea">
+      <embed height="246" width="470" ?autoplay="1" src="https://thumbs.gfycat.com/AgitatedPlaintiveFawn-mobile.mp4"
+        type="" />
+      <div class="video_views">
+        <span>16.7K views</span>
+        <img src="../img/v_tag.png" alt="video tag" />
+      </div>
+    </div>
+    <div class="video_log">
+      <img src="../img/video_tag.png" alt="" />
+      <div class="video_log_det">
+        <p>BD3D</p>
+        <span>@_bd3d_</span>
+      </div>
+    </div>
+    <div class="video_desc_fea">
+      <h3>Limit Collision Option</h3>
+      <p>
+        The limit collision feature is useful when we want to ensure a minimal
+        distance between the distributed points from a given distance radius.
+      </p>
+      <br />
+      <h3>Beware:</h3>
+      <p>
+        The limit collision feature is using the poisson disk algorithm which is
+        slower to calculate, especially when dealing with an unnecessary heavy
+        density, do not abuse it.
+      </p>
+      <br />
+      <h3>Beginner Misconception:</h3>
+      <p>
+        Achieving physically accurate collisions between, let say, individual
+        branches of trees within a forest, or individual blades of grass within
+        a field, is not a realistic expectation of what is currently possible
+        with current 3D technologies. It also breaks the principle of
+        instancing!
+      </p>
+    </div>
+  </div>
+
+  <div class="example_v_card">
+    <div class="video_cont_fea">
+      <embed height="246" width="470" ?autoplay="1" src="https://thumbs.gfycat.com/AmpleScaryInchworm-mobile.mp4"
+        type="" />
+      <div class="video_views">
+        <span>16.1K views</span>
+        <img src="../img/v_tag.png" alt="video tag" />
+      </div>
+    </div>
+    <div class="video_log">
+      <img src="../img/video_tag.png" alt="" />
+      <div class="video_log_det">
+        <p>BD3D</p>
+        <span>@_bd3d_</span>
+      </div>
+    </div>
+    <div class="video_desc_fea">
+      <h3>Global vs Local Space Distribution</h3>
+      <p>
+        As the distribution density is defined by a distance unit, we need to
+        calculate our surface square area, therefore our surface scale has to be
+        taken into consideration!
+      </p>
+      <br />
+      <p>
+        In the local space, the surface scale is not applied therefore the
+        density will stay stable when rescaling the object, in global space, the
+        scale will be applied, and the surface area and density will adapt in
+        real time.
+      </p>
+    </div>
+  </div>
+
+  <div class="example_v_card">
+    <div class="video_cont_fea">
+      <embed height="246" width="470" ?autoplay="1"
+        src="https://thumbs.gfycat.com/DimCleanAntarcticgiantpetrel-mobile.mp4" type="" />
+      <div class="video_views">
+        <span>16.9K views</span>
+        <img src="../img/v_tag.png" alt="video tag" />
+      </div>
+    </div>
+    <div class="video_log">
+      <img src="../img/video_tag.png" alt="" />
+      <div class="video_log_det">
+        <p>BD3D</p>
+        <span>@_bd3d_</span>
+      </div>
+    </div>
+    <div class="video_desc_fea">
+      <h3>Seed Values & Dice Operator</h3>
+      <p>
+        When you see a seed slider and a dice icon on a feature, it means that
+        the effect can be randomized depending on a chosen seed value. The
+        considerable radical seed value you can change is the seed of your
+        distribution.
+      </p>
+      <br />
+      <h3>Pro-Tip:</h3>
+      <p>
+        A master seed is available in the extra panel, this master seed value
+        will have an influence on every single Geo-Scatter seed present in your
+        .blend file. Rendering an animation of this master seed with a '#frame'
+        driver is the best way to iterate over your environment design quickly.
+      </p>
+      <br />
+      <h3>Careful:</h3>
+
+      <p>Editing the surfaces meshes will reset seeds values.</p>
+    </div>
+  </div>
+</div>
+
+<div class="troubleshoot">
+  <div class="scattering_main_title">
+    <h1 style="padding-left: 25px">Mesh Element Distribution</h1>
+    <p style="padding-left: 25px">Distribute per verts/edges/faces</p>
+  </div>
+</div>
+
+<div class="prerequisie_section">
+  <div class="extra_fea_section">
+    <div class="example_v_card">
+      <div class="video_cont_fea">
+        <embed height="246" width="470" ?autoplay="1"
+          src="https://thumbs.gfycat.com/UnnaturalThoroughAllensbigearedbat-mobile.mp4" type="" />
+        <div class="video_views">
+          <span>16.9K views</span>
+          <img src="../img/v_tag.png" alt="video tag" />
+        </div>
+      </div>
+      <div class="video_log">
+        <img src="../img/video_tag.png" alt="" />
+        <div class="video_log_det">
+          <p>BD3D</p>
+          <span>@_bd3d_</span>
+        </div>
+      </div>
+      <div class="video_desc_fea">
+        <h3>Per Face Distribution</h3>
+        <p>
+          Distribute one instance per face center. By default, the tangent axis of
+          the instances will be stable, even when rotating a face.
+        </p>
+        <br />
+
+        <h3>Default Alignment:</h3>
+        <p>
+          By default, the normal of the nstances will be aligned toward the face's
+          normal direction, and the default tangent alignment will be based on the
+          adjacents vertices ID, therefore the alignment will stay stable even
+          when rotating a face.
+        </p>
+      </div>
+    </div>
+
+    <div class="example_v_card">
+      <div class="video_cont_fea">
+        <embed height="246" width="470" ?autoplay="1" src="https://thumbs.gfycat.com/SlimyRemoteIcefish-mobile.mp4"
+          type="" />
+        <div class="video_views">
+          <span>16.9K views</span>
+          <img src="../img/v_tag.png" alt="video tag" />
+        </div>
+      </div>
+      <div class="video_log">
+        <img src="../img/video_tag.png" alt="" />
+        <div class="video_log_det">
+          <p>BD3D</p>
+          <span>@_bd3d_</span>
+        </div>
+      </div>
+      <div class="video_desc_fea">
+        <h3>Exclusive Face Size Feature</h3>
+        <p>
+          A new option will be available to scale the instances according to the
+          face surface area.
+        </p>
+      </div>
+    </div>
+
+    <div class="example_v_card">
+      <div class="video_cont_fea">
+        <embed height="246" width="470" ?autoplay="1"
+          src="https://thumbs.gfycat.com/DecimalSolidAfricanfisheagle-mobile.mp4" type="" />
+        <div class="video_views">
+          <span>16.9K views</span>
+          <img src="../img/v_tag.png" alt="video tag" />
+        </div>
+      </div>
+      <div class="video_log">
+        <img src="../img/video_tag.png" alt="" />
+        <div class="video_log_det">
+          <p>BD3D</p>
+          <span>@_bd3d_</span>
+        </div>
+      </div>
+      <div class="video_desc_fea">
+        <h3>Per Edge Distribution</h3>
+        <p>
+          Distribute one instance per edge center, or first vertex of an edge.
+          Selection options are available to only scatter on edges un-connected to
+          faces, or only on boundary edges.
+        </p>
+        <br />
+        <h3>Default Alignment:</h3>
+        <p>
+          By default, the normal/tangent of the instances will be aligned toward
+          the direction of the edges, depending on your position mode. All default
+          alignments are stable, relative to the edges, even when moving or
+          extruding the mesh.
+        </p>
+      </div>
+    </div>
+
+    <div class="example_v_card">
+      <div class="video_cont_fea">
+        <embed height="246" width="470" ?autoplay="1"
+          src="https://thumbs.gfycat.com/HoarseEnergeticFrilledlizard-mobile.mp4" type="" />
+        <div class="video_views">
+          <span>16.9K views</span>
+          <img src="../img/v_tag.png" alt="video tag" />
+        </div>
+      </div>
+      <div class="video_log">
+        <img src="../img/video_tag.png" alt="" />
+        <div class="video_log_det">
+          <p>BD3D</p>
+          <span>@_bd3d_</span>
+        </div>
+      </div>
+      <div class="video_desc_fea">
+        <h3>Exclusive Edge Length Feature</h3>
+        <p>
+          A new option will be available to scale the instances on XYZ according
+          to the edge length.
+        </p>
+        <br />
+        <p>
+          There are 3 scaling methods available, <i>'Frozen Scale'</i> will reset
+          all scales to 1.0, <i>'Dynamic Scale'</i> will adjust the scale starting
+          from 1.0 depending on range threshold, and 'Default Scale'.
+        </p>
+        <p>
+          This method can support up to 20 items. <br />An
+          <a href="https://sites.google.com/view/geoscatter/example-files?authuser=0">example blend file </a>is
+          available.
+        </p>
+      </div>
+    </div>
+
+
+    <div class="example_v_card">
+      <div class="video_cont_fea">
+        <embed height="246" width="470" ?autoplay="1"
+          src="https://thumbs.gfycat.com/EssentialWideeyedBellfrog-mobile.mp4" type="" />
+        <div class="video_views">
+          <span>16.9K views</span>
+          <img src="../img/v_tag.png" alt="video tag" />
+        </div>
+      </div>
+      <div class="video_log">
+        <img src="../img/video_tag.png" alt="" />
+        <div class="video_log_det">
+          <p>BD3D</p>
+          <span>@_bd3d_</span>
+        </div>
+      </div>
+      <div class="video_desc_fea">
+        <h3>Per Vertex Distribution</h3>
+        <p>Distribute one instance per vertex.</p>
+        <br />
+        <h3>Default Alignment:</h3>
+        <p>
+          The default normal/tangent alignments of instances will be the surfaces
+          Z and Y axis.
+        </p>
+      </div>
+    </div>
+
+
+    <div class="example_v_card card_hide">
+      <div class="video_cont_fea">
+        <embed height="246" width="470" ?autoplay="1"
+          src="https://thumbs.gfycat.com/EssentialWideeyedBellfrog-mobile.mp4" type="" />
+        <div class="video_views">
+          <span>16.9K views</span>
+          <img src="../img/v_tag.png" alt="video tag" />
+        </div>
+      </div>
+      <div class="video_log">
+        <img src="../img/video_tag.png" alt="" />
+        <div class="video_log_det">
+          <p>BD3D</p>
+          <span>@_bd3d_</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+<div class="troubleshoot">
+  <div class="scattering_main_title">
+    <h1 style="padding-left: 25px">Volume Distribution</h1>
+  </div>
+</div>
+
+<div class="extra_fea_section">
+  <div class="example_v_card">
+    <div class="video_cont_fea">
+      <embed height="246" width="470" ?autoplay="1" src="https://thumbs.gfycat.com/NippyKindheartedCarp-mobile.mp4"
+        type="" />
+      <div class="video_views">
+        <span>16.9K views</span>
+        <img src="../img/v_tag.png" alt="video tag" />
+      </div>
+    </div>
+    <div class="video_log">
+      <img src="../img/video_tag.png" alt="" />
+      <div class="video_log_det">
+        <p>BD3D</p>
+        <span>@_bd3d_</span>
+      </div>
+    </div>
+    <div class="video_desc_fea">
+      <h3>Density & Limit Distance</h3>
+      <p>
+        The volume distribution method will generate points inside the
+        surface(s) volume. The distribution algorithm is based on the normal
+        directions and is biased toward the Zaxis. distance option is also
+        available for this distribution method.
+      </p>
+      <br />
+
+      <h3>Default Alignment:</h3>
+      <p>
+        The default normal/tangent alignments of instances will be the surfaces
+        Z and Y axis.
+      </p>
+    </div>
+  </div>
+
+  <div class="example_v_card">
+    <div class="video_cont_fea">
+      <embed height="246" width="470" ?autoplay="1" src="https://thumbs.gfycat.com/ScornfulArcticAxolotl-mobile.mp4"
+        type="" />
+      <div class="video_views">
+        <span>16.9K views</span>
+        <img src="../img/v_tag.png" alt="video tag" />
+      </div>
+    </div>
+    <div class="video_log">
+      <img src="../img/video_tag.png" alt="" />
+      <div class="video_log_det">
+        <p>BD3D</p>
+        <span>@_bd3d_</span>
+      </div>
+    </div>
+    <div class="video_desc_fea">
+      <h3>Compatibility With Features</h3>
+      <p>Some feature(s) are not available for this distribution method:</p>
+      <ul style="padding-left: 25px">
+        <li style="list-style-type: square; padding: 5px">Mask>Vertex Group</li>
+        <li style="list-style-type: square; padding: 5px">
+          Mask>Color-Attribute
+        </li>
+        <li style="list-style-type: square; padding: 5px">Mask>Image</li>
+        <li style="list-style-type: square; padding: 5px">Mask>Material</li>
+        <li style="list-style-type: square; padding: 5px">Abiotic>Slope</li>
+        <li style="list-style-type: square; padding: 5px">
+          Abiotic>Orientation
+        </li>
+        <li style="list-style-type: square; padding: 5px">Abiotic>Curvature</li>
+        <li style="list-style-type: square; padding: 5px">Abiotic>Border</li>
+        <li style="list-style-type: square; padding: 5px">
+          Visibility>Area-Preview
+        </li>
+      </ul>
+      <p>Features relying on UV space or vertex-colors will be inconsistent</p>
+    </div>
+  </div>
+</div>
+
+<div class="troubleshoot">
+  <div class="scattering_main_title">
+    <h1 style="padding-left: 25px">Clump Distribution</h1>
+  </div>
+</div>
+
+
+<div class="prerequisie_section">
+  <div class="extra_fea_section">
+    <div class="example_v_card">
+      <div class="video_cont_fea">
+        <embed height="246" width="470" ?autoplay="1" src="https://thumbs.gfycat.com/GenerousSameGharial-mobile.mp4"
+          type="" />
+        <div class="video_views">
+          <span>16.9K views</span>
+          <img src="../img/v_tag.png" alt="video tag" />
+        </div>
+      </div>
+      <div class="video_log">
+        <img src="../img/video_tag.png" alt="" />
+        <div class="video_log_det">
+          <p>BD3D</p>
+          <span>@_bd3d_</span>
+        </div>
+      </div>
+      <div class="video_desc_fea">
+        <h3>Clump Distribution</h3>
+        <p>
+          The clump distribution method will generate two scatter at once. First,
+          it will generate the points for the clumps, then points for children
+          around each clump, depending on the radius values chosen.
+        </p>
+      </div>
+    </div>
+
+    <div class="example_v_card">
+      <div class="video_cont_fea">
+        <embed height="246" width="470" ?autoplay="1"
+          src="https://thumbs.gfycat.com/ImpoliteFrighteningHammerheadbird-mobile.mp4" type="" />
+        <div class="video_views">
+          <span>16.9K views</span>
+          <img src="../img/v_tag.png" alt="video tag" />
+        </div>
+      </div>
+      <div class="video_log">
+        <img src="../img/video_tag.png" alt="" />
+        <div class="video_log_det">
+          <p>BD3D</p>
+          <span>@_bd3d_</span>
+        </div>
+      </div>
+      <div class="video_desc_fea">
+        <h3>Exclusive Scale Falloff Feature</h3>
+        <p>
+          When choosing the clump distribution mode, a new scale falloff feature
+          will be available in the scale subpanel. The scale will be driven by
+          your falloff distance.
+        </p>
+      </div>
+    </div>
+
+    <div class="example_v_card">
+      <div class="video_cont_fea">
+        <embed height="246" width="470" ?autoplay="1" src="https://thumbs.gfycat.com/DependableGrandAlpaca-mobile.mp4"
+          type="" />
+        <div class="video_views">
+          <span>16.9K views</span>
+          <img src="../img/v_tag.png" alt="video tag" />
+        </div>
+      </div>
+      <div class="video_log">
+        <img src="../img/video_tag.png" alt="" />
+        <div class="video_log_det">
+          <p>BD3D</p>
+          <span>@_bd3d_</span>
+        </div>
+      </div>
+      <div class="video_desc_fea">
+        <h3>Default Tangent Alignment</h3>
+        <p>
+          If the tangent alignment feature is disabled, the default tangent
+          alignment of your children will be the direction from the parent clump
+          center. This is very useful for plants, as the leaves or branches will
+          need to be aligned as such.
+        </p>
+      </div>
+    </div>
+
+    <div class="example_v_card">
+      <div class="video_cont_fea">
+        <embed height="246" width="470" ?autoplay="1" src="https://thumbs.gfycat.com/RadiantLoathsomeHyrax-mobile.mp4"
+          type="" />
+        <div class="video_views">
+          <span>16.9K views</span>
+          <img src="../img/v_tag.png" alt="video tag" />
+        </div>
+      </div>
+      <div class="video_log">
+        <img src="../img/video_tag.png" alt="" />
+        <div class="video_log_det">
+          <p>BD3D</p>
+          <span>@_bd3d_</span>
+        </div>
+      </div>
+      <div class="video_desc_fea">
+        <h3>Exclusive Normal Falloff Feature</h3>
+        <p>
+          A new normal influence slider will appear in the rotation subpanel, to
+          tilt your children's normal direction toward/outward clumps center.
+        </p>
+        <br />
+        <p>
+          There are 3 scaling methods available, <i>'Frozen Scale'</i> will reset
+          all scales to 1.0, <i>'Dynamic Scale'</i> will adjust the scale starting
+          from 1.0 depending on range threshold, and 'Default Scale'.
+        </p>
+        <p>
+          This method can support up to 20 items. <br />An
+          <a href="https://sites.google.com/view/geoscatter/example-files?authuser=0">example blend file </a>is
+          available.
+        </p>
+      </div>
+    </div>
+
+    <div class="example_v_card" style="margin-left: 25px;">
+      <div class="video_cont_fea">
+        <embed height="246" width="470" ?autoplay="1" src="https://thumbs.gfycat.com/LeftFaintChupacabra-mobile.mp4"
+          type="" />
+        <div class="video_views">
+          <span>16.9K views</span>
+          <img src="../img/v_tag.png" alt="video tag" />
+        </div>
+      </div>
+      <div class="video_log">
+        <img src="../img/video_tag.png" alt="" />
+        <div class="video_log_det">
+          <p>BD3D</p>
+          <span>@_bd3d_</span>
+        </div>
+      </div>
+      <div class="video_desc_fea">
+        <h3>Use Clumps as Instancing Clusters</h3>
+        <p>
+          It's possible to assign the instances per clump! If the instance picking
+          method is set to cluster, a new toggle will be available, exclusively
+          for the clump distribution mode
+        </p>
+      </div>
+    </div>
+
+    <div class="clump_dist_card">
+      <img src="../img/dist1.jpg" alt="" />
+      <h3 style="margin-top: 20px; padding-top: 20px">Pro Tip:</h3>
+      <p>
+        If you do not need the parametric aspect of clump distribution, we'd
+        suggest working with random distribution while using assets modeled in
+        clump already. It will be more friendly to control, for both yourself and
+        your computer.
+      </p>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="features_border"></div>
+
+<div class="distribution_border_sec">
+  <div class="example_v_card">
+    <div class="video_cont_fea">
+      <embed height="246" width="470" ?autoplay="1" src="https://thumbs.gfycat.com/OilyDependableApatosaur-mobile.mp4"
+        type="" />
+      <div class="video_views">
+        <span>16.9K views</span>
+        <img src="../img/v_tag.png" alt="video tag" />
+      </div>
+    </div> <br><br><br><br> <br><br>
+    <div class="video_log">
+      <img src="../img/video_tag.png" alt="" />
+      <div class="video_log_det">
+        <p>BD3D</p>
+        <span>@_bd3d_</span>
+      </div>
+    </div>
+    <div class="video_desc_dist">
+      <h3>Individual Models Advantages:</h3>
+      <ul style="margin-left: 15px;">
+        <li style="list-style-type: square;">Ease of use, lesser density is needed.</li>
+        <li style="list-style-type: square;">Faster to render</li>
+        <li style="list-style-type: square;">Less lag</li>
+      </ul><br>
+
+      <h3>Clump Models Inconveniences:</h3>
+      <ul style="margin-left: 15px;">
+        <li style="list-style-type: square;">Not ideal for close-ups.</li>
+        <li style="list-style-type: square;">Not precise when masking, or near borders.<br />( Note that there is a
+          technique available for clean <br> borders/collision. see <a
+            href="https://sites.google.com/view/geoscatter/example-files?authuser=0">Clean Lawn, Near Pavements <br> and
+            Borders</a> )</li>
+      </ul>
+      </p>
+    </div>
+  </div>
+
+  <div class="distribution_sec_desc">
+    <h3>Scattering Clump Models</h3> <br>
+    <p>
+      Sometimes you might encounter models made in "Clump" in your environmental
+      work, these models are extremely useful for filling large areas, as we
+      need way less density to create a meadow with a large clump of grass than
+      with individual tiny grass blades for example.
+    </p> <br>
+
+    <p>
+      While clump models are fundamentally needed for a majority of
+      environments, they are not ideal in some scenarios. It is always important
+      to use the appropriate model for your scene.
+    </p><br>
+    <p>
+      Note that assets in the starter library are all in clumps, however, feel
+      free to edit them to narrower clumps if needed. Here's below a comparative
+      table
+    </p>
+    <br />
+    <br />
+    <br>
+
+    <h3>Individual Models Advantages:</h3>
+    <ul style="margin-left: 15px;">
+      <li style="list-style-type: square;">Clean near borders, more precise area control.</li>
+      <li style="list-style-type: square;">Better for close-up shots.</li>
+    </ul><br>
+
+    <h3>Individual Models Inconveniences:</h3>
+    <ul style="margin-left: 15px;">
+      <li style="list-style-type: square;">Need way more of them.</li>
+      <li style="list-style-type: square;">Slower to render</li>
+      <li style="list-style-type: square;">Might heavily lag your viewport, sometimes impossible to use.</li>
+    </ul>
+  </div>
+</div>
+
+
+<div class="troubleshoot">
+  <div class="scattering_main_title">
+    <h1 style="padding-left: 25px">Stable Deform Distribution</h1>
+    <p style="padding-left: 25px">Ideal for animated mesh that deforms!</p>
+  </div>
+</div>
+
+
+<div class="distribution_border_sec">
+  <div class="example_v_card">
+    <div class="video_cont_fea">
+      <embed height="246" width="470" ?autoplay="1" src="https://thumbs.gfycat.com/KeenJointBanteng-mobile.mp4"
+        type="" />
+      <div class="video_views">
+        <span>16.9K views</span>
+        <img src="../img/v_tag.png" alt="video tag" />
+      </div>
+    </div>
+    <div class="video_log">
+      <img src="../img/video_tag.png" alt="" />
+      <div class="video_log_det">
+        <p>BD3D</p>
+        <span>@_bd3d_</span>
+      </div>
+    </div>
+    <div class="video_desc_fea">
+      <h3>Stable Deform Distribution</h3>
+      <p>
+        The <i>'Stable Deform'</i> distribution method is a variation of the random distribution method with the main
+        difference being that thegenerated points are being distributed within the chosen UVW space.
+      </p>
+
+      <p>
+        Because UVmaps of meshes generally stay fixed, you can freely deform/animate your surface(s) mesh in the XYZ
+        space while keeping a completely stable distribution seed and density.
+      </p>
+      <h3>Default Alignment:</h3>
+      <p>The default normal/tangent alignments of instances will be the surfaces Z and Y axis.</p>
+    </div>
+  </div>
+
+  <div class="distribution_sec_desc comparison">
+    <h3 style="padding: 0px 17px;">Comparison </h3> <br>
+    <p style="padding: 0px 17px;">
+      Above: <i>Random distribution method</i> <br> <br>
+      Below: <i>Stable deform method</i> <br>
+    </p>
+
+    <div class="example_v_card">
+      <div class="video_cont">
+        <embed height="194" width="370" ?autoplay="1" src="https://thumbs.gfycat.com/FreeGlamorousBug-mobile.mp4"
+          type="" />
+        <div class="video_views">
+          <span>16.9K views</span>
+          <img src="../img/v_tag.png" alt="video tag" />
+        </div>
+      </div>
+      <div class="video_log">
+        <img src="../img/video_tag.png" alt="">
+        <div class="video_log_det">
+          <p>BD3D</p>
+          <span>@_bd3d_</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="example_v_card" style="margin-top: 1rem;">
+      <div class="video_cont">
+        <embed height="194" width="370" ?autoplay="1" src="https://thumbs.gfycat.com/FreeGlamorousBug-mobile.mp4"
+          type="" />
+        <div class="video_views">
+          <span>16.9K views</span>
+          <img src="../img/v_tag.png" alt="video tag" />
+        </div>
+      </div>
+      <div class="video_log">
+        <img src="../img/video_tag.png" alt="">
+        <div class="video_log_det">
+          <p>BD3D</p>
+          <span>@_bd3d_</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<div class="troubleshoot">
+  <div class="scattering_main_title">
+
+    <h1 style="padding-left: 25px">Manual Distribution</h1>
+    <p style="padding-left: 25px">The manual distribution mode is a whole new workflow by itself.</p>
+  </div>
+</div>
+
+
+<div class="mode_page_text">
+  <p class="mode_page_text">
+    Please consult the <a href="https://sites.google.com/view/geoscatter/manual/manual-mode?authuser=0">manual mode
+      page</a> for information about this distribution method.
+  </p>
+</div>
+<div class="manual_dist">
+  <div class="manual_dist1">
+    <h3>Basic usage:</h3> <br>
+    <p>Scatter a new system, then in tweaking>distribution, change the distribution method to "manual". You will be able
+      to enter the dedicated manual mode environment. Note that all settings of the procedural distribution can also
+      have an influence on the point created in manual mode.</p>
+  </div>
+
+  <div class="manual_dist2">
+    <h3>Default Alignment:
+    </h3> <br>
+    <p>The default alignments will vary depending on your brush rotation settings, each point is encoded with its own
+      rotation and alignment information.</p>
+  </div>
+</div>
+
+
+<script>
+  // seach bar code
+  var searchIcon = document.querySelector('.search-icon');
+  var searchBox = document.querySelector('.search-box');
+  var closeIcon = document.querySelector('.close-icon');
+
+  searchIcon.addEventListener('click', function () {
+    searchBox.classList.toggle('active');
+    closeIcon.classList.toggle('active');
+  });
+
+  closeIcon.addEventListener('click', function () {
+    searchBox.classList.remove('active');
+    closeIcon.classList.remove('active');
+  });
+</script>

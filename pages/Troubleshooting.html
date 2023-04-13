@@ -1,0 +1,459 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+  integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+<link rel="stylesheet" href="../styles.css" />
+
+
+<div class="troubleshoot">
+  <div class="trouble_main_title">
+  <h1>Troubleshooting</h1>
+  <p style="margin-left: 5px;">
+    List of common problems. <br />
+    We do advise you to read our online manual in its entirety when you have a
+    bit of free time.
+  </p>
+</div>
+  
+  <div class="small_screen_hide">
+    <div class="search-container">
+      <div class="search-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="search-box">
+        <form>
+          <div class="close-icon">
+            <i class="fa fa-arrow-left"></i>
+          </div>
+          <div class="search-input">
+            <input type="text" placeholder="Search...">
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="trouble_all_faqs">
+  <div class="ts_dropdowns">
+    <div class="faq-container">
+      <div class="faq-item">
+        <div class="border_hr">
+          <h2 class="faq-question ts_title">My plugin won't install</h2>
+          <i class="faq-icon fa fa-angle-down"></i>
+        </div>
+        <ul class="faq-answer">
+          <li>
+            Please make sure your version of blender matches the version of the
+            plugin you are installing. <br />
+            for compatibility information about our plugin, please read the
+            release notes page.
+          </li>
+          <li><b>Try to quit your blender app & restart.</b></li>
+          <li>Are you on MACOS? this is probably an unzipping issue</li>
+        </ul>
+      </div>
+  
+      <div class="faq-item">
+        <div class="border_hr">
+          <h2 class="faq-question ts_title">I don't see my scatter</h2>
+          <i class="faq-icon fa fa-angle-down"></i>
+        </div>
+        <ul class="faq-answer">
+          <li>
+            Please verify in your outliner if some of your scatter-collections are
+            not hidden. ( Make sure to enable all outliner restriction filters, in
+            blender, there are many ways an object can be hidden in the outliner,
+            most of the time this is done by
+            <b>mistakenly hitting the horizontal numberpad of your keyboard )</b>
+          </li>
+          <li>
+            In <i>"Tweak>Distribution"</i> make sure that the distribution density
+            is not too small relative to the size of your terrain
+          </li>
+          <li>
+            You might want to apply your terrain scale, perhaps it is very big.
+            Alternatively in <i>"Tweak>Scale>DefaultScale"</i> you could set the
+            default scale reference to <i>"global" </i>
+          </li>
+          <li>
+            Please verify if your system(s) are visible in
+            "Npanel>Tweak>SystemList". You should see a screen icon activated.
+          </li>
+          <li>
+            Please verify if your scatter-system has any designated instances. In
+            "Npanel>Tweak>Instancing". No instances equal nothing displayed.
+          </li>
+          <li>
+            Please disable all features, perhaps one of them is not tweaked
+            correctly and therefore masking out everything.
+          </li>
+          <ul>
+            <li class="nested_li">
+              Most of the time the ecosystems feature might be the culprit, if you
+              create relations with a system hidden or that does not exist
+              anymore.
+            </li>
+            <li class="nested_li">A visibility feature might be responsible.</li>
+            <li class="nested_li">
+              The pattern feature might mask an unusually large area.
+            </li>
+          </ul>
+          <li>
+            Please make sure your version of blender matches the version of the
+            plugin you are installing.
+          </li>
+          <li class="nested_li">
+            Did you have a forward compatibility issue perhaps? <br />
+            Please be careful when switching blender version while working on your
+            projects, it could corrupt them forever.
+          </li>
+        </ul>
+      </div>
+  
+      <div class="faq-item">
+        <div class="border_hr">
+          <h2 class="faq-question ts_title">Incorrect scatter scale</h2>
+          <i class="faq-icon fa fa-angle-down"></i>
+        </div>
+        <ul class="faq-answer">
+          <li>
+            By default the scatter will be parented to your surface(s), it means
+            that if your surface has a scale of [100,100,100], your scattered
+            instances will be x100 as larger than the scene unit. To resolve this
+            issue you have two possible solutions:
+          </li>
+          <li class="nested_li">Apply the scale of your surface with CTRL+A</li>
+          <li class="nested_li">
+            Set your scatter default scale to "global" space instead of the
+            "local" surface space, this is located in "Tweak>Scale>Default Scale".
+          </li>
+          <li>
+            Make sure the scale of the instances you chose is set to [1,1,1] (to
+            easily retrieve your original instance go in "Tweak>Instancing" &
+            click on the select icon).
+          </li>
+          <li>
+            Make sure you are working in the correct scene scale, blender
+            beginners often forgot to follow blender native scape, 1 blender unit
+            is 1 meter.
+          </li>
+          <li>
+            Optionally you can change the default scale of your instance in
+            "Tweak>Scale>Default Scale"
+          </li>
+        </ul>
+      </div>
+  
+      <div class="faq-item">
+        <div class="border_hr">
+          <h2 class="faq-question ts_title">Incorrect instances render colors</h2>
+          <i class="faq-icon fa fa-angle-down"></i>
+        </div>
+        <ul class="faq-answer">
+          <li>
+            If the scattered instances are not displaying an accurate color,
+            that's probably because you did not create the shaders of the objects
+            scattered, is that correct?
+            <b>If the objects you are using are indeed created by someone else,
+              the shaders surely rely on the display color blender property to
+              drive the color in render</b>, this is possible thanks to the object info node used by
+            Cycles/Eevee render engines. <br /><br />
+  
+            In Geo-Scatter you are able to tweak the display color of your scatter
+            via 'N Panel > Geo-Scatter > Tweaking > System(s) List'. Please
+            consult the creator of the model used to verify if/how the display
+            color property is being used. If you are using botaniq, consult this
+            page.
+          </li>
+        </ul>
+      </div>
+  
+      <div class="faq-item">
+        <div class="border_hr">
+          <h2 class="faq-question ts_title">Problems when switching blender versions</h2>
+          <i class="faq-icon fa fa-angle-down"></i>
+        </div>
+        <ul class="faq-answer">
+          <li>
+            As you may know, the Geo-Scatter plugin is based on the very efficient
+            <i>"Geometry-node" </i> system. Geometry-node may vary from one
+            blender version to another, meaning that it is important to be careful
+            when changing blender versions, please take the following pieces of
+            advice into consideration when switching from one blender version to
+            another:
+          </li>
+          <li class="nested_li">
+            First of all, please be aware that changing your software version
+            mid-project is a bad demeanor in the CG industry, regardless of our
+            plugin. Please avoid doing so or you will have problems sooner or
+            later,
+            <b>always prefer using the same version of your software from the
+              beginning to the end of your project</b>. Make sure to document which software version your project was made
+            in to avoid corrupting any blender files by opening & saving your
+            project in the wrong version. If you really need to upgrade your
+            software version make sure to save a copy of your project beforehand.
+          </li>
+          <li class="nested_li">
+            <b>Avoid at all cost forward-compatibility errors, or you might
+              corrupt your project forever</b>, as .blend files are not forward-compatible! Unsure what forward
+            compatibility means? Here's an example: You are working on a project
+            made in blender 3.2, and your collaborator join-in & starts to work on
+            the same .blend file but in blender 3.4. A few days later you re-open
+            your projects and surprise, all your shaders node-trees are corrupted,
+            all color-mix nodes suddenly became "undefined", because the internal
+            code of these nodes changed in blender 3.4. In conclusion, never open
+            & save a .blend file made in a newer version in an older version,
+            manage your blender version clearly.
+          </li>
+          <li class="nested_li">
+            Please make sure the plugins you are using are compatible with your
+            blender version. Do not assume a blender plugin is compatible with all
+            blender versions, it is a common wrong assumption.
+          </li>
+          <li class="nested_li">
+            When upgrading your Geo-Scatter plugin version, all scatter-system(s)
+            you created with our plugin in your project will need to be updated.
+            As we explained above it is not advised to switch your software
+            version mid-project but if you really need to: click on the "update
+            node-tree" button to update all internal geometry-node system(s) we
+            are using. Additionally, you are able to force update all node-trees
+            in the Geo-Scatter plugin preferences, in the "debug" area. If you
+            encounter errors while updating, restart your blender session. Still
+            not working? Please contact us with a link to your file via the
+            blendermarket direct-messaging system.
+          </li>
+        </ul>
+      </div>
+  
+      <div class="faq-item">
+        <div class="border_hr">
+          <h2 class="faq-question ts_title">I see wired boxes everywhere</h2>
+          <i class="faq-icon fa fa-angle-down"></i>
+        </div>
+        <ul class="faq-answer">
+          <li>
+            We advise being more familiar with a native blender option called
+            objects-displays. It is a very important optimization feature located
+            per object properties, it will potentially save your computer from
+            crashing. <br />
+            The Geo-Scatter might enable this blender option automatically if the
+            object you are trying to scatter is very heavy. If you do not like
+            this security behavior you are able to disable it in 'N
+            Panel>Geo-Scatter>Create', in the behavior popover menu, located next
+            to any creating operator button.
+          </li>
+        </ul>
+      </div>
+  
+      <div class="faq-item">
+        <div class="border_hr">
+          <h2 class="faq-question ts_title">
+            How can i locate the original instance object?
+          </h2>
+          <i class="faq-icon fa fa-angle-down"></i>
+        </div>
+        <ul class="faq-answer">
+          <li>
+            If you're unsure where the original scattered objects are located in
+            your scene, go in <i>"NPanel>Geo-Scatter>Tweaking>Instancing"</i> and
+            click on the select icon to select the objects in your scene.
+            Alternatively, you can hold ALT while doing so to recenter the view
+            around the selection. <br />
+            From there you will be able to edit the object in edit mode or change
+            the object materials.
+          </li>
+        </ul>
+      </div>
+  
+      <div class="faq-item">
+        <div class="border_hr">
+          <h2 class="faq-question ts_title">My animation crash on render</h2>
+          <i class="faq-icon fa fa-angle-down"></i>
+        </div>
+        <ul class="faq-answer">
+          <li>
+            Please toggle the <i>"Lock interface"</i> option in the blender main
+            header render menu. <br />
+            Blender is a bit unstable when this option is not toggled, it does not
+            tolerate python-interaction-related changes between frames otherwise.
+          </li>
+        </ul>
+      </div>
+  
+      <div class="faq-item">
+        <div class="border_hr">
+          <h2 class="faq-question ts_title">Render is not the same as viewport</h2>
+          <i class="faq-icon fa fa-angle-down"></i>
+        </div>
+        <ul class="faq-answer">
+          <li>
+            It is very likely that you have a <b>modifier</b> on one of your
+            surfaces that is changing its topology only in the render. In most
+            cases, the culprit is a <b>subdivision modifier!</b>
+          </li>
+          <li class="nested_li">
+            Please make sure to have the same level of subdivision on viewport &
+            on render for your subdiv modifier.
+          </li>
+          <li class="nested_li">
+            Note that if your emitting surface is very high-poly, you could use a
+            low-poly surface invisible on render only used for the scattering.
+            This trick will be needed if you'd like to work with materials that
+            have adaptive displacement enabled for example.
+          </li>
+          <li>
+            Perhaps you have a collection or an object in your scene with a
+            different viewport/render state?
+          </li>
+          <li>
+            Perhaps you have an optimization feature on one of your systems
+            enabled only for the viewport, therefore is impacting the
+            final-render?
+          </li>
+        </ul>
+      </div>
+  
+      <div class="faq-item">
+        <div class="border_hr">
+          <h2 class="faq-question ts_title">How to render my scene on a render farm?</h2>
+          <i class="faq-icon fa fa-angle-down"></i>
+        </div>
+        <ul class="faq-answer">
+          <li>
+            Because any scatter-system can be read & rendered on any other PC
+            without having the Geo-Scatter plugin installed, it shouldn't pose a
+            problem to render your scene. However we do advise disabling any
+            display or visibility optimization just in case.
+          </li>
+          <li>
+            Note that any keyframe/driver animation will need our plugin to be
+            activated.
+          </li>
+          <li>
+            if you have any doubt, for a guaranteed result, use the "export as
+            instance" functionality available in our plugin extra panel, this will
+            non-destructively bake the scatter-system(s) as real blender
+            instances.
+          </li>
+        </ul>
+      </div>
+  
+      <div class="faq-item">
+        <div class="border_hr">
+          <h2 class="faq-question ts_title">My scene is unusually slow</h2>
+          <i class="faq-icon fa fa-angle-down"></i>
+        </div>
+        <ul class="faq-answer">
+          <li>
+            Perhaps you are beginning in 3d & have false expectations about what
+            blender/your computer is capable of doing? Unsure where to start? here
+            are some questions you should ask yourself:
+          </li>
+          <li class="nested_li">
+            Is your computer able to handle large blender 3D scenes? Did you ever
+            work on large 3D scenes in blender/maya/3Dsmax in the past? Or perhaps
+            this is your first time creating large scenes? Perhaps the slowdown is
+            completely normal, your scene might just be really heavy for your
+            computer.
+          </li>
+          <li class="nested_li">
+            How many points are you initially scattering, more than a million? Is
+            your scatter area very large? <br />
+            <b>Solution:</b> Use visibility optimization features, hide your
+            unused scatter-system(s) in the viewport, separate your
+            scatter-surface in foreground /middleground /background.
+          </li>
+          <li class="nested_li">
+            Is there an extreme amount of triangles drawn on your screens? Blender
+            is using rasterization to render the viewport, this rendering
+            technique will scale depending on the number of triangles displayed.
+            See basics of computer graphics. <br />
+            <b>Solution:</b> Use display optimization (display as point is the
+            fastest option). hide your unused scatter-system(s) in the viewport.
+          </li>
+          <li class="nested_li">
+            Is the surface you are scattering upon high poly? perhaps with
+            heavy-to-compute modifiers enabled? br
+            <b>Solution:</b> Use a low poly invisible surface only used as a
+            scattering surface, you can keep your high poly mesh for the
+            rendering.
+          </li>
+          <li>
+            Note that <b>some features might be slower than others!</b> For
+            example:
+          </li>
+          <li class="nested_li">
+            The random distribution mode with limit distance enabled is slower
+            than the original random distribution mode
+          </li>
+          <li class="nested_li">
+            Any features using proximity calculation such as "Tweak>Proximity" or
+            "Tweak>Ecosystems" are computer intensive, especially when calculating
+            proximity with high poly meshes.
+          </li>
+          <li class="nested_li">
+            Display as convex-hull, bounding-box, or point-cloud might be more
+            computer-intensive, as these methods will be constructing the display
+            object on the fly.
+          </li>
+          <li>
+            <b>If you believe your scene is unusually slow compared to a native
+              blender environment scene, please contact us</b>
+            maybe you found a bug! Our plugin is/shall be highly optimized and we
+            did an abundance of research on the subject.
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<script>
+  // seach bar code
+  var searchIcon = document.querySelector('.search-icon');
+  var searchBox = document.querySelector('.search-box');
+  var closeIcon = document.querySelector('.close-icon');
+
+  searchIcon.addEventListener('click', function () {
+    searchBox.classList.toggle('active');
+    closeIcon.classList.toggle('active');
+  });
+
+  closeIcon.addEventListener('click', function () {
+    searchBox.classList.remove('active');
+    closeIcon.classList.remove('active');
+  });
+
+
+  // faq javascript
+  var faqItems = document.querySelectorAll(".faq-item");
+
+faqItems.forEach(function (item) {
+  var question = item.querySelector(".faq-question");
+  var icon = item.querySelector(".faq-icon");
+  var answer = item.querySelector(".faq-answer");
+
+  if (!answer.style.display || answer.style.display === "none") {
+    answer.style.display = "none";
+  }
+
+  // Add a click event listener to the whole border_hr div
+  var borderHr = item.querySelector(".border_hr");
+  borderHr.addEventListener("click", function (event) {
+    if (answer.style.display === "none") {
+      answer.style.display = "block";
+      icon.classList.remove("fa-angle-down");
+      icon.classList.add("fa-angle-up");
+    } else {
+      answer.style.display = "none";
+      icon.classList.remove("fa-angle-up");
+      icon.classList.add("fa-angle-down");
+    }
+  });
+});
+</script>

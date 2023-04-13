@@ -1,0 +1,682 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+  integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+<link rel="stylesheet" href="../styles.css" />
+
+<div class="troubleshoot">
+  <div class="scattering_main_title">
+
+    <h1 style="margin-left: 27px;">Your Computer Have Limits</h1>
+    <p style="margin-left: 27px;">
+      It's important to have appropriate expectations over what your software an
+    </p>
+  </div>
+  <div class="small_screen_hide">
+    <div class="search-container">
+      <div class="search-icon">
+        <i class="fa fa-search"></i>
+      </div>
+      <div class="search-box">
+        <form>
+          <div class="close-icon">
+            <i class="fa fa-arrow-left"></i>
+          </div>
+          <div class="search-input">
+            <input type="text" placeholder="Search...">
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="limits_desc">
+  <div class="limits_desc1">
+    <p>
+      We all saw these very impressive unreal engine 5 demos where a gazillion
+      triangles are being streamed into the viewport with absolutely no lag
+      whatsoever! If you are new to 3D, you might assume that this level of
+      performance can be achieved in any 3D app viewport, after all, 3D apps
+      only use clay render, few billions of tris are easy to display. Right?
+    </p>
+    <p>
+      It is time to adjust your expectation if this is the case! Performances
+      are heavily dependent on your utilization and on the software & hardware
+      you are using.
+    </p>
+  </div>
+  <div class="limits_desc2">
+    <p>
+      While UE5 is a fantastic piece of technology, its sole purpose is being
+      able to run in real-time, where stable performance is the key focus of
+      developers, sometimes at the cost of creative "budgets", limitations, and
+      time-consuming /inconvenient workflow.
+    </p>
+    <p>
+      Blender (& its DCC siblings such as Max/ Maya/ Modo), is <b>not</b> a
+      real-time application, it is a digital content creation tool (alias DCC),
+      where rendering is done separately during a dedicated part of the process.
+    </p>
+    <p>
+      This in return gives us way more creative freedom as the final render can
+      be computed during an indefinite amount of time, compared to being
+      restrained to a stable framerate. But, as a tradeoff, we the artists, will
+      need to be smart on how we preview and manage our heavy scenes when
+      working in the viewport.
+    </p>
+  </div>
+  <div class="limits_desc3">
+    <p>
+      You might assume that the best solution to make blender viewport faster is
+      using game-engine-like optimization tricks!
+    </p>
+    <p>
+      I'm sorry to inform you that this is a common misconception.
+      Distance-based LOD for example, is one of such technology quite demanded
+      by blender users. Implementing such an inconvenient trick does not make
+      much sense in a non-real-time rendering app.
+    </p>
+    <p>
+      The best and most optimal, and easy-to-use approach is to simply display a
+      placeholder (a replacement object only meant for visual representation) in
+      your viewport, and render the full-resolution asset only during the final
+      render.
+    </p>
+  </div>
+</div>
+
+<div class="troubleshoot">
+  <div class="scattering_main_title">
+
+    <h1 style="margin-left: 30px;">Identifying Slowdowns</h1>
+    <p style="margin-left: 30px;">
+      When starting in 3D it can be tricky to identify slowdowns that may occur
+      while working, as we will learn below, the Scatter5 plugin proposes powerful
+      features to avoid them, however, it is still important to identify the
+      problem in order to solve it! Here are some walls you may face when working
+      on a heavy scene.
+    </p>
+  </div>
+</div>
+
+<div class="limits_desc">
+  <div class="limits_desc1">
+    <img src="../img/opt5.png" alt="" />
+    <h3 style="padding: 6px 0px">Rasterization Slowdowns</h3>
+    <p>
+      The viewports (more precisely "solid"/ "wireframe"/ "material"/ "overlay"
+      options) of blender is running on a rendering algorithm called
+      "Rasterization". It's the same technology used by Eevee or games. This
+      algorithm is extremely fast to compute, however, it does not scale well
+      with high polycount. On the contrary, ray-tracers such as CyclesX do not
+      care about polycount that much. Such ray-tracing algorithms scale
+      depending on the number of rays bouncing in the scene, they can handle
+      renders with multiple billions of tris with ease (see
+      <a href="https://youtu.be/Qf5dho10OfI?t=560" target="_blank">cg geek demo</a>) however, ray tracers are not a
+      viable solution for working in the
+      viewport yet (except in ClarisseIFX for example) so we'll need to be
+      careful about what we decide to display.
+    </p>
+    <p>
+      ILet's talk about numbers. For reference, when scattering a 5.000 poly
+      object with my 2080 GPU, my viewport will start to become laggy when
+      displaying 100.000 instances, and become completely frozen around 500.000
+      instances. (Reminder: to get informed about your scene object-count,
+      enable the statistics overlay in the viewport header -> overlay menu ).
+      CyclesX ray-traced rendered view will just do fine!
+    </p>
+    <p>
+      <b>Pro-Tip:</b> Be aware that enabling the viewport overlay effect has an
+      impact on the performance as it is doing rasterization in the background.
+      Also, note that the viewport shadows or ambient occlusion options make
+      blender considerably slower!
+    </p>
+  </div>
+  <div class="limits_desc2">
+    <img src="../img/opt1.jpg" alt="" />
+    <h3 style="padding: 6px 0px">Scatter-Engine Slowdowns</h3>
+    <p>
+      As you may know already, Scatter5 is based on a geometry-node engine, it
+      is currently the fastest method available for us, blender plugin
+      developers. Geometry-node is quite fast by nature! If you avoid hitting
+      viewport rasterization slowdowns, by for example using the display as a
+      point feature, the next logical slowdown you will be facing is the
+      calculation done by the Scatter-Engine itself. Depending on your update
+      dependencies and the feature you are using, around +-5.000.000 points are
+      manageable when working live in the viewport.
+    </p>
+    <p>
+      What are update dependencies? Well, it is when an element in your scene or
+      in the UI will trigger a recalculation, when for example, changing a
+      slider values will trigger a recalculation of the scatter, and so does
+      moving elements tied to a scatter-system such as an emitter, a chosen
+      surface, camera, or an object inside a proximity feature collection for
+      example.
+    </p>
+    <p>
+      <b>Pro-Tip:</b> Note that using a dedicated
+      <a href="https://sites.google.com/view/scatter5docs/manual/scattering?authuser=0#h.t04ee4l83qa7"
+        target="_blank">empty emitter </a>will make things faster to compute on big scenes for blender when
+      tweaking slider.
+    </p>
+    <img src="../img/opt3.jpg" alt="" />
+    <h3 style="padding: 9px 0px">Memory Limit?</h3>
+    <p>
+      If you want to scare a 3d artist, the best way to proceed is to display a
+      message in his interface telling him he ran out of memory! However, this
+      is unlikely to happen in a scattering workflow, because scattering is
+      using a memory-efficient object duplication technique that I am sure you
+      are familiar with, called "Instancing". Internally, the mesh & texture
+      information of your object will be re-used in memory. So no worries with
+      memory usage when working with Scatter5.
+    </p>
+  </div>
+  <div class="limits_desc3">
+    <img src="../img/opt2.jpg" alt="" />
+    <h3 style="padding: 9px 0px">High Poly Surfaces Slowdowns</h3>
+    <p>
+      Scatter is quite forgiving regarding your chosen surfaces polycount, but
+      not blender! Vertex color painting, weight painting, and texture painting
+      will be slow when approaching 200.000 verts.
+    </p>
+    <p>
+      Fortunately, there's a way to avoid this, by using two distinct terrain
+      objects instead of one: one invisible low-poly version you will use for
+      scattering & painting, and another high-res version only used for the
+      final render.
+    </p>
+    <p>
+      Be warned that it is not a good idea to use a subsurf modifier on your
+      emitting surface as it may reset the seed of your scatter-system(s) and
+      slow down your scene.
+    </p>
+    <img src="../img/opt4.jpg" alt="" />
+    <h3 style="padding: 9px 0px">Instance Limit?</h3>
+    <p>
+      The brand new CyclesX also has limits, you'll be able to render up to 30
+      million instances before the initialization time, canceling time, and RAM
+      consumption becomes too heavy. I believe this limit will be improved upon
+      a later release, after all, CyclesX is still brand new (writing this in
+      2021).
+    </p>
+    <p>
+      Other rendering engines, such as Octane, might have a different limit.
+      Note that the Scatter plugin and geometry node are compatible with
+      external render engines of course.
+    </p>
+  </div>
+</div>
+
+<div class="troubleshoot">
+  <div class="scattering_main_title">
+
+    <h1 style="margin-left: 33px;">Hide From Viewport</h1>
+    <p style="margin-left: 33px;">What you see, is not what you get</p>
+  </div>
+</div>
+
+<div class="viewport_data">
+  <div class="viewport_data_desc">
+    <h3>Hide What You do not Use</h3>
+    <p>
+      When working on a large sceneries with a lot of scatter-systems, it is a
+      good practice to hide what you do not need to visualize in real time by
+      turning off the viewport display (screen icon). The system will always
+      appear on the final render if the render toggle is enabled.
+    </p>
+    <br />
+    <h3>Reminder:</h3>
+    <p>
+      There's a handy shortcut to quickly isolate a scatter-layer: holding ALT
+      when clicking in the system list.
+    </p>
+  </div>
+  <img src="../img/opt6.jpg" alt="" />
+</div>
+
+<div class="viewport_data">
+  <div class="viewport_data_desc">
+    <h3>Consider Security Warnings</h3>
+    <p>
+      If you ever recieved a message warning you that you have created millions
+      of instances and that Scatter5 automatically hid the scatter-system for
+      your own safety, perhaps it's best to be careful! Accidentally un-hiding
+      such a system could freeze your computer! Best would be to enable the max
+      amount feature just in case.
+    </p>
+  </div>
+  <img src="../img/opt7.jpg" alt="" />
+</div>
+
+<div class="troubleshoot">
+  <div class="scattering_main_title">
+
+    <h1 style="margin-left: 30px;">Preview Area</h1>
+  </div>
+</div>
+
+<div class="viewport_data">
+  <div class="viewport_data_desc preview_desc">
+    <p>
+      When working on large environments, it will be hard to visualize all the
+      scatter layers simultaneously on the full surface of the terrain.
+    </p>
+    <p>
+      We can use the preview area feature to sample some selected faces. the
+      final render will not be affected, except if you want it to (see
+      visibility features below).
+    </p>
+  </div>
+  <div class="preview_videos">
+    <div class="example_v_card">
+      <div class="video_cont">
+        <embed height="194" width="370" ?autoplay="1" src="https://thumbs.gfycat.com/AggressiveUniqueHeifer-mobile.mp4"
+          type="" />
+        <div class="pre_video_views">
+          <span>16.9K views</span>
+          <img src="../img/v_tag.png" alt="video tag" />
+        </div>
+      </div>
+      <div class="pre_video_log">
+        <img src="../img/video_tag.png" alt="" />
+        <div class="video_log_det">
+          <p>BD3D</p>
+          <span>@_bd3d_</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="troubleshoot">
+  <div class="scattering_main_title">
+
+    <h1 style="margin-left: 30px;">Maximal Amount</h1>
+  </div>
+</div>
+
+<div class="get_copy_desc">
+  <p>
+    Since Scatter 5.3 we introduced a new "Max Amount" feature directly
+    integrated per scatter-system(s). If you'd like to have an extra layer of
+    real-time security while working on larger scenes, please enable this
+    feature in order to guarantee that your instance count will never exceed the
+    chosen threshold.
+  </p>
+</div>
+
+<div class="troubleshoot">
+  <div class="scattering_main_title">
+
+    <h1 style="margin-left: 30px;">Density Reduction</h1>
+  </div>
+</div>
+
+<div class="get_copy_desc">
+  <p>
+    In the visibility category, a removal rate slider is available to reduce
+    what's visible within the viewport. The final render will not be affected,
+    except if you want it to (see visibility features below).
+  </p>
+</div>
+
+<div class="troubleshoot">
+  <div class="scattering_main_title">
+
+    <h1 style="margin-left: 30px;">Camera Optimization</h1>
+  </div>
+</div>
+
+<div class="extra_fea_section">
+  <div class="example_v_card">
+    <div class="video_cont_fea">
+      <embed height="246" width="470" ?autoplay="1" src="https://thumbs.gfycat.com/FrenchHonestDassie-mobile.mp4"
+        type="" />
+      <div class="video_views">
+        <span>16.9K views</span>
+        <img src="../img/v_tag.png" alt="video tag" />
+      </div>
+    </div>
+    <div class="video_log">
+      <img src="../img/video_tag.png" alt="" />
+      <div class="video_log_det">
+        <p>BD3D</p>
+        <span>@_bd3d_</span>
+      </div>
+    </div>
+    <div class="video_desc_fea">
+      <h3>Frustum Culling</h3>
+      <p>
+        The frustum culling feature will remove instances not contained within
+        the given FOV range. The FOV will be calculated automatically if the
+        "per camera setting" toggle is activated.
+      </p>
+      <br />
+      <p>This method can support up to 20 items.</p>
+    </div>
+  </div>
+
+  <div class="example_v_card">
+    <div class="video_cont_fea">
+      <embed height="246" width="470" ?autoplay="1" src="https://thumbs.gfycat.com/ScarceAcidicGavial-mobile.mp4"
+        type="" />
+      <div class="video_views">
+        <span>16.9K views</span>
+        <img src="../img/v_tag.png" alt="video tag" />
+      </div>
+    </div>
+    <div class="video_log">
+      <img src="../img/video_tag.png" alt="" />
+      <div class="video_log_det">
+        <p>BD3D</p>
+        <span>@_bd3d_</span>
+      </div>
+    </div>
+    <div class="video_desc_fea">
+      <h3>Distance Culling</h3>
+      <p>
+        This optimization feature will create a culling transition from the
+        given distance range with your active camera.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="get_copy_desc">
+  <p style="padding: 0px 40px">
+    These features are to be activated per scatter-system, this grants you the
+    ability to selectively choose the level of optimization. Remember, If you'd
+    like to batch-apply settings on all the selected scatter-systems, the
+    <a href="https://sites.google.com/view/scatter5docs/manual/prerequisite?authuser=0#h.oq92j12mnt2u"
+      target="_blank">ALT-for-batch</a>
+    behavior is here for you
+  </p>
+</div>
+
+<div class="extra_fea_section">
+  <div class="example_v_card">
+    <div class="video_cont_fea">
+      <embed height="246" width="470" ?autoplay="1" src="https://thumbs.gfycat.com/PlainBogusCicada-mobile.mp4"
+        type="" />
+      <div class="video_views">
+        <span>16.9K views</span>
+        <img src="../img/v_tag.png" alt="video tag" />
+      </div>
+    </div>
+    <div class="video_log">
+      <img src="../img/video_tag.png" alt="" />
+      <div class="video_log_det">
+        <p>BD3D</p>
+        <span>@_bd3d_</span>
+      </div>
+    </div>
+    <div class="video_desc_fea">
+      <h3>Camera Update Dependencies</h3>
+      <p>
+        One of the inconveniences of the camera clipping/culling feature is the
+        recalculation of the scattered point for each camera move. This
+        recalculation might become sluggish in some scenes. If you start hitting
+        such a slowdown, you can change the camera update behavior.
+      </p>
+      <br />
+      <p>
+        In the example hereby, the update method is set on 'Halt' mode, the
+        update will only trigger when the camera has stopped moving.
+      </p>
+    </div>
+  </div>
+
+  <div class="example_v_card">
+    <div class="video_cont_fea">
+      <embed height="246" width="470" ?autoplay="1" src="https://thumbs.gfycat.com/BoringFancyGalah-mobile.mp4"
+        type="" />
+      <div class="video_views">
+        <span>16.9K views</span>
+        <img src="../img/v_tag.png" alt="video tag" />
+      </div>
+    </div>
+    <div class="video_log">
+      <img src="../img/video_tag.png" alt="" />
+      <div class="video_log_det">
+        <p>BD3D</p>
+        <span>@_bd3d_</span>
+      </div>
+    </div>
+    <div class="video_desc_fea">
+      <h3>Occlusion Culling</h3>
+      <p>
+        The occlusion culling option let you hide points located in areas unseen
+        by the camera. Optionally choose a collection of occluding objects.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="troubleshoot">
+  <div class="scattering_main_title">
+
+    <h1 style="margin-left: 30px;">Display As</h1>
+    <p style="margin-left: 30px;">Disguised your instances</p>
+  </div>
+</div>
+
+<div class="get_copy_desc">
+  <img src="../img/opt8.jpg" class="display_as_pix" alt="" />
+  <p>
+    The "Display As" feature will let you represent your high poly instance with
+    a more efficient drawing solution, there are multiple methods available at
+    your disposal, and some are more efficient than others:&nbsp;
+  </p>
+  <ul>
+    <li>
+
+      <b>Bounding Box:</b> Will display the solid bounding box of your
+      instances.&nbsp;
+
+    </li>
+    <li>
+
+      <b> Convex Hull: </b> Will display the convex-hull geometry of your instances. Be
+      aware that this option is heavier to calculate!
+
+    </li>
+    <li>
+
+      <b> Placeholder:</b> Replace your instances with one object available in a
+      predefined list. Note that some placeholders in this list are handy for
+      visualizing rotation and alignment settings.
+
+    </li>
+    <li>
+      <b>Custom Placeholder</b>: Replace your instances with the given object.
+    </li>
+    <li>
+      <b>Single Point:</b> Replace your instances with a single point at its origin.
+      Points are extremely fast to rasterize, blender can display millions of
+      them with no slowdown in the viewport.
+    </li>
+    <li>
+      <b>Point-Cloud:</b> Replace your instances with a generated group of points,
+      ideal to have a good representation of the final render-shape.
+      &nbsp;this display method is quite promising, however,
+      <a href="https://developer.blender.org/T93245" target="_blank">T93245</a>
+      &amp;
+      <a href="https://developer.blender.org/T92963" target="_blank">T92963</a>
+      are important issues that need to be solved, right now this display
+      option is not as fast as it should be.
+    </li>
+  </ul>
+</div>
+
+<div class="instance_sec">
+  <div class="instance_v_card">
+    <div class="video_cont_fea">
+      <embed height="246" width="470" ?autoplay="1"
+        src="https://thumbs.gfycat.com/CrispSpectacularInvisiblerail-mobile.mp4" type="" />
+      <div class="video_views">
+        <span>16.9K views</span>
+        <img src="../img/v_tag.png" alt="video tag" />
+      </div>
+    </div>
+    <div class="instance_video_log">
+      <img src="../img/video_tag.png" alt="" />
+      <div class="video_log_det">
+        <p>BD3D</p>
+        <span>@_bd3d_</span>
+      </div>
+    </div>
+    <div class="instance_v_desc">
+      <h3>Real Geometry while Rendering</h3>
+      <p style="line-height: 30px">
+        This feature visibility is tweakable, it's possible to define if the display effect takes place only within the
+        viewport, turns off during render, or rendered view. By default, it will turn off during any rendering state.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="instance_sec">
+  <div class="instance_v_card">
+    <div class="video_cont_fea">
+      <embed height="246" width="470" ?autoplay="1" src="https://thumbs.gfycat.com/HeavyOrneryBallpython-mobile.mp4"
+        type="" />
+      <div class="video_views">
+        <span>16.9K views</span>
+        <img src="../img/v_tag.png" alt="video tag" />
+      </div>
+    </div>
+    <div class="instance_video_log">
+      <img src="../img/video_tag.png" alt="" />
+      <div class="video_log_det">
+        <p>BD3D</p>
+        <span>@_bd3d_</span>
+      </div>
+    </div>
+    <div class="instance_v_desc">
+      <h3>Reveal Near Camera</h3>
+      <p style="line-height: 25px">
+        The reveal near camera option will reveal the real geometry of the instance when the camera is closeby. Using
+        this feature in combination with point display and camera clipping/culling is one of the best real-time viewport
+        optimization tricks you can get in Scatter5!
+      </p> <br>
+
+      <p style="line-height: 25px">
+        Moving the camera will trigger a recalculation of the scattering, as explained above, update dependencies linked
+        to camera can be tweaked.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="display_sec">
+  <img src="../img/opt9.jpg" alt="">
+  <div class="display_sec_desc">
+    <h3>Object Display Color Representation</h3>
+    <p>
+      Here's a tip! In the header popover menu of the display feature, click on "show systems colors" to have an
+      accurate representation of your scatter-system assigned color within the viewport! This operator will simply put
+      the shading on "solid", and set the shading color on <i>"object"</i>.
+    </p><br>
+    <h3>Known Issue:</h3>
+    <p>
+      points' drawing methods may produce unstable colors &nbsp;<a href="https://developer.blender.org/T93245"
+        target="_blank">T93245</a>
+    </p>
+  </div>
+</div>
+
+<div class="display_sec">
+  <img src="../img/opt10.png" alt="">
+  <div class="display_sec_desc">
+    <h3>Inaccurate Render Color?</h3>
+    <p>
+      If your rendered object color is not the same once scattered, that's probably because your object (that you
+      probably bought online?) is using the 'display color' property as a color influence in its materials shader,
+      meaning that the display color is not used only for viewport display purpose but will also have an impact in the
+      render. If you have this problem, simply change the display color in Scatter5 system list are.
+    </p> <br><br>
+
+    <h3>Display As & Biomes</h3>
+    <p style="width: 70%;">
+      This feature can be encoded within a biome file. Thanks to this implementation, you can activate the display
+      feature when scattering a biome, this option is located in the biome manager Header>Option menu.
+    </p>
+  </div>
+</div>
+
+
+<div class="troubleshoot">
+  <div class="scattering_main_title">
+
+    <h1 style="margin-left: 30px;">Features Visibility</h1>
+  </div>
+</div>
+
+<div class="visiblity_data">
+  <div class="viewport_data_desc features_vis">
+    <p>
+      All optimization features presented above are active/inactive depending on your render state. It's possible to
+      define when the effect takes place during the rendering process. Please enable the solid/rendered/render icon to
+      change the visibility states.
+    </p>
+    <br />
+    <h3>Known Issue:</h3>
+    <p>
+      Unfortunately, having multiple 3D viewports in your scene is problematic for rendered view feature, it is
+      impossible for us to enable a feature only for N viewport space.
+    </p>
+  </div>
+  <img src="../img/opt11.jpg" alt="" />
+</div>
+
+
+<div class="troubleshoot">
+  <div class="scattering_main_title">
+
+    <h1 style="margin-left: 30px;">Wireboxes Everywhere?</h1>
+  </div>
+</div>
+
+
+<div class="visiblity_data">
+  <div class="viewport_data_desc features_vis">
+    <p>
+      The bounding box display is a native per-object setting located in Object Properties &gt; Viewport Display &gt;
+      Display As. Sometimes the object you are scattering may have the bounding-box display enabled, either because the
+      scattered object has this setting active, or because an <a
+        href="https://sites.google.com/view/scatter5docs/manual/scattering?authuser=0#h.d7tqql8vk0o3"
+        target="_blank">operator security feature</a> is protecting you from scattering highpoly assets.
+    </p>
+    <br />
+    <h3>Reminder:</h3>
+    <p>
+      In the instance list, you have quick access to the object by clicking on the select icon, this button will select
+      the item in your scene, then you will be able to change the option in the object property. However, be warned, it
+      might be displayed as such <a
+        href="https://sites.google.com/view/scatter5docs/manual/optimization?authuser=0#h.lom0je87pp3e"
+        target="_blank">for a reason
+    </p>
+  </div>
+  <img src="../img/opt12.jpg" alt="" />
+</div>
+
+
+<script>
+  // seach bar code
+  var searchIcon = document.querySelector('.search-icon');
+  var searchBox = document.querySelector('.search-box');
+  var closeIcon = document.querySelector('.close-icon');
+
+  searchIcon.addEventListener('click', function () {
+    searchBox.classList.toggle('active');
+    closeIcon.classList.toggle('active');
+  });
+
+  closeIcon.addEventListener('click', function () {
+    searchBox.classList.remove('active');
+    closeIcon.classList.remove('active');
+  });
+</script>
