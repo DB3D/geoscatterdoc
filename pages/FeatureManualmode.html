@@ -5,10 +5,9 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 <link rel="stylesheet" href="../styles.css" />
 
-<div class="troubleshoot">
-  <div class="scattering_main_title">
-
-    <h1 style="margin-left: 20px">Location Transforms</h1>
+<div class="titleheader">
+  <div class="titleheadertext">
+    <h1>Location Transforms</h1>
   </div>
   <div class="small_screen_hide">
     <div class="search-container">
@@ -123,8 +122,8 @@
   </div>
 </div>
 
-<div class="troubleshoot" style="padding-left: 70px">
-  <div class="scattering_main_title">
+<div class="titleheader" style="padding-left: 70px">
+  <div class="titleheadertext">
     <h1>Distribution Brushes</h1>
     <p>Brushes that add new points</p>
   </div>
@@ -263,9 +262,8 @@
   </div>
 </div>
 
-<div class="troubleshoot" style="padding-left: 70px">
-  <div class="scattering_main_title">
-
+<div class="titleheader" style="padding-left: 70px">
+  <div class="titleheadertext">
     <h1>Eraser Brushes</h1>
     <p>These brushes will</p>
   </div>
@@ -312,8 +310,8 @@
   </div>
 </div>
 
-<div class="troubleshoot" style="padding-left: 70px">
-  <div class="scattering_main_title">
+<div class="titleheader" style="padding-left: 70px">
+  <div class="titleheadertext">
     <h1>Translation Brushes</h1>
     <p>Brushes that change the location of instances</p>
   </div>
@@ -445,11 +443,10 @@
 </div>
 
 
-<div class="troubleshoot" style="padding-left: 70px">
-  <div class="scattering_main_title">
-
-    <h1 style="margin-left: 10px;">Rotation Brushes</h1>
-    <p style="margin-left: 10px;">Brushes that alter/set the default rotation attributes of points</p>
+<div class="titleheader" style="padding-left: 70px">
+  <div class="titleheadertext">
+    <h1>Rotation Brushes</h1>
+    <p>Brushes that alter/set the default rotation attributes of points</p>
   </div>
 </div>
 
@@ -545,8 +542,8 @@
   </div>
 </div>
 
-<div class="troubleshoot" style="padding-left: 70px">
-  <div class="scattering_main_title">
+<div class="titleheader" style="padding-left: 70px">
+  <div class="titleheadertext">
     <h1>Scale Brushes</h1>
     <p>Brushes that alter/set the default scale attributes of points</p>
   </div>
@@ -603,11 +600,10 @@
   </div>
 </div>
 
-<div class="troubleshoot">
-  <div class="scattering_main_title">
-
-    <h1 style="margin-left: 25px">Instance Index Brushes</h1>
-    <p style="margin-left: 25px">Brushes that assign instances to points</p>
+<div class="titleheader">
+  <div class="titleheadertext">
+    <h1>Instance Index Brushes</h1>
+    <p>Brushes that assign instances to points</p>
   </div>
 </div>
 
@@ -632,10 +628,9 @@
   </div>
 </div>
 
-<div class="troubleshoot">
-  <div class="scattering_main_title">
-
-    <h1 style="margin-left: 26px">Convert Procedural To Manual</h1>
+<div class="titleheader">
+  <div class="titleheadertext">
+    <h1>Convert Procedural To Manual</h1>
   </div>
 </div>
 
@@ -659,9 +654,8 @@
   </div>
 </div>
 
-<div class="troubleshoot" style="padding-left: 70px">
-  <div class="scattering_main_title">
-
+<div class="titleheader" style="padding-left: 70px">
+  <div class="titleheadertext">
     <h1>Mixing Manual With Procedural</h1>
   </div>
 </div>
@@ -717,9 +711,8 @@
   </div>
 </div>
 
-<div class="troubleshoot" style="padding-left: 70px">
-  <div class="scattering_main_title">
-
+<div class="titleheader" style="padding-left: 70px">
+  <div class="titleheadertext">
     <h1>Manual Mode Header</h1>
     <p>the header of manual mode had few handy options!</p>
   </div>
@@ -800,4 +793,23 @@
     searchBox.classList.remove('active');
     closeIcon.classList.remove('active');
   });
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script>
+    $('h1[id]').click(function(event) {
+        try {
+            event.preventDefault();
+            var f = $(this).find('a').attr('data-frag');
+            var h = top.location.hash.substring(1);
+            if (h != "") {
+                var p = h.split('&');
+                var section = p[0].split('=')[1];
+                var article = p[1].split('=')[1];
+                top.location.hash = "#section=" + section + "&article=" + article + "&header=" + f;
+            }
+        } catch (error) {
+            console.log(error);
+        }
+    });
 </script>

@@ -5,13 +5,10 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 <link rel="stylesheet" href="../styles.css" />
 
-<div class="troubleshoot">
-  <div class="scattering_main_title">
-
-    <h1 style="margin-left: 27px;">Your Computer Have Limits</h1>
-    <p style="margin-left: 27px;">
-      It's important to have appropriate expectations over what your software an
-    </p>
+<div class="titleheader">
+  <div class="titleheadertext">
+    <h1>Your Computer Have Limits</h1>
+    <p>It's important to have appropriate expectations over what your software an</p>
   </div>
   <div class="small_screen_hide">
     <div class="search-container">
@@ -88,12 +85,10 @@
   </div>
 </div>
 
-<div class="troubleshoot">
-  <div class="scattering_main_title">
-
-    <h1 style="margin-left: 30px;">Identifying Slowdowns</h1>
-    <p style="margin-left: 30px;">
-      When starting in 3D it can be tricky to identify slowdowns that may occur
+<div class="titleheader">
+  <div class="titleheadertext">
+    <h1>Identifying Slowdowns</h1>
+    <p>When starting in 3D it can be tricky to identify slowdowns that may occur
       while working, as we will learn below, the Scatter5 plugin proposes powerful
       features to avoid them, however, it is still important to identify the
       problem in order to solve it! Here are some walls you may face when working
@@ -210,11 +205,10 @@
   </div>
 </div>
 
-<div class="troubleshoot">
-  <div class="scattering_main_title">
-
-    <h1 style="margin-left: 33px;">Hide From Viewport</h1>
-    <p style="margin-left: 33px;">What you see, is not what you get</p>
+<div class="titleheader">
+  <div class="titleheadertext">
+    <h1>Hide From Viewport</h1>
+    <p>What you see, is not what you get</p>
   </div>
 </div>
 
@@ -251,10 +245,9 @@
   <img src="../img/opt7.jpg" alt="" />
 </div>
 
-<div class="troubleshoot">
-  <div class="scattering_main_title">
-
-    <h1 style="margin-left: 30px;">Preview Area</h1>
+<div class="titleheader">
+  <div class="titleheadertext">
+    <h1>Preview Area</h1>
   </div>
 </div>
 
@@ -280,10 +273,9 @@
   </div>
 </div>
 
-<div class="troubleshoot">
-  <div class="scattering_main_title">
-
-    <h1 style="margin-left: 30px;">Maximal Amount</h1>
+<div class="titleheader">
+  <div class="titleheadertext">
+    <h1>Maximal Amount</h1>
   </div>
 </div>
 
@@ -297,10 +289,9 @@
   </p>
 </div>
 
-<div class="troubleshoot">
-  <div class="scattering_main_title">
-
-    <h1 style="margin-left: 30px;">Density Reduction</h1>
+<div class="titleheader">
+  <div class="titleheadertext">
+    <h1>Density Reduction</h1>
   </div>
 </div>
 
@@ -312,10 +303,9 @@
   </p>
 </div>
 
-<div class="troubleshoot">
-  <div class="scattering_main_title">
-
-    <h1 style="margin-left: 30px;">Camera Optimization</h1>
+<div class="titleheader">
+  <div class="titleheadertext">
+    <h1>Camera Optimization</h1>
   </div>
 </div>
 
@@ -398,11 +388,10 @@
   </div>
 </div>
 
-<div class="troubleshoot">
-  <div class="scattering_main_title">
-
-    <h1 style="margin-left: 30px;">Display As</h1>
-    <p style="margin-left: 30px;">Disguised your instances</p>
+<div class="titleheader">
+  <div class="titleheadertext">
+    <h1>Display As</h1>
+    <p>Disguised your instances</p>
   </div>
 </div>
 
@@ -523,10 +512,9 @@
 </div>
 
 
-<div class="troubleshoot">
-  <div class="scattering_main_title">
-
-    <h1 style="margin-left: 30px;">Features Visibility</h1>
+<div class="titleheader">
+  <div class="titleheadertext">
+    <h1>Features Visibility</h1>
   </div>
 </div>
 
@@ -548,10 +536,9 @@
 </div>
 
 
-<div class="troubleshoot">
-  <div class="scattering_main_title">
-
-    <h1 style="margin-left: 30px;">Wireboxes Everywhere?</h1>
+<div class="titleheader">
+  <div class="titleheadertext">
+    <h1>Wireboxes Everywhere?</h1>
   </div>
 </div>
 
@@ -594,4 +581,23 @@
     searchBox.classList.remove('active');
     closeIcon.classList.remove('active');
   });
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script>
+    $('h1[id]').click(function(event) {
+        try {
+            event.preventDefault();
+            var f = $(this).find('a').attr('data-frag');
+            var h = top.location.hash.substring(1);
+            if (h != "") {
+                var p = h.split('&');
+                var section = p[0].split('=')[1];
+                var article = p[1].split('=')[1];
+                top.location.hash = "#section=" + section + "&article=" + article + "&header=" + f;
+            }
+        } catch (error) {
+            console.log(error);
+        }
+    });
 </script>

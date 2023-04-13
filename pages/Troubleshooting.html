@@ -6,13 +6,10 @@
 <link rel="stylesheet" href="../styles.css" />
 
 
-<div class="troubleshoot">
-  <div class="trouble_main_title">
+<div class="titleheader">
+  <div class="titleheadertext">
   <h1>Troubleshooting</h1>
-  <p style="margin-left: 5px;">
-    List of common problems. <br />
-    We do advise you to read our online manual in its entirety when you have a
-    bit of free time.
+  <p>List of common problems.<br/>We do advise you to read our online manual in its entirety when you have a bit of free time.
   </p>
 </div>
   
@@ -456,4 +453,23 @@ faqItems.forEach(function (item) {
     }
   });
 });
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script>
+    $('h1[id]').click(function(event) {
+        try {
+            event.preventDefault();
+            var f = $(this).find('a').attr('data-frag');
+            var h = top.location.hash.substring(1);
+            if (h != "") {
+                var p = h.split('&');
+                var section = p[0].split('=')[1];
+                var article = p[1].split('=')[1];
+                top.location.hash = "#section=" + section + "&article=" + article + "&header=" + f;
+            }
+        } catch (error) {
+            console.log(error);
+        }
+    });
 </script>

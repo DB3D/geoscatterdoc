@@ -5,10 +5,10 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 <link rel="stylesheet" href="../styles.css" />
 
-<div class="troubleshoot">
-  <div class="scattering_main_title">
-    <h1 style="padding-left: 20px">Random Distribution</h1>
-    <p style="padding-left: 20px">The simplest distribution method available</p>
+<div class="titleheader">
+  <div class="titleheadertext">
+    <h1>Random Distribution</h1>
+    <p>The simplest distribution method available</p>
   </div>
   <div class="small_screen_hide">
     <div class="search-container">
@@ -138,10 +138,10 @@
   </div>
 </div>
 
-<div class="troubleshoot">
-  <div class="scattering_main_title">
-    <h1 style="padding-left: 25px">Mesh Element Distribution</h1>
-    <p style="padding-left: 25px">Distribute per verts/edges/faces</p>
+<div class="titleheader">
+  <div class="titleheadertext">
+    <h1>Mesh Element Distribution</h1>
+    <p>Distribute per verts/edges/faces</p>
   </div>
 </div>
 
@@ -263,9 +263,9 @@
 
 
 
-<div class="troubleshoot">
-  <div class="scattering_main_title">
-    <h1 style="padding-left: 25px">Volume Distribution</h1>
+<div class="titleheader">
+  <div class="titleheadertext">
+    <h1>Volume Distribution</h1>
   </div>
 </div>
 
@@ -323,9 +323,9 @@
   </div>
 </div>
 
-<div class="troubleshoot">
-  <div class="scattering_main_title">
-    <h1 style="padding-left: 25px">Clump Distribution</h1>
+<div class="titleheader">
+  <div class="titleheadertext">
+    <h1>Clump Distribution</h1>
   </div>
 </div>
 
@@ -500,10 +500,10 @@
 </div>
 
 
-<div class="troubleshoot">
-  <div class="scattering_main_title">
-    <h1 style="padding-left: 25px">Stable Deform Distribution</h1>
-    <p style="padding-left: 25px">Ideal for animated mesh that deforms!</p>
+<div class="titleheader">
+  <div class="titleheadertext">
+    <h1>Stable Deform Distribution</h1>
+    <p>Ideal for animated mesh that deforms!</p>
   </div>
 </div>
 
@@ -569,11 +569,10 @@
 </div>
 
 
-<div class="troubleshoot">
-  <div class="scattering_main_title">
-
-    <h1 style="padding-left: 25px">Manual Distribution</h1>
-    <p style="padding-left: 25px">The manual distribution mode is a whole new workflow by itself.</p>
+<div class="titleheader">
+  <div class="titleheadertext">
+    <h1>Manual Distribution</h1>
+    <p>The manual distribution mode is a whole new workflow by itself.</p>
   </div>
 </div>
 
@@ -616,4 +615,23 @@
     searchBox.classList.remove('active');
     closeIcon.classList.remove('active');
   });
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script>
+    $('h1[id]').click(function(event) {
+        try {
+            event.preventDefault();
+            var f = $(this).find('a').attr('data-frag');
+            var h = top.location.hash.substring(1);
+            if (h != "") {
+                var p = h.split('&');
+                var section = p[0].split('=')[1];
+                var article = p[1].split('=')[1];
+                top.location.hash = "#section=" + section + "&article=" + article + "&header=" + f;
+            }
+        } catch (error) {
+            console.log(error);
+        }
+    });
 </script>

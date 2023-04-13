@@ -12,9 +12,9 @@
 />
 <link rel="stylesheet" href="../styles.css" />
 
-<div class="troubleshoot">
-  <div class="culling_page_title">
-    <h1 style="margin-left: 10px">Vertex-Group Mask</h1>
+<div class="titleheader">
+  <div class="titleheadertext">
+    <h1>Vertex-Group Mask</h1>
   </div>
   <div class="small_screen_hide">
     <div class="search-container">
@@ -78,9 +78,9 @@
   </div>
 </div>
 
-<div class="troubleshoot">
-  <div class="culling_page_title">
-    <h1 style="margin-left: 10px">Vertex-Color Mask</h1>
+<div class="titleheader">
+  <div class="titleheadertext">
+    <h1>Vertex-Color Mask</h1>
   </div>
 </div>
 
@@ -137,9 +137,9 @@
   </ul>
 </div>
 
-<div class="troubleshoot">
-  <div class="culling_page_title">
-    <h1 style="margin-left: 10px">Image Mask</h1>
+<div class="titleheader">
+  <div class="titleheadertext">
+    <h1>Image Mask</h1>
   </div>
 </div>
 
@@ -179,9 +179,9 @@
   </div>
 </div>
 
-<div class="troubleshoot">
-  <div class="culling_page_title">
-    <h1 style="margin-left: 10px">Bezier-Area Mask</h1>
+<div class="titleheader">
+  <div class="titleheadertext">
+    <h1>Bezier-Area Mask</h1>
   </div>
 </div>
 
@@ -210,9 +210,9 @@
   </div>
 </div>
 
-<div class="troubleshoot">
-  <div class="culling_page_title">
-    <h1 style="margin-left: 10px">Boolean Mask</h1>
+<div class="titleheader">
+  <div class="titleheadertext">
+    <h1>Boolean Mask</h1>
   </div>
 </div>
 
@@ -223,9 +223,9 @@
   </p>
 </div>
 
-<div class="troubleshoot">
-  <div class="culling_page_title">
-    <h1 style="margin-left: 10px">Upward Obstruction Mask</h1>
+<div class="titleheader">
+  <div class="titleheadertext">
+    <h1>Upward Obstruction Mask</h1>
   </div>
 </div>
 
@@ -256,9 +256,9 @@
   </div>
 </div>
 
-<div class="troubleshoot">
-  <div class="culling_page_title">
-    <h1 style="margin-left: 10px">Material Slot Mask</h1>
+<div class="titleheader">
+  <div class="titleheadertext">
+    <h1>Material Slot Mask</h1>
   </div>
 </div>
 
@@ -280,9 +280,9 @@
   </div>
 </div>
 
-<div class="troubleshoot">
-  <div class="culling_page_title">
-    <h1 style="margin-left: 10px">Universal Feature Mask</h1>
+<div class="titleheader">
+  <div class="titleheadertext">
+    <h1>Universal Feature Mask</h1>
   </div>
 </div>
 
@@ -327,4 +327,23 @@
     searchBox.classList.remove("active");
     closeIcon.classList.remove("active");
   });
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script>
+    $('h1[id]').click(function(event) {
+        try {
+            event.preventDefault();
+            var f = $(this).find('a').attr('data-frag');
+            var h = top.location.hash.substring(1);
+            if (h != "") {
+                var p = h.split('&');
+                var section = p[0].split('=')[1];
+                var article = p[1].split('=')[1];
+                top.location.hash = "#section=" + section + "&article=" + article + "&header=" + f;
+            }
+        } catch (error) {
+            console.log(error);
+        }
+    });
 </script>

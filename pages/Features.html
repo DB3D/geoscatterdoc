@@ -6,7 +6,7 @@
 <link rel="stylesheet" href="../styles.css" />
 
 
-<div class="troubleshoot">
+<div class="titleheader">
   <div class="feature_main_title">
     <h1>Table of Content</h1>
   </div>
@@ -39,14 +39,14 @@
   </div>
   <div class="main_card">
     <img src="../img/files.png" alt="files img" />
-    <a href="./pages/installation.html">Installation</a>
+    <a href="./FeatureInstallation.html">Installation</a>
     <p>
       Here is how to install a blender plugin, and install a .scatpack file.
     </p>
   </div>
   <div class="main_card">
     <img src="../img/donut.jpg" alt="donut img" />
-    <a href="./pages/prerequisite.html">Prerequisite</a>
+    <a href="./FeaturePrerequisite.html">Prerequisite</a>
     <p>Few things you should know about blender before getting started.</p>
   </div>
 </div>
@@ -56,81 +56,75 @@
 <div class="feature_cards">
   <div class="main_card">
     <img src="../img/blue.png" alt="mark img" />
-    <a href="./pages/scattering.html">Scattering</a>
+    <a href="./FeatureScattering.html">Scattering</a>
     <p>Everything you need to know about the Scattering operators.</p>
   </div>
   <div class="main_card">
     <img src="../img/men.jpg" alt="files img" />
-    <a href="./pages/distribution.html">Distribution</a>
+    <a href="./FeatureDistribution.html">Distribution</a>
     <p>
       The various particle distribution methods explained.
     </p>
   </div>
   <div class="main_card">
     <img src="../img/path.png" alt="donut img" />
-    <a href="./pages/cullingMask.html">Culling Masks</a>
+    <a href="./FeatureCullingmask.html">Culling Masks</a>
     <p>Mask out areas of your scatter easily with the multiple methods available.</p>
   </div>
   <div class="main_card">
     <img src="../img/arrow.png" alt="donut img" />
-    <a href="./pages/rotation.html">Rotation</a>
+    <a href="./FeatureRotation.html">Rotation</a>
     <p>Have complete control over your particles rotation settings and alignment.</p>
   </div>
   <div class="main_card">
     <img src="../img/germ.png" alt="donut img" />
-    <a href="./pages/scale.html">Scale</a>
+    <a href="./FeatureScale.html">Scale</a>
     <p>Have control over the scale of your particles in various ways.</p>
   </div>
   <div class="main_card">
     <img src="../img/land.png" alt="donut img" />
-    <a href="./pages/pattern.html">Pattern</a>
+    <a href="./FeaturePattern.html">Pattern</a>
     <p>Add some pattern influencing your particles density/scale with the help of blender texture-data.</p>
   </div>
   <div class="main_card">
     <img src="../img/glacier.png" alt="donut img" />
-    <a href="./pages/abiotic.html">Abiotic</a>
+    <a href="./FeatureAbiotic.html">Abiotic</a>
     <p>All factors related to your terrain surface that can influence your scatter, such as slope or altitude for
       example.</p>
   </div>
   <div class="main_card">
     <img src="../img/3d.jpg" alt="donut img" />
-    <a href="./pages/proximity.html">Proximity</a>
+    <a href="./FeatureProximity.html">Proximity</a>
     <p>Influence your particles density/rotation/scale with the proximity of other elements in your scene.</p>
   </div>
   <div class="main_card">
     <img src="../img/green3d.png" alt="donut img" />
-    <a href="./pages/ecosystem.html">Ecosystem</a>
+    <a href="./FeatureEcosystem.html">Ecosystem</a>
     <p>Create dynamic environment that can influence one another.</p>
   </div>
   <div class="main_card">
     <img src="../img/mass.png" alt="donut img" />
-    <a href="./pages/offSet.html">Offset</a>
+    <a href="./FeatureOffset.html">Offset</a>
     <p>Offset your particles, push them around, or add falling effects.</p>
   </div>
   <div class="main_card">
     <img src="../img/bluemass.png" alt="donut img" />
-    <a href="./pages/wind.html">Wind</a>
+    <a href="./FeatureWind.html">Wind</a>
     <p>Add wind effects on your scattering by tilting your particles.</p>
   </div>
   <div class="main_card">
     <img src="../img/frame.png" alt="donut img" />
-    <a href="./pages/optimization.html">Optimization</a>
+    <a href="./FeatureOptimization.html">Optimization</a>
     <p>Optimize your viewport performance.</p>
   </div>
   <div class="main_card">
     <img src="../img/house.jpg" alt="donut img" />
-    <a href="./pages/instancing.html">Instancing</a>
+    <a href="./FeatureInstancing.html">Instancing</a>
     <p>Have control on how your instances are assigned to your scattered points.</p>
   </div>
   <div class="main_card">
-    <img src="../img/earth.jpg" alt="donut img" />
-    <a href="./pages/proVertexData.html">Procedural Data</a>
-    <p>Generate extremely useful vertex data to influence your scatter or shaders..</p>
-  </div>
-
-  <div class="main_card">
     <img src="../img/cars.jpg" alt="donut img" />
-    <a href="./pages/manualMode.html">Manual Mode</a>
+    <a href="./FeatureManualmode.html">Manual Mode</a>
     <p>The manual mode is a fantastic alternative to the procedural workflow of Scatter.</p>
   </div>
 </div>
@@ -169,4 +163,23 @@
     searchBox.classList.remove('active');
     closeIcon.classList.remove('active');
   });
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script>
+    $('h1[id]').click(function(event) {
+        try {
+            event.preventDefault();
+            var f = $(this).find('a').attr('data-frag');
+            var h = top.location.hash.substring(1);
+            if (h != "") {
+                var p = h.split('&');
+                var section = p[0].split('=')[1];
+                var article = p[1].split('=')[1];
+                top.location.hash = "#section=" + section + "&article=" + article + "&header=" + f;
+            }
+        } catch (error) {
+            console.log(error);
+        }
+    });
 </script>

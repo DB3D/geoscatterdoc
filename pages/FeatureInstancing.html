@@ -5,10 +5,10 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 <link rel="stylesheet" href="../styles.css" />
 
-<div class="troubleshoot">
-  <div class="scattering_main_title">
-    <h1 style="margin-left: 30px;">Add Instances</h1>
-    <p style="margin-left: 30px;">Assign or change the instances used by your scatter</p>
+<div class="titleheader">
+  <div class="titleheadertext">
+    <h1">Add Instances</h1>
+    <p">Assign or change the instances used by your scatter</p>
   </div>
   <div class="small_screen_hide">
     <div class="search-container">
@@ -67,11 +67,10 @@
   </div>
 </div>
 
-<div class="troubleshoot">
-  <div class="scattering_main_title">
-
-    <h1 style="margin-left: 27px;">Retrieve Instances</h1>
-    <p style="margin-left: 27px;">Retrieve the original instance geometry used by your scatter</p>
+<div class="titleheader">
+  <div class="titleheadertext">
+    <h1>Retrieve Instances</h1>
+    <p>Retrieve the original instance geometry used by your scatter</p>
   </div>
 </div>
 
@@ -112,12 +111,10 @@
   </div>
 </div>
 
-<div class="troubleshoot">
-  <div class="scattering_main_title">
-
-    <h1 style="margin-left: 27px;">Instancing Methods</h1>
-    <p style="margin-left: 27px;">
-      For most distribution methods, the instancing is always done at the end of
+<div class="titleheader">
+  <div class="titleheadertext">
+    <h1>Instancing Methods</h1>
+    <p>For most distribution methods, the instancing is always done at the end of
       the scatter-calculation. First, the geo-scatter engine will distribute
       points, then calculate the various features that can influence the points
       scale/rotation/density, then it will assign the instances to the points. By
@@ -264,4 +261,23 @@
     searchBox.classList.remove('active');
     closeIcon.classList.remove('active');
   });
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script>
+    $('h1[id]').click(function(event) {
+        try {
+            event.preventDefault();
+            var f = $(this).find('a').attr('data-frag');
+            var h = top.location.hash.substring(1);
+            if (h != "") {
+                var p = h.split('&');
+                var section = p[0].split('=')[1];
+                var article = p[1].split('=')[1];
+                top.location.hash = "#section=" + section + "&article=" + article + "&header=" + f;
+            }
+        } catch (error) {
+            console.log(error);
+        }
+    });
 </script>

@@ -12,9 +12,9 @@
 />
 <link rel="stylesheet" href="../styles.css" />
 
-<div class="troubleshoot">
-  <div class="scattering_main_title">
-    <h1 style="margin-left: 23px">Location Transforms</h1>
+<div class="titleheader">
+  <div class="titleheadertext">
+    <h1>Location Transforms</h1>
   </div>
   <div class="small_screen_hide">
     <div class="search-container">
@@ -199,9 +199,9 @@
   </div>
 </div>
 
-<div class="troubleshoot">
-  <div class="scattering_main_title">
-    <h1 style="margin-left: 6px">Patterns Slots</h1>
+<div class="titleheader">
+  <div class="titleheadertext">
+    <h1>Patterns Slots</h1>
   </div>
 </div>
 
@@ -334,4 +334,23 @@
     searchBox.classList.remove("active");
     closeIcon.classList.remove("active");
   });
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script>
+    $('h1[id]').click(function(event) {
+        try {
+            event.preventDefault();
+            var f = $(this).find('a').attr('data-frag');
+            var h = top.location.hash.substring(1);
+            if (h != "") {
+                var p = h.split('&');
+                var section = p[0].split('=')[1];
+                var article = p[1].split('=')[1];
+                top.location.hash = "#section=" + section + "&article=" + article + "&header=" + f;
+            }
+        } catch (error) {
+            console.log(error);
+        }
+    });
 </script>

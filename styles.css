@@ -8,6 +8,27 @@
 /* font-family: "Source Sans Pro", Arial; */
 /* font-family: Roboto, Arial; */
 
+/* main header format */
+
+.titleheader { /*== main header*/
+  background-color: #e1dfdb;
+  padding: 2rem 0rem;
+}
+.titleheader h1 {
+  font-family: 'Source Sans Pro', Arial;
+  font-size: 29pt;
+  font-weight: 400;
+}
+.titleheader p {
+  margin-top: 1rem;
+  font-family: "Source Sans Pro", sans-serif;
+}
+.titleheadertext {
+  width: 1030px;
+  margin: 0 auto;
+}
+
+/* Below == shit we have to sort, thanks to freelancer..  */
 
 *,
 *::before,
@@ -318,15 +339,7 @@ img {
   width: 993px;
   margin: 0 auto;
 }
-.troubleshoot { /*== main header*/
-  background-color: #e1dfdb;
-  padding: 2rem 0rem;
-}
-.troubleshoot h1 {
-  font-family: 'Source Sans Pro', Arial;
-  font-size: 29pt;
-  font-weight: 400;
-}
+
 .proximity_main_titles {
   width: 845px;
   margin: 0 auto;
@@ -337,10 +350,7 @@ img {
   font-weight: 400 !important;
   color: rgb(36, 35, 35) !important;
 }
-.troubleshoot p {
-  margin-top: 1rem;
-  font-family: "Source Sans Pro", sans-serif;
-}
+
 .procee_text {
   font-family: "Source Sans Pro", sans-serif;
   padding: 10px 40px;
@@ -1887,10 +1897,6 @@ position: relative;
   padding: 30px;
   font-family: "Source Sans Pro", sans-serif;
 }
-.scattering_main_title {
-  width: 1030px;
-  margin: 0 auto;
-}
 .patt_img {
   padding: 0px 20px;
   width: 270px;
@@ -2044,7 +2050,7 @@ position: relative;
   .prerequisie_section {
     width: auto;
   }
-  .scattering_main_title {
+  .titleheadertext {
     width: auto
   }
   .gt_copy_des {
@@ -2260,7 +2266,7 @@ position: relative;
   .faq-question {
     font-size: 20px;
   }
-  .troubleshoot h1 {
+  .titleheader h1 {
     font-size: 23px;
   }
   .clump_dist_card {
@@ -2326,7 +2332,7 @@ position: relative;
     padding: 0px 20px;
     width: 436px;
   }
-  .troubleshoot {
+  .titleheader {
     padding: 3rem 10px;
   }
   .manual_scatter img {

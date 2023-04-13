@@ -5,12 +5,12 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 <link rel="stylesheet" href="../styles.css" />
 
-<div class="troubleshoot">
-  <div class="scattering_main_title">
-
-    <h1 style="margin-left: 12px;">What is an Abiotic Factor?</h1>
-    <p style="margin-left: 12px;">Ever heard this term before?</p>
+<div class="titleheader">
+  <div class="titleheadertext">
+    <h1>What is an Abiotic Factor?</h1>
+    <p>Ever heard this term before?</p>
   </div>
+
   <div class="small_screen_hide">
     <div class="search-container">
       <div class="search-icon">
@@ -57,10 +57,9 @@
   </div>
 </div>
 
-<div class="troubleshoot">
-  <div class="scattering_main_title">
-
-    <h1 style="margin-left: 12px;">Elevation</h1>
+<div class="titleheader">
+  <div class="titleheadertext">
+    <h1>Elevation</h1>
   </div>
 </div>
 
@@ -108,10 +107,9 @@
   </div>
 </div>
 
-<div class="troubleshoot">
-  <div class="scattering_main_title">
-
-    <h1 style="margin-left: 12px;">Slope</h1>
+<div class="titleheader">
+  <div class="titleheadertext">
+    <h1>Slope</h1>
   </div>
 </div>
 
@@ -139,10 +137,9 @@
   </div>
 </div>
 
-<div class="troubleshoot">
-  <div class="scattering_main_title">
-
-    <h1 style="margin-left: 12px;">Orientation</h1>
+<div class="titleheader">
+  <div class="titleheadertext">
+    <h1>Orientation</h1>
   </div>
 </div>
 
@@ -195,10 +192,9 @@
   </div>
 </div>
 
-<div class="troubleshoot">
-  <div class="scattering_main_title">
-
-    <h1 style="margin-left: 12px;">Curvature</h1>
+<div class="titleheader">
+  <div class="titleheadertext">
+    <h1>Curvature</h1>
   </div>
 </div>
 
@@ -221,10 +217,9 @@
   </div>
 </div>
 
-<div class="troubleshoot">
-  <div class="scattering_main_title">
-
-    <h1 style="margin-left: 12px;">Border</h1>
+<div class="titleheader">
+  <div class="titleheadertext">
+    <h1>Border</h1>
   </div>
 </div>
 
@@ -265,4 +260,23 @@
     searchBox.classList.remove('active');
     closeIcon.classList.remove('active');
   });
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script>
+    $('h1[id]').click(function(event) {
+        try {
+            event.preventDefault();
+            var f = $(this).find('a').attr('data-frag');
+            var h = top.location.hash.substring(1);
+            if (h != "") {
+                var p = h.split('&');
+                var section = p[0].split('=')[1];
+                var article = p[1].split('=')[1];
+                top.location.hash = "#section=" + section + "&article=" + article + "&header=" + f;
+            }
+        } catch (error) {
+            console.log(error);
+        }
+    });
 </script>

@@ -5,9 +5,9 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 <link rel="stylesheet" href="../styles.css" />
 
-<div class="troubleshoot">
-  <div class="proximity_main_titles">
-    <h1 style="margin-left: 23px;">Repel</h1>
+<div class="titleheader">
+  <div class="titleheadertext">
+    <h1>Repel Feature</h1>
   </div>
   <div class="small_screen_hide">
     <div class="search-container">
@@ -100,9 +100,9 @@
   </div>
 </div>
 
-<div class="troubleshoot">
-  <div class="proximity_main_titles">
-    <h1 style="margin-left: 20px;">Lean Near Objects</h1>
+<div class="titleheader">
+  <div class="titleheadertext">
+    <h1>Lean Near Objects</h1>
   </div>
 </div>
 
@@ -145,17 +145,14 @@
       </div>
 </div>
 
-<div class="troubleshoot">
-  <div class="proximity_main_titles">
-    <h1 style="margin-left: 15px;">Outskirt Effects</h1>
+<div class="titleheader">
+  <div class="titleheadertext">
+    <h1>Outskirt Effects</h1>
   </div>
 </div>
 
 <div class="Outskirt">
   <div class="offset_v_card" style="padding: 0px 20px;">
-
-
-
     <div class="example_v_card">
       <div class="video_cont">
         <embed ?autoplay="1" src="https://thumbs.gfycat.com/ClearcutFatLarva-mobile.mp4" type="" />
@@ -163,7 +160,7 @@
           </div>
     <div class="video_desc_culling Outskirt_desc">
       <p>
-        The <i>"Outskirt" </i> feature will procedurally find the delimitation of your scatter from the given threshold
+        The <i>"Outskirt"</i> feature will procedurally find the delimitation of your scatter from the given threshold
         value in order to create a transition effect.
       </p><br>
       <h3>Use Case:</h3>
@@ -191,4 +188,23 @@
     searchBox.classList.remove('active');
     closeIcon.classList.remove('active');
   });
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script>
+    $('h1[id]').click(function(event) {
+        try {
+            event.preventDefault();
+            var f = $(this).find('a').attr('data-frag');
+            var h = top.location.hash.substring(1);
+            if (h != "") {
+                var p = h.split('&');
+                var section = p[0].split('=')[1];
+                var article = p[1].split('=')[1];
+                top.location.hash = "#section=" + section + "&article=" + article + "&header=" + f;
+            }
+        } catch (error) {
+            console.log(error);
+        }
+    });
 </script>
