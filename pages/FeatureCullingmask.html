@@ -330,20 +330,4 @@
 </script>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-<script>
-    $('h1[id]').click(function(event) {
-        try {
-            event.preventDefault();
-            var f = $(this).find('a').attr('data-frag');
-            var h = top.location.hash.substring(1);
-            if (h != "") {
-                var p = h.split('&');
-                var section = p[0].split('=')[1];
-                var article = p[1].split('=')[1];
-                top.location.hash = "#section=" + section + "&article=" + article + "&header=" + f;
-            }
-        } catch (error) {
-            console.log(error);
-        }
-    });
-</script>
+<script src="../nav.js"></script>
