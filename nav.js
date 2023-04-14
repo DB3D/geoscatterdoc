@@ -4,14 +4,15 @@ $(window).ready(function() {
     function encode_frag(page, article) {
         if (page == "") {
             // remove hash..
-            if ("pushState" in history) {
-                history.pushState("", document.title, window.location.pathname + window.location.search);
-            }
+            // if ("pushState" in history) {
+            //     history.pushState("", document.title, window.location.pathname + window.location.search);
+            // }
+            top.window.location.hash = "#";
         } else {
             if (article != "") {
-                window.location.hash = "#page=" + page + "&article=" + article;
+                top.window.location.hash = "#page=" + page + "&article=" + article;
             } else {
-                window.location.hash = "#page=" + page;
+                top.window.location.hash = "#page=" + page;
             }
         }
     }
@@ -20,10 +21,10 @@ $(window).ready(function() {
             page: undefined,
             article: undefined,
         };
-        if (window.location.hash != "") {
+        if (top.window.location.hash != "") {
             try {
                 // take out `#`
-                var h = window.location.hash.substring(1);
+                var h = top.window.location.hash.substring(1);
                 if (h != "") {
                     var p = h.split('&');
                     if (p.length == 1) {
@@ -46,7 +47,7 @@ $(window).ready(function() {
                 }
             } catch (error) {
                 console.log(error);
-                window.location.hash = "#";
+                top.window.location.hash = "#";
             }
         }
         return r;
@@ -72,7 +73,7 @@ $(window).ready(function() {
             $(".menu-item a[data-url='" + url +"']").addClass('active');
         } catch (error) {
             console.log(error);
-            window.location.hash = "#";
+            top.window.location.hash = "#";
         }
     }
     function in_iframe() {
@@ -82,8 +83,22 @@ $(window).ready(function() {
             return true;
         }
     }
+    function in_docs_frame() {
+        if (in_iframe()) {
+            // NOTE: lets assume there will be no other `docs.html`
+            return window.location.href.split('/').slice(-1) == 'docs.html'
+        }
+        return false;
+    }
+    function in_page_frame() {
+        if (in_iframe()) {
+            // NOTE: lets assume there will be no other `docs.html`
+            return window.location.href.split('/').slice(-1) != 'docs.html'
+        }
+        return false;
+    }
     
-    if (in_iframe()) {
+    if (in_page_frame()) {
         // make article headers change url in top and jump at them
         $('a[data-frag] h1[id]').click(function(event) {
             try {
