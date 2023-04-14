@@ -262,6 +262,9 @@ img {
   margin: 0;
   background-color: #000000;
   overflow: auto;
+  
+  /* FIX THE BLOODY SCROLLBAR */
+  overflow-x: hidden;
 }
 .rotate {
   transform: rotate(180deg);
@@ -322,6 +325,10 @@ img {
 #main_page_frame {
   min-height: 100vh;
   width: 100%;
+  
+  /* FIX THE BLOODY SCROLLBAR */
+  display: block;
+  
 }
 .july_logs_ul {
   padding: 0px 20px;
