@@ -148,6 +148,55 @@
 .large_video_template {
   width: 1123px;
   margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+/* prerequisite layout */
+
+.prerequisie_section {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1100px;
+  justify-content: space-between;
+  padding: 10px 0px;
+  margin: 0 auto;
+}
+
+.prerequisie_section img {
+  border-radius: 20px;
+}
+.prerequisie_section embed {
+  border-radius: 20px;
+  width: 470px;
+  height: 245px;
+}
+
+/* .video_cont_fea {
+  width: 472px !important;
+  border: 1px solid lightgrey;
+  position: relative;
+}
+.video_cont_fea embed {
+  width: 470px;
+  height: 245px;
+} */
+
+.prerequisie_cards {
+  font-family: "Source Sans Pro", sans-serif;
+  
+  margin: 15px 0px;
+}
+.prerequisie_cards h2 {
+  padding: 30px 0 5px 0;
+}
+
+.prerequisie_cards h3 {
+  padding: 15px 0 5px 0;
+}
+
+.prerequisie_cards p {
+  line-height: 30px;
 }
 
 
@@ -160,7 +209,9 @@
 
 
 
-/* Below == shit we have to sort, thanks to freelancer..  */
+
+
+/* Below == the shit stylesheet we have to sort, thanks to our wonderful freelancer..  */
 
 *,
 *::before,
@@ -1209,25 +1260,6 @@ img {
   width: 45%;
 }
 
-.prerequisie_section {
-  display: flex;
-  flex-wrap: wrap;
-  width: 1100px;
-  justify-content: center;
-  padding: 10px 0px;
-  margin: 0 auto;
-}
-.prerequisie_cards {
-  font-family: "Source Sans Pro", sans-serif;
-  
-  margin: 15px 0px;
-}
-.prerequisie_cards h3 {
-  padding: 14px 5px;
-}
-.prerequisie_cards p {
-  line-height: 30px;
-}
 .clump_dist_card {
   padding: 0px 20px;
   width: 520px;
