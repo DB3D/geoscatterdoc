@@ -29,6 +29,121 @@
   margin: 0 auto;
 }
 
+/* article style with padding */
+
+.article_content {
+  width: 1030px;
+  margin: 0 auto;
+  font-family: "Source Sans Pro", sans-serif;
+  padding: 30px 0;
+}
+.article_content h3 {
+  color: #274e13;
+  padding: 10px 0px;
+}
+.article_content ul {
+  margin-left: 20px;
+}
+.article_content ul li {
+  list-style-type: square;
+  line-height: 30px;
+  padding: 5px;
+}
+.article_content p {
+  line-height: 30px;
+  margin-top: 5px;
+}
+
+/* image gallery */
+
+.plugin_ins_slider {
+  background-color: #ffffff;
+  width: 700px;
+  margin: 20px auto;
+  height: 330px;
+  position: relative;
+}
+.image-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.image-container img {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  transition: opacity 0.5s ease-in-out;
+}
+.image-container img.slider_active {
+  display: block;
+}
+.dot-container {
+  width: 100%;
+  margin: 20px auto 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dot-container button {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-color: lightgrey;
+  margin: 0 5px;
+  border: none;
+  cursor: pointer;
+}
+.dot-container button.active {
+  background-color: #303033;
+}
+#prev,
+#next {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  color: #ffffff;
+  margin: auto;
+  top: 46%;
+  border: none;
+  border-radius: 50%;
+  font-size: 18px;
+  font-weight: bolder;
+  outline: none;
+  cursor: pointer;
+}
+#prev {
+  left: 1%;
+}
+#prev:hover {
+  background-color: #686565;
+}
+#next {
+  right: 1%;
+}
+#next:hover {
+  background-color: #686565;
+}
+
+/* large video */
+
+.large_video_template {
+  width: 1123px;
+  margin: 0 auto;
+}
+
+
+
+
+
+
+
+
+
+
+
 /* Below == shit we have to sort, thanks to freelancer..  */
 
 *,
@@ -1258,10 +1373,6 @@ padding: 0px 20px;
 
 /* installation mode page stylings starts */
 
-.installation_wide_video {
-  width: 1123px;
-  margin: 0 auto;
-}
 
 .installation_video {
   padding: 30px 40px;
@@ -1287,110 +1398,11 @@ padding: 0px 20px;
   padding: 20px 0px !important;
   margin: 0px auto !important;
 }
-.plugin_ins_slider {
-  background-color: #ffffff;
-  width: 700px;
-  margin: 20px auto;
-  height: 330px;
-  position: relative;
-}
 
-.image-container {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  position: relative;
-}
 
-.image-container img {
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: none;
-  transition: opacity 0.5s ease-in-out;
-}
-
-.image-container img.slider_active {
-  display: block;
-}
-
-.dot-container {
-  width: 100%;
-  margin: 20px auto 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.dot-container button {
-  height: 15px;
-  width: 15px;
-  border-radius: 50%;
-  background-color: lightgrey;
-  margin: 0 5px;
-  border: none;
-  cursor: pointer;
-}
-
-.dot-container button.active {
-  background-color: #303033;
-}
-
-#prev,
-#next {
-  height: 50px;
-  width: 50px;
-  position: absolute;
-  background-color: #404040;
-  color: #ffffff;
-  margin: auto;
-  top: 46%;
-  border: none;
-  border-radius: 50%;
-  font-size: 18px;
-  font-weight: bolder;
-  outline: none;
-  cursor: pointer;
-}
-
-#prev {
-  left: 1%;
-}
-#prev:hover {
-  background-color: #686565;
-}
-#next {
-  right: 1%;
-}
-#next:hover {
-  background-color: #686565;
-}
-.slider_content {
-  width: 950px;
-  margin: 0 auto;
-  font-family: "Source Sans Pro", sans-serif;
-  padding: 30px;
-}
-.slider_content h3 {
-  color: #274e13;
-  padding: 10px 0px;
-}
-.slider_content ul {
-  margin-left: 20px;
-}
-.slider_content ul li {
-  list-style-type: square;
-  line-height: 30px;
-  padding: 5px;
-}
 .center_img {
   width: 600px;
   margin: 20px auto;
-}
-.slider_content p {
-  line-height: 30px;
-  margin-top: 5px;
 }
 /* installation mode page stylings ends */
 
@@ -1864,35 +1876,6 @@ position: relative;
   background-color: #303033;
 }
 
-#prev,
-#next {
-  height: 50px;
-  width: 50px;
-  position: absolute;
-  background-color: #404040;
-  color: #ffffff;
-  margin: auto;
-  top: 46%;
-  border: none;
-  border-radius: 50%;
-  font-size: 18px;
-  font-weight: bolder;
-  outline: none;
-  cursor: pointer;
-}
-
-#prev {
-  left: 1%;
-}
-#prev:hover {
-  background-color: #686565;
-}
-#next {
-  right: 1%;
-}
-#next:hover {
-  background-color: #686565;
-}
 
 /* scattering mode page stylings ends */
 
@@ -2085,7 +2068,7 @@ position: relative;
   .plugin_ins_slider {
     width: 60%;
   }
-  .slider_content {
+  .article_content {
     width: 90%;
   }
   .center_img {
