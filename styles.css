@@ -11,7 +11,8 @@
 /* generic article title header */
 
 .titleheader { /*== main header*/
-  background-color: #e1dfdb;
+  background-image: linear-gradient(to bottom, #e1dfdb 10%, transparent 110%);
+  background-attachment: fixed;
   padding: 2rem 0 2rem 0;
   position: -webkit-sticky; /* For Safari browser compatibility */
   position: sticky;
