@@ -13,18 +13,22 @@
 .titleheader { /*== main header*/
   background-color: #e1dfdb;
   padding: 2rem 0 2rem 0;
+  position: -webkit-sticky; /* For Safari browser compatibility */
+  position: sticky;
+  top: 0;
+  z-index: 100; 
 }
 .titleheader h1 {
   font-family: 'Source Sans Pro', Arial;
   font-size: 29pt;
   font-weight: 400;
   color: black;
+  width: 1030px;
+  margin: 0 auto;
 }
 .titleheader p {
   margin-top: 1rem;
   font-family: "Source Sans Pro", sans-serif;
-}
-.titleheadertext {
   width: 1030px;
   margin: 0 auto;
 }
@@ -72,7 +76,7 @@
 }
 
 .end_page_spacing {
-  margin: 40% 0;
+  margin: 50% 0;
 }
 
 /* centered images */ 
