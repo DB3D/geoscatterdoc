@@ -14,6 +14,8 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 <link rel="stylesheet" href="../styles.css" />
 
+<!-- title -->
+
 <div class="titleheader">
   <div class="titleheadertext">
     <a href="#" data-frag="emitter"><h1 id="emitter">Emitter</h1></a>
@@ -21,52 +23,57 @@
   </div>
   </div>
 
-<div class="emitter_section">
-  <div class="emitter_cards">
-    <img src="../img/scat1.jpg" alt="" />
-    <h3>What is an Emitter?</h3>
-    <p>
-      When using Geo-Scatter, the plugin will first ask you to define your
-      emitter-object in order to be able to create or tweak a scatter. This
-      object main purpose is to hold datablocks of all the scatter-system(s) and
-      their properties.
-    </p>
-    <br />
-    <p>
-      By default, every creation operator will use this emitter object as the
-      scattering surface, however, the surface(s) can be picked independently.
-    </p>
-    <p>
-      If you'd like to switch from one emitter to another, just click on the
-      little icon on the top right of any panels. This process is not
-      destructive, the settings will all be saved unless you delete one of these
-      emitter object(s).
-    </p>
-  </div>
+<div class="article_content">
+  <div class="flex_cards_section">
 
-  <div class="emitter_cards">
-    <img src="../img/scat2.jpg" alt="" />
-    <h3>Emitter Switching Workflow</h3>
-    <p>
-      In the plugin manager, there are alternative ways to switch from one
-      emitter to another, for example, you can change the emitter with a
-      pin/unpin action, or directly set the active object as an emitter target.
-    </p>
-    <br />
-    <p>
-      Note that the statistic panel (in the plugin manager) is also an efficient
-      way to change between existing emitters quickly.
-    </p>
-    <br />
-    <h3>Reminder:</h3>
-    <p>
-      The plugin manager is the place where your biome library is located, you
-      can find it in blender preferences, search <i>"Scatter"</i> and click on
-      the <i>"Enter Manager"</i> button.
-    </p>
+    <div class="flex_singlecard card2x">
+      <img src="../img/scat1.jpg" alt="" />
+      <h2>What is an Emitter?</h2>
+      <p>
+        When using Geo-Scatter, the plugin will first ask you to define your
+        emitter-object in order to be able to create or tweak a scatter. This
+        object main purpose is to hold datablocks of all the scatter-system(s) and
+        their properties.
+      </p>
+      <br />
+      <p>
+        By default, every creation operator will use this emitter object as the
+        scattering surface, however, the surface(s) can be picked independently.
+      </p>
+      <p>
+        If you'd like to switch from one emitter to another, just click on the
+        little icon on the top right of any panels. This process is not
+        destructive, the settings will all be saved unless you delete one of these
+        emitter object(s).
+      </p>
+    </div>
+
+    <div class="flex_singlecard card2x">
+      <img src="../img/scat2.jpg" alt="" />
+      <h2>Switching Emitter's</h2>
+      <p>
+        In the plugin manager, there are alternative ways to switch from one
+        emitter to another, for example, you can change the emitter with a
+        pin/unpin action, or directly set the active object as an emitter target.
+      </p>
+      <br />
+      <p>
+        Note that the statistic panel (in the plugin manager) is also an efficient
+        way to change between existing emitters quickly.
+      </p>
+      <br />
+      <h3>Reminder:</h3>
+      <p>
+        The plugin manager is the place where your biome library is located, you
+        can find it in blender preferences, search "Scatter" and click on
+        the "Enter Manager" button.
+      </p>
+    </div>
+
   </div>
 </div>
 
+<!-- title -->
 
 <div class="titleheader">
   <div class="titleheadertext">
@@ -75,55 +82,53 @@
   </div>
 </div>
 
-<div class="surface_scatering">
-  <div class="emitter_section">
-    <div class="emitter_cards">
+<div class="article_content">
+  <div class="flex_cards_section">
+
+    <div class="flex_singlecard card2x">
       <img src="../img/scat3.jpg" alt="" />
-      <h3>Pick your Surface(s)</h3>
+      <h2>Pick your Surface(s)</h2>
       <p>
         By default, any new scatter will use the chosen emitter as the
-        distribution surface.
-      </p>
-      <br />
-      <p>
-        Since
+        distribution surface. Since
         <a href="https://sites.google.com/view/scatter5docs/changelogs?authuser=0#h.htsims2am8cw"
           target="_blank">Geo-Scatter 5.3</a>
         you are able to pick any surface(s) of your choice independently from the
         emitter object:
+        <ul>
+          <li>
+            For already created system(s), in the new surface sub-panel in the
+            tweaking panel
+          </li>
+          <li>
+            For system(s) soon to be created, in the operator's popovers located in
+            the creation panel.
+          </li>
+        </ul>
       </p>
-      <ul>
-        <li>
-          For already created system(s), in the new surface sub-panel in the
-          tweaking panel
-        </li>
-        <li>
-          For system(s) soon to be created, in the operator's popovers located in
-          the creation panel.
-        </li>
-      </ul>
     </div>
 
-    <div class="emitter_cards">
+    <div class="flex_singlecard card2x">
       <img src="../img/scat4.jpg" alt="" />
-      <h3>Large & Highpoly Surfaces</h3>
+      <h2>Large & Highpoly Surfaces</h2>
       <p>
         Be careful when scattering on enormous terrains, the scattering density is
         based on the surface-area and displaying too many instances will slow-down
         or sometimes freeze your computer, and some features such as abiotic
         curvature or mask painting might be slower with heavy -polycount surfaces.
       </p>
-      <br />
+      <h3>Pro Tip:</h3>
       <p>
         If you intend to scatter on a large area, please read the
         <a href="https://sites.google.com/view/geoscatter/manual/optimization?authuser=0">optimization</a>
-        page. The "on creation" settings might help too!
+        page. The on creation settings might help too, 
+        thanks to them you will be able to define some optimization settings on creation!
       </p>
     </div>
 
-    <div class="emitter_cards">
+    <div class="flex_singlecard card2x">
       <img src="../img/scat5.jpg" alt="" />
-      <h3>Non-linear workflow</h3>
+      <h2>Non-linear workflow</h2>
       <p>
         The native scattering experience in blender consists of adding a
         particle-system data-block on a single emitter object, then repeat the
@@ -133,7 +138,7 @@
       </p>
       <br />
       <p>
-        Rest assured this linear workflow is still available in Scatter5 simply by
+        Rest assured this linear workflow is still available in Geo-Scatter simply by
         swapping emitter objects. However since the multi-surface feature has been
         implemented in our pipeline, users are able to de-centralize their
         scatter-system(s) from their emitters by choosing alternative surface(s).
@@ -143,14 +148,13 @@
       </p>
     </div>
 
-    <div class="emitter_cards">
+    <div class="flex_singlecard card2x">
       <img src="../img/scat6.jpg" alt="" />
-      <h3>About Multi-surface Implementation</h3>
+      <h2>About Multi-surface Implementation</h2>
       <p>
         This multi-surface workflow has been rigorously implemented in our
         scattering pipeline, here are a few implementation examples:
       </p>
-      <br />
       <ul>
         <li>
           It is possible to scatter locally on many surfaces simultaneously.
@@ -176,9 +180,12 @@
         </li>
       </ul>
     </div>
-  </div>
 
+  </div>
 </div>
+
+<!-- title -->
+
 <div class="titleheader">
   <div class="titleheadertext">
     <a href="#" data-frag="addnew"><h1 id="addnew">Add New</h1></a>
@@ -186,44 +193,42 @@
   </div>
 </div>
 
-<div class="add_new_sec">
-  <div class="offset_v_card">
-    <div class="video_cont_offset">
-      <embed height="246" width="470" ?autoplay="1" src="https://thumbs.gfycat.com/GrimyOrderlyCoypu-mobile.mp4"
-        type="" />
+<div class="article_content">
+  <div class="medial_textr">
+
+    <div class="medial">
+      <gif>
+        <embed height="100%" ?autoplay="1" src="https://thumbs.gfycat.com/GrimyOrderlyCoypu-mobile.mp4" type="" />
+      </gif>
     </div>
-  
-  </div>
 
-  <div class="add_new_desc">
-    <p>
-      The fastest and simplest way to create a new scatter-system is by clicking
-      on the add icon next to your system list. This will generate a simple
-      random distribution with a density of 0.2 instance /m² and no features
-      enabled on the defined emitter surface.
-    </p>
-    <br />
-    <p>
-      If you have objects selected in your viewport it will link them in the
-      instance collection, if not, it will activate the default display as a
-      point feature.
-    </p>
-    <br />
+    <div class="card2x">
+      <h2>Add Operator</h2>
+      <p>
+        The fastest and simplest way to create a new scatter-system is by clicking
+        on the add icon next to your system list. It  will create a simple
+        random distribution on the defined emitter with a density of 0.2 instances/m² with no features
+        enabled. If you have objects selected in your viewport it will link them in the
+        instance collection, if not, it will activate the display as feature by default.
+      </p>
+      <br>
+      <h3>Warnings:</h3>
+      <p>
+        Please use the remove operator to delete a scatter-systems, do not delete
+        Geo-Scatter collections directly from the outliner, this will lead to issues.
+      </p>
+      <br>
+      <h3>Pro-Tip:</h3>
+      <p>
+        Hold the ALT key to consider the selection as your future surface(s) with
+        un-defined instances instead.
+      </p>
+    </div>
 
-    <h3>Beware:</h3>
-    <p>
-      Please use the remove operator to delete a scatter-systems, do not delete
-      Scatter5 collections directly from the outliner, this will lead to issues.
-    </p>
-    <br />
-
-    <h3>Pro-Tip:</h3>
-    <p>
-      Hold the ALT key to consider the selection as your future surface(s) with
-      un-defined instances instead.
-    </p>
   </div>
 </div>
+
+<!-- title -->
 
 <div class="titleheader">
   <div class="titleheadertext">
@@ -232,23 +237,32 @@
   </div>
 </div>
 
-<div class="add_new_sec2">
-  <img src="../img/beero1.png" class="add_new_desc_img" alt="sssssssssssssssss" />
-  <div class="add_new_desc2">
-    <p>
-      The second fastest way to scatter the selected objects from the viewport
-      or the asset browser is by using the density scatter operator. Quite
-      straightforward, choose your Particles /m², cm², ha, or km² ratio, an
-      estimation will be made in real-time, then click on the scatter button.
-    </p>
-    <br />
-    <p>
-      A new scatter system will appear in your system list. Note that the all
-      system(s) created will always use the m² unit.
-    </p>
-    <br />
+<div class="article_content">
+  <div class="medial_textr">
+
+    <div class="medial card2x">
+      <img src="../img/beero1.png" alt="sssssssssssssssss" />
+    </div>
+
+    <div class="card2x">
+      <h2>Density Scatter Operator</h2>
+      <p>
+        The second fastest way to scatter the selected objects from the viewport
+        or the asset browser is by using the density scatter operator. Quite
+        straightforward, choose your Particles /m², cm², ha, or km² ratio, an
+        estimation will be made in real-time, then click on the scatter button.
+      </p>
+      <br />
+      <p>
+        A new scatter system will appear in your system list. Note that the all
+        system(s) created will always use the m² unit.
+      </p>
+    </div>
+
   </div>
 </div>
+
+<!-- title -->
 
 <div class="titleheader">
   <div class="titleheadertext">
@@ -257,159 +271,164 @@
   </div>
 </div>
 
-<div class="add_new_sec">
-  <div class="offset_v_card">
-    <div class="video_cont_offset">
-      <embed height="246" width="470" ?autoplay="1"
-        src="https://thumbs.gfycat.com/HeartyEverlastingHumpbackwhale-mobile.mp4" type="" />
-    </div>
-   
-  </div>
+<div class="article_content">
+  <div class="medial_textr">
 
-  <div class="add_new_desc">
-    <h3>Usage:</h3>
+  <div class="medial card2x">
+    <gif>
+      <embed height="246" width="470" ?autoplay="1" src="https://thumbs.gfycat.com/HeartyEverlastingHumpbackwhale-mobile.mp4" type="" />
+    </gif>
+  </div>
+   
+  <div class="card2x">
+    <h2>How to use</h2>
     <p>
-      One of the most important features of the Scatter plugin is the
-      <i>"Scatter Object With Preset" </i> concept. Quite easy to understand ,
-      it goes like this:
+      One of the most important workflow of the Geo-Scatter plugin is the
+      "Scatter the selected Object(s) with the selected Preset" concept:
     </p>
-    <br />
     <ul>
-      <li>1.&nbsp; &nbsp;Select your future instance(s)</li>
-      <li>2.&nbsp; &nbsp;Select your preset</li>
-      <li>
-        3.&nbsp; &nbsp;Click on 'Scatter', and it will scatter the selection on
-        your emitter <br />
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;surface by default.
-      </li>
+      <li>Select your future instance(s) in the viewport (or in the asset-browser).</li>
+      <li>Select your preset by clicking on the thumbnail</li>
+      <li>Click on 'Scatter', and it will scatter the selection on your emitter surface by default.</li>
     </ul>
-    <br />
+    <br>
+    <br>
     <h3>Pro Tip:</h3>
     <p>
       You are able to automatically generate the name or color of your future
       scatter-system by enabling the options in the header menu.
     </p>
-    <br />
+  </div>
+
   </div>
 </div>
 
-<div class="add_new_sec">
-  <div class="offset_v_card">
-    <div class="video_cont_offset">
-      <embed height="246" width="470" ?autoplay="1" src="https://thumbs.gfycat.com/EagerLastingKakarikis-mobile.mp4"
-        type="" />
+<div class="article_content">
+  <div class="medial_textr">
+
+    <div class="medial card2x">
+      <gif>
+        <embed height="246" width="470" ?autoplay="1" src="https://thumbs.gfycat.com/EagerLastingKakarikis-mobile.mp4" type="" />
+      </gif>
     </div>
-    
-  </div>
+      
+    <div class="card2x">
+      <h2>Asset Browser Support</h2>
+      <p>
+        Since the arrival of the new asset browser in blender 3.0 we wanted 
+        to be the first to harness it's full power within our plugin!
+        Within the tweak panel interface, you'll be able to define if your
+        scatter operator will scatter the selected objects of the viewport, 
+        or the selected assets in your asset-browser. If you choose this latest 
+        option, Geo-Scatter will automatically import the assets for you.
+      </p>
+    </div>
 
-  <div class="add_new_desc">
-    <h3>Asset Browser Support</h3>
-    <p>
-      With the release of blender 3.0, we wanted to implement the new fantastic
-      asset browser within the Scatter plugin right away!
-    </p>
-    <br />
-    <p>
-      Above your <i>"Scatter Object(s)"</i> button you're able to choose if you
-      will scatter the selection from the viewport, or from the asset browser.
-    </p>
+  </div>
+</div>
+
+<div class="separator_line"></div>
+
+<div class="article_content">
+  <div class="medial_textr">
+
+    <div class="medial card2x">
+      <img src="../img/scat21.jpg" alt="" /> 
+      <br>
+      <br>
+      <h2>Install the Presets</h2>
+      <p>
+        These presets are parts of the <i>preset.scatpack</i>, shipped with
+        our plugin. You'll be able to install this preset scatpack just like you would with plugins
+      </p>
+      <br />
+      <h3>Pro Tip:</h3>
+      <p>
+        Note that these presets can be applied directly to the selected-system(s)
+        in the lister side menu, or per settings in the gear-icon header popover
+        menu.
+      </p>
+    </div>
+
+    <div class="card2x">
+      <h2>The Presets</h2>
+      <p>
+        A preset is a '.preset' text file assigned to an icon and encoded with
+        settings. Presets are of course completely customizable, you can create
+        your own presets, save them and share them with your friends or
+        collaborator.
+      </p>
+      <br />
+      <p>Here is a quick description of the presets color code:</p>
+      <ul>
+        <li>
+          <p><b>Dark Blue:</b> Simple Random Distribution</p>
+        </li>
+        <li>
+          <p>
+            <b>Clear Blue:</b> Random Distribution with limit collision enabled
+          </p>
+        </li>
+        <li>
+          <p><b>Red:</b> Random Distribution with unique noise patterns.</p>
+        </li>
+        <li>
+          <p><b>Pink:</b> Same as above, but with wave patterns.</p>
+        </li>
+        <li>
+          <p>
+            <b>Orange:</b> Random Distribution with multi-user patterns via RGB
+            channels.
+          </p>
+        </li>
+        <li>
+          <p>
+            <b>Brown:</b> Random Distribution with multi-user patterns via color
+            ID.
+          </p>
+        </li>
+        <li>
+          <p>
+            <b>MultiColor:</b> Random Distribution with 'Cluster' instancing pick
+            method.
+          </p>
+        </li>
+        <li>
+          <p><b>Grey:</b> Clump Distribution</p>
+        </li>
+        <li>
+          <p>
+            <b>Greyish Blue:</b> Random Distribution with generated rotation tilt
+            flowmaps.
+          </p>
+        </li>
+        <li>
+          <p>
+            <b>Desaturated Blue: </b> Random Distribution with generated rotation
+            tangent flowmaps
+          </p>
+        </li>
+        <li>
+          <p><b>Greens:</b> Forest Presets</p>
+        </li>
+        <li>
+          <p>
+            <b>Camo:</b> Forest Presets with 'Cluster' instancing pick method.
+          </p>
+        </li>
+        <li>
+          <p>
+            <b>Purple:</b> Special examples, such as per face, offset, 45d snap,
+            or billboards.
+          </p>
+        </li>
+      </ul>
+    </div>
+
   </div>
 </div>
 
-<div class="features_border"></div>
-
-<div class="preset_section">
-  <div class="presets_img_sec">
-    <img src="../img/scat21.jpg" alt="" /> <br />
-    <p>
-      <i>These presets are parts of the scatter-library scatpack, shipped with
-        the plugin.</i>
-    </p>
-    <br />
-    <h3>Pro Tip:</h3>
-    <p>
-      Note that these presets can be applied directly to the selected-system(s)
-      in the lister side menu, or per settings in the gear-icon header popover
-      menu.
-    </p>
-  </div>
-
-  <div class="presets_desc">
-    <h3>The Presets</h3>
-    <br />
-    <p>
-      A preset is a '.preset' text file assigned to an icon and encoded with
-      settings. Presets are of course completely customizable, you can create
-      your own presets, save them and share them with your friends or
-      collaborator.
-    </p>
-    <br />
-    <p>Here is a quick description of the presets, by their order:</p>
-    <ul>
-      <li>
-        <p><b>Dark Blue:</b> Simple Random Distribution&nbsp;</p>
-      </li>
-      <li>
-        <p>
-          <b>Clear Blue:</b> Random Distribution with limit collision enabled
-        </p>
-      </li>
-      <li>
-        <p><b>Red:</b> Random Distribution with unique noise patterns.</p>
-      </li>
-      <li>
-        <p><b>Pink:</b> Same as above, but with wave patterns.</p>
-      </li>
-      <li>
-        <p>
-          <b>Orange:</b> Random Distribution with multi-user patterns via RGB
-          channels.
-        </p>
-      </li>
-      <li>
-        <p>
-          <b>Brown:</b> Random Distribution with multi-user patterns via color
-          ID.
-        </p>
-      </li>
-      <li>
-        <p>
-          b MultiColor: Random Distribution with 'Cluster' instancing pick
-          method.
-        </p>
-      </li>
-      <li>
-        <p><b>Grey:</b> Clump Distribution</p>
-      </li>
-      <li>
-        <p>
-          <b>Greyish Blue:</b> Random Distribution with generated rotation tilt
-          flowmaps.
-        </p>
-      </li>
-      <li>
-        <p>
-          <b>Desaturated Blue: </b> Random Distribution with generated rotation
-          tangent flowmaps
-        </p>
-      </li>
-      <li>
-        <p><b>Greens:</b> Forest Presets</p>
-      </li>
-      <li>
-        <p>
-          <b>Camo:</b> Forest Presets with 'Cluster' instancing pick method.
-        </p>
-      </li>
-      <li>
-        <p>
-          <b>Purple:</b> Special examples, such as per face, offset, 45d snap,
-          or billboards.
-        </p>
-      </li>
-    </ul>
-  </div>
-</div>
+<!-- title -->
 
 <div class="titleheader">
   <div class="titleheadertext">
@@ -435,15 +454,11 @@
 </div>
 
 
-<div class="add_new_sec">
-  <div class="offset_v_card">
-    <div class="video_cont_offset">
-      <embed height="246" width="470" ?autoplay="1" src="https://thumbs.gfycat.com/ThoughtfulNauticalLeopard-mobile.mp4"
-        type="" />
-    </div>
+<div class="article_content">
+  <gif>
+    <embed height="246" width="470" ?autoplay="1" src="https://thumbs.gfycat.com/ThoughtfulNauticalLeopard-mobile.mp4" type="" />
+  </gif>
     
-  </div>
-
   <div class="add_new_desc">
     <h3>Usage</h3>
     <p>
@@ -500,6 +515,8 @@
   </div>
 </div>
 
+<!-- title -->
+
 <div class="titleheader">
   <div class="titleheadertext">
     <a href="#" data-frag="manualscatter"><h1 id="manualscatter">Manual Scatter</h1></a>
@@ -518,6 +535,8 @@
   </p>
 </div>
 
+<!-- title -->
+
 <div class="titleheader">
   <div class="titleheadertext">
     <a href="#" data-frag="quickscatter"><h1 id="quickscatter">Quick Scatter</h1></a>
@@ -525,14 +544,11 @@
   </div>
 </div>
 
-<div class="add_new_sec">
-  <div class="offset_v_card">
-    <div class="video_cont_offset">
-      <embed height="246" width="470" ?autoplay="1"
-        src="https://thumbs.gfycat.com/HeartyEverlastingHumpbackwhale-mobile.mp4" type="" />
-    </div>
-    
-  </div>
+<div class="article_content">
+  <gif>
+    <embed height="246" width="470" ?autoplay="1" src="https://thumbs.gfycat.com/HeartyEverlastingHumpbackwhale-mobile.mp4" type="" />
+  </gif>
+  
 
   <div class="add_new_desc">
     <p>
@@ -570,6 +586,8 @@
     </ul>
   </div>
 </div>
+
+<!-- title -->
 
 <div class="titleheader">
   <div class="titleheadertext">
@@ -618,6 +636,8 @@
   </div>
 </div>
 
+<!-- title -->
+
 <div class="titleheader">
   <div class="titleheadertext">
     <a href="#" data-frag="systemlist"><h1 id="systemlist">System List</h1></a>
@@ -627,15 +647,11 @@
   </div>
 </div>
 
-<div class="add_new_sec">
-  <div class="offset_v_card">
-    <div class="video_cont_offset">
-      <embed height="246" width="470" ?autoplay="1" src="https://thumbs.gfycat.com/ScratchyDisfiguredHuia-mobile.mp4"
-        type="" />
-    </div>
+<div class="article_content">
+  <gif>
+    <embed height="246" width="470" ?autoplay="1" src="https://thumbs.gfycat.com/ScratchyDisfiguredHuia-mobile.mp4" type="" />
+  </gif>
    
-  </div>
-
   <div class="add_new_desc">
     <h3>Main Lister Interface</h3>
     <p>
@@ -697,6 +713,8 @@
     </p>
   </div>
 </div>
+
+<!-- title -->
 
 <div class="titleheader">
   <div class="titleheadertext">
