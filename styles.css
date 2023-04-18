@@ -13,7 +13,6 @@
 .titleheader { /*== main header*/
   background-color: #e1dfdb;
   padding: 2rem 0 2rem 0;
-  margin-right: 1%;
 }
 .titleheader h1 {
   font-family: 'Source Sans Pro', Arial;
@@ -73,11 +72,7 @@
 }
 
 .end_page_spacing {
-  width: 1030px;
-  margin: 10% auto;
-  border: 2px solid #00000000;
-  border-radius: 100%;
-  border-radius: 10000px
+  margin: 40% 0;
 }
 
 /* centered images */ 
