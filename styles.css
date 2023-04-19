@@ -13,7 +13,7 @@
 .titleheader { /*== main header*/
   background-image: linear-gradient(to bottom, #e1dfdb 50%, transparent 95%);
   background-attachment: fixed;
-  padding: 2rem 0 2rem 0;
+  padding: 1.5rem 0 1.5rem 0;
   position: -webkit-sticky; /* For Safari browser compatibility */
   position: sticky;
   top: 0;
@@ -205,6 +205,9 @@
 }
 .card2x {
   width: 45%;;
+}
+.card3x {
+  width: 31%;;
 }
 
 /* image on the left, text on the right layout type */
