@@ -219,12 +219,23 @@
   margin: 0 auto;
   justify-content: left;
 }
+.medial_textr_big {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1125px;
+  margin: 0 auto;
+  justify-content: left;
+}
 .edial_textr h2{
   padding: 0 0 5px 0;
 }
 .medial_textr embed {
   width: 470px;
   height: 245px;
+}
+.medial_textr_big embed {
+  width: 564px;
+  height: 294px;
 }
 .medial {
   padding-right: 5%;
