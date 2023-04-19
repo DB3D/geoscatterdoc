@@ -21,91 +21,94 @@
 />
 <link rel="stylesheet" href="../styles.css" />
 
+<!-- title -->
+
 <div class="titleheader">
     <a href="#" data-frag="vg"><h1 id="vg">Vertex-Group Mask</h1></a>
     <p>Mask based on a chosen vertex-group</p>
 </div>
 
-<div class="offset_v_card">
-  <div class="example_v_card">
-    <div class="video_cont">
-      <embed
-        ?autoplay="1"
-        src="https://thumbs.gfycat.com/SpanishJollyFunnelweaverspider-mobile.mp4"
-        type=""
-      />
-          </div>
-      </div>
+<div class="article_content">
+  <div class="medial_textr">
 
-  <div class="video_desc_culling" style="margin-top: 10px">
-    <p>
-      Remove density of the active scatter-system with the help of a chosen
-      vertex-group (often called <i>"Vgroup"</i> ).
-    </p>
+    <div class="medial">
+      <embed ?autoplay="1" src="https://thumbs.gfycat.com/SpanishJollyFunnelweaverspider-mobile.mp4" type=""/>
+    </div>
 
-    <h3 style="margin-top: 5px">Reminder:</h3>
-    <ul>
-      <li>
-        Use the ALT key while assigning your vertex-group to batch assign to all
-        selected system(s).
-      </li>
-      <li>
-        Remember that the
-        <a
-          href="https://sites.google.com/view/geoscatter/manual/procedural-vertex-data?authuser=0"
-          >procedural vertex-data workflow </a
-        >is available to generate a more complex combination of vertex masks
-      </li>
-      <li>
-        If you are working with multiple surfaces, please make sure your chosen
-        vertex-group is shared across all of your surfaces.
-      </li>
-      <li>
-        If you cannot paint anything, that's probably because your surface does
-        not have enough vertices. We propose a "remesh" operator in the emitter
-        panel.
-      </li>
-    </ul>
+    <div class="card2x">
+      <h2>Vertex-Group Mask</h2>
+      <p>
+        Remove points of your distribution based on a chosen
+        vertex-group ( also called "Vgroup" ).
+      </p>
+      <br>
+      <h3>Reminder:</h3>
+      <ul>
+        <li>
+          Use the ALT key while assigning your vertex-group to batch assign to all
+          selected system(s).
+        </li>
+        <li>
+          Remember that the
+          <a
+            href="https://sites.google.com/view/geoscatter/manual/procedural-vertex-data?authuser=0"
+            >procedural vertex-data workflow </a
+          >is available to generate a more complex combination of vertex masks
+        </li>
+        <li>
+          If you are working with multiple surfaces, please make sure your chosen
+          vertex-group is shared across all of your surfaces.
+        </li>
+        <li>
+          If you cannot paint anything, that's probably because your surface does
+          not have enough vertices. We propose a "remesh" operator in the emitter
+          panel.
+        </li>
+      </ul>
+    </div>
+
   </div>
 </div>
+
+<!-- title -->
 
 <div class="titleheader">
     <a href="#" data-frag="vcol"><h1 id="vcol">Vertex-Color Mask</h1></a>
     <p>Mask based on a chosen vertex-color attribute</p>
 </div>
 
-<div class="offset_v_card">
-  <div class="example_v_card">
-    <div class="video_cont">
-      <embed
-        ?autoplay="1"
-        src="https://thumbs.gfycat.com/ForsakenWhiteJanenschia-mobile.mp4"
-        type=""
-      />
-          </div>
-      </div>
-  <div class="video_desc_culling" style="line-height: 30px; padding-top: 10px">
-    <p>
-      Remove density of a scatter-system with the help of a chosen vertex-color
-      layer (often called <i>"Vcol"</i>, now recently re-named to id "Color
-      Attribute").
-    </p>
-    <br />
-    <p>
-      By default, Scatter5 will use the greyscale information of your color
-      data, however, there are multiple color sampling methods available such as
-      R/G/B channels or color ID. Handy to control the density of multiple
-      scatter-system for one single painting canvas.
-    </p>
+<div class="article_content">
+  <div class="medial_textr">
+
+    <div class="medial">
+      <embed ?autoplay="1" src="https://thumbs.gfycat.com/ForsakenWhiteJanenschia-mobile.mp4" type=""/>    
+    </div>
+
+    <div class="card2x">
+      <h2>Vertex-Color Mask</h2>
+      <p>
+        Remove density of a scatter-system with the help of a chosen vertex-color
+        layer ( also called "Vcol", now recently re-named to "Color
+        Attribute" ).
+      </p>
+      <br />
+      <p>
+        By default, Geo-Scatter will use the greyscale information of your color
+        data, however, there are multiple color sampling methods available such as
+        R/G/B channels or color ID. Handy to control the density of multiple
+        scatter-system for one single painting canvas.
+      </p>
+    </div>
+
   </div>
 </div>
 
-<div class="culling_content">
-  <h3>Pro Tip:</h3>
+<div class="article_content" style="padding-top: 0">
+  <h2>Pro Tip:</h2>
   <ul>
     <li>
       When painting color ID maps, be sure that your brush falloff is set to
-      flat. Gradient painting is not recommended when using a custom-color
+      flat.<br>Gradient painting is not recommended when using a custom-color
       sampling method.
     </li>
     <li>
@@ -125,169 +128,190 @@
       in blender.
     </li>
   </ul>
+
+  <br>
 </div>
+
+<!-- title -->
 
 <div class="titleheader">
     <a href="#" data-frag="image"><h1 id="image">Image Mask</h1></a>
     <p>Mask based on a chosen image data</p>
 </div>
 
-<div class="offset_v_card">
-  <div class="example_v_card">
-    <div class="video_cont">
-      <embed
-        ?autoplay="1"
-        src="https://thumbs.gfycat.com/AshamedGrotesqueHarlequinbug-mobile.mp4"
-        type=""
-      />
-          </div>
-      </div>
-  <div class="video_desc_culling" style="line-height: 30px; padding-top: 10px">
-    <p>
-      Remove density of a scatter-system with a chosen image. Using an image for
-      masking is best if you do not want to be limited by the amount and
-      disparity of your surface(s) vertices. The color sampling tips from above
-      also apply to this feature as well.
-    </p>
-    <br />
-    <h3 style="margin-top: 5px">Reminder:</h3>
-    <ul>
-      <li>
-        In blender, it is important to always save your image datas, or you
-        might lose them when you open your file later on!
-      </li>
-      <li>
-        If you do not see anything, perhaps that's because your emitter surface
-        does not have any UV's?
-      </li>
-      <li>
-        Note that blender painter editor is quite slow when painting large
-        areas.
-      </li>
-    </ul>
+<div class="article_content">
+  <div class="medial_textr">
+
+    <div class="medial">
+      <embed ?autoplay="1" src="https://thumbs.gfycat.com/AshamedGrotesqueHarlequinbug-mobile.mp4" type=""/>      
+    </div>
+
+    <div class="card2x">
+      <h2>Image Mask</h2>
+      <p>
+        Remove density of a scatter-system with a chosen image. Using an image for
+        masking is best if you do not want to be limited by the amount and
+        disparity of your surface(s) vertices. The color sampling tips from above
+        also apply to this feature as well.
+      <br>
+      <br>
+      <h3>Reminder:</h3>
+      <ul>
+        <li>
+          In blender, it is important to always save your image datas, or you
+          might lose them when you open your file later on!
+        </li>
+        <li>
+          If you do not see anything, perhaps that's because your emitter surface
+          does not have any UV's?
+        </li>
+        <li>
+          Note that blender painter editor is quite slow when painting large
+          areas.
+        </li>
+      </ul>
+    </div>
+
   </div>
 </div>
+
+<!-- title -->
 
 <div class="titleheader">
     <a href="#" data-frag="bezier_area"><h1 id="bezier_area">Bezier-Area Mask</h1></a>
     <p>Mask based on a chosen bezier-area object</p>
 </div>
 
-<div class="offset_v_card">
-  <div class="example_v_card">
-    <div class="video_cont">
-      <embed
-        ?autoplay="1"
-        src="https://thumbs.gfycat.com/LameAridFrigatebird-mobile.mp4"
-        type=""
-      />
-          </div>
-      </div>
-  <div class="video_desc_culling" style="line-height: 30px; margin-top: 10px">
-    <p>
-      Remove instances located under the inside area of a chosen closed bezier
-      curve.
-    </p>
-    <br />
-    <h3 style="margin-top: 5px">Reminder:</h3>
-    <p>
-      Note that it's possible to have many curves within the same bezier data.
-    </p>
-    <h3 style="margin-top: 5px">Pro Tip:</h3>
-    <p>Go in the orthogonal top perspective to edit your curve more easily.</p>
+<div class="article_content">
+  <div class="medial_textr">
+
+    <div class="medial">
+      <embed ?autoplay="1" src="https://thumbs.gfycat.com/LameAridFrigatebird-mobile.mp4" type=""/>
+      <br>
+    </div>
+
+    <div class="card2x">
+      <h2>Bezier-Area Mask</h2>
+      <p>Remove your distributed points located directly under the inner-area of a chosen closed bezier curve.</p>
+      <br>
+      <h3>Reminder:</h3>
+      <p>While you are limited to one bezier object, please remind yourself that it is possible to have many curves da=ta within the same bezier object.</p>
+      <br>
+      <h3>Pro Tip:</h3>
+      <p>because the points are removed from the Z axis, it's much easier to enter orthogonal top perspective to edit your curves.</p>
+    </div>
+
   </div>
 </div>
+
+<!-- title -->
 
 <div class="titleheader">
     <a href="#" data-frag="boolean"><h1 id="boolean">Boolean Mask</h1></a>
     <p>Mask based on intersections with a chosen object</p>
 </div>
 
-<div class="boolean_text">
-  <p>
-    With the boolean mask you are able to remove instances located <br />
-    inside or outside objects linked in a given collection.
-  </p>
+<div class="article_content">
+  <div class="medial_textr">
+
+    <div class="medial">
+      <embed ?autoplay="1" src="https://thumbs.gfycat.com/LameAridFrigatebird-mobile.mp4" type=""/>
+    </div>
+
+    <div class="card2x">
+      <h2>Boolean Mask</h2>
+      <p>
+        With the boolean mask you are able to your distributed points directly located
+        inside, or outside, the volume of objects linked in a given collection.
+      </p>
+    </div>
+
+  </div>
 </div>
+
+<!-- title -->
 
 <div class="titleheader">
     <a href="#" data-frag="upward"><h1 id="upward">Upward Obstruction Mask</h1></a>
     <p>Mask based on an obstruction with a chosen object</p>
 </div>
 
-<div class="offset_v_card">
-  <div class="example_v_card">
-    <div class="video_cont">
-      <embed
-        ?autoplay="1"
-        src="https://thumbs.gfycat.com/HelpfulIdioticKilldeer-mobile.mp4"
-        type=""
-      />
-          </div>
-      </div>
-  <div class="video_desc_culling" style="line-height: 30px; padding-top: 10px">
-    <p>Remove instances under the objects linked in the chosen collection.</p>
-    <br />
-    <h3 style="margin-top: 5px">Pro Tip:</h3>
-    <p>
-      For features interacting heavily with object meshes, If you are working
-      with a lot of polygons, it might be best to quickly create a low poly
-      easy-to-compute version of your mesh.
-    </p>
-    <h3 style="margin-top: 5px">Reminder:</h3>
-    <p>
-      Moving elements inside of the chosen collection will trigger an update of
-      the dependent scatter-system(s).
-    </p>
+<div class="article_content">
+  <div class="medial_textr">
+
+    <div class="medial">
+      <embed ?autoplay="1" src="https://thumbs.gfycat.com/HelpfulIdioticKilldeer-mobile.mp4" type=""/>
+    </div>
+
+    <div class="card2x">
+      <h2>Upward Obstruction Mask</h2>
+      <p>Remove your distributed points located directly under the objects linked in the chosen collection.</p>
+      <br/>
+      <h3>Pro Tip:</h3>
+      <p>
+        For features interacting heavily with object meshes, If you are working
+        with a lot of polygons, it might be best to quickly create a low poly
+        easy-to-compute version of your mesh.
+      </p>
+      <br/>
+      <h3>Reminder:</h3>
+      <p>
+        Moving elements inside of the chosen collection will trigger an update of
+        the dependent scatter-system(s).
+      </p>
+    </div>
+
   </div>
 </div>
+
+<!-- title -->
 
 <div class="titleheader">
     <a href="#" data-frag="material"><h1 id="material">Material Slot Mask</h1></a>
     <p>Mask based on a chosen face material index</p>
 </div>
 
-<div class="offset_v_card">
-  <div class="example_v_card">
-    <div class="video_cont">
-      <embed
-        ?autoplay="1"
-        src="https://thumbs.gfycat.com/ParallelDefensiveArabianwildcat-mobile.mp4"
-        type=""
-      />
-          </div>
-      </div>
-  <div class="video_desc_culling" style="line-height: 30px; padding-top: 10px">
-    <p>
-      Distribute instances depending on their <br />
-      surfaces material-slots.
-    </p>
+<div class="article_content">
+  <div class="medial_textr">
+
+    <div class="medial">
+      <embed ?autoplay="1" src="https://thumbs.gfycat.com/ParallelDefensiveArabianwildcat-mobile.mp4" type=""/>
+      <br>
+    </div>
+
+    <div class="card2x">
+      <h2>Material Slot Mask</h2>
+      <p>
+        Remove your distributed points depending on their location on a given face material-index.
+      </p>
+    </div>
+        
   </div>
 </div>
 
+<!-- title -->
+
 <div class="titleheader">
-    <a href="#" data-frag="universal"><h1 id="universal">Universal Feature Mask</h1></a>
+    <a href="#" data-frag="universal"><h1 id="universal">Feature Mask</h1></a>
     <p>Influence any of our procedural features with a mask</p>
 </div>
 
-<div class="offset_v_card">
-  <div class="example_v_card">
-    <div class="video_cont">
-      <embed
-        ?autoplay="1"
-        src="https://thumbs.gfycat.com/SelfishOilyCricket-mobile.mp4"
-        type=""
-      />
-          </div>
-      </div>
-  <div class="video_desc_culling" style="line-height: 30px">
+<div class="article_content">
+  <div class="medial_textr">
+
+    <div class="medial">
+      <embed ?autoplay="1" src="https://thumbs.gfycat.com/SelfishOilyCricket-mobile.mp4" type=""/>      
+    </div>
+
+  <div class="card2x">
+    <h2>Universal Mask</h2>
     <p>
-      In Scatter5, almost every single feature can be masked with what we called
+      In Geo-Scatter, almost every single feature can be masked with what we called
       the "Universal Feature Mask". This grants you the ability to precisely
       control where the effect contextually takes place, with the help of a
       procedural noise, a chosen vgroup, or vertex-color layer.
     </p>
-    <br />
+    <br/>
     <p>
       In the hereby example, we are painting a wind effect by assigning a
       Vertex-Group feature mask to our wind-waves feature.
