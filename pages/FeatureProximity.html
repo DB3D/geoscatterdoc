@@ -104,44 +104,63 @@
     <p>Fake physics interaction easily</p>
 </div>
 
-<div class="offset_v_card">
-  <div class="video_desc_lean">
-    <p>
-      The Repel feature is also able to procedurally orient the instances near a
-      given distance threshold from the chosen objects inside the linked
-      collection.
-    </p>
-    <p>
-      By default, the proximity contact will be the faces of your objects
-      meshes. If your assets are too high poly it might be a good idea to change
-      the contact option.
-    </p> <br>
+<div class="article_content">
+  <div class="flex_cards_section">
 
-    <h3 style="margin-top: 5px">Use Case:</h3>
-    <p>
-      Useful if you'd like to fake interaction with objects without doing
-      destructive time-consuming soft-bodies simulation. If a more precise
-      simulation is needed, you will need to export your scatter-systems as a
-      mesh in order to use the the simulation method of your choice (soft-bodies
-      simulations are out of the scope of a scattering tool relying on the
-      technology of instancing).
-    </p> <br>
-    <h3>Beginner Misconception:</h3>
-    <p>
-      Achieving physically accurate collisions between, let say, your individual
-      hundreds of thousands blades of grass with your crowd animation, is not a
-      realistic expectation of what scattering is supposed to do, it breaks the
-      principle of instancing! What is needed in this case is a soft-body
-      simulation with the exported instances, merged as one single object!
-    </p>
-  </div>
+    <div class="flex_singlecard card2x">
+      <h2 style="padding-top:0;">Repel, Lean Options</h2>
+      <p>
+        The Repel feature is also able to procedurally orient the instances near a
+        given distance threshold from the chosen objects inside the linked
+        collection.
+      </p>
+      <p>
+        By default, the proximity contact will be the faces of your objects
+        meshes. If your assets are too high poly it might be a good idea to change
+        the contact option.
+      </p> 
+    </div>
 
-  <div class="example_v_card">
-    <div class="video_cont">
-      <embed ?autoplay="1" src="https://thumbs.gfycat.com/InformalEqualGnu-mobile.mp4" type="" />
-          </div>
+      <div class="flex_singlecard card2x">
+          <embed ?autoplay="1" src="https://thumbs.gfycat.com/InformalEqualGnu-mobile.mp4" type="" />
       </div>
+
+      <div class="flex_singlecard card2x">
+        <h2 style="padding-top:0;">Use Cases</h2>
+        <p>
+          Useful if you'd like to fake interaction with objects without doing
+          destructive time-consuming soft-bodies simulation. If a more precise
+          simulation is needed, you will need to export your scatter-systems as a
+          mesh in order to use the the simulation method of your choice (soft-bodies
+          simulations are out of the scope of a scattering tool relying on the
+          technology of instancing).
+        </p>
+      </div>
+
+      <div class="flex_singlecard card2x">
+        <h2 style="padding-top:0;">Notes</h2>
+        <p>
+          Please note that proximity features were originally called 
+          "Cull Near" and "Lean Near" in older versions. 
+          Since Geo-Scatter5.3 we merged both functionalities into two all-in-one "repel" slots.
+        </p>
+      </div>
+
+      <div class="flex_singlecard card2x">
+        <h2 style="padding-top:0;">Misconceptions</h2>
+        <p>
+          Achieving physically accurate collisions between, let say, your hundreds of thousands
+          of individual grass blades with your moving object, is not a
+          realistic expectation of what the acti of scattering is supposed to do, as it breaks the
+          principle of instancing! What is needed in this case is a soft-body
+          simulation with the exported instances, merged as one single object!
+        </p>
+      </div>
+
+  </div>
 </div>
+
+
 
 <!-- title -->
 
@@ -150,24 +169,50 @@
     <p>Procedurally detect the edge of your scatter</p>
 </div>
 
-<div class="Outskirt">
-  <div class="offset_v_card" style="padding: 0px 20px;">
-    <div class="example_v_card">
-      <div class="video_cont">
+<div class="article_content">
+  <div class="flex_cards_section">
+
+    <div class="flex_singlecard card2x">
+      <gif>
         <embed ?autoplay="1" src="https://thumbs.gfycat.com/ClearcutFatLarva-mobile.mp4" type="" />
-              </div>
-          </div>
-    <div class="video_desc_culling Outskirt_desc">
+      </gif>
+
+      <h2>Outskirt Feature</h2>
       <p>
-        The <i>"Outskirt"</i> feature will procedurally find the delimitation of your scatter from the given threshold
-        value in order to create a transition effect.
-      </p><br>
-      <h3>Use Case:</h3>
+        The "Outskirt" feature will procedurally find the delimitation of 
+        your scatter from the given threshold value, very useful if you'd 
+        like to to create a transition effect on your scatter boundaries.
+      </p>
+      <br>
+      <h3>Notes:</h3>
+      <ul>
+        <li>
+          This feature is heavy to compute.
+        </li>
+        <li>
+          All procedural-features will still work as expected, individually per
+          surface local space, or in your scene global space.
+        </li>
+        <li>
+          This feature works best with a contrasted distribution.
+        </li>
+        <li>
+          If you'd like to create clumps transition effects with this feature, please consider the dedicated clump distribution method with influences on scale and orientation available.
+        </li>
+      </ul>
+
+    </div>
+
+    <div class="flex_singlecard card2x">
+      <img src="../img/prox.jpg" alt="">
+
+      <h2>Use Case:</h2>
       <p>Useful for many scenarios, such as creating rugs, or imitating nature behaviors! Plants/trees located on the
         outskirt of a densely populated area will always have a lower size and are slightly tilted in the outward
-        direction of thepack.</p> <br>
-      <img src="../img/prox.jpg" alt="">
+        direction of thepack.
+      </p>
     </div>
+
   </div>
 </div>
 
