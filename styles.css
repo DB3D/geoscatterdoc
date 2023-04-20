@@ -374,7 +374,7 @@ body::-webkit-scrollbar-thumb {
   background-color: rgb(73, 67, 67);
 }
 .menu-item a {
-  padding: 10px 30px;
+  padding: 8px 30px;
   font-size: 16px !important;
   color: #c5c0c0 !important;
 }
