@@ -467,7 +467,6 @@ img {
   left: 0%;
   padding: 7px;
   width: 70%;
-  background-color: rgb(0, 0, 0);
   height: 46px;
   margin: 0 !important;
   margin-bottom: 5% !important;
@@ -485,11 +484,9 @@ img {
 }
 .sm_header {
   width: 100%;
-  height: 46px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #000000;
   display: none;
 }
 .burger-menu:before,
@@ -605,7 +602,6 @@ img {
   bottom: 0;
   width: 50%;
   display: block;
-  background: #000000;
   z-index: 1;
 }
 .mainsite .mainpage {
@@ -2119,6 +2115,9 @@ position: relative;
 
 
 @media only screen and (max-width: 1200px) {
+  .titleheader{
+    padding: 1rem 3.5rem;
+  }
   .sm_header {
     display: block;
   }
@@ -2432,15 +2431,22 @@ position: relative;
 }
 @media only screen and (max-width: 470px) {
 
+  .titleheader{
+    padding: 1rem 2.5rem;
+  }
+  .titleheader h1{
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .titleheader p{
+    font-size: 12px;
+  }
   .installation_video embed {
     height: 32vh;
   }
   .plugin_ins_slider1 {
     padding: 0px 20px;
     width: 436px;
-  }
-  .titleheader {
-    padding: 3rem 10px;
   }
   .manual_scatter img {
     width: 100% !important;
