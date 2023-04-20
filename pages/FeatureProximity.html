@@ -14,81 +14,90 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 <link rel="stylesheet" href="../styles.css" />
 
+<!-- title -->
+
 <div class="titleheader">
     <a href="#" data-frag="repel"><h1 id="repel">Repel Feature</h1></a>
     <p>Affect your points near a chosen collection of objects</p>
 </div>
 
-<div class="repel_v_section">
-  <div class="example_v_card">
-    <div class="video_cont">
-      <embed ?autoplay="1" src="https://thumbs.gfycat.com/SparklingIncompleteBunny-mobile.mp4" type="" />
-          </div>
-        <div class="repel_video_cont">
-      <p>
-        Assuming your repel object possesses a volume, you can use the
-        <i>'Consider Volume'</i> option if you'd like to also cull instances
-        located inside or outside the volume.
-      </p>
-      <h3>Reminder:</h3>
-      <p>
-        If you only care about the volume feature, we have a more simplistic
-        culling mask available.
-      </p>
-    </div>
-  </div>
+<div class="article_content">
+  <div class="flex_cards_section">
 
-  <div class="example_v_card">
-    <div class="video_cont">
-      <embed height="194" width="370" ?autoplay="1"
-        src="https://thumbs.gfycat.com/LonelySelfishAustraliancurlew-mobile.mp4" type="" />
-          </div>
-        <div class="repel_video_cont">
-      <h3>Consider Volume Option</h3>
+    <div class="flex_singlecard card2x">
+      <gif>
+        <embed ?autoplay="1" src="https://thumbs.gfycat.com/SparklingIncompleteBunny-mobile.mp4" type="" />
+      </gif>
+
+        <h2>Repel Feature</h2>
+        <p>
+          The "Repel" feature will procedurally remove and/or adjust instances
+           scales/rotations near a defined distance threshold from
+            the objects linked to the chosen collection. 
+        </p>
+        <br>
+        <p>
+          By default, the proximity contact will be the faces of the objects meshe. 
+          If your assets are too high poly it might be a 
+          good idea to change the proximity contact option.
+        </p>
+    </div>
+
+    <div class="flex_singlecard card2x">
+      <gif>
+        <embed ?autoplay="1" src="https://thumbs.gfycat.com/LonelySelfishAustraliancurlew-mobile.mp4" type="" />
+      </gif>
+
+      <h2>Volume Option</h2>
       <p>
-        The <i>"Repel"</i> feature will procedurally remove and/or adjust
-        instances scales/rotations near a defined distance threshold from the
-        objects linked to the chosen collection.
+        if your repel object has a volume, you can use the
+        "Consider Volume" option if you'd like to also cull instances
+        located inside or outside the volume area.
       </p>
+      <br>
+      <h3 style="padding-top: 0;">Reminder:</h3>
       <p>
-        By default, the proximity contact will be the faces of the objects
-        meshe. If your assets are too high poly it might be a good idea to
-        change the proximity contact option.
+        Note that if you only care about culling inside a volume,
+         a simplistic object boolean feature is available in the culling mask category
       </p>
     </div>
+
   </div>
 </div>
 
-<div class="instance_sec">
-  <div class="instance_v_card">
-    <div class="example_v_card">
-      <div class="video_cont">
-        <embed ?autoplay="1" src="https://thumbs.gfycat.com/MatureCanineInchworm-mobile.mp4" type="" />
-              </div>
-          </div>
-    <div class="wind_v_desc prox_vide_dex">
-      <h3>Pro Tip:</h3>
-      <p>
-        To generate a clean grass scatter near pavements, assuming you have a
-        clump model to cover the large areas and a tiny grass model to fill the
-        gaps, here's the most memory-efficient technique you can use:
-      </p>
-      <ul>
-        <li>
-          1. On the large clump system, enable the Proximity → Repel feature and
-          choose your pavement collision collection
-        </li>
-        <li>
-          2. Do the same for the tiny system but reverse the influence and use
-          the 'consider volume' option to also cull points located within the
-          object volume.
-        </li>
-      </ul>
-      <a class="blend_downlod_btn"
-        href="https://drive.google.com/file/d/1wo64fwcfV6mia1SFAm6M3f87gaW6uzx7/view?usp=sharing">Example avaialabe</a>
-    </div>
+<div class="separator_line"></div>
+
+<div class="article_content">
+  <div class="medial_textr">
+
+      <div class="medial card2x">
+          <embed ?autoplay="1" src="https://thumbs.gfycat.com/MatureCanineInchworm-mobile.mp4" type="" />
+      </div>
+
+      <div class="card2x">
+        <h2>Clean Border Example</h2>
+        <p>
+          If you are working with clump model to cover large areas and a tinier grass model to fill the
+          gaps between small areas, you can use the following workflow ( this example is available in our <a href="./Examples.html">example page</a>):
+        </p>
+        <br>
+        <ul>
+          <li>
+            Scatter the clumps model on a dedicated scatter system, then enable the Proximity>Repel feature and
+            choose your pavement collision collection.
+          </li>
+          <li>
+            Do the same for the tiny system but reverse the influence, then use
+            the 'consider volume' option to also cull points located inside the
+            object volume.
+          </li>
+        </ul>
+      </div>
+
   </div>
 </div>
+
+<!-- title -->
 
 <div class="titleheader">
     <a href="#" data-frag="lean"><h1 id="lean near">Lean Near Objects</h1></a>
@@ -133,6 +142,8 @@
           </div>
       </div>
 </div>
+
+<!-- title -->
 
 <div class="titleheader">
     <a href="#" data-frag="outskirt"><h1 id="outskirt">Outskirt Effects</h1></a>
