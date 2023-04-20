@@ -2374,6 +2374,7 @@ position: relative;
   }
   .titleheader h1 {
     font-size: 23px;
+    font-weight: bold;
   }
   .clump_dist_card {
     width: 424px !important;
