@@ -105,6 +105,10 @@
   display: flex;
   justify-content: center;
 }
+.large_video_template embed{
+  width: 645px;
+  height: 337px;
+}
 
 /* flex cards layout type */
 
