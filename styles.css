@@ -53,6 +53,12 @@
   line-height: 30px;
   margin-top: 5px;
 }
+.article_content h2 {
+  font-weight: 550;
+}
+.article_content h3 {
+  font-weight: 600;
+}
 .article_content img{
   border-radius: 20px;
 }
@@ -801,9 +807,6 @@ img {
 
 /* search bar css ends */
 
-.ts_dropdowns {
-  padding: 3rem;
-}
 .faq-container {
   width: 100%;
   margin: 0 auto;
@@ -2383,7 +2386,7 @@ position: relative;
   }
   .titleheader h1 {
     font-size: 23px;
-    font-weight: bold;
+    font-weight: 600;
   }
   .clump_dist_card {
     width: 424px !important;
