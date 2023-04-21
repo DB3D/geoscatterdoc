@@ -374,9 +374,9 @@ body::-webkit-scrollbar-thumb {
   background-color: rgb(73, 67, 67);
 }
 .menu-item a {
-  padding: 8px 30px;
-  font-size: 16px !important;
-  color: #c5c0c0 !important;
+  padding: 7px 30px;
+  font-size: 17px !important;
+  color: #505050 !important;
 }
 .submenu-item {
   /* padding: 10px 0px; */
@@ -390,19 +390,21 @@ body::-webkit-scrollbar-thumb {
 .submenu-item a {
   color: #cccccc;
   font-size: 14px;
-  padding-left: 20%;
+  padding-left: 24%;
   font-family: "Source Sans Pro", sans-serif;
 }
 .menu-list li.menu-item a:hover {
   color: #ffffff !important; 
 }
 .menu-list li.menu-item a.active {
-  font-weight: 700 !important;
+  font-weight: 600 !important;
   color: #fff !important;
+  background-color: #c5c5c5;
 }
 .menu-list li.submenu-item a.active {
-  font-weight: 700 !important;
+  font-weight: 600 !important;
   color: white !important;
+  background-color: #c5c5c5;
 }
 a,
 button {
@@ -466,7 +468,6 @@ img {
   top: 0%;
   left: 0%;
   padding: 7px;
-  width: 70%;
   height: 46px;
   margin: 0 !important;
   margin-bottom: 5% !important;
@@ -558,7 +559,7 @@ img {
   bottom: 0;
   width: -45rem;
   margin: 0;
-  background-color: #000000;
+  background-color: #d6d6d6;
   overflow: auto;
   
   /* FIX THE BLOODY SCROLLBAR */
