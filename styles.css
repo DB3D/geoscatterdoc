@@ -62,9 +62,6 @@
 .article_content a {
   color: orangered;
 }
-.article_content i {
-  color: rgb(132, 132, 132);
-}
 .article_content span {
   color: #000;
   background-color: #f0f0f0;
@@ -148,11 +145,18 @@
 .card3x {
   width: 31%;;
 }
+.card3x embed {
+  width: 100%;
+  height: 48%;
+}
 .card4x {
   width: 22%;;
 }
 .card5x {
   width: 17%;;
+}
+.cardhidden {
+  opacity: 0;
 }
 
 /* flex cards layout type for features */
