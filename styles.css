@@ -266,11 +266,9 @@
 /* example page special */
 
 .examplecard{
-  border: solid 1px #acacac;
-  padding: 20px;
-  border-radius: 20px;
   display: flex;
   flex-direction: column;
+  margin-bottom: 30px;
 }
 .examplecard video{
   width: 100%;
