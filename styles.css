@@ -11,14 +11,14 @@
 /* generic article title header */
 
 .titleheader { /*== main header*/
-  background-image: linear-gradient(to bottom, #e1dfdb 50%, transparent 95%);
-  background-attachment: fixed;
-  padding: 1rem 0;
+  padding: 10px 0;
   position: -webkit-sticky; /* For Safari browser compatibility */
   position: sticky;
   top: 0;
   z-index: 100;
-  margin-bottom: 20px;
+  background-color: white;
+  border-bottom: solid 1px darkgray;
+  border-top: solid 1px darkgray;
 }
 .titleheader h1 {
   font-family: 'Source Sans Pro', Arial;
@@ -35,13 +35,21 @@
   margin: 0 auto;
 }
 
+/* generic styling border */
+
+.gmstyling{
+  background-color: white;
+  border: solid 1px darkgray;
+  border-radius: 20px;
+  padding: 25px;
+}
+
 /* generic article content */
 
 .article_content {
   width: 1030px;
-  margin: 0 auto;
+  margin: 40px auto;
   font-family: "Source Sans Pro", sans-serif;
-  padding: 30px 0;
 }
 .article_content ul {
   margin-left: 20px;
@@ -64,6 +72,10 @@
 .article_content embed,
 .article_content video {
   border-radius: 20px;
+}
+.article_content video {
+  width: 100%;
+  height: auto;
 }
 .article_content a {
   color: orangered;
@@ -89,14 +101,14 @@
   height: 100%;
 }
 .gif video{
-  background: #e1dfdb;
+  background: #000000;
 }
 
 /* separator line*/
 
 .separator_line {
   width: 1030px;
-  margin: 3rem auto;
+  margin: 40px auto;
   border: 2px solid #d9d9d9;
   border-radius: 100%;
   border-radius: 10000px
@@ -118,7 +130,6 @@
 /* centered large video */
 
 .large_video_template {
-  width: 1123px;
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -135,16 +146,16 @@
 .flex_cards_section {
   display: flex;
   flex-wrap: wrap;
-  width: 1100px;
-  justify-content: space-between;
+  justify-content: flex-start;
   margin: 0 auto;
+  gap: 36px;
 }
 .flex_cards_section img {
   border-radius: 20px;
 }
 .flex_singlecard {
-  font-family: "Source Sans Pro", sans-serif;
-  margin: 15px 0px;
+  display: flex;
+  flex-flow: column;
 }
 .flex_singlecard h2 {
   padding: 30px 0 5px 0;
@@ -155,32 +166,20 @@
 .flex_singlecard p {
   line-height: 30px;
 }
+.flex_bottomalign {
+  margin-top: auto;
+}
 .cardlarge {
   width: 60%;
 }
 .card2x {
-  width: 45%;
-}
-.card2x embed,
-.card2x video,
-.card2x iframe {
-  width: 487px;;
-  height: 253px;
+  width: 495px;
 }
 .card3x {
   width: 31%;
 }
-.card3x embed,
-.card3x video,
-.card3x iframe {
-  width: 100%;
-  height: 180px;
-}
 .card4x {
   width: 22%;
-}
-.card5x {
-  width: 17%;
 }
 .cardhidden {
   opacity: 0;
@@ -224,42 +223,32 @@
 .medial_textr {
   display: flex;
   flex-wrap: wrap;
-  width: 1125px;
   margin: 0 auto;
-  justify-content: left;
+  justify-content: space-between;
 }
 .medial_textr_big {
   display: flex;
   flex-wrap: wrap;
-  width: 1125px;
   margin: 0 auto;
-  justify-content: left;
+  justify-content: space-between;
 }
 .medial_textr h2{
   padding: 0 0 5px 0;
 }
-.medial_textr embed {
-  width: 446.5px;
-  height: 232.75px;
+.medial,
+.textr {
+  display: flex;
+  flex-wrap: wrap;
+  flex-flow: column;
 }
-.medial_textr iframe {
-  width: 446.5px;
-  height: 232.75px;
+.medial_textr .medial {
 }
-.medial_textr_big embed,
-.medial_textr_big video,
-.medial_textr_big iframe {
-  width: 622px;
+.medial_textr .textr {
+  width: 45%;
+}
+.medial_textr_big .medial embed {
+  width: 624px;
   height: 327px;
-}
-.medial {
-  padding-right: 5%;
-}
-.medial_textr .card2x embed,
-.medial_textr .card2x video,
-.medial_textr .card2x iframe {
-  width: 451px;
-  height: 235px;
 }
 
 
@@ -268,7 +257,6 @@
 .examplecard{
   display: flex;
   flex-direction: column;
-  margin-bottom: 30px;
 }
 .examplecard video{
   width: 100%;
@@ -288,12 +276,9 @@
 .example_page_txtstyling .download_blend,
 .example_page_txtstyling .download_blend a {
   /*needed to override general article content a */
-  color: #000000; 
+  color: white; 
   display: block; 
   text-align: center;
-}
-.download_layout{
-  margin-top: auto;
 }
 .download_blend {
   text-decoration: none;
@@ -301,9 +286,11 @@
   padding: 8px;
   font-family: "Source Sans Pro", sans-serif;
   display: flex;
-  border-radius: 10px;
+  border-radius: 16px;
   margin: 10px 0 0 0;
   justify-content: center;
+  color: white;
+  background-color: black;
 }
 .download_blend:hover {
   background-color: rgb(255, 110, 57);
@@ -374,20 +361,15 @@ body::-webkit-scrollbar-thumb {
   font-family: "Source Sans Pro", sans-serif;
 }
 .menu-list li.menu-item a:hover {
-  color: #ffffff !important; 
+  text-decoration-line: underline;
 }
-.menu-list li.menu-item a.active {
+.menu-list a.active {
   font-weight: 600 !important;
   color: #fff !important;
-  background-color: #c5c5c5;
+  background-color: black;
 }
-.menu-list li.submenu-item a.active {
-  font-weight: 600 !important;
-  color: white !important;
-  background-color: #c5c5c5;
-}
-a,
 
+a,
 img {
   display: block;
   width: 100%;
@@ -425,10 +407,10 @@ img {
 .burger-menu {
   position: relative;
   width: 24px;
-  height: 4px;
+  height: 1px;
   margin: 10px 0;
   border-radius: 4px;
-  background: #ffffff;
+  background: darkgray;
   transition: all 0.35s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 .sm_header {
@@ -443,10 +425,9 @@ img {
   position: absolute;
   display: block;
   content: "";
-  width: 24px;
-  height: 4px;
+  height: 1px;
   border-radius: 4px;
-  background: #ffffff;
+  background: darkgray;
   transition: all 0.35s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 .burger-menu:before {
@@ -499,7 +480,7 @@ img {
   left: 0;
   bottom: 0;
   z-index: 3;
-  background: #000000;
+  background-color: white;
 }
 .sidenav .menu {
   position: fixed;
@@ -507,7 +488,9 @@ img {
   bottom: 0;
   width: -45rem;
   margin: 0;
-  background-color: #d6d6d6;
+  background-color: white;
+  border-right: solid 1px darkgray;
+  border-top: solid 1px darkgray;
   overflow: auto;
   overflow-x: hidden;
 }
@@ -517,7 +500,7 @@ img {
 .sidenav .menu-item {
   padding: 0;
   margin-bottom: 0rem;
-  transition: all 0.35s ease;
+  transition: all 0.15s ease;
 }
 
 .sidenav .menu-link {
@@ -525,7 +508,7 @@ img {
   font-family: "Source Sans Pro", sans-serif;
   font-size: 18px;
   color: rgba(255, 255, 255, 1);
-  transition: all 0.35s ease;
+  transition: all 0.15s ease;
 }
 .sidenav .menu-link:hover {
   opacity: 1;
@@ -580,11 +563,6 @@ img {
   cursor: pointer;
   justify-content: space-between;
   border-bottom: 1px solid grey;
-  padding-bottom: 15px;
-  margin: 25px 0px;
-}
-.faq_borderbottom{
-  margin-bottom: 45px;
 }
 .faq_titltt {
   font-family: 'Source Sans Pro', Arial;
@@ -594,7 +572,6 @@ img {
 }
 .faq-question {
   margin: 0;
-  font-size: 29pt;
   cursor: pointer;
   font-family: 'Source Sans Pro', Arial;
   font-weight: 500 !important;
