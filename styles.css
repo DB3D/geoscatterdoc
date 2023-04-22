@@ -19,7 +19,6 @@
   background-color: white;
   border-bottom: solid 1px darkgray;
   border-top: solid 1px darkgray;
-  box-shadow: #a8a8a81f 2px 4px 20px 0px;
 }
 .titleheader h1 {
   font-family: 'Source Sans Pro', Arial;
@@ -861,7 +860,7 @@ img {
 @media only screen and (max-width: 1200px) {
 
   .titleheader{
-    padding: 1rem 3.5rem;
+    padding: 10px 50px;
   }
   .sm_header {
     display: block;
