@@ -17,7 +17,8 @@
   position: -webkit-sticky; /* For Safari browser compatibility */
   position: sticky;
   top: 0;
-  z-index: 100; 
+  z-index: 100;
+  margin-bottom: 20px;
 }
 .titleheader h1 {
   font-family: 'Source Sans Pro', Arial;
@@ -948,6 +949,7 @@ img {
 
   .titleheader{
     padding: 1rem 2.5rem;
+    margin-bottom: 0;
   }
   .titleheader h1{
     font-size: 16px;
