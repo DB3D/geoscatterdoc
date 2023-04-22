@@ -264,6 +264,17 @@
 
 /* example page special */
 
+.examplecard{
+  border: solid 1px #acacac;
+  padding: 20px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.examplecard video{
+  width: 100%;
+  height: auto;
+}
 .example_page_txtstyling p{
   text-align: left;
 }
@@ -282,6 +293,9 @@
   display: block; 
   text-align: center;
 }
+.download_layout{
+  margin-top: auto;
+}
 .download_blend {
   text-decoration: none;
   border: 1px solid #919191;
@@ -289,7 +303,7 @@
   font-family: "Source Sans Pro", sans-serif;
   display: flex;
   border-radius: 10px;
-  margin: 10px 0px;
+  margin: 10px 0 0 0;
   justify-content: center;
 }
 .download_blend:hover {
