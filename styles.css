@@ -19,6 +19,7 @@
   background-color: white;
   border-bottom: solid 1px darkgray;
   border-top: solid 1px darkgray;
+  box-shadow: #a8a8a81f 2px 4px 20px 0px;
 }
 .titleheader h1 {
   font-family: 'Source Sans Pro', Arial;
@@ -27,6 +28,7 @@
   color: black;
   width: 1030px;
   margin: 0 auto;
+  
 }
 .titleheader p {
   margin-top: 1rem;
@@ -42,6 +44,7 @@
   border: solid 1px darkgray;
   border-radius: 20px;
   padding: 25px;
+  box-shadow: #a8a8a84a 2px 4px 20px 0px;
 }
 
 /* generic article content */
@@ -538,7 +541,6 @@ img {
   z-index: 2;
   color: #252a32;
   background: #fff;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 3px rgba(0, 0, 0, 0.24);
   transition: all 0.35s ease;
 }
 .mainsite .mainpage .article {
@@ -885,7 +887,7 @@ img {
     overflow: hidden;
   }
   .mainsite.active .mainpage {
-    transform: translateX(15rem);
+    transform: translateX(15.1rem);
   }
   .flex_cards_section {
     width: auto;
