@@ -178,16 +178,15 @@
   flex-flow: column;
 }
 .flex_singlecard h2 {
-  padding: 30px 0 5px 0;
+  padding: 5% 0 5px 0;
 }
 .flex_singlecard.card3x h2 {
-  padding: 15px 0 5px 0;
+  padding: 2.5% 0 5px 0;
 }
 .flex_singlecard h3 {
-  padding: 15px 0 5px 0;
+  padding: 2.5% 0 5px 0;
 }
 .flex_singlecard p {
-  line-height: 30px;
 }
 .flex_bottomalign {
   margin-top: auto;
@@ -219,8 +218,8 @@
   margin: 5px 15px;
 }
 .feature_card img {
-  width: 150px;
-  height: 100px;
+  width: 100%;
+  height: auto;
 }
 .feature_card a {
   color: rgba(225, 223, 219, 1);
@@ -248,12 +247,14 @@
   flex-wrap: wrap;
   margin: 0 auto;
   justify-content: space-between;
+  flex-direction: row;
 }
 .medial_textr_big {
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
   justify-content: space-between;
+  flex-direction: row;
 }
 .medial_textr h2{
   padding: 0 0 5px 0;
@@ -269,9 +270,19 @@
 .medial_textr .textr {
   width: 45%;
 }
-.medial_textr_big .medial embed {
-  width: 624px;
-  height: 327px;
+.youtube {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 100% * 9 / 16, maintains 16:9 aspect ratio */
+  overflow: hidden;
+}
+.youtube iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
 }
 
 
@@ -579,7 +590,6 @@ img {
 }
 .faq_titltt {
   font-family: 'Source Sans Pro', Arial;
-  font-size: 20pt !important;
   font-weight: 400 !important;
   color: rgb(36, 35, 35) !important;
 }
@@ -872,9 +882,61 @@ img {
 @media only screen and (max-width: 1200px) {
 
   .titleheader{
+    padding-top: 5px;
+    padding-bottom: 5px;
     padding-left:50px;
     padding-right:50px;
   }
+  .titleheader h1{
+    font-size: 23px;
+    font-weight: 500;
+  }
+  .titleheader p{
+    font-size: 14px;
+  }
+  .article_content {
+    width: 95%;
+    margin: 20px auto;
+  }
+  .article_content h2 {
+    font-size: max(16px, 2.5vw);
+  }
+  .article_content h3 {
+    font-size: max(14px, 2.0vw);
+  }
+  .article_content ul li,
+  .article_content p {
+    font-size: max(13px, 1.5vw);
+    line-height: 25px;
+  }
+  .flex_singlecard.optimizationtext.card3x {
+    width: 100%;
+  }
+  .flex_cards_section {
+    justify-content: center;
+    gap: 2vw;
+  }
+  .gmstyling {
+    padding: 2vw;
+  }
+  .card2x {
+    width: 45%;
+  }
+  .medial_textr .textr,
+  .textr {
+    width: 38%;
+  }
+  .medial {
+    width: 58%;
+  }
+  .faq-item {
+    margin-bottom: 2.2vw;
+  }
+  .feature_card {
+    width: 120px;
+    margin: 5px 12px;
+  }
+
   .sm_header {
     display: block;
   }
@@ -904,15 +966,10 @@ img {
   .flex_cards_section {
     width: auto;
   }
-  .article_content {
-    width: 90%;
-  }
   .center_img {
     width: 55%;
   }
-}
 
-@media only screen and (max-width: 950px) {
   #prev,
   #next {
     font-size: 14px;
@@ -920,17 +977,26 @@ img {
     width: 40px !important;
 
   }
-  .titleheader{
-    padding-top: 5px;
-    padding-bottom: 5px;
+}
+
+@media only screen and (max-width: 720px) {
+  .article_content p {
+    line-height: max(18px, 1.5vw);
   }
-  .titleheader h1{
-    font-size: 23px;
-    font-weight: 500;
+  .flex_singlecard.gmstyling.card3x {
+    padding: 2vw;
   }
-  .titleheader p{
-    font-size: 14px;
+  .card4x,
+  .card3x{
+    width: 45%;
   }
+  .textr.card3x{
+    width: 100%;
+  }
+  .medial{
+    width: 100%;
+  }
+
 }
 
 @media only screen and (max-width: 470px) {
@@ -945,6 +1011,33 @@ img {
   .titleheader p{
     font-size: 12px;
   }
+  .article_content {
+    width: 98%;
+    margin: 10px auto;
+  }
+  .gmstyling {
+    padding: 10px;
+  }
+  .card3x,
+  .card4x,
+  .card2x {
+    width: 100%;
+  }
+
+  .flex_cards_features{
+    gap: 3vw;
+  }
+  .feature_card{
+    margin: 0;
+    width: max(48%, 11vw);
+    padding: 2vw;
+  }
+
+  .medial_textr .textr,
+  .medial, .textr {
+    width: 100%;
+  }
+
 }
 
 
