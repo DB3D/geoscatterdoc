@@ -31,7 +31,7 @@
   background-color: var(--header_color);
   border-bottom: solid 1px var(--border_color);
   border-top: solid 1px var(--border_color);
-  box-shadow: #00000009 14px 14px 13px 0px;
+  box-shadow: #00000009 0px 10px 13px 0px;
 }
 .titleheader h1 {
   font-family: 'Source Sans Pro', Arial;
@@ -51,13 +51,16 @@
 
 /* generic styling border */
 
-.gmstyling{
+.gmstyling {
   background-color: var(--container_color);
   border: solid 1px var(--border_color);
   border-radius: 20px;
   padding: 25px;
   /* box-shadow: #a8a8a84a 2px 4px 20px 0px; */
   box-shadow: #00000008 14px 14px 13px 0px;
+}
+.flex_singlecard.gmstyling.card3x {
+  padding: 20px;
 }
 
 /* generic article content */
@@ -176,6 +179,9 @@
 }
 .flex_singlecard h2 {
   padding: 30px 0 5px 0;
+}
+.flex_singlecard.card3x h2 {
+  padding: 15px 0 5px 0;
 }
 .flex_singlecard h3 {
   padding: 15px 0 5px 0;
