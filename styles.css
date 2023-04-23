@@ -18,7 +18,7 @@
   --nav_active: #292929;
   --nav_font_color: #a9a9a9;
   --nav_font_active: #ffffff;
-  
+  --lamp_color: #000000a8;
   /* Set the initial value of the "theme" custom property */
   --theme: light;
 }
@@ -38,6 +38,7 @@
   --nav_active: #292929;
   --nav_font_color: #a9a9a9;
   --nav_font_active: #ffffff;
+  --lamp_color: #dfdfdfa8;
 }
 
 
@@ -467,7 +468,7 @@ img {
   padding: 4px;
   height:auto;
   z-index: 999999;
-  stroke: var(--font_color);
+  stroke: var(--lamp_color);
   stroke-width: 0.5;
   stroke-linecap: round;
   stroke-linejoin: round;
@@ -936,7 +937,7 @@ img {
     line-height: 25px;
   }
   .flex_singlecard.optimizationtext.card3x {
-    width: 100%;
+    width: 29.8%;
   }
   .flex_cards_section {
     justify-content: flex-start;
@@ -1034,6 +1035,9 @@ img {
   .medial_textr .medial,
   .medial_textr_big .textr,
   .medial_textr_big .medial {
+    width: 100%;
+  }
+  .flex_singlecard.optimizationtext.card3x {
     width: 100%;
   }
   .medial {
