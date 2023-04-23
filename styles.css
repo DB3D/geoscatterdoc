@@ -1,24 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700;800;900&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@700&family=Source+Sans+Pro:wght@300;400;500;600;700;800;900&display=swap");
 
+/* Variables */
 
-/* fontfamily used in website  */
-/* Source Sans Pro", sans-serif; */
-/* font-family: Quicksand, sans-serif !important; */
-/* font-family: "Source Sans Pro", Arial; */
-/* font-family: Roboto, Arial; */
+:root {
+  --border_color: #0000003b;
+  --background_color: #00000010;
+  --header_color: #ffffff;
+  --container_color: #ffffff;
+  --nav_color: #141414;
+  --nav_active: #292929;
+}
 
 /* generic article title header */
 
 .titleheader { /*== main header*/
-  padding: 10px 0;
+  padding: 7px 0;
   position: -webkit-sticky; /* For Safari browser compatibility */
   position: sticky;
   top: 0;
   z-index: 100;
-  background-color: white;
-  border-bottom: solid 1px darkgray;
-  border-top: solid 1px darkgray;
+  background-color: var(--header_color);
+  border-bottom: solid 1px var(--border_color);
+  border-top: solid 1px var(--border_color);
   box-shadow: #00000009 14px 14px 13px 0px;
 }
 .titleheader h1 {
@@ -40,8 +44,8 @@
 /* generic styling border */
 
 .gmstyling{
-  background-color: white;
-  border: solid 1px darkgray;
+  background-color: var(--container_color);
+  border: solid 1px var(--border_color);
   border-radius: 20px;
   padding: 25px;
   /* box-shadow: #a8a8a84a 2px 4px 20px 0px; */
@@ -370,7 +374,7 @@ body::-webkit-scrollbar-thumb {
 .menu-list a.active {
   font-weight: 600 !important;
   color: #fff !important;
-  background-color: #292929;
+  background-color: var(--nav_active);
 }
 
 a,
@@ -492,9 +496,7 @@ img {
   bottom: 0;
   width: -45rem;
   margin: 0;
-  background-color: #141414;
-  border-right: solid 1px darkgray;
-  border-top: solid 1px darkgray;
+  background-color: var(--nav_color);
   overflow: auto;
   overflow-x: hidden;
 }
@@ -565,7 +567,6 @@ img {
   align-items: center;
   cursor: pointer;
   justify-content: space-between;
-  border-bottom: 1px solid grey;
 }
 .faq_titltt {
   font-family: 'Source Sans Pro', Arial;
@@ -862,7 +863,8 @@ img {
 @media only screen and (max-width: 1200px) {
 
   .titleheader{
-    padding: 10px 50px;
+    padding-left:50px;
+    padding-right:50px;
   }
   .sm_header {
     display: block;
@@ -926,8 +928,8 @@ img {
 @media only screen and (max-width: 470px) {
 
   .titleheader{
-    padding: 1rem 2.5rem;
-    margin-bottom: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
   }
   .titleheader h1{
     font-size: 16px;
