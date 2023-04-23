@@ -1005,11 +1005,11 @@ img {
     padding-bottom: 5px;
   }
   .titleheader h1{
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 500;
   }
   .titleheader p{
-    font-size: 12px;
+    font-size: 0;
   }
   .article_content {
     width: 98%;
