@@ -913,7 +913,6 @@ img {
 }
 
 @media only screen and (max-width: 950px) {
-
   #prev,
   #next {
     font-size: 14px;
@@ -921,38 +920,31 @@ img {
     width: 40px !important;
 
   }
-}
-
-@media only screen and (max-width: 520px) {
-
-  .faq-question {
-    font-size: 20px;
+  .titleheader{
+    padding-top: 5px;
+    padding-bottom: 5px;
   }
-  .titleheader h1 {
+  .titleheader h1{
     font-size: 23px;
-    font-weight: 600;
+    font-weight: 500;
+  }
+  .titleheader p{
+    font-size: 14px;
   }
 }
 
 @media only screen and (max-width: 470px) {
-
   .titleheader{
     padding-top: 5px;
     padding-bottom: 5px;
   }
   .titleheader h1{
     font-size: 16px;
-    font-weight: bold;
+    font-weight: 500;
   }
   .titleheader p{
     font-size: 12px;
   }
 }
 
-@media only screen and (max-width: 420px) {
-
-  .faq-question {
-    font-size: 18px;
-  }
-}
 
