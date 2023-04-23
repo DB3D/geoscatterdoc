@@ -18,7 +18,28 @@
   --nav_active: #292929;
   --nav_font_color: #a9a9a9;
   --nav_font_active: #ffffff;
+  
+  /* Set the initial value of the "theme" custom property */
+  --theme: light;
 }
+
+[data-theme="dark"] {
+  /* Override the values of the CSS variables when the "data-theme" attribute is set to "dark" */
+  --border_color: #ffffff3b;
+  /* backgrounds */
+  --background_color: #333333;
+  --header_color: #141414;
+  --container_color: #444444;
+  /* generic font */
+  --font_color: #ffffff;
+  --link_color: #ff4500;
+  /* nav bar */
+  --nav_color: #141414;
+  --nav_active: #292929;
+  --nav_font_color: #a9a9a9;
+  --nav_font_active: #ffffff;
+}
+
 
 /* generic article title header */
 
@@ -426,8 +447,6 @@ img {
   left: 0%;
   padding: 7px;
   height: 46px;
-  margin: 0 !important;
-  margin-bottom: 5% !important;
   overflow: hidden;
   z-index: 2;
 }
@@ -439,6 +458,20 @@ img {
   border-radius: 4px;
   background: darkgray;
   transition: all 0.35s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.lamp {
+  position: fixed;
+  width: 39px;
+  right: 0;
+  top: 0;
+  padding: 4px;
+  height:auto;
+  z-index: 999999;
+  stroke: var(--font_color);
+  stroke-width: 0.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
 }
 .sm_header {
   width: 100%;
@@ -1046,7 +1079,9 @@ img {
     width: max(48%, 11vw);
     padding: 2vw;
   }
-
+  .lamp {
+    width: 35px;
+  }
   .article_content img,
   .article_content embed,
   .article_content video {
