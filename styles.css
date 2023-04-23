@@ -1,15 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700;800;900&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@700&family=Source+Sans+Pro:wght@300;400;500;600;700;800;900&display=swap");
 
-/* Variables */
+/* Themes Variables */
 
 :root {
+  /* border */
   --border_color: #0000003b;
+  /* backgrounds */
   --background_color: #00000010;
   --header_color: #ffffff;
   --container_color: #ffffff;
+  /* generic font */
+  --font_color: #000000;
+  --link_color: #ff4500;
+  /* nav bar */
   --nav_color: #141414;
   --nav_active: #292929;
+  --nav_font_color: #a9a9a9;
+  --nav_font_active: #ffffff;
 }
 
 /* generic article title header */
@@ -27,16 +35,16 @@
 }
 .titleheader h1 {
   font-family: 'Source Sans Pro', Arial;
+  color: var(--font_color);
   font-size: 22pt;
   font-weight: 400;
-  color: black;
   width: 1030px;
   margin: 0 auto;
   
 }
 .titleheader p {
-  margin-top: 1rem;
   font-family: "Source Sans Pro", sans-serif;
+  color: var(--font_color);
   width: 1030px;
   margin: 0 auto;
 }
@@ -58,6 +66,7 @@
   width: 1030px;
   margin: 40px auto;
   font-family: "Source Sans Pro", sans-serif;
+  color: var(--font_color);
 }
 .article_content ul {
   margin-left: 20px;
@@ -86,7 +95,7 @@
   height: auto;
 }
 .article_content a {
-  color: orangered;
+  color: var(--link_color);
   display: inline;
 }
 .article_content span {
@@ -277,7 +286,6 @@
   text-align: left;
 }
 .example_page_txtstyling h5{
-  color: black;
   font-size: 15px;
   font-weight: 400;
   }
@@ -324,7 +332,6 @@
 body::-webkit-scrollbar {
   width: 6px;            
 }
-
 body::-webkit-scrollbar-thumb {
   background-color: rgb(180, 180, 189);   
   border-radius: 20px;        
@@ -352,18 +359,15 @@ body::-webkit-scrollbar-thumb {
 .menu-item a {
   padding: 7px 30px;
   font-size: 17px !important;
-  color: #a9a9a9 !important;
+  color: var(--nav_font_color);
 }
 .submenu-item {
   /* padding: 10px 0px; */
-  color: #fff !important;
-
 }
 .submenu-item.active {
   background-color: rgb(73, 67, 67);
 }
 .submenu-item a {
-  color: #cccccc;
   font-size: 14px;
   padding-left: 24%;
   font-family: "Source Sans Pro", sans-serif;
@@ -373,7 +377,7 @@ body::-webkit-scrollbar-thumb {
 }
 .menu-list a.active {
   font-weight: 600 !important;
-  color: #fff !important;
+  color: var(--nav_font_active);
   background-color: var(--nav_active);
 }
 
@@ -513,7 +517,6 @@ img {
   display: block;
   font-family: "Source Sans Pro", sans-serif;
   font-size: 18px;
-  color: rgba(255, 255, 255, 1);
   transition: all 0.15s ease;
 }
 .sidenav .menu-link:hover {
