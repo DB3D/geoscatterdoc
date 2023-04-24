@@ -209,7 +209,7 @@
   flex-wrap: wrap;
   justify-content: flex-start;
   margin: 0 auto;
-  gap: 36px;
+  gap: 34px;
 }
 .flex_cards_section img {
   border-radius: 20px;
@@ -927,8 +927,7 @@ img {
   .titleheader{
     padding-top: 5px;
     padding-bottom: 5px;
-    padding-left:50px;
-    padding-right:50px;
+    padding-left: 25px;
   }
   .titleheader h1{
     font-size: 23px;
@@ -972,10 +971,7 @@ img {
     padding: 2vw;
   }
   .card2x {
-    width: 48.9%;
-  }
-  .card3x{
-    width: 31.9%;
+    width: 48.2%;
   }
   .medial_textr .textr,
   .textr {
@@ -1047,12 +1043,12 @@ img {
   }
   .card4x,
   .card3x{
-    width: 48.9%;
+    width: 47.9%;
   }
   .textr.card3x{
     width: 100%;
   }
-  .medial_textr.textr,
+  .medial_textr .textr,
   .medial_textr .medial,
   .medial_textr_big .textr,
   .medial_textr_big .medial {
@@ -1079,7 +1075,7 @@ img {
     padding-bottom: 5px;
   }
   .titleheader h1{
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 500;
   }
   .titleheader p{
