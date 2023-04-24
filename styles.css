@@ -5,7 +5,7 @@
 
 :root {
   /* border */
-  --border_color: #0000003b;
+  --border_color: #0000002b;
   /* backgrounds */
   --background_color: #f2f2f2;
   --header_color: #ffffff;
@@ -16,13 +16,17 @@
   --link_color: #ff4500;
   --span_font: #000000;
   --span_color: #f0f0f0;
-  /* nav bar */
-  --nav_color: #141414;
-  --nav_active: #292929;
-  --nav_font_color: #a9a9a9;
-  --nav_font_active: #ffffff;
-  --lamp_color: #000000a8;
+  /* elements */
   --button_color: #303033;
+  --lamp_color: #3b3b3ba8;
+  --separator_color: #e7e7e7;
+  /* nav bar */
+  --nav_color: #e6e6e6;
+  --nav_active: #d5d5d5;
+  --nav_hover: #d5d5d57a;
+  --nav_border: #0000000f;
+  --nav_font_color: #6b6b6b;
+  --nav_font_active: #ffffff;
   /* Set the initial value of the "theme" custom property */
   --theme: light;
 }
@@ -31,22 +35,26 @@
   /* Override the values of the CSS variables when the "data-theme" attribute is set to "dark" */
   --border_color: #ffffff0d;
   /* backgrounds */
-  --background_color: #0e0e0e;
-  --header_color: #151515;
-  --container_color: #151515;
+  --background_color: #151515;
+  --header_color: #1a1a1a;
+  --container_color: #1a1a1a;
   /* generic font */
   --font_color_h: #ffffffd4;
   --font_color_p: #ffffff8a;
   --link_color: #ff4500;
   --span_font: #9f9f9f;
   --span_color: #ffffff26;
+  /* elements */
+  --button_color: #303033;
+  --lamp_color: #ffffffef;
+  --separator_color: #1e1e1ebf;
   /* nav bar */
-  --nav_color: #0a0a0a;
+  --nav_color: #0d0d0d;
   --nav_active: #292929;
+  --nav_hover: #ededed0a;
+  --nav_border: #4747473b;
   --nav_font_color: #a9a9a9;
   --nav_font_active: #ffffff;
-  --lamp_color: #ffffffa8;
-  --button_color: #303033;
   /* dark theme */
   --theme: dark;
 }
@@ -162,7 +170,7 @@
 .separator_line {
   width: 1030px;
   margin: 40px auto;
-  border: 2px solid #d9d9d9;
+  border: 2px solid var(--separator_color);
   border-radius: 100%;
   border-radius: 10000px
 }
@@ -561,7 +569,7 @@ img {
   background-color: var(--nav_color);
   overflow: auto;
   overflow-x: hidden;
-  border: solid 1px var(--border_color);
+  border: solid 1px var(--nav_border);
 }
 .rotate {
   transform: rotate(180deg);
@@ -576,7 +584,7 @@ img {
 }
 .sidenav .menu-link:hover {
   opacity: 1;
-  background-color: #ffffff09;
+  background-color: var(--nav_hover);
 }
 .mainsite {
   position: relative;
