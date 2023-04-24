@@ -74,13 +74,13 @@
           correctly and therefore masking out everything.
         </li>
         <ul>
-          <li class="faq_nested_li">
+          <li>
             Most of the time the ecosystems feature might be the culprit, if you
             create relations with a system hidden or that does not exist
             anymore.
           </li>
-          <li class="faq_nested_li">A visibility feature might be responsible.</li>
-          <li class="faq_nested_li">
+          <li>A visibility feature might be responsible.</li>
+          <li>
             The pattern feature might mask an unusually large area.
           </li>
         </ul>
@@ -88,7 +88,7 @@
           Please make sure your version of blender matches the version of the
           plugin you are installing.
         </li>
-        <li class="faq_nested_li">
+        <li>
           Did you have a forward compatibility issue perhaps? <br />
           Please be careful when switching blender version while working on your
           projects, it could corrupt them forever.
@@ -108,8 +108,8 @@
           instances will be x100 as larger than the scene unit. To resolve this
           issue you have two possible solutions:
         </li>
-        <li class="faq_nested_li">Apply the scale of your surface with <span>CTRL + A</span></li>
-        <li class="faq_nested_li">
+        <li>Apply the scale of your surface with <span>CTRL + A</span></li>
+        <li>
           Set your scatter default scale to "global" space instead of the
           "local" surface space, this is located in <span>Tweak > Scale > Default Scale</span>.
         </li>
@@ -168,7 +168,7 @@
           advice into consideration when switching from one blender version to
           another:
         </li>
-        <li class="faq_nested_li">
+        <li>
           First of all, please be aware that changing your software version
           mid-project is a bad demeanor in the CG industry, regardless of our
           plugin. Please avoid doing so or you will have problems sooner or
@@ -179,7 +179,7 @@
           project in the wrong version. If you really need to upgrade your
           software version make sure to save a copy of your project beforehand.
         </li>
-        <li class="faq_nested_li">
+        <li>
           <b>Avoid at all cost forward-compatibility errors, or you might
             corrupt your project forever</b>, as .blend files are not forward-compatible! Unsure what forward
           compatibility means? Here's an example: You are working on a project
@@ -191,12 +191,12 @@
           & save a .blend file made in a newer version in an older version,
           manage your blender version clearly.
         </li>
-        <li class="faq_nested_li">
+        <li>
           Please make sure the plugins you are using are compatible with your
           blender version. Do not assume a blender plugin is compatible with all
           blender versions, it is a common wrong assumption.
         </li>
-        <li class="faq_nested_li">
+        <li>
           When upgrading your Geo-Scatter plugin version, all scatter-system(s)
           you created with our plugin in your project will need to be updated.
           As we explained above it is not advised to switch your software
@@ -277,11 +277,11 @@
           surfaces that is changing its topology only in the render. In most
           cases, the culprit is a <b>subdivision modifier!</b>
         </li>
-        <li class="faq_nested_li">
+        <li>
           Please make sure to have the same level of subdivision on viewport &
           on render for your subdiv modifier.
         </li>
-        <li class="faq_nested_li">
+        <li>
           Note that if your emitting surface is very high-poly, you could use a
           low-poly surface invisible on render only used for the scattering.
           This trick will be needed if you'd like to work with materials that
@@ -335,21 +335,21 @@
           blender/your computer is capable of doing? Unsure where to start? here
           are some questions you should ask yourself:
         </li>
-        <li class="faq_nested_li">
+        <li>
           Is your computer able to handle large blender 3D scenes? Did you ever
           work on large 3D scenes in blender/maya/3Dsmax in the past? Or perhaps
           this is your first time creating large scenes? Perhaps the slowdown is
           completely normal, your scene might just be really heavy for your
           computer.
         </li>
-        <li class="faq_nested_li">
+        <li>
           How many points are you initially scattering, more than a million? Is
           your scatter area very large? <br />
           <b>Solution:</b> Use visibility optimization features, hide your
           unused scatter-system(s) in the viewport, separate your
           scatter-surface in foreground /middleground /background.
         </li>
-        <li class="faq_nested_li">
+        <li>
           Is there an extreme amount of triangles drawn on your screens? Blender
           is using rasterization to render the viewport, this rendering
           technique will scale depending on the number of triangles displayed.
@@ -357,7 +357,7 @@
           <b>Solution:</b> Use display optimization (display as point is the
           fastest option). hide your unused scatter-system(s) in the viewport.
         </li>
-        <li class="faq_nested_li">
+        <li>
           Is the surface you are scattering upon high poly? perhaps with
           heavy-to-compute modifiers enabled? br
           <b>Solution:</b> Use a low poly invisible surface only used as a
@@ -368,16 +368,16 @@
           Note that <b>some features might be slower than others!</b> For
           example:
         </li>
-        <li class="faq_nested_li">
+        <li>
           The random distribution mode with limit distance enabled is slower
           than the original random distribution mode
         </li>
-        <li class="faq_nested_li">
+        <li>
           Any features using proximity calculation such as <span>Tweak > Proximity</span> or
         <span>Tweak > Ecosystems</span> are computer intensive, especially when calculating
           proximity with high poly meshes.
         </li>
-        <li class="faq_nested_li">
+        <li>
           Display as convex-hull, bounding-box, or point-cloud might be more
           computer-intensive, as these methods will be constructing the display
           object on the fly.

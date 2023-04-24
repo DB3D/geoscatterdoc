@@ -685,16 +685,6 @@ img {
 .faq-answer b {
   font-weight: 700;
 }
-.faq_nested_li {
-  margin-left: 12px;
-}
-.faq_nested_li2 {
-  padding: 0px 20px;
-  margin-left: 10px;
-}
-.faq_nested_li2 li {
-  list-style-type: square;
-}
 
 /* image containter stuff ? */
 
@@ -934,7 +924,7 @@ img {
    88YbdP88 Yb   dP 88""Yb 88 88  .o 88""   
    88 YY 88  YbodP  88oodP 88 88ood8 888888  */
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1080px) {
 
   .titleheader{
     padding-top: 5px;
