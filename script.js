@@ -35,26 +35,26 @@ menuLinks.forEach((menuItem) => {
   });
 });
 
-try {
-    // seach bar code
-    var searchIcon = document.querySelector(".search-icon");
-    var searchBox = document.querySelector(".search-box");
-    var closeIcon = document.querySelector(".close-icon");
-    var searchInput = document.querySelector('.search-input input[type="text"]');
-
-    searchIcon.addEventListener("click", function () {
-      searchBox.classList.add("active");
-      closeIcon.classList.add("active");
-      searchIcon.classList.add("small_screen_hide");
-      searchInput.focus();
-    });
-
-    closeIcon.addEventListener("click", function () {
-      searchBox.classList.remove("active");
-      closeIcon.classList.remove("active");
-      searchIcon.classList.remove("small_screen_hide");
-    });
-} catch (error) {
-    // this will happen when main document is loaded, search icon is only on sub pages..
-}
+// try {
+//     // seach bar code
+//     var searchIcon = document.querySelector(".search-icon");
+//     var searchBox = document.querySelector(".search-box");
+//     var closeIcon = document.querySelector(".close-icon");
+//     var searchInput = document.querySelector('.search-input input[type="text"]');
+//
+//     searchIcon.addEventListener("click", function () {
+//       searchBox.classList.add("active");
+//       closeIcon.classList.add("active");
+//       searchIcon.classList.add("small_screen_hide");
+//       searchInput.focus();
+//     });
+//
+//     closeIcon.addEventListener("click", function () {
+//       searchBox.classList.remove("active");
+//       closeIcon.classList.remove("active");
+//       searchIcon.classList.remove("small_screen_hide");
+//     });
+// } catch (error) {
+//     // this will happen when main document is loaded, search icon is only on sub pages..
+// }
 
