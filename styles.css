@@ -933,13 +933,15 @@ img {
   .titleheader h1{
     font-size: 23px;
     font-weight: 500;
+    width: 90%; /*previous 1030px*/
   }
   .titleheader p{
     font-size: 14px;
+    width: 90%; /*previous 1030px*/
   }
   .article_content {
-    width: 95%;
     margin: 20px auto;
+    width: 90%; /*previous 1030px*/
   }
   .article_content h2 {
     font-size: max(16px, 2.5vw);
@@ -951,6 +953,9 @@ img {
   .article_content p {
     font-size: max(13px, 1.5vw);
     line-height: 25px;
+  }
+  .separator_line {
+    width: 90%; /*previous 1030px*/
   }
   .flex_singlecard.optimizationtext.card3x {
     width: 29.8%;
