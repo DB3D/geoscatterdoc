@@ -483,6 +483,7 @@ img {
   right: 0;
   top: 0;
   padding: 4px;
+  margin-right: 4px;
   height:auto;
   z-index: 999999;
   stroke: var(--lamp_color);
@@ -1075,7 +1076,7 @@ img {
     padding-bottom: 5px;
   }
   .titleheader h1{
-    font-size: 16px;
+    font-size: 17px;
     font-weight: 500;
   }
   .titleheader p{
