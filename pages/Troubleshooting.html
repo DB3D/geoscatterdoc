@@ -22,8 +22,8 @@
 
 <div class="article_content">
 
-    <div class="faq-item">
-      <div class="faq_border gmstyling">
+    <div class="faq-item gmstyling">
+      <div class="faq_border">
         <h2 class="faq-question faq_titltt">My plugin won't install</h2>
         <i class="faq-icon fa fa-angle-down"></i>
       </div>
@@ -39,8 +39,8 @@
       </ul>
     </div>
   
-    <div class="faq-item">
-      <div class="faq_border gmstyling">
+    <div class="faq-item gmstyling">
+      <div class="faq_border">
         <h2 class="faq-question faq_titltt">I don't see my scatter</h2>
         <i class="faq-icon fa fa-angle-down"></i>
       </div>
@@ -53,21 +53,21 @@
           <b>mistakenly hitting the horizontal numberpad of your keyboard )</b>
         </li>
         <li>
-          In <i>"Tweak>Distribution"</i> make sure that the distribution density
+          In <span>Tweak > Distribution</span> make sure that the distribution density
           is not too small relative to the size of your terrain
         </li>
         <li>
           You might want to apply your terrain scale, perhaps it is very big.
-          Alternatively in <i>"Tweak>Scale>DefaultScale"</i> you could set the
-          default scale reference to <i>"global" </i>
+          Alternatively in <span>Tweak > Scale > DefaultScale</span> you could set the
+          default scale reference to "global".
         </li>
         <li>
           Please verify if your system(s) are visible in
-          "Npanel>Tweak>SystemList". You should see a screen icon activated.
+          <span>Npanel > Tweak > SystemList</span>. You should see a screen icon activated.
         </li>
         <li>
           Please verify if your scatter-system has any designated instances. In
-          "Npanel>Tweak>Instancing". No instances equal nothing displayed.
+          <span>Npanel > Tweak > Instancing</span>. No instances equal nothing displayed.
         </li>
         <li>
           Please disable all features, perhaps one of them is not tweaked
@@ -96,26 +96,26 @@
       </ul>
     </div>
 
-    <div class="faq-item">
-      <div class="faq_border gmstyling">
+    <div class="faq-item gmstyling">
+      <div class="faq_border">
         <h2 class="faq-question faq_titltt">Incorrect scatter scale</h2>
         <i class="faq-icon fa fa-angle-down"></i>
       </div>
       <ul class="faq-answer">
         <li>
           By default the scatter will be parented to your surface(s), it means
-          that if your surface has a scale of [100,100,100], your scattered
+          that if your surface has a scale of <span>[100,100,100]</span>, your scattered
           instances will be x100 as larger than the scene unit. To resolve this
           issue you have two possible solutions:
         </li>
-        <li class="faq_nested_li">Apply the scale of your surface with <span>CTRL+A</span></li>
+        <li class="faq_nested_li">Apply the scale of your surface with <span>CTRL + A</span></li>
         <li class="faq_nested_li">
           Set your scatter default scale to "global" space instead of the
-          "local" surface space, this is located in "Tweak>Scale>Default Scale".
+          "local" surface space, this is located in <span>Tweak > Scale > Default Scale</span>.
         </li>
         <li>
-          Make sure the scale of the instances you chose is set to [1,1,1] (to
-          easily retrieve your original instance go in "Tweak>Instancing" &
+          Make sure the scale of the instances you chose is set to <span>[1,1,1]</span> (to
+          easily retrieve your original instance go in <span>Tweak > Instancing</span> &
           click on the select icon).
         </li>
         <li>
@@ -125,13 +125,13 @@
         </li>
         <li>
           Optionally you can change the default scale of your instance in
-          "Tweak>Scale>Default Scale"
+        <span>Tweak > Scale > Default Scale</span>.
         </li>
       </ul>
     </div>
 
-    <div class="faq-item">
-      <div class="faq_border gmstyling">
+    <div class="faq-item gmstyling">
+      <div class="faq_border">
         <h2 class="faq-question faq_titltt">Incorrect instances render colors</h2>
         <i class="faq-icon fa fa-angle-down"></i>
       </div>
@@ -146,7 +146,7 @@
           Cycles/Eevee render engines. <br /><br />
 
           In Geo-Scatter you are able to tweak the display color of your scatter
-          via 'N Panel > Geo-Scatter > Tweaking > System(s) List'. Please
+          via <span>N Panel > Geo-Scatter > Tweaking > System(s) List</span>. Please
           consult the creator of the model used to verify if/how the display
           color property is being used. If you are using botaniq, consult this
           page.
@@ -154,15 +154,15 @@
       </ul>
     </div>
 
-    <div class="faq-item">
-      <div class="faq_border gmstyling">
+    <div class="faq-item gmstyling">
+      <div class="faq_border">
         <h2 class="faq-question faq_titltt">Problems when switching blender versions</h2>
         <i class="faq-icon fa fa-angle-down"></i>
       </div>
       <ul class="faq-answer">
         <li>
           As you may know, the Geo-Scatter plugin is based on the very efficient
-          <i>"Geometry-node" </i> system. Geometry-node may vary from one
+          "Geometry-node" system. Geometry-node may vary from one
           blender version to another, meaning that it is important to be careful
           when changing blender versions, please take the following pieces of
           advice into consideration when switching from one blender version to
@@ -211,8 +211,8 @@
       </ul>
     </div>
 
-    <div class="faq-item">
-      <div class="faq_border gmstyling">
+    <div class="faq-item gmstyling">
+      <div class="faq_border">
         <h2 class="faq-question faq_titltt">I see wired boxes everywhere</h2>
         <i class="faq-icon fa fa-angle-down"></i>
       </div>
@@ -224,15 +224,15 @@
           crashing. <br />
           The Geo-Scatter might enable this blender option automatically if the
           object you are trying to scatter is very heavy. If you do not like
-          this security behavior you are able to disable it in 'N
-          Panel>Geo-Scatter>Create', in the behavior popover menu, located next
+          this security behavior you are able to disable it in <span>N
+          Panel > Geo-Scatter > Create</span>, in the behavior popover menu, located next
           to any creating operator button.
         </li>
       </ul>
     </div>
 
-    <div class="faq-item">
-      <div class="faq_border gmstyling">
+    <div class="faq-item gmstyling">
+      <div class="faq_border">
         <h2 class="faq-question faq_titltt">
           How can i locate the original instance object?
         </h2>
@@ -241,7 +241,7 @@
       <ul class="faq-answer">
         <li>
           If you're unsure where the original scattered objects are located in
-          your scene, go in <i>"NPanel>Geo-Scatter>Tweaking>Instancing"</i> and
+          your scene, go in <span>NPanel > Geo-Scatter > Tweaking>Instancing</span> and
           click on the select icon to select the objects in your scene.
           Alternatively, you can hold <span>ALT</span> while doing so to recenter the view
           around the selection. <br />
@@ -251,14 +251,14 @@
       </ul>
     </div>
 
-    <div class="faq-item">
-      <div class="faq_border gmstyling">
+    <div class="faq-item gmstyling">
+      <div class="faq_border">
         <h2 class="faq-question faq_titltt">My animation crash on render</h2>
         <i class="faq-icon fa fa-angle-down"></i>
       </div>
       <ul class="faq-answer">
         <li>
-          Please toggle the <i>"Lock interface"</i> option in the blender main
+          Please toggle the "Lock interface" option in the blender main
           header render menu. <br />
           Blender is a bit unstable when this option is not toggled, it does not
           tolerate python-interaction-related changes between frames otherwise.
@@ -266,8 +266,8 @@
       </ul>
     </div>
 
-    <div class="faq-item">
-      <div class="faq_border gmstyling">
+    <div class="faq-item gmstyling">
+      <div class="faq_border">
         <h2 class="faq-question faq_titltt">Render is not the same as viewport</h2>
         <i class="faq-icon fa fa-angle-down"></i>
       </div>
@@ -299,8 +299,8 @@
       </ul>
     </div>
 
-    <div class="faq-item">
-      <div class="faq_border gmstyling">
+    <div class="faq-item gmstyling">
+      <div class="faq_border">
         <h2 class="faq-question faq_titltt">How to render my scene on a render farm?</h2>
         <i class="faq-icon fa fa-angle-down"></i>
       </div>
@@ -324,8 +324,8 @@
       </ul>
     </div>
 
-    <div class="faq-item">
-      <div class="faq_border gmstyling">
+    <div class="faq-item gmstyling">
+      <div class="faq_border">
         <h2 class="faq-question faq_titltt">My scene is unusually slow</h2>
         <i class="faq-icon fa fa-angle-down"></i>
       </div>
@@ -373,8 +373,8 @@
           than the original random distribution mode
         </li>
         <li class="faq_nested_li">
-          Any features using proximity calculation such as "Tweak>Proximity" or
-          "Tweak>Ecosystems" are computer intensive, especially when calculating
+          Any features using proximity calculation such as <span>Tweak > Proximity</span> or
+        <span>Tweak > Ecosystems</span> are computer intensive, especially when calculating
           proximity with high poly meshes.
         </li>
         <li class="faq_nested_li">
