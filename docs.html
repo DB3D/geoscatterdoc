@@ -120,38 +120,7 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 <script src="nav.js"></script>
-
-<script>
-  // Function to apply the dark mode to the iframe
-  function applyDarkModeToIframe() {
-    const iframe = document.getElementById('main_page_frame');
-    iframe.addEventListener('load', () => {
-      const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
-      const theme = document.documentElement.getAttribute('data-theme');
-      iframeDoc.documentElement.setAttribute('data-theme', theme);
-    });
-  }
-
-  // Dark mode toggle event listener
-  const toggle = document.getElementById('dark-mode-toggle');
-  toggle.addEventListener('click', () => {
-    const currentTheme = document.documentElement.getAttribute('data-theme');
-    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-    document.documentElement.setAttribute('data-theme', newTheme);
-    localStorage.setItem('theme', newTheme);
-    applyDarkModeToIframe();
-  });
-
-  // Initialize theme based on user preferences or saved theme
-  const userPrefersDark =
-    window.matchMedia &&
-    window.matchMedia('(prefers-color-scheme: dark)').matches;
-  const savedTheme = localStorage.getItem('theme');
-  const theme = savedTheme ? savedTheme : userPrefersDark ? 'dark' : 'light';
-  document.documentElement.setAttribute('data-theme', theme);
-  applyDarkModeToIframe();
-</script>
-
+<script src="theme.js"></script>
 
 <!-- -------------------------------------------------------------------------------------------------------------- -->
 
