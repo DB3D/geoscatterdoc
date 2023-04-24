@@ -576,6 +576,15 @@ img {
   overflow-x: hidden;
   border: solid 1px var(--nav_border);
 }
+.sidenav .nav_version{
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 14px;
+  color: var(--nav_font_color);
+  opacity: 0.35;
+  font-family: "Source Sans Pro", sans-serif;
+}
 .rotate {
   transform: rotate(180deg);
 }
