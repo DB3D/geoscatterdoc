@@ -580,7 +580,7 @@ img {
   pointer-events: none;
   position: fixed;
   bottom: 1rem;
-  left: 7.3rem;
+  left: 6rem;
   font-size: 14px;
   color: var(--nav_font_color);
   opacity: 0.35;
