@@ -577,9 +577,10 @@ img {
   border: solid 1px var(--nav_border);
 }
 .sidenav .nav_version{
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
+  pointer-events: none;
+  position: fixed;
+  bottom: 1rem;
+  left: 7.3rem;
   font-size: 14px;
   color: var(--nav_font_color);
   opacity: 0.35;
@@ -1004,6 +1005,10 @@ img {
   }
   .sidenav {
     z-index: 2;
+  }
+  .sidenav .nav_version{
+    left: unset;
+    right: 1rem;
   }
   .wrapper {
     padding: 4rem 0 2rem 0;
