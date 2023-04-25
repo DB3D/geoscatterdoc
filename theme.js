@@ -37,6 +37,8 @@ $(window).ready(function()
 {
     // set to current document (inner iframes load same js so they set it for themselves when ready)
     $('html').attr('data-theme', theme);
+    // show document..
+    $('body').addClass('fade_in');
     // main iframe has also button, this is skipped in inner iframes because button is not defined..
     $('#dark-mode-toggle').click(function(event)
     {
