@@ -20,6 +20,7 @@
   --button_color: #303033;
   --lamp_color: #3b3b3ba8;
   --separator_color: #e7e7e7;
+  --anchor_color:#3b3b3ba8;
   /* nav bar */
   --nav_color: #e6e6e6;
   --nav_active: #d5d5d5;
@@ -48,6 +49,7 @@
   --button_color: #303033;
   --lamp_color: #ffffffef;
   --separator_color: #1e1e1ebf;
+  --anchor_color: #ffffffef;
   /* nav bar */
   --nav_color: #0d0d0d;
   --nav_active: #292929;
@@ -495,6 +497,20 @@ img {
   stroke-linecap: round;
   stroke-linejoin: round;
   fill: none;
+}
+.header-anchor {
+  display: inline;
+  opacity: 0;
+  margin-left: 5px;
+}
+.header-anchor svg {
+  height: 0.65em;
+  margin-left: 0.3rem;
+  fill: var(--anchor_color);
+}
+h1:hover .header-anchor,
+h2:hover .header-anchor {
+  opacity: 1;
 }
 .sm_header {
   width: 100%;
