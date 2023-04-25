@@ -658,9 +658,8 @@ img {
   font-family: 'Source Sans Pro', Arial;
   font-weight: 500 !important;
 }
-.faq-question i {
-  font-size: 18px;
-  font-weight: 400;
+.faq_border p {
+  margin-right: auto;
 }
 .faq-icon {
   float: right;
