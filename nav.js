@@ -99,6 +99,7 @@ $(window).ready(function() {
     }
     
     if (in_page_frame()) {
+        /*
         // make article headers change url in top and jump at them
         $('a[data-frag] h1[id]').click(function(event) {
             try {
@@ -112,6 +113,7 @@ $(window).ready(function() {
                 console.log(error);
             }
         });
+        */
     } else {
         // make menu buttons change url
         var ls = $('.menu-item a');
