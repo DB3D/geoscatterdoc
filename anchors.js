@@ -49,9 +49,10 @@ $(window).ready(function()
             let p = h.split('&');
             if (p.length == 2)
             {
-                let a = p[1].split('=')[1];
-                // scroll_to_header($('#' + a));
-                scroll_to_header(a);
+                // let a = p[1].split('=')[1];
+                // // scroll_to_header($('#' + a));
+                // scroll_to_header(a);
+                scroll_to_header(p[1]);
             }
         }
         catch (error)

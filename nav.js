@@ -10,9 +10,10 @@ $(window).ready(function() {
             top.window.location.hash = "#";
         } else {
             if (article != "") {
-                top.window.location.hash = "#page=" + page + "&article=" + article;
+                // top.window.location.hash = "#page=" + page + "&article=" + article;
+                top.window.location.hash = "#" + page + "&" + article;
             } else {
-                top.window.location.hash = "#page=" + page;
+                top.window.location.hash = "#" + page;
             }
         }
     }
@@ -28,20 +29,23 @@ $(window).ready(function() {
                 if (h != "") {
                     var p = h.split('&');
                     if (p.length == 1) {
-                        var s = p[0].split('=')
-                        if (s[0] == 'page') {
-                            r.page = s[1];
-                        }
+                        // var s = p[0].split('=')
+                        // if (s[0] == 'page') {
+                        //     r.page = s[1];
+                        // }
+                        r.page = p[0];
                     }
                     if (p.length == 2) {
-                        var s = p[0].split('=')
-                        if (s[0] == 'page') {
-                            r.page = s[1];
-                        }
-                        var s = p[1].split('=')
-                        if (s[0] == 'article') {
-                            r.article = s[1];
-                        }
+                        // var s = p[0].split('=')
+                        // if (s[0] == 'page') {
+                        //     r.page = s[1];
+                        // }
+                        // var s = p[1].split('=')
+                        // if (s[0] == 'article') {
+                        //     r.article = s[1];
+                        // }
+                        r.page = p[0];
+                        r.article = p[1];
                     }
                     return r;
                 }
