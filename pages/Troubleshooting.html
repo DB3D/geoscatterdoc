@@ -33,7 +33,7 @@
           Please make sure your version of blender matches the version of the
           plugin you are installing. <br />
           for compatibility information about our plugin, please read the
-          release notes page.
+          <>release notes page.
         </li>
         <li><b>Try to quit your blender app & restart.</b></li>
         <li>Are you on MACOS? this is probably an unzipping issue</li>
@@ -89,11 +89,13 @@
           Please make sure your version of blender matches the version of the
           plugin you are installing.
         </li>
-        <li>
-          Did you have a forward compatibility issue perhaps? <br />
-          Please be careful when switching blender version while working on your
-          projects, it could corrupt them forever.
-        </li>
+        <ul>
+          <li>
+            Did you have a forward compatibility issue perhaps? <br />
+            Please be careful when switching blender version while working on your
+            projects, it could corrupt them forever.
+          </li>
+        </ul>
       </ul>
     </div>
 
@@ -109,11 +111,13 @@
           instances will be x100 as larger than the scene unit. To resolve this
           issue you have two possible solutions:
         </li>
-        <li>Apply the scale of your surface with <span>CTRL + A</span></li>
-        <li>
-          Set your scatter default scale to "global" space instead of the
-          "local" surface space, this is located in <span>Tweak > Scale > Default Scale</span>.
-        </li>
+         <ul>
+          <li>Apply the scale of your surface with <span>CTRL + A</span></li>
+          <li>
+            Set your scatter default scale to "global" space instead of the
+            "local" surface space, this is located in <span>Tweak > Scale > Default Scale</span>.
+          </li>
+          </ul>
         <li>
           Make sure the scale of the instances you chose is set to <span>[1,1,1]</span> (to
           easily retrieve your original instance go in <span>Tweak > Instancing</span> &
@@ -169,46 +173,49 @@
           advice into consideration when switching from one blender version to
           another:
         </li>
-        <li>
-          First of all, please be aware that changing your software version
-          mid-project is a bad demeanor in the CG industry, regardless of our
-          plugin. Please avoid doing so or you will have problems sooner or
-          later,
-          <b>always prefer using the same version of your software from the
-            beginning to the end of your project</b>. Make sure to document which software version your project was made
-          in to avoid corrupting any blender files by opening & saving your
-          project in the wrong version. If you really need to upgrade your
-          software version make sure to save a copy of your project beforehand.
-        </li>
-        <li>
-          <b>Avoid at all cost forward-compatibility errors, or you might
-            corrupt your project forever</b>, as .blend files are not forward-compatible! Unsure what forward
-          compatibility means? Here's an example: You are working on a project
-          made in blender 3.2, and your collaborator join-in & starts to work on
-          the same .blend file but in blender 3.4. A few days later you re-open
-          your projects and surprise, all your shaders node-trees are corrupted,
-          all color-mix nodes suddenly became "undefined", because the internal
-          code of these nodes changed in blender 3.4. In conclusion, never open
-          & save a .blend file made in a newer version in an older version,
-          manage your blender version clearly.
-        </li>
-        <li>
-          Please make sure the plugins you are using are compatible with your
-          blender version. Do not assume a blender plugin is compatible with all
-          blender versions, it is a common wrong assumption.
-        </li>
-        <li>
-          When upgrading your Geo-Scatter plugin version, all scatter-system(s)
-          you created with our plugin in your project will need to be updated.
-          As we explained above it is not advised to switch your software
-          version mid-project but if you really need to: click on the "update
-          node-tree" button to update all internal geometry-node system(s) we
-          are using. Additionally, you are able to force update all node-trees
-          in the Geo-Scatter plugin preferences, in the "debug" area. If you
-          encounter errors while updating, restart your blender session. Still
-          not working? Please contact us with a link to your file via the
-          blendermarket direct-messaging system.
-        </li>
+        <br>
+        <ul>
+          <li>
+            First of all, please be aware that changing your software version
+            mid-project is a bad demeanor in the CG industry, regardless of our
+            plugin. Please avoid doing so or you will have problems sooner or
+            later,
+            <b>always prefer using the same version of your software from the
+              beginning to the end of your project</b>. Make sure to document which software version your project was made
+            in to avoid corrupting any blender files by opening & saving your
+            project in the wrong version. If you really need to upgrade your
+            software version make sure to save a copy of your project beforehand.
+          </li>
+          <li>
+            <b>Avoid at all cost forward-compatibility errors, or you might
+              corrupt your project forever</b>, as .blend files are not forward-compatible! Unsure what forward
+            compatibility means? Here's an example: You are working on a project
+            made in blender 3.2, and your collaborator join-in & starts to work on
+            the same .blend file but in blender 3.4. A few days later you re-open
+            your projects and surprise, all your shaders node-trees are corrupted,
+            all color-mix nodes suddenly became "undefined", because the internal
+            code of these nodes changed in blender 3.4. In conclusion, never open
+            & save a .blend file made in a newer version in an older version,
+            manage your blender version clearly.
+          </li>
+          <li>
+            Please make sure the plugins you are using are compatible with your
+            blender version. Do not assume a blender plugin is compatible with all
+            blender versions, it is a common wrong assumption.
+          </li>
+          <li>
+            When upgrading your Geo-Scatter plugin version, all scatter-system(s)
+            you created with our plugin in your project will need to be updated.
+            As we explained above it is not advised to switch your software
+            version mid-project but if you really need to: click on the "update
+            node-tree" button to update all internal geometry-node system(s) we
+            are using. Additionally, you are able to force update all node-trees
+            in the Geo-Scatter plugin preferences, in the "debug" area. If you
+            encounter errors while updating, restart your blender session. Still
+            not working? Please contact us with a link to your file via the
+            blendermarket direct-messaging system.
+          </li>
+        </ul>
       </ul>
     </div>
 
@@ -278,16 +285,18 @@
           surfaces that is changing its topology only in the render. In most
           cases, the culprit is a <b>subdivision modifier!</b>
         </li>
-        <li>
-          Please make sure to have the same level of subdivision on viewport &
-          on render for your subdiv modifier.
-        </li>
-        <li>
-          Note that if your emitting surface is very high-poly, you could use a
-          low-poly surface invisible on render only used for the scattering.
-          This trick will be needed if you'd like to work with materials that
-          have adaptive displacement enabled for example.
-        </li>
+        <ul>
+          <li>
+            Please make sure to have the same level of subdivision on viewport &
+            on render for your subdiv modifier.
+          </li>
+          <li>
+            Note that if your emitting surface is very high-poly, you could use a
+            low-poly surface invisible on render only used for the scattering.
+            This trick will be needed if you'd like to work with materials that
+            have adaptive displacement enabled for example.
+          </li>
+        </ul>
         <li>
           Perhaps you have a collection or an object in your scene with a
           different viewport/render state?
@@ -336,53 +345,57 @@
           blender/your computer is capable of doing? Unsure where to start? here
           are some questions you should ask yourself:
         </li>
-        <li>
-          Is your computer able to handle large blender 3D scenes? Did you ever
-          work on large 3D scenes in blender/maya/3Dsmax in the past? Or perhaps
-          this is your first time creating large scenes? Perhaps the slowdown is
-          completely normal, your scene might just be really heavy for your
-          computer.
-        </li>
-        <li>
-          How many points are you initially scattering, more than a million? Is
-          your scatter area very large? <br />
-          <b>Solution:</b> Use visibility optimization features, hide your
-          unused scatter-system(s) in the viewport, separate your
-          scatter-surface in foreground /middleground /background.
-        </li>
-        <li>
-          Is there an extreme amount of triangles drawn on your screens? Blender
-          is using rasterization to render the viewport, this rendering
-          technique will scale depending on the number of triangles displayed.
-          See basics of computer graphics. <br />
-          <b>Solution:</b> Use display optimization (display as point is the
-          fastest option). hide your unused scatter-system(s) in the viewport.
-        </li>
-        <li>
-          Is the surface you are scattering upon high poly? perhaps with
-          heavy-to-compute modifiers enabled? br
-          <b>Solution:</b> Use a low poly invisible surface only used as a
-          scattering surface, you can keep your high poly mesh for the
-          rendering.
-        </li>
+        <ul>
+          <li>
+            Is your computer able to handle large blender 3D scenes? Did you ever
+            work on large 3D scenes in blender/maya/3Dsmax in the past? Or perhaps
+            this is your first time creating large scenes? Perhaps the slowdown is
+            completely normal, your scene might just be really heavy for your
+            computer.
+          </li>
+          <li>
+            How many points are you initially scattering, more than a million? Is
+            your scatter area very large? <br />
+            <b>Solution:</b> Use visibility optimization features, hide your
+            unused scatter-system(s) in the viewport, separate your
+            scatter-surface in foreground /middleground /background.
+          </li>
+          <li>
+            Is there an extreme amount of triangles drawn on your screens? Blender
+            is using rasterization to render the viewport, this rendering
+            technique will scale depending on the number of triangles displayed.
+            See basics of computer graphics. <br />
+            <b>Solution:</b> Use display optimization (display as point is the
+            fastest option). hide your unused scatter-system(s) in the viewport.
+          </li>
+          <li>
+            Is the surface you are scattering upon high poly? perhaps with
+            heavy-to-compute modifiers enabled? br
+            <b>Solution:</b> Use a low poly invisible surface only used as a
+            scattering surface, you can keep your high poly mesh for the
+            rendering.
+          </li>
+        </ul>
         <li>
           Note that <b>some features might be slower than others!</b> For
           example:
         </li>
-        <li>
-          The random distribution mode with limit distance enabled is slower
-          than the original random distribution mode
-        </li>
-        <li>
-          Any features using proximity calculation such as <span>Tweak > Proximity</span> or
-        <span>Tweak > Ecosystems</span> are computer intensive, especially when calculating
-          proximity with high poly meshes.
-        </li>
-        <li>
-          Display as convex-hull, bounding-box, or point-cloud might be more
-          computer-intensive, as these methods will be constructing the display
-          object on the fly.
-        </li>
+        <ul>
+          <li>
+            The random distribution mode with limit distance enabled is slower
+            than the original random distribution mode
+          </li>
+          <li>
+            Any features using proximity calculation such as <span>Tweak > Proximity</span> or
+          <span>Tweak > Ecosystems</span> are computer intensive, especially when calculating
+            proximity with high poly meshes.
+          </li>
+          <li>
+            Display as convex-hull, bounding-box, or point-cloud might be more
+            computer-intensive, as these methods will be constructing the display
+            object on the fly.
+          </li>
+        </ul>
         <li>
           <b>If you believe your scene is unusually slow compared to a native
             blender environment scene, please contact us</b>
