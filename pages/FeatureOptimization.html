@@ -18,7 +18,7 @@
 <!-- title -->
 
 <div class="titleheader">
-    <h1>Your Computer Have Limits</h1>
+    <h1>Your Computer Has Limits</h1>
     <p>Have proper expectations on your computer and your 3D software</p>
 </div>
 
@@ -37,7 +37,7 @@
       <p>
         It is time to adjust your expectation if this is the case! Performances
         are heavily dependent on your utilization and on the software & hardware
-        you are using. Please remember, a 3D package, is not supposed to be a video-game like experience
+        you are using. Please remember, a 3D package, is not supposed to be a video-game-like experience
       </p>
     </div>
 
@@ -66,14 +66,14 @@
 
     <div class="flex_singlecard optimizationtext card3x">
       <p>
-        You might assume that the best solution to make blender viewport faster is
+        You might assume that the best solution to make Blender viewport faster is
         using game-engine-like optimization tricks!
       </p>
       <br>
       <p>
         I'm sorry to inform you that this is a common misconception.
         Distance-based LOD for example, is one of such technology quite demanded
-        by blender users. Implementing such an inconvenient trick does not make
+        by Blender users. Implementing such an inconvenient trick does not make
         much sense in a non-real-time rendering app.
       </p>
       <br>
@@ -92,7 +92,7 @@
 
 <div class="titleheader">
     <h1>Identifying Slowdowns</h1>
-    <p>Hear these tips to identiy the slowdowns like a a pro</p>
+    <p>Hear these tips to identify the slowdowns like a pro</p>
 </div>
 
 <div class="article_content gmstyling">  
@@ -103,7 +103,7 @@
       <h2>Rasterization Slowdowns</h2>
       <p>
         The viewports (more precisely "solid"/ "wireframe"/ "material"/ "overlay"
-        options) of blender is running on a rendering algorithm called
+        options) of Blender are running on a rendering algorithm called
         "Rasterization". It's the same technology used by Eevee or games. This
         algorithm is extremely fast to compute, however, it does not scale well
         with high polycount. On the contrary, ray-tracers such as CyclesX do not
@@ -130,7 +130,7 @@
         Be aware that enabling the viewport overlay effect has an
         impact on the performance as it is doing rasterization in the background.
         Also, note that the viewport shadows or ambient occlusion options make
-        blender considerably slower!
+        Blender considerably slower!
       </p>
     </div>
 
@@ -138,8 +138,8 @@
       <img src="../img/opt1.jpg" alt="" />
       <h2>Scatter-Engine Slowdowns</h2>
       <p>
-        As you may know already, Scatter5 is based on a geometry-node engine, it
-        is currently the fastest method available for us, blender plugin
+        As you may know already, Geo-Scatter is based on a geometry-node engine, it
+        is currently the fastest method available for us, Blender plugin
         developers. Geometry-node is quite fast by nature! If you avoid hitting
         viewport rasterization slowdowns, by for example using the display as a
         point feature, the next logical slowdown you will be facing is the
@@ -150,8 +150,8 @@
       <br>
       <p>
         What are update dependencies? Well, it is when an element in your scene or
-        in the UI will trigger a recalculation, when for example, changing a
-        slider values will trigger a recalculation of the scatter, and so does
+        in the UI will trigger a recalculation, when for example, changing 
+        slider's values will trigger a recalculation of the scatter, and so does
         moving elements tied to a scatter-system such as an emitter, a chosen
         surface, camera, or an object inside a proximity feature collection for
         example.
@@ -161,8 +161,8 @@
       <p>
         Note that using a dedicated
         <a href="https://www.geoscatter.com/documentation/#FeatureScattering&article_non_linear_workflow"
-          target="_top">empty emitter </a>will make things faster to compute on big scenes for blender when
-        tweaking slider.
+          target="_top">empty emitter </a>will make things faster to compute on big scenes for Blender when
+        tweaking slider's.
       </p>
 
       <br><br><br>
@@ -176,7 +176,7 @@
         using a memory-efficient object duplication technique that I am sure you
         are familiar with, called "Instancing". Internally, the mesh & texture
         information of your object will be re-used in memory. So no worries with
-        memory usage when working with Scatter5.
+        memory usage when working with Geo-Scatter.
       </p>
     </div>
 
@@ -185,7 +185,7 @@
       <h2>High Poly Surfaces Slowdowns</h2>
       <p>
         Scatter is quite forgiving regarding your chosen surfaces polycount, but
-        not blender! Vertex color painting, weight painting, and texture painting
+        not Blender! Vertex color painting, weight painting, and texture painting
         will be slow when approaching 200.000 verts.
       </p>
       <br>
@@ -242,9 +242,9 @@
           <h2>Ray-Tracing is Powerful</h2>
           <p>
               While the viewport rasterization algorithm might not be able to display your render,
-              it does <b>not</b> means your ray-tracer will not be able to handle the load! 
+              it does <b>not</b> mean your ray-tracer will not be able to handle the load! 
               Hide problematic layers for the viewport, and render them later in your final render, 
-              this is the most important optimization trick you should think of when working with 3D DCC's such as blender
+              this is the most important optimization trick you should think of when working with 3D DCC's such as Blender
           </p>
       </div>
 
@@ -262,8 +262,8 @@
       <div class="textr card2x">
         <h2>Hide What You do not Use</h2>
         <p>
-          When working on a large sceneries with a lot of scatter-systems, it is a
-          good practice to hide what you do not need to visualize in real time by
+          When working on large sceneries with a lot of scatter-systems, it is a
+          good practice to hide what you do not need to visualize in real-time by
           turning off the viewport display (screen icon). The system will always
           appear on the final render if the render toggle is enabled.
         </p>
@@ -289,10 +289,10 @@
       <div class="textr card2x">
         <h2>Consider Security Warnings</h2>
         <p>
-          If you ever recieved a message warning you that you have created millions
+          If you ever received a message warning you that you have created millions
           of instances and that Geo-Scatter automatically hid the scatter-system for
           your own safety, perhaps it's best to be careful! Accidentally un-hiding
-          such a system could freeze your computer! Best would be to enable the max
+          such a system could freeze your computer! The best would be to enable the max
           amount feature just in case.
         </p>
       </div>
@@ -367,7 +367,7 @@
 
 <div class="titleheader">
     <h1>Camera Optimization</h1>
-    <p>Optimize your workflow with advance camera optimization settings</p>
+    <p>Optimize your workflow with advanced camera optimization settings</p>
 </div>
 
 <div class="article_content" style="margin-bottom: 0;">
@@ -398,7 +398,7 @@
       
         <h2>Occlusion Culling</h2>
         <p>
-          The occlusion culling option let you hide points located in areas unseen
+          The occlusion culling option lets you hide points located in areas unseen
           by the camera. Optionally choose a collection of occluding objects.
         </p>
     </div>
@@ -431,7 +431,7 @@
     like to batch-apply settings on all the selected scatter-systems, the
     <a href="https://www.geoscatter.com/documentation/#FeatureOffset&section_falling_animation"
       target="_top">ALT-for-batch</a>
-    behavior is here for you, it's the official method to batch apply settings to many items simultaneously in blender.
+    behavior is here for you, it's the official method to batch apply settings to many items simultaneously in Blender.
   </p>
 </div>
 
@@ -460,11 +460,11 @@
         </p>
         <ul>
           <li>
-            <b>Bounding Box:</b> Will display the solid bounding box of your
+            <b>Bounding Box:</b> This will display the solid bounding box of your
             instances.
           </li>
           <li>
-            <b> Convex Hull: </b> Will display the convex-hull geometry of your instances. Be
+            <b> Convex Hull: </b> This will display the convex-hull geometry of your instances. Be
             aware that this option is heavier to calculate!
           </li>
           <li>
@@ -476,8 +476,8 @@
             <b>Custom Placeholder</b>: Replace your instances with the given object.
           </li>
           <li>
-            <b>Single Point:</b> Replace your instances with a single point at its origin.
-            Points are extremely fast to rasterize, blender can display millions of
+            <b>Single Point:</b> Replace your instances with a single point at their origin.
+            Points are extremely fast to rasterize, Blender can display millions of
             them with no slowdown in the viewport.
           </li>
           <li>
@@ -527,14 +527,14 @@
       <div class="textr card2x">
         <h2>Reveal Near Camera</h2>
         <p>
-          The reveal near camera option will reveal the real geometry of the instance when the camera is closeby. Using
+          The reveal near camera option will reveal the real geometry of the instance when the camera is close by. Using
           this feature in combination with point display and camera clipping/culling is one of the best real-time viewport
           optimization tricks you can get in Geo-Scatter!
         </p> 
         <br>
         <p>
           Moving the camera will trigger a recalculation of the scattering, as explained above, update dependencies linked
-          to camera can be tweaked.
+          to camera's can be tweaked.
         </p>
       </div>
       
@@ -580,7 +580,7 @@
           If your rendered object color is not the same once scattered, that's probably because your object (that you
           probably bought online?) is using the 'display color' property as a color influence in its materials shader,
           meaning that the display color is not used only for viewport display purpose but will also have an impact in the
-          render. If you have this problem, simply change the display color in Scatter5 system list are.
+          render. If you have this problem, simply change the display color in Geo-Scatter system-list.
         </p> <br><br>
     
         <h3>Display As & Biomes</h3>
@@ -630,7 +630,7 @@
 
 <div class="titleheader">
     <h1>Wireboxes Everywhere?</h1>
-    <p>Beginners often don't know this native blender functionality</p>
+    <p>Beginners often don't know this native Blender functionality</p>
 </div>
 
 <div class="article_content">
@@ -645,7 +645,7 @@
         <p>
           The bounding box display is a native per-object setting located in Object Properties &gt; Viewport Display &gt;
           Display As. Sometimes the object you are scattering may have the bounding-box display enabled, either because the
-          scattered object has this setting active, or because an is protecting you from scattering highpoly assets.
+          scattered object has this setting active, or because an is protecting you from scattering high-poly assets.
         </p>
         <br />
         <h3>Reminder:</h3>
@@ -675,17 +675,17 @@
       <div class="textr card2x">
         <h2>Properties Update Behavior</h2>
         <p>
-          Tweaking sliders in blender can be slow sometimes, in that case, 
+          Tweaking sliders in Blender can be slow sometimes, in that case, 
           it is advised to manually input a number and press enter 
-          instead of doing mouse-sliding gestures that could potentially freeze your blender session.
+          instead of doing mouse-sliding gestures that could potentially freeze your Blender session.
         </p>
         <br>
         <p>
-          Geo-Scatter properties have been implemented with it's own ALT-for-batchn system, and also, their own update delay behaviors! 
+          Geo-Scatter properties have been implemented with its own ALT-for-batch system, and also, their own update delay behaviors! 
           In the extra panel, it is possible to tweak your Geo-Scatter settings update behavior,
-          By default the blender will try to send update signals when you slide your propery. 
-          You can change this update behavior for our plugin settings, for example you can set it to "halt" in 
-          order to only send the update signal when the sliding gesture hasbeen stopped.
+          By default the Blender will try to send update signals when you slide your property. 
+          You can change this updated behavior for our plugin settings, for example, you can set it to "halt" in 
+          order to only send the update signal when the sliding gesture has been stopped.
         </p>
         <br>
         <h3>Pro Tip:</h3>

@@ -36,7 +36,7 @@
         <p>
           When you create a new scatter-system, it will generate a new instances
           collection each time. This collection will be stored by default in the
-          Scatter5 collection. In the Instancing tab, you are able to quickly add
+          Geo-Scatter collection. In the Instancing tab, you are able to quickly add
           or remove instances selected in the viewport or asset browser to this
           collection.
         </p>
@@ -44,11 +44,11 @@
         <h3>Pro Tip:</h3>
         <ul>
           <li>
-            The <span>ALT</span> key for batch operation, is supported with the
+            The <span>ALT</span> key for batch operation is supported with the
             'add new instance(s)' and 'remove instance' operations.
           </li>
           <li>
-            Note that it is also possible to work with blender linked-objects, or
+            Note that it is also possible to work with Blender linked-objects, or
             collection-groups!
           </li>
         </ul>
@@ -77,7 +77,7 @@
         <h2>Retrieve Instances</h2>
         <p>
           It is possible to easily retrieve any instance used by any
-          scatter-system in your blender scene. To do so, click on the select icon
+          scatter-system in your Blender scene. To do so, click on the select icon
           & the instance will be selected in the viewport. If the instance is
           stored in a hidden collection in your outliner we will propose you to
           activate this collection viewstate.
@@ -110,8 +110,8 @@
   <h2>Instancing Methods</h2>
   <p>
     For most distribution methods, the instancing is always done at the end of
-    the scatter-calculation. First, the geo-scatter engine will distribute
-    points, then calculate the various features that can influence the points
+    the scatter calculation. First, the geo-scatter engine will distribute
+    points, then calculate the various features that can influence the point's
     scale/rotation/density, then it will assign the instances to the points. By
     default the assignation will be done randomly, meaning that the engine will
     pick a random object from your instance & assign it to a scattered point,
@@ -157,8 +157,8 @@
         </p>
         <h3 style="padding-bottom: 0;">Pro Tip:</h3>
         <p>
-          If you'd like to have individual control over density /
-          scale /rotation, then this method is not what you seek, i would suggest
+          If you'd like to have individual control over density/
+          scale/rotation, then this method is not what you seek, I would suggest
           using a multi-user vertex-color
           <a href="https://www.geoscatter.com/documentation/#FeatureCullingmask&section_vertex_color_mask" target="_top">culling mask</a>
           or
@@ -174,7 +174,7 @@
         <h2>Scale Attribute</h2>
         <p>
           Assign instances based on the scale of your scatter! This method will
-          guarantee that your instances scale are physically accurate, once you
+          guarantee that your instance's scales are physically accurate, once you
           defined a minimal/maximal scale range per item. Geo-Scatter will assign
           the instances based on the average XYZ scale vector of your
           scatter-system.
@@ -183,7 +183,7 @@
         <p>
           There are 3 scaling methods available, 'Frozen Scale' will reset
           all scales to 1.0, 'Dynamic Scale' will adjust the scale starting
-          from 1.0 depending on range threshold, and 'Default Scale'.
+          from 1.0 depending on the range threshold, and 'Default Scale'.
         </p>
         <h3 style="padding-bottom: 0;">Note:</h3>
         <p>
