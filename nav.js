@@ -137,4 +137,34 @@ $(window).ready(function() {
         frag_to_state();
     }
     
+    
+    
+    
+    $("a[data-doc]").click(function(event) {
+        event.preventDefault();
+        var h = $(this).attr('data-doc').substring(1);
+        var p = h.split('&');
+        var page = p[0];
+        var article = ""
+        if (p.length == 2) {
+            article = p[1];
+        }
+        
+        if (in_page_frame()) {
+            var url = './pages/' + page + '.html';
+            if (article != "") {
+                url = url + "#" + article;
+            }
+            docs = $('#docs_frame', top.window.document)[0].contentWindow.document;
+            $('#main_page_frame', docs).attr('src', url);
+            encode_frag(page, article);
+            
+            $('.menu-item a', docs).removeClass('active');
+            $(".menu-item a[data-url='" + url +"']", docs).addClass('active');
+        }
+        
+    });
+    
+    
+    
 });
