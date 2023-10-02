@@ -42,6 +42,22 @@
   
     <div class="faq-item gmstyling">
       <div class="faq_border">
+        <h2 class="faq-question faq_titltt">My biomes don't work</h2>
+        <i class="faq-icon fa fa-angle-down"></i>
+      </div>
+      <ul class="faq-answer">
+        <li>
+          There's a 90% of chance that you forgot to also install the associated asset library in your blender asset browser. Most report we have are linked with this omission.
+        </li>
+        <li>
+          There's a small percentage of chance that there's a name conflict, for example, a creator created a biome that relies on "rock.blend", but this name is already taken in your asset library & therefore the assets cannot be found. 
+          We always insist with biome creators to ensure their relying .blend naming are unique, however sometimes mistakes happens. A simple solution to this problem is to rename the conflicting .blend.
+        </li>
+      </ul>
+    </div>
+
+    <div class="faq-item gmstyling">
+      <div class="faq_border">
         <h2 class="faq-question faq_titltt">I don't see my scatter</h2>
         <i class="faq-icon fa fa-angle-down"></i>
       </div>
@@ -270,6 +286,21 @@
           header render menu. <br />
           Blender can be unstable when this option is not toggled with plugin enabled, as otherwise Blender will not
           tolerate python-interaction-related changes between frames otherwise.
+        </li>
+      </ul>
+    </div>
+
+    <div class="faq-item gmstyling">
+      <div class="faq_border">
+        <h2 class="faq-question faq_titltt">My keyframes/drivers don't work anymore</h2>
+        <i class="faq-icon fa fa-angle-down"></i>
+      </div>
+      <ul class="faq-answer">
+        <li>
+          Unfortunately this is a known blender bug that can't be solved yet. By default plugins properties aren't supported by the driver/keyframe system of blender, 
+          we can animate the properties, but blender won't send the appropriate update signal. We did fix this first buggy behavior within our plugin! 
+          But unfortunately there's another buggy blender behavior you will face: deleting any scatter will create issue with your animation, once you animate a plugin property, you cannot delete <b>any</b> scatters or you might lose your animation data. 
+          Unfortunately there's no way around it, it happens because blender register the keyframes/drivers by the order of creation of the scatter. 
         </li>
       </ul>
     </div>
