@@ -47,7 +47,7 @@
       </div>
       <ul class="faq-answer">
         <li>
-          There's a 90% of chance that you forgot to also install the associated asset library in your blender asset browser. Most report we have are linked with this omission.
+          There's a chance that you forgot to also install the associated asset library in your blender asset browser. Most report we have are related with this omission.
         </li>
         <li>
           There's a small percentage of chance that there's a name conflict, for example, a creator created a biome that relies on "rock.blend", but this name is already taken in your asset library & therefore the assets cannot be found. 
@@ -361,6 +361,24 @@
           instance"</i> functionality available in our plugin extra panel, this will
           non-destructively bake the scatter-system(s) as real Blender
           instances.
+        </li>
+      </ul>
+    </div>
+
+    <div class="faq-item gmstyling">
+      <div class="faq_border">
+        <h2 class="faq-question faq_titltt">I cannot share my scatters with another collaborator/renderfarms</h2>
+        <i class="faq-icon fa fa-angle-down"></i>
+      </div>
+      <ul class="faq-answer">
+        <li>
+          Please, make sure you are not relying on keyframe and/or drivers on some of our plugin properties. If your collaborator is not using our plugin, then these properties won't exist, therefore the animation data relying on our plugin API will break.
+        </li>
+        <li>
+          Always make sure your collaborator or render farm is using the exact same version of blender you are using! otherwise nodegroups and/or shaders might break. 
+        </li>
+        <li>
+          Finally, make sure that you didn't link anything in your file! you can use the "Make Local" operator using the F3 operator menu search to abolish all possible link.
         </li>
       </ul>
     </div>
