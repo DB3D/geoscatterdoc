@@ -123,7 +123,10 @@
         <b>Improvement:</b> Added the ability to choose a local or global space for the noise features masks.
       </li>
       <li>
-        <b>Improvement:</b> We have written and enhanced many more 'on hover' descriptions. To learn more about features, sliders and options, hover over their properties in the interface with your mouse while staying still for half a second. 
+        <b>Improvement:</b> We added new 'helper' placeholders to the placeholder list (in the 'Display As' feature). Two new placeholders are available: A triangular tangent green arrow, and a normal blue arrow.
+      </li>
+      <li>
+        <b>Improvement:</b> We have re-written, added, and enhanced most of 'on hover' descriptions. To learn more about features, sliders and options, hover over their properties in the interface with your mouse while staying still for half a second. You should be able to understand features without the need of using this documentation website
       </li>
       <li>
         <b>improvement: </b> Addon-preferences properties improvements
@@ -153,6 +156,9 @@
         <b>Bugfix:</b> Interface error if no instancing collection was chosen. 
       </li>
       <li>
+        <b>Bugfix:</b> For our textures-data system, we fixed the visualizer, as it sometimes produced inaccurate projection-transforms.
+      </li>
+      <li>
         <b>Bugfix:</b> Fixed wrong texture muscgrave_type to noise_type since blender musgrave textures are gone. 
       </li>
       <li>
@@ -166,6 +172,12 @@
       </li>
       <li>
         <b>Bugfix:</b> Fixing an 'offset falling animation' property still active if the rotation sub-option was disabled.
+      </li>
+      <li>
+        <b>Note:</b> Some of you reported an unjustified lag when playing an animation, we reported this issue, and it is related to a blender geometrynode bug. (See <a href="https://projects.blender.org/blender/blender/issues/111200" target="_blank">Report</a>)
+      </li>
+      <li>
+        <b>Note:</b> For the new bezier-spline distribution method, we are aware of a blender geometry-node bug where the curve incline won't follow the curve-tilt data in global space. (See <a href="https://projects.blender.org/blender/blender/issues/126283" target="_blank">Report</a>)
       </li>
 
     </ul>
