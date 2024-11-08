@@ -43,7 +43,15 @@
       </div>
 
   </div>
+
+  <br><h2>Plugins Drag and Drop</h2>
+  <p>In the video we install a plugin manually on old blender versions however <b>in newer version of blender, you can now install plugins simply by drag and dropping their <span>.zip</span> file directly in blender.</b><br> 
+  </p>
+  </div>
+
 </div>
+
+
 
 <!-- title -->
 
@@ -86,69 +94,68 @@
   <ul>
     <li>
       <p>
-          The first step to installing any Blender plugin is to make sure the plugin you are using is compatible
-          with the version of Blender you are using. Compatibility information about our plugins is available in 
-          <a href="#" data-doc="#Changelogs">the changelog page.</a>
+          Ensure the plugin is compatible with your version of Blender. Compatibility details can be found in
+          <a href="#" data-doc="#Changelogs">the changelog page</a>.
+      </p>
+    </li>
+
+    <li>
+      <p>
+        <b>If you have Blender 4.2 or above:</b> And you're using Geo-Scatter 5.5 or above, you can now drag and drop the plugin <span>.zip</span> file directly into your Blender window.
+        Blender will then prompt you to install and activate it the plugin. The plugin will wait for you in the 'T' panel.
+        <br><b>If you prefer manual installation, follow these steps:</b>
+      </p>
+    </li>
+
+    <ul>
+        <li>
+          <p>
+            Open Blender Preferences by selecting <span>Main Header > Edit > Preferences</span> or by setting an editor type to 'Preferences'.
+          </p>
+        </li>
+        <li>
+          <p>
+            In the 'Add-ons' category, click on 'Install' (it may be in a menu hidden under an arrow button).
+          </p>
+        </li>
+        <li>
+          <p>
+            Select the 'GeoScatter.zip' file and confirm. Blender will extract the plugin files to your addons directory.
+          </p>
+          <ul>
+              <li>
+                <p>
+                  Extension path (<i>WinOS</i>): <span>C:\Users\%USERNAME%\Appdata\Roaming\Blender Foundation\Blender\X.X\extensions\user_default\</span><br>
+                  Legacy path (<i>WinOs</i>): <span>C:\Users\%USERNAME%\Appdata\Roaming\Blender Foundation\Blender\X.X\scripts\addons\</span><br>
+                  Extension path (<i>macOS</i>): <span>/Users/$USER/Library/Application Support/Blender/X.X/extensions/user_default/</span><br>
+                  Legacy path (<i>macOS</i>): <span>/Users/$USER/Library/Application Support/Blender/X.X/scripts/addons/</span><br>
+                  Extension path (<i>Linux</i>): <span>/home/$USER/.config/blender/X.X/extensions/user_default/</span><br>
+                  Legacy path (<i>Linux</i>): <span>/home/$USER/.config/blender/X.X/scripts/addons/</span><br>
+                  It may be useful to know about these paths for troubleshootings (consult the Blender manual for other OS paths). A total manual installation consists of unzipping your plugin content on such location by yourself.
+                </p>
+              </li>
+          </ul>
+        </li>
+        <li>
+          <p>
+            In Blender's Add-ons preferences, search and enable Geo-Scatter. Click the arrow next to 'Enable' to access plugin settings.
+          </p>
+        </li>
+    </ul>
+
+    <li>
+      <p>
+        Save your preferences to retain changes (it should be done automatically by default).
       </p>
     </li>
     <li>
       <p>
-        Go into the Blender preferences, either by clicking on
-        <span>Main Header > Edit > Preferences</span> or by changing an editor type
-        to 'preferences'.
-      </p>
-    </li>
-    <li>
-      <p>
-        Go to the 'Add-ons' category, and click on 'Install' to install a new
-        addon.
-      </p>
-    </li>
-    <li>
-      <p>
-        Choose your addon file, in our case a 'GeoScatter.zip' file, when
-        confirming, Blender will simply extract the files inside your addons
-        folder
-      </p>
-      <ul>
-        <ul>
-          <li>
-            <p>
-              this folder is by default located inside
-              <span>
-                User/username/Appdata/Roaming/Blender
-                Foundation/Blender/X.XX/scripts/addons/</span>
-              for Windows OS users ( consult the Blender manual to find the
-              addon path of your OS) this is a very important path that you
-              should be able to locate on your computer. There will be a new
-              folder added in this path named after our plugin that should
-              contain an <span>__init__.py</span>
-              file.
-            </p>
-          </li>
-        </ul>
-      </ul>
-    </li>
-    <li>
-      <p>
-        Search in your Blender plugins and enable Geo-Scatter in your addons
-        preferences. Next to the enable button, there is a little arrow for
-        opening the plugin preferences layout.
-      </p>
-    </li>
-    <li>
-      <p>
-        Don't forget to save your preferences, if not done automatically.
-      </p>
-    </li>
-    <li>
-      <p>
-        If it is your first time using our products you need to install
-        <b>your first biome and preset scatpacks!</b> <br />
+        For first-time users, you may want to also install <b>your first <span>biome.scatpack</span> and <span>preset.scatpacks</span>!</b><br/>
       </p>
     </li>
   </ul>
 </div>
+
 
 <!-- title -->
 
@@ -191,6 +198,11 @@
         biomes library to see the new elements available. Depending on your
         package you may see a new category in your library navigator, located in
         the left side panel.
+      </p>
+    </li>
+    <li>
+      <p>
+        Please note that if you installed a scatpack named <span>preset.scatpack</span>, it is not a biome, but a pack of presets for the preset-scatter operator located in the 'Tweak' panel.
       </p>
     </li>
   </ul>
@@ -276,11 +288,9 @@
     ( <span>.biome</span> , <span>.preset</span> , <span>.jpeg</span> , or <span>.blend</span> files ) to your
     <span>scatter library</span> folder located somewhere on your computer. By
     default, it will be located in
-    <span>Users\username\AppData\Roaming\Blender Foundation\Blender\data\scatter
-      library\</span>
-    however its location can be customized. In your Geo-Scatter plugin
-    preferences, you will be able to directly open the library in your file
-    explorer at the correct location.
+    <span>C:\Users\%USERNAME%\Appdata\Roaming\Blender Foundation\Blender\data\scatter library\</span> for windows OS,
+    however this location can be customized. You are able to directly open the scatter library folder in your file
+    explorer at the correct location with an operator also located in your Geo-Scatter plugin preferences.
   </p>
 
 </div>

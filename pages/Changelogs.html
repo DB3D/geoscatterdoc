@@ -32,16 +32,18 @@
     <ul class="faq-answer">
 
       <img src="../img/Geo-Scatter 5.5.0.jpg" alt="" />
-      <p style="margin-left: -19px"><b>Blender Compatibility: </b>  Blender 4.2 or Above</p>
+      <p style="margin-left: -19px"><b>Blender Compatibility: </b>  Blender 4.2 LTS & Blender 4.3</p>
       <p style="margin-left: -19px"><b>Retro Compatibility: </b>  Accepts system(s) made with Scatter 5.0/5.1/5.2/5.3/5.4/5.5</p>
       <p style="margin-left: -19px"><b>Credit: </b>  Hero Artwork by  <a href="https://www.youtube.com/watch?v=CSawWe5qYmY&t=5897s" target="_blank">Maarten Nauta</a></p>
-      <p style="margin-left: -19px"><b>Important: </b>  Some settings have changed since previous versions, expect changes when updating your scatters.</p>
       
       <br>
       <li>
-        <b>Release-Notes: </b>In this major release, we introduce 3 new distribution methods and important new features, such as ecosystem density, or proximity imprint simulation! As well as many other changes, improvements, and fixes.<br />
+        <b>Release-Notes: </b>In this major release, we introduce 3 new distribution methods and important new features, such as ecosystem density, or proximity imprint simulation and many others changess, improvements, and fixes.
       </li>
-      
+      <li>
+        <b>Compatibility-Notes: </b>Some settings have changed since previous versions, expect changes when updating your scatters.<br />
+      </li>
+
       <li>
         <b>New-Feature: </b> 3 new distribution methods
         <ul> 
@@ -54,17 +56,25 @@
         <b>New-Feature:</b> Rework of the ‘In Volume’ distribution method. Now supporting random or grid distribution submethod.
       </li>
       <li>
+        <b>New-Feature:</b> New 'Efficient Distribution' option available for the camera culling feature. Enabled by default, this option shall greatly boost your compute speed when working with large terrains.
+      </li>
+      <li>
         <b>New-Feature:</b> New ecosystem density feature, scatter only on dense/scarce areas of chosen scatter-systems.
       </li>
       <li>
-        <b>New-Feature:</b> New manual mode translation brushes
+        <b>New-Feature:</b> New manual mode brushes
         <ul> 
-          <li>‘Push’ Push manually distributed instances around depending on the direction of your brush-strokes.</li>
-          <li>‘Split’ Create a pathway between manually distributed instances. Press CTRL for the reverse effect.</li>
-          <li>‘Attract’ Attract manually distributed instances together. Press CTRL for the reverse effect.</li>
-          <li>‘Turbulence’ Randomly push the location of manually distributed instances around, great if you'd like to create a random.</li>
-          <li>‘Relax’ Brush improvement. The relax algorithm is much faster and better at offsetting manually distributed instances at equidistant locations.
+          <li>‘Line’ distribution brush. Draw points at regular interval along a straight line projected from the global Z axis.</li>
+          <li>‘Lasso Delete’ removal brush. A new lasso deletion brush.</li>
+          <li>‘Push’ translation brush. Push manually distributed instances around depending on the direction of your brush-strokes.</li>
+          <li>‘Split’ translation brush. Create a pathway between manually distributed instances. Press CTRL for the reverse effect.</li>
+          <li>‘Attract’ translation brush. Attract manually distributed instances together. Press CTRL for the reverse effect.</li>
+          <li>‘Turbulence’ translation brush. Randomly push the location of manually distributed instances around, great if you'd like to create a random.</li>
+          <li>‘Relax’ translation brush improvement. The relax algorithm is much faster and better at offsetting manually distributed instances at equidistant locations.</li>
         </ul>
+      </li>
+      <li>
+        <b>New-Feature:</b> New 'smoothing' options, handy if you'd like your effects to not be influenced by the slightest mesh imperfection of your surface(s). Available for the 'rotation align normal/tangent downslope' and 'abiotic slope/orientation/curvature' features. 
       </li>
       <li>
         <b>New-Feature:</b> Enhanced and improved Wind-waves features with new options and sliders. You are now able to create wind patterns that also tilt on its sides instead of tilting unilaterally facing the general wind-wave texture direction.
@@ -73,13 +83,16 @@
         <b>New-Feature:</b> New proximity simulation imprint option for the proximity repel features. Create an imprint effect from passing colliders. (This option requires an animation running).
       </li>
       <li>
-        <b>New-Feature:</b> Automatic data-transfer of surfaces attributes when using these new distribution methods, also for manual mode distribution. (previously it was required of users to click on an operator to transfer the surface's attributes)
+        <b>New-Feature:</b> Automatic data-transfer of surfaces attributes when using these new distribution methods, also for manual mode distribution. (previously it was required of users to click on an operator to transfer the surface's attributes).
       </li>
       <li>
         <b>New-Feature:</b> New methods for the align X/Y axis features, in order to align the rotation instances to the active camera.
       </li>
       <li>
-        <b>New-Feature:</b> For features relying on the active camera (such as camera visibility) the camera update behavior drop-down enum now features a new ‘real-time’ option, now set as the new defaults. When choosing this option, the Geometry-node scatter engine will use the recently added 'Active Camera' input node instead of relying on our plugin constantly feeding camera transforms information.
+        <b>New-Feature:</b> Improvement of the offset features. Now featuring new local/global spaces methods, seeds, and a reworked 'random' offset method, previously called 'noise animation'.
+      </li>
+      <li>
+        <b>New-Feature:</b> For features relying on the active camera (such as camera visibility) the camera update behavior drop-down enum now features a new ‘real-time’ option. When choosing this option, the Geometry-node scatter engine will use the recently added 'Active Camera' input node instead of relying on our plugin constantly feeding camera transforms information. So use this feature if you'd like to send your .blend file to a cloud render.
       </li>
       <li>
         <b>New-Feature: </b> Better in-between files scatter's management
@@ -88,6 +101,9 @@
           <li>We now support duplicating scenes containing scatters. Behavior when scattering across multiple scenes is improved.</li>
           <li>We now support cross ‘.blend’ file copy/pasting of objects containing scatter systems. Use the CtrlC/CtrlV shortcuts on an emitter or a scatter object ('scatter_obj' objects containing the instances scatters) from one file to another.</li>
         </ul>
+      </li>
+      <li>
+        <b>New-Feature:</b> New universal feature mask image paint method. Define your feature influence area with the help of an image. We also slightly changed the feature masks interface, it now uses a toggle button, default set to False, instead of a drop down set to 'None'.
       </li>
       <li>
         <b>Improvement:</b> Official support for the new extension system (you can now drag and drop a plugin .zip directly into blender 4.2+ to install.)
@@ -108,7 +124,13 @@
         <b>Improvement:</b> New default user-interface look consisting of checkbox buttons with icons. If you don’t like this style, disable ‘use toggles with icons’ in the plugin preferences.
       </li>
       <li>
+        <b>Improvement:</b> Scattering the selected assets will now consider the selection across all possible open asset-browser editors instead of picking the first one found.
+      </li>
+      <li>
         <b>Improvement:</b> New ‘animation data’ interface in the extra panel in order to easily overview the currently animated plugin properties via drivers or keyframes.
+      </li>
+      <li>
+        <b>Improvement:</b> The visibility frustrum culling feature now supports blender horizontal or vertical sensor fit method camera data options.
       </li>
       <li>
         <b>Improvement:</b> The Copy/paste systems operation located in system lister drop-down menu now supports manual mode scatters as well.
@@ -123,7 +145,13 @@
         <b>Improvement:</b> Added the ability to choose a local or global space for the noise features masks.
       </li>
       <li>
+        <b>Improvement:</b> Improved responsiveness when tweaking Vector or Color scatter properties.
+      </li>
+      <li>
         <b>Improvement:</b> We added new 'helper' placeholders to the placeholder list (in the 'Display As' feature). Two new placeholders are available: A triangular tangent green arrow, and a normal blue arrow.
+      </li>
+      <li>
+        <b>Improvement:</b> Biome creators can now set custom python instructions on biome-loading operations. A new "script" dictionary need to be added in the .biome json file manually via a text editor. This dict should contain an "operation_name" string value as well as a "file_name" value being the name of the script the creator want to execute during loading. This script will have access to the variables 'psys', 'surfaces' and 'emitter'.
       </li>
       <li>
         <b>Improvement:</b> We have re-written, added, and enhanced most of 'on hover' descriptions. To learn more about features, sliders and options, hover over their properties in the interface with your mouse while staying still for half a second. You should be able to understand features without the need of using this documentation website
@@ -136,7 +164,6 @@
           <li>A new option to fully hide 'scatter_obj' modifiers in addition to their object viewport status is available in the Geo-Scatter plugin preferences. By default only the scatter_obj will be hidden in the viewport, you can use this option to force hide also the scatter_obj geometry node modifiers, this will save up some evaluation time therefore saving on performances.</li>
         </ul>
       </li>
-
       <li>
         <b>Bugfix:</b> Operator-override error fix, when trying to open the biome-manager.
       </li>
@@ -148,6 +175,9 @@
       </li>
       <li>
         <b>Bugfix:</b> Creating a new empty emitter thrown errors. 
+      </li>
+      <li>
+        <b>Bugfix:</b> We tweaked the behavior of the clump rotation normal influence slider, this only applies to clump distribution method. 
       </li>
       <li>
         <b>Bugfix:</b> Batch randomizing scatters led to changes in clump-distribution densities. 
@@ -179,7 +209,9 @@
       <li>
         <b>Note:</b> For the new bezier-spline distribution method, we are aware of a blender geometry-node bug where the curve incline won't follow the curve-tilt data in global space. (See <a href="https://projects.blender.org/blender/blender/issues/126283" target="_blank">Report</a>)
       </li>
-
+      <li>
+        <b>Note:</b> If you used the 5.5 BETA and saved some .blend files with it, please use the 'Force-Update' button located in the plugin manager preferences to update your blend file with the official released 'Scatter-Engine MKV'.
+      </li>
     </ul>
   </div>
 
@@ -304,13 +336,14 @@
       <p style="margin-left: -19px"><b>Blender Compatibility: </b>  Blender 3.3 LTS to 3.6LTS</p>
       <p style="margin-left: -19px"><b>Retro Compatibility: </b>  Accepts system(s) made with Scatter 5.0/5.1/5.2/5.3/5.4</p>
       <p style="margin-left: -19px"><b>Credit: </b>  Hero Artwork by  <a href="https://www.gurjas.art/" target="_blank">GurJas Studios</a></p>
-      <p style="margin-left: -19px"><b>Important: </b>  Some settings have changed since previous versions, expect changes when updating your scatters.</p>
       
       <br>
       <li>
-        <b>Release-Notes: </b>In this release, we introduce the concept of Scatter-Groups. Scatter-Groups are not only great to organize your scenes, but they will become the new standard on how to intuitively assign your environments composition on your surfaces with ease!<br />
+        <b>Release-Notes: </b>In this release, we introduce the concept of Scatter-Groups. Scatter-Groups are not only great to organize your scenes, but they will become the new standard on how to intuitively assign your environments composition on your surfaces with ease!
       </li>
-      
+      <li>
+        <b>Compatibility-Notes: </b>Some settings have changed since previous versions, expect changes when updating your scatters.<br />
+      </li>
 
       <li>
         <b>New-Feature: </b> New group implementation
@@ -668,7 +701,6 @@
       <p style="margin-left: -19px"><b>Blender Compatibility: </b>  Blender 3.3 LTS [Outdated]</p>
       <p style="margin-left: -19px"><b>Retro Compatibility: </b>  Accepts system(s) made with Scatter 5.0/5.1/5.2/5.3</p>
       <p style="margin-left: -19px"><b>Credit: </b>  Hero Artwork by  <a href="https://artstation.com/megatecture" target="_blank">Megatecture</a></p>
-      <p style="margin-left: -19px"><b>Important: </b>  Some settings have changed since previous versions, expect changes when updating your scatters.</p>
 
       <br>
       <li>
@@ -678,6 +710,10 @@
           multi-surface scattering implementation.
         </p>
       </li>
+      <li>
+        <b>Compatibility-Notes: </b>Some settings have changed since previous versions, expect changes when updating your scatters.<br />
+      </li>
+
       <li>
         <p>
           <b>New-Feature:</b> One of the most ambitious features we worked on so
@@ -1550,7 +1586,7 @@
         <b>Improvement:</b> The bezier-area mask now has a brand new painting mode, we'll be able to paint scatter areas with a lasso style active tool. It is also possible to call this paint operator directly after a biome has been scattered, this is a very efficient way to paint biomes on your emitter surface.
       </li>
       <li>
-        <b>Bugfix:</b> A lot of new bug have been fixed!
+        <b>Bugfix:</b> A lot of bugs have been fixed!
       </li>
     </ul>
   </div>
@@ -1570,7 +1606,7 @@
       <br>
       <li>
         <p>
-          <b>Important Note: </b> Complete rework of .<br />
+          <b>Important Note: </b> Complete rework of our plugin.<br />
           please run the "update node-tree" operator in order to convert your
           scatter system(s) first.&nbsp;
         </p>
@@ -2064,7 +2100,7 @@
 
   <div class="faq-item gmstyling">
     <div class="faq_border">
-      <h2 class="faq-question">1.0 &nbsp;&nbsp;</h2><p>03 January 2020</p>
+      <h2 class="faq-question">1.0 &nbsp;&nbsp;</h2><p>5 November 2019</p>
       <i class="faq-icon fa fa-angle-down"></i>
     </div>
     <ul class="faq-answer">
