@@ -31,18 +31,16 @@
       <h2>What is an Emitter?</h2>
       <p>
         When using Geo-Scatter, the plugin will first ask you to define your
-        emitter-object in order to be able to create or tweak a scatter. This
-        object's main purpose is to hold datablocks of all the scatter-system(s) and
-        their properties.
+        emitter-object to be able to create or tweak a scatter. The
+        emitter main purpose is to detain all the properties & settings of your scatter-system(s)
       </p>
       <br />
       <p>
-        By default, every creation operator will use this emitter object as the
-        scattering surface, however, the surface(s) can be picked independently.
+        By default, every creation operator will use the emitter object as the
+        scattering surface, however, the surface(s) can be picked independently from the emitter.
       </p>
       <p>
-        If you'd like to switch from one emitter to another, just click on the
-        little icon on the top right of any panels. This process is not
+        You can swap from one emitter to another from the header of your create or tweak panel. This process is not
         destructive, the settings will all be saved unless you delete one of these
         emitter object(s).
       </p>
@@ -54,18 +52,18 @@
       <p>
         In the plugin manager, there are alternative ways to switch from one
         emitter to another, for example, you can change the emitter with a
-        pin/unpin action, or directly set the active object as an emitter target.
+        pin/unpin action.
       </p>
       <br />
       <p>
-        Note that the statistic panel (in the plugin manager) is also an efficient
+        Note that the large lister interface (in the plugin manager) is also an efficient
         way to change between existing emitters quickly.
       </p>
       <br />
       <h3>Reminder:</h3>
       <p>
         The plugin manager is the place where your biome library is located, you
-        can find it in Blender preferences, search "Scatter" and click on
+        can find it in Blender preferences, search "Geo-Scatter" and click on
         the "Enter Manager" button.
       </p>
     </div>
@@ -88,19 +86,13 @@
       <h2>Pick your Surface(s)</h2>
       <p>
         By default, any new scatter will use the chosen emitter as the
-        distribution surface. Since
-        <a href="#"
-          data-doc="#Changelogs&article_5_3_">Geo-Scatter 5.3</a>
-        you are able to pick any surface(s) of your choice independently from the
-        emitter object:
+        distribution surface. Since <a href="#" data-doc="#Changelogs&article_5_3_">Geo-Scatter 5.3</a> you are able to pick any surface(s) of your choice independently from the emitter object:
         <ul>
           <li>
-            For already created system(s), in the new surface sub-panel in the
-            tweaking panel
+            For already created system(s), in the <span>Tweak > Surface</span> when setting a scatter-system active.
           </li>
           <li>
-            For system(s) soon to be created, in the operator's popovers located in
-            the creation panel.
+            For system(s) soon to be created, in the operator's popovers menu located next to each large scatter button in the <span>Create</span> panel.
           </li>
         </ul>
       </p>
@@ -110,17 +102,15 @@
       <img src="../img/scat4.jpg" alt="" />
       <h2>Large & Highpoly Surfaces</h2>
       <p>
-        Be careful when scattering on enormous terrains, the scattering density is
-        based on the surface-area, and displaying too many instances will slow-down
-        or sometimes freeze your computer, and some features such as abiotic
-        curvature or mask painting might be slower with heavy -polycount surfaces.
+        Be careful when scattering on enormously large terrains, the scattering density is
+        based on your surface's areas, displaying too many instances will slow-down
+        or sometimes freeze your computer. Some features such as abiotic
+        curvature or vertex-group painting might be slow with heavy-polycount surfaces.
       </p>
       <h3>Pro Tip:</h3>
       <p>
-        If you intend to scatter on a large area, please read the
-        <a href="#" data-doc="#FeatureOptimization">optimization</a>
-        page. The on-creation settings might help too, 
-        thanks to them you will be able to define some optimization settings within the scatter-creation process!
+        If you intend to scatter on a large area, we advise you to read the <a href="#" data-doc="#FeatureOptimization">optimization</a> page.
+        Note that thanks to the on-creation menu located next to each large scatter operators of the create panel, you'll be able to define default optimization settings of your scatters.
       </p>
     </div>
 
@@ -129,20 +119,14 @@
       <h2>Non-linear workflow</h2>
       <p>
         The native scattering experience in Blender consists of adding a
-        particle-system data-block on a single emitter object, then repeating the
-        process for other objects. While this makes a lot of sense when working
-        with individual objects at the time, from the point of view of scenery
-        creation, this linear process is unnecessarily slow & repetitive.
-      </p>
-      <br />
-      <p>
-        Rest assured this linear workflow is still available in Geo-Scatter simply by
-        swapping emitter objects. However since the multi-surface feature has been
-        implemented in our pipeline, users are able to de-centralize their
-        scatter-system(s) from their emitters by choosing alternative surface(s).
-        If doing so, it might make sense to create a dummy object whose only
-        purpose is to hold the scatter-system(s) & their settings. We propose to
-        create such a dummy object in the initial define-emitter panel.
+        particle-system data-block on a single emitter object that will be used as a scatter-surface as well, then repeating the
+        process on other objects when needed. While this workflow makes a lot of sense when working
+        with individual objects, from the point of view of scenery creation, this process is unnecessarily slow & repetitive.
+      <br/><br/>
+        This linear workflow is still available in Geo-Scatter, as your emitter will by the default surface of your scatters.
+        However now with our multi-surface functionality, the emitter object doesn't necessarily represents the surface you are scattering upon!
+        If you know in advance that you are going to work with many surfaces, it will make more sense to create a dummy object whose only
+        purpose is to be used as an emitter to hold the scatter-system(s) settings, then select your surfaces independently. You can create such a dummy object in the initial 'define-emitter panel', when no emitter is selected.
       </p>
     </div>
 
@@ -155,13 +139,12 @@
       </p>
       <ul>
         <li>
-          It is possible to scatter locally on many surfaces simultaneously.
-          Meaning that the distribution density will stay stable, even when your
-          surface(s) scales are animated for example.
+          It is possible to scatter <b>locally</b> on many surfaces simultaneously.
+          Meaning that the distribution density will stay stable according to their transforms scale.
         </li>
         <li>
           All procedural features will still work as expected, individually per
-          surface local space, or in your scene global space.
+          surface local space, or evaluated on your scene global space.
         </li>
         <li>
           Some inputs will be highlighted in red if an attribute (vertex group/
@@ -169,11 +152,11 @@
         </li>
         <li>
           The creation operators now have a "future surfaces" option in their
-          creation popovers.
+          creation popovers. where you can choose the default surfaces of your scatters.
         </li>
         <li>
-          Manual mode also accepts many surfaces as one large painting canvas. The
-          scattered points will stick to each parent-surface automatically.
+          Manual distribution mode also accepts many surfaces as one large painting canvas. The
+          scattered points will stick to each parent-surface automatically, adapting from their transforms.
           Swapping surfaces won't remove the created points.
         </li>
       </ul>
@@ -200,24 +183,33 @@
       <h2>Add Operator</h2>
       <p>
         The fastest and simplest way to create a new scatter-system is by clicking
-        on the add icon next to your system list. It  will create a simple
+        on the add icon next to your system list, in the <span>Tweak</span> panel. This operator will create a simple
         random distribution on the defined emitter with a density of 0.2 instances/m² with no features
         enabled. If you have objects selected in your viewport it will link them in the
         instance collection, if not, it will activate the display-as feature by default.
       </p>
-      <br>
-      <h3>Warnings:</h3>
-      <p>
-        Please use the remove operator to delete a scatter-systems, do not delete
-        Geo-Scatter collections directly from the outliner, this will lead to issues.
-      </p>
-      <br>
-      <h3>Pro Tip:</h3>
-      <p>
-        Hold the <span>ALT</span> key to consider the selection as your future surface(s) with
-        undefined instances instead.
-      </p>
     </div>
+  
+    <div class="textr card2x">
+    <h3>Remove Scatters:</h3>
+    <p>
+      If you wish to remove a scatter you created, please use the remove operator (button with the minus icon) to delete a scatter-systems, do not delete
+      a Geo-Scatter collections or a 'scatter_obj' directly from the outliner, please use this operator instead.
+    </p>
+    <br>
+    <h3>Pro Tip:</h3>
+    <p>
+      Hold the <span>ALT</span> key to consider the selection as your future surface(s) with
+      undefined instances instead.
+    </p>
+  </div>
+  
+  <div class="textr card2x">
+    <h3>Extra Info:</h3>
+    <p>
+      When you create a scatter in our plugin, we will add a new 'scatter_obj' 3Dobject in your outliner with a geometry-node modifier attached. This modifiers holds our 'GEO-SCATTER ENGINE' and is responsible for the scattering computing.
+    </p>
+  </div>
 
   </div>
 </div>
@@ -239,15 +231,15 @@
     <div class="textr card2x">
       <h2>Density Scatter Operator</h2>
       <p>
-        The second fastest way to scatter the selected objects from the viewport
-        or the asset browser is by using the density scatter operator. Quite
+        The second fastest way to scatter the selected objects from the 3Dviewport
+        or from the selected assets from your asset-browser editor is by using the density scatter operator. Quite
         straightforward, choose your Particles /m², cm², ha, or km² ratio, an
         estimation will be made in real-time, then click on the scatter button.
       </p>
       <br />
       <p>
         A new scatter system will appear in your system list. Note that the all
-        system(s) created will always use the m² unit.
+        system(s) created will always use the m² unit. The m is the internal unit of blender, it is best to stick with it.
       </p>
     </div>
 
@@ -272,20 +264,14 @@
     <h2>How to use</h2>
     <p>
       One of the most important workflows of the Geo-Scatter plugin is the
-      "Scatter the selected Object(s) with the selected Preset" concept:
+      "Scatter the selected Object(s) with the selected Preset" concept.<br><br>
+      <b>Follows these simple steps</b>:
     </p>
     <ul>
-      <li>Select your future instance(s) in the viewport (or in the asset-browser).</li>
-      <li>Select your preset by clicking on the thumbnail</li>
-      <li>Click on 'Scatter', and it will scatter the selection on your emitter surface by default.</li>
+      <li><b>1)</b> Select your future instance(s) in the viewport (or in the asset-browser if you select the option).</li>
+      <li><b>2)</b> Select your preset by clicking on the thumbnail</li>
+      <li><b>3)</b> Click on 'Scatter', and it will scatter the selection on your emitter surface by default (you can define the default surface on the popover menu next to the scatter button).</li>
     </ul>
-    <br>
-    <br>
-    <h3>Pro Tip:</h3>
-    <p>
-      You are able to automatically generate the name or color of your future
-      scatter-system by enabling the options in the header menu.
-    </p>
   </div>
 
   </div>
@@ -306,7 +292,7 @@
         Within the tweak panel interface, you'll be able to define if your
         scatter operator will scatter the selected objects of the viewport, 
         or the selected assets in your asset-browser. If you choose this latest 
-        option, Geo-Scatter will automatically import the assets for you.
+        option, Geo-Scatter will automatically import the assets then proceed to scatter them.
       </p>
     </div>
 
@@ -322,14 +308,19 @@
       <br>
       <h2>Install the Presets</h2>
       <p>
-        These presets are parts of the <span>preset.scatpack</span>, shipped with
-        our plugin. You'll be able to install this preset scatpack just like you would with plugins
+        These colorful presets are parts of the <span>preset.scatpack</span>, shipped with
+        our Geo-Scatter plugin. You'll be able to install this preset scatpack just like you would install a biome scatpack.
+      </p>
+      <br />
+      <h3 class="flex_bottomalign">Pro Tip:</h3>
+      <p>
+        Note that you can generate a preset icon in the settings menu, by clicking on the wheel-gear icon
       </p>
       <br />
       <h3 class="flex_bottomalign">Pro Tip:</h3>
       <p>
         Note that these presets can be applied directly to the selected-system(s)
-        in the lister side menu, or per settings in the gear-icon header popover
+        in the drop down menu of the lister interface, or on the per settings category menu by clicking on the gear-wheel icon in your settings header of the <span>Tweak</span> panel
         menu.
       </p>
     </div>
@@ -337,10 +328,9 @@
     <div class="textr card2x">
       <h2>The Presets</h2>
       <p>
-        A preset is a '.preset' text file assigned to an icon and encoded with
-        settings. Presets are of course completely customizable, you can create
-        your own presets, save them and share them with your friends or
-        collaborator.
+        A preset is a <span>.preset</span> json file encoded with scatter
+        settings. Presets are completely customizable, you can create
+        your own presets, save them and share them with your friends or collaborator.
       </p>
       <br />
       <p>Here is a quick description of the presets color code:</p>
@@ -416,7 +406,7 @@
 
 <div class="titleheader">
     <h1>Biome Scatter</h1>
-    <p>With only and all the work is done for you</p>
+    <p>Only one click and all the work is done for you</p>
 </div>
 
 <div class="article_content">
@@ -435,21 +425,34 @@
       <br />
       <p>
         Our biome system grants you the ability to append a whole pre-made
-        multi-layered ecosystem with only one click! The assets will first be
-        loaded into the file, then the scattering will be done automatically,
-        layer by layer, in front of your eyes.
-      </p>
-      <br />
-      <p>
-        You can access the biomes in the scatter manager editor, by default it
-        will open a new floating window, however, it is also accessible from the
-        Blender addon preferences editor, search for scatter and click on
-        <i>'Enter Manager'.</i>
+        multi-layered ecosystem with only one click! All assets your biome is using will first be
+        linked or appended into your file, then the scattering will be done automatically, layer by layer, in front of your eyes.<br>
       </p>
     </div>
 
+    <div class="textr card2x">
+        <h2>Access Interface</h2>
+      <p>
+        You can access your biome library by clicking on the 'Open Biome' button in the <span>Create</span> panel. Note that this interface is also accessible from 
+        Blender addon preferences editor, search for the Geo-Scatter plugin and click on the
+        <i>'Enter Manager' button.</i>
+      </p>
+    </div>
+    
+    <div class="textr card2x">
+        <h2>Install Biomes</h2>
+      <p>
+        Installing a biome pack is easy. In the biome interface, click on <span>Header > File > Install a Package</span> button. 
+        Choose your <span>.scaptack</span> file, then you'll also probably need to install assets in your blender asset-browser. 
+        Please check out the <a href="#" data-doc="#FeatureInstallation">Installation</a> page for more detailed information about the process.
+      </p>
+    </div>
+
+
   </div>
+
 </div>
+
 
 <div class="article_content">
   <div class="medial_textr gmstyling">
@@ -461,29 +464,28 @@
   <div class="textr card2x">
     <h2>Biome Library</h2>
     <p>
-      The biome-system we invented, available within the Geo-Scatter or Biome-Reader plugin, is fantastic and extremely effective!
-      And here's the good news, you can get a 
+      The biome-system we invented, available for the Geo-Scatter or Biome-Reader plugin, is fantastic and extremely effective!
+      And here's the good news, you can get a library of plants and biomes absolutely for free, it's called the 
       <a href="https://www.geoscatter.com/biomes.html#tag=&id=geoscatter-plantlibrary"
-        target="_blank">library of plants and biomes absolutely for free, it's called the "<i>Plant Library</i>"</a>, 
-        The free biomes vary from classic grasses to autumn, winter, desert, or even
-      forests! We got you covered with a variety of moods, great to start your scattering journey.
+        target="_blank">Plant Library</a>, 
+        The free biomes vary from classic grasses to autumn, winter, desert, or flowers.. We got you covered with a variety of natural moods, great to start your scattering journey.
     </p>
     <br />
     <p>
-      However, be aware that assets are not our focus! We want to work with
-      talented asset-creators, not compete with them. Therefore, do not expect
-      free updates with new vegetation biomes coming in the future, we'd much
-      rather want to motivate you to create your own biome library and share it
+      Be aware that assets are not our focus! We want to work with
+      talented asset-creators, not compete with them! Do not expect
+      free updates with new models for the plant library coming in near future, we'd much
+      rather want to motivate <b>you</b> to create your own biome library and share it
       with the community, or use the biomes of the community directly of course.
-      (you can check out what is available, free or paid, in the 'Scatpack'
-      category in the manager)
+      (you can check out all asset-packs that also proposes biomes on <a href="https://www.geoscatter.com/biomes.html" target="_blank">this page</a> ).
     </p>
     <br />
+    <h2>Create your own Biomes!</h2>
     <p>
       Creating new biomes can be done with very few clicks. To do so, go in the
       biome manager, in <span>Header > File</span>, click on <i>Create a new biome</i>, then
-      follow the instructions, and you'll be good to go. Biomes icons can also
-      be generated on the fly.
+      follow the instructions, and you'll be good to go (if you need more clarifications about the biome creation dialog settings, hover on a setting to read it's description). Biomes icons can also
+      be generated on the fly with the operator located on the drop-down menu next to their add button.
     </p>
   </div>
 
@@ -507,9 +509,8 @@
   <div class="textr card2x">
     <h2>Manual Scatter Operator</h2>
     <p>
-      Manual mode is a brand new exciting distribution workflow existing in its own custom interface! 
-      You can directly enter this mode with the selected object(s) 
-      from your viewport or asset browser by using this operator.
+      Manual mode is a distribution workflow of its own, existing in its own custom interface, similar to sculpt mode. In this mode you will be able to paint scatters like an artist on a canvas with the help of brushes.
+      With its operator located in the <span>Create</span> panel you can directly enter this mode with the selected object(s) from your viewport or asset browser as instances. More about manual mode on <a href="#" data-doc="#FeatureManualmode">this</a> page.
     </p>
   </div>
 
@@ -534,26 +535,25 @@
       <h2>Quick Scatter Operator</h2>
       <p>
         In Geo-Scatter 5.1 we added a new shortcut based workflow where you''ll be
-        able to create and directly tweak scatter-system(s) faster than ever.
+        able to create and directly tweak scatter-system(s) faster than ever with the help of a pie meny and shortcuts.
       </p>
       <ul>
         <li>
           <p>
             The default shortcut to call the operator is <span>SHIFT+CTRL+ALT+W</span>
             however it's best if you assign a shortcut of your preference in the
-            operator behavior panel.
+            operator popover 'on creation' menu located next to the operator large button.
           </p>
         </li>
         <li>
           <p>
-            Depending on where the operator was called, it will use the selected
-            objects from the viewport or asset browser as instances.
+            If you call the shortcut within the asset-browser editor area, it will use your selected assets as instances. If you call the shortcut on a 3Dviewport, it will use the selected objects of your viewport as instances.
           </p>
         </li>
         <li>
           <p>
             The default density of this operator can be tweaked in the popover
-            menu.
+            'on creation' menu.
           </p>
         </li>
         <li>
@@ -573,7 +573,7 @@
 
 <div class="titleheader">
     <h1>Operator Popover</h1>
-    <p>Control how scattering operators behave!</p>
+    <p>Also called the 'On Creation' menu. Control how the scatter operators behave!</p>
 </div>
 
 <div class="article_content">
@@ -584,38 +584,27 @@
     </div>
   
     <div class="textr card2x">
-      <h2>Advanced Options</h2>
+      <h2>Operators Settings</h2>
       <p>
-        The behaviors of the 'Density Scatter'/'Preset Scatter'/'Manual Scatter'/'Quick Scatter'/'Biome Scatter' operators can be tweaked with more precise & advanced options:
+        The default behaviors of the operators located in the <span>Create</span> panel can be tweaked in the 'On Creation' popover menu, 
+        by clicking on the settings icon next to the operators large buttons.<br><br>
+        <h3>Here's what you can do from this menu</h3>
       </p>
-      <br />
       <ul>
         <li>
-          <p>
-            By default all these operators will use the emitter object as a surface, however you are free to use an 
-            alternative surface independently from the emitter object, with the future surface properties. 
-          </p>
+          <p>By default all these creation operators will use the emitter object as the a surface, however you are free to use an  other surface(s) independently from the emitter object chosen.</p>
         </li>
         <li>
-          <p>
-            If you know in advance that you will work with a lot of particles, the future 'Visibility' 
-            and 'Display' settings can activate optimization features before the new system is visible in your viewport.
-          </p>
+          <p>If you know in advance that you will generate a lof of instances, the future 'Visibility' and 'Display' settings can activate optimization features by default.</p>
         </li>
         <li>
-          <p>
-            Use the future mask settings if you'd like to directly paint or assign a mask(s).
-          </p>
+          <p>Use the future mask settings if you'd like to directly paint or assign a mask(s).</p>
         </li>
         <li>
-          <p>
-            You can choose to import or link the models from the biomes or asset browser.
-          </p>
+          <p>You can choose to import or link the models from the biomes or asset browser.</p>
         </li>
         <li>
-          <p>
-            These operators may do security checks when you try to scatter too many items or too high poly items and warns you about it! You are able to adjust the security parameters in this menu.
-          </p>
+          <p>These operators may do security checks when you try to scatter too many instances or too high-poly instances. You are able to adjust the security parameters in this menu as well.</p>
         </li>
       </ul>
     </div>
@@ -640,25 +629,36 @@
     <div class="textr card2x">
       <h2>Main Lister</h2>
       <p>
-        The main system list interface is located in the tweaking panel. The
-        selection is mainly used for
-        <a href="#" data-doc="#FeaturePrerequisite&article_batch_operation">
-        batch operations</a>.
-        <br>
-        <br>
-        <h3>Pro Tip:</h3>
-        Shortcuts are available while clicking on a system:
-        <ul>
-          <li>
-            press <span>ALT</span> to isolate.
-          </li>
-          <li>
-            press <span>SHIFT</span> to add to the selection.
-          </li>
-          <li>
-            press <span>ALT+SHIFT</span> to isolate the selection.
-        </ul>
+        The main system list interface is located in the <span>Tweak</span> panel. This is where you will define the active scatter or group system to tweak it's settings. 
+        The selection is mainly used for <a href="#" data-doc="#FeaturePrerequisite&article_batch_operation">batch operations</a> and by various operators.
       </p>
+    </div>
+
+    <div class="textr card2x">
+      <h2>Shortcuts:</h2>
+      <ul>
+        <li>
+          press <span>ALT</span> while clicking on the remove icon to batch remove the selection.
+        </li>
+        <li>
+          press <span>ALT</span> while clicking on a system to isolate.
+        </li>
+        <li>
+          press <span>SHIFT</span> while clicking on a system to add to the selection.
+        </li>
+        <li>
+          press <span>ALT+SHIFT</span> while clicking on a system to isolate the selection.
+          <li>
+            <span>DOUBLE-CLICK</span> on a system to isolate to rename.
+          </li>
+      </ul>
+    </div>
+
+    <div class="textr card2x">
+      <h2>Functionalities</h2>
+      <p>
+      In this interface, you'll have access to the simple add new operator by clicking on the 'plus' icon, you'll be able to remove systems by clicking on the 'minus' icon, and finally, you'll be able to open the drop-down menu by clicking on the downarrow icon where you'll find many other useful operators. Hover on them to read their descriptions.
+      <p>
     </div>
 
     </div>
@@ -675,12 +675,11 @@
       <div class="textr card2x">
         <h2>Lister Shortcut</h2>
         <p>
-          Use the shortcut <span>CTRL+SHIFT+Q</span> to call a lister interface. It's best practice to avoid constantly going up & down in the tweaking interface and use this operator instead!
+          Use the <span>CTRL+SHIFT+Q</span> shortcut to call a quick lister interface. It's best practice to avoid constantly going up & down in the tweaking interface and use this operator instead!
           Note that you are able to customize this shortcut in the plugin manager.
         </p>
         <br>
-        <h3>Pro Tip:</h3>
-        Extra shortcuts are available in this interface:
+        <h3>Shortcuts:</h3>
         <ul>
           <li>
             press <span>SUPPR</span> to remove the system.
@@ -724,17 +723,16 @@
 <div class="medial_textr gmstyling">
 
   <div class="medial card2x">
-    <div class="youtube">
-      <iframe src="https://www.youtube.com/embed/QyItEQdSWbw" type=""></iframe>
-    </div>
+    <img src="../img/groupex.jpg" alt="" />
   </div>
   
   <div class="textr card2x">
     <h2>Scatter Groups</h2>
     <p>
       The scatter-group is a way to group scatter-systems together. Not only great for organizing your environments, 
-      you'll also be able to use group features to, for example, mask entire groups with one stroke of weight painting. You can create a scatter-group in the right side menu next to your scatter lister interface.
-      <b>Discover our video tutorial!</b>
+      you'll also be able to use group features when a group is selected on the lister, to, for example, mask all members of the groups with one stroke of weight painting! 
+      <br><br>You can create a scatter-group in the drop-down menu next to your scatter lister interface.
+      We made entire videos about groups on our youtube channel, <a href="https://www.youtube.com/watch?v=QyItEQdSWbw">check it out</a>!
     </p>
   </div>
 

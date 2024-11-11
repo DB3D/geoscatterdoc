@@ -24,7 +24,7 @@
 
 <div class="article_content">
 
-  <div class="faq-item gmstyling">
+  <div class="faq-item gmstyling opendefault">
     <div class="faq_border">
       <h2 class="faq-question">5.5 &nbsp;&nbsp;</h2><p>15 November 2024</p>  <h3>Latest Major Release </h3>
       <i class="faq-icon fa fa-angle-down"></i>
@@ -327,7 +327,7 @@
   
   <div class="faq-item gmstyling">
     <div class="faq_border">
-      <h2 class="faq-question">5.4 &nbsp;&nbsp;</h2><p>4 July 2023</p>
+      <h2 class="faq-question">5.4 &nbsp;&nbsp;</h2><p>4 July 2023</p>  <h3>Major Release </h3>
       <i class="faq-icon fa fa-angle-down"></i>
     </div>
     <ul class="faq-answer">
@@ -690,9 +690,9 @@
     </ul>
   </div>
 
-  <div class="faq-item gmstyling">
+  <div class="faq-item gmstyling ">
     <div class="faq_border">
-      <h2 class="faq-question">5.3 &nbsp;&nbsp;</h2><p>4 October 2022</p>
+      <h2 class="faq-question">5.3 &nbsp;&nbsp;</h2><p>4 October 2022</p>  <h3>Major Release </h3>
       <i class="faq-icon fa fa-angle-down"></i>
     </div>
     <ul class="faq-answer">
@@ -1593,7 +1593,7 @@
 
   <div class="faq-item gmstyling">
     <div class="faq_border">
-      <h2 class="faq-question">5.0 &nbsp;&nbsp;</h2><p>17 December 2021</p>
+      <h2 class="faq-question">5.0 &nbsp;&nbsp;</h2><p>17 December 2021</p>  <h3>Complete Rework </h3>
       <i class="faq-icon fa fa-angle-down"></i>
     </div>
     <ul class="faq-answer">
@@ -2141,29 +2141,34 @@
   /// faq javascript
   var faqItems = document.querySelectorAll(".faq-item");
 
-faqItems.forEach(function (item) {
-  var question = item.querySelector(".faq-question");
-  var icon = item.querySelector(".faq-icon");
-  var answer = item.querySelector(".faq-answer");
+  faqItems.forEach(function (item, index) {
+    var question = item.querySelector(".faq-question");
+    var icon = item.querySelector(".faq-icon");
+    var answer = item.querySelector(".faq-answer");
 
-  if (!answer.style.display || answer.style.display === "none") {
-    answer.style.display = "none";
-  }
-
-  // Add a click event listener to the whole faq_border div
-  var borderHr = item.querySelector(".faq_border");
-  borderHr.addEventListener("click", function (event) {
-    if (answer.style.display === "none") {
+    // Set the first FAQ item as open by default
+    if (item.classList.contains("opendefault")) { 
       answer.style.display = "block";
       icon.classList.remove("fa-angle-down");
       icon.classList.add("fa-angle-up");
     } else {
       answer.style.display = "none";
-      icon.classList.remove("fa-angle-up");
-      icon.classList.add("fa-angle-down");
     }
+
+    // Add a click event listener to the whole faq_border div
+    var borderHr = item.querySelector(".faq_border");
+    borderHr.addEventListener("click", function (event) {
+      if (answer.style.display === "none") {
+        answer.style.display = "block";
+        icon.classList.remove("fa-angle-down");
+        icon.classList.add("fa-angle-up");
+      } else {
+        answer.style.display = "none";
+        icon.classList.remove("fa-angle-up");
+        icon.classList.add("fa-angle-down");
+      }
+    });
   });
-});
 
 </script>
 

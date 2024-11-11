@@ -18,7 +18,7 @@
 
 <div class="titleheader">
   <h1>Troubleshooting</h1>
-  <p>List of common problems.</p>
+  <p>List of common problems and their solutions</p>
 </div>
 
 <div class="article_content">
@@ -31,12 +31,11 @@
       <ul class="faq-answer">
         <li>
           Please make sure your version of Blender matches the version of the
-          plugin you are installing. <br />
-          for compatibility information about our plugin, please read the
-          <>release notes page.
+          plugin you are installing.<br>
+          For compatibility information about our plugin, please read <a href="#" data-doc="#Changelogs">your plugin version release notes</a>.
         </li>
-        <li><b>Try to quit your Blender app & restart.</b></li>
-        <li>Are you on MACOS? this is probably an unzipping issue</li>
+        <li>A potential fix would be <b>to quit your Blender app & restart.</b></li>
+        <li>Are you on MACOS? this is probably an unzipping issue. Safari might have unzipped your file automatically. Check out the Installation page for more information.</li>
       </ul>
     </div>
   
@@ -47,11 +46,11 @@
       </div>
       <ul class="faq-answer">
         <li>
-          There's a chance that you forgot to also install the associated asset library in your blender asset browser. Most report we have are related with this omission.
+          There's a chance that you forgot to also install the associated asset library in your blender asset browser.<br>Most reports we recieve are related to this omission. IF you are unsure if you installed your biome pack correctly, please read the installation page or see our tutorial.
         </li>
         <li>
           There's a small percentage of chance that there's a name conflict, for example, a creator created a biome that relies on "rock.blend", but this name is already taken in your asset library & therefore the assets cannot be found. 
-          We always insist with biome creators to ensure their relying .blend naming are unique, however sometimes mistakes happens. A simple solution to this problem is to rename the conflicting .blend.
+          We always insist with biome creators to ensure their .blend naming are unique, however sometimes mistakes happens. A simple solution to this problem is to set a custom enrironment path in your plugin preferences. Check out the installation page for more information about this functionality.
         </li>
       </ul>
     </div>
@@ -63,32 +62,40 @@
       </div>
       <ul class="faq-answer">
         <li>
-          Please verify in your outliner if some of your scatter-collections are
-          not hidden. ( Make sure to enable all outliner restriction filters, in
-          Blender, there are many ways an object can be hidden in the outliner,
-          most of the time this is done by
-          <b>mistakenly hitting the horizontal numberpad of your keyboard )</b>
+          Please make sure your version of Blender matches the version of the
+          plugin you are installing.
         </li>
-        <li>
-          In <span>Tweak > Distribution</span> make sure that the distribution density
-          is not too small relative to the size of your terrain
-        </li>
-        <li>
-          You might want to apply your terrain scale, perhaps it is very big.
-          Alternatively in <span>Tweak > Scale > DefaultScale</span>, you could set the
-          default scale reference to "global".
-        </li>
+        <ul>
+          <li>
+            Did you have a forward compatibility issue perhaps? <br />
+            Please be careful when switching Blender version while working on your
+            projects, it could corrupt your files forever. The best demeanor when working with 3Dsofwares is to stick to the same blender and plugins versions from start to finish.
+          </li>
+        </ul>
         <li>
           Please verify if your system(s) are visible in
           <span>Npanel > Tweak > SystemList</span>. You should see a screen icon activated.
         </li>
         <li>
-          Please verify if your scatter-system has any designated instances. In
-          <span>Npanel > Tweak > Instancing</span>. No instances equal nothing displayed.
+          Please verify in your outliner if some of your scatter-collections or 'scatter_obj' are
+          not hidden.<br>To do so, first make sure to enable all outliner restriction filters. In
+          Blender, there are many ways an object can be hidden in the outliner,
+          most of the time this is done by <b>mistakenly hitting the horizontal numberpad of your keyboard</b>, as this will hide collections in your outliner.
         </li>
         <li>
-          Please disable all features, perhaps one of them is not tweaked
-          correctly and therefore masking out everything.
+          In <span>Tweak > Distribution</span> make sure that the distribution density is not too small, relatively to the size of your terrain.
+        </li>
+        <li>
+          You might want to apply your terrain scale, perhaps it's scale is very big.
+          Alternatively in <span>Tweak > Scale > DefaultScale</span>, you could set the
+          default scale reference to "global".
+        </li>
+        <li>
+          Please verify if your scatter-system has any designated instances. In
+          <span>Npanel > Tweak > Instancing</span>. If no instances are chosen and no display as options are activated, then we'll display nothing as there's nothing to be instanciated.
+        </li>
+        <li>
+          Please inspect the features you have enabled for your system or system-group. Perhaps one of them is not tweaked correctly and therefore masking out everything.
         </li>
         <ul>
           <li>
@@ -101,17 +108,6 @@
             The pattern feature might mask an unusually large area.
           </li>
         </ul>
-        <li>
-          Please make sure your version of Blender matches the version of the
-          plugin you are installing.
-        </li>
-        <ul>
-          <li>
-            Did you have a forward compatibility issue perhaps? <br />
-            Please be careful when switching Blender version while working on your
-            projects, it could corrupt them forever.
-          </li>
-        </ul>
       </ul>
     </div>
 
@@ -122,27 +118,26 @@
       </div>
       <ul class="faq-answer">
         <li>
-          By default the scatter will be parented to your surface(s), it means
+          By default your scatter-system(s) will have a scale relative to the scale of yoursurface(s), it means
           that if your surface has a scale of <span>[100,100,100]</span>, your scattered
           instances will be x100 as larger than the scene unit. To resolve this
           issue you have two possible solutions:
         </li>
          <ul>
-          <li>Apply the scale of your surface with <span>CTRL + A</span></li>
+          <li>Apply the scale of your surfaces with <span>CTRL + A</span></li>
           <li>
-            Set your scatter default scale to "global" space instead of the
-            "local" surface space, this is located in <span>Tweak > Scale > Default Scale</span>.
+            Set your scatter default scale to "global" space instead of the "local" surface space, this is located in <span>Tweak > Scale > Default Scale</span>.
           </li>
           </ul>
         <li>
-          Make sure the scale of the instances you chose is set to <span>[1,1,1]</span> (to
+          Make sure the scale of the instances you assigned yo your scatters are set to <span>[1,1,1]</span> (to
           easily retrieve your original instance go in <span>Tweak > Instancing</span> &
           click on the select icon).
         </li>
         <li>
           Make sure you are working in the correct scene scale, Blender
           beginners often forgot to follow Blender native scape, 1 Blender unit
-          is 1 meter.
+          is 1 meter. With our plugin, a unit of 1 will always be 1m.
         </li>
         <li>
           Optionally you can change the default scale of your instance in
@@ -164,7 +159,7 @@
           <b>If the objects you are using are indeed created by someone else,
             the shaders surely rely on the display color Blender property to
             drive the color in render</b>, this is possible thanks to the object info node used by
-          Cycles/Eevee render engines. <br /><br />
+          Cycles/Eevee render engines.<br />
 
           In Geo-Scatter you are able to tweak the display color of your scatter
           via <span>N Panel > Geo-Scatter > Tweaking > System(s) List</span>. Please
@@ -182,9 +177,7 @@
       </div>
       <ul class="faq-answer">
         <li>
-          As you may know, the Geo-Scatter plugin is based on the very efficient
-          "Geometry-node" system. Geometry-node may vary from one
-          Blender version to another, meaning that it is important to be careful
+          As you may know, the Geo-Scatter plugin is based on "Geometry-node". Geometry-node may vary from one version of Blender to another, meaning that it is important to be careful
           when changing Blender versions, please take the following pieces of
           advice into consideration when switching from one Blender version to
           another:
@@ -193,43 +186,41 @@
         <ul>
           <li>
             First of all, please be aware that changing your software version
-            mid-project is a bad demeanor in the CG industry, regardless of our
-            plugin. Please avoid doing so or you will have problems sooner or
-            later,
-            <b>always prefer using the same version of your software from the
-              beginning to the end of your project</b>. Make sure to document which software version your project was made
-            in to avoid corrupting any Blender files by opening & saving your
-            project in the wrong version. If you really need to upgrade your
+            mid-project is a bad demeanor. Please avoid doing so or you will have problems sooner or
+            later, with your blender shaders or with the plugins you are using.
+            <b>Always stick to using the same version of your software from the
+              beginning to the end of your project</b>. Additionally, make sure to document which software version your project was made
+            on to avoid corrupting any Blender files by opening & saving your
+            project in the wrong version later. If you really need to upgrade your
             software version make sure to save a copy of your project beforehand.
           </li>
           <li>
             <b>Avoid at all cost forward-compatibility errors, or you might
-              corrupt your project forever</b>, as .blend files are not forward-compatible! Unsure what forward
+              corrupt your project forever</b>. Blender '.blend' files are not forward-compatible! Unsure what forward
             compatibility means? Here's an example: You are working on a project
             made in Blender 3.2, and your collaborator join-in & starts to work on
             the same .blend file but in Blender 3.4. A few days later you re-open
-            your projects and surprise, all your shaders node-trees are corrupted,
+            your projects in Blender 3.2 and surprise, all your shaders node-trees are corrupted,
             all color-mix nodes suddenly became "undefined", because the internal
             code of these nodes changed in Blender 3.4. In conclusion, never open
             & save a .blend file made in a newer version in an older version,
-            manage your Blender version clearly.
+            it's your job as an artistu to manage your Blender version clearly, especially when working as a team.
           </li>
           <li>
             Please make sure the plugins you are using are compatible with your
             Blender version. Do not assume a Blender plugin is compatible with all
-            Blender versions, it is a common wrong assumption.
+            Blender versions, it is a common wrong assumption. You will find compatibility information about each of our plugin versions in our Changelogs page.
           </li>
           <li>
-            When upgrading your Geo-Scatter plugin version, all scatter-system(s)
+            When upgrading your Geo-Scatter plugin, all scatter-system(s)
             you created with our plugin in your project will need to be updated.
             As we explained above it is not advised to switch your software
-            version mid-project but if you really need to: click on the "update
+            version mid-project but if you really need to: Click on the "update
             node-tree" button to update all internal geometry-node system(s) we
             are using. Additionally, you are able to force update all node-trees
             in the Geo-Scatter plugin preferences, in the "debug" area. If you
             encounter errors while updating, restart your Blender session. Still
-            not working? Please contact us with a link to your file via the
-            Blendermarket direct-messaging system.
+            not working? Please contact us with a link to your file.
           </li>
         </ul>
       </ul>
@@ -243,34 +234,14 @@
       <ul class="faq-answer">
         <li>
           We advise being more familiar with a native Blender option called
-          objects-displays. It is a very important optimization feature located
+          'objects-displays'. It is a very important optimization feature located
           per object properties, it will potentially save your computer from
-          crashing. <br />
-          The Geo-Scatter might enable this Blender option automatically if the
-          object you are trying to scatter is very heavy. If you do not like
+          crashing. This option is located in <span>Properties Editor > Object > Viewport Display > Display As</span>.
+          Our plugins might enable this Blender option automatically if the
+          object you are trying to scatter is very heavy in terms of polycount. If you do not like
           this security behavior you are able to disable it in <span>N
           Panel > Geo-Scatter > Create</span>, in the behavior popover menu, located next
           to any creating operator button.
-        </li>
-      </ul>
-    </div>
-
-    <div class="faq-item gmstyling">
-      <div class="faq_border">
-        <h2 class="faq-question faq_titltt">
-          How can I locate the original instance object?
-        </h2>
-        <i class="faq-icon fa fa-angle-down"></i>
-      </div>
-      <ul class="faq-answer">
-        <li>
-          If you're unsure where the original scattered objects are located in
-          your scene, go in <span>NPanel > Geo-Scatter > Tweaking>Instancing</span> and
-          click on the select icon to select the objects in your scene.
-          Alternatively, you can hold <span>ALT</span> while doing so to recenter the view
-          around the selection. <br />
-          From there you will be able to edit the object in edit mode or change
-          the object materials.
         </li>
       </ul>
     </div>
@@ -283,24 +254,7 @@
       <ul class="faq-answer">
         <li>
           Please toggle the "Lock interface" option in the Blender main
-          header render menu. <br />
-          Blender can be unstable when this option is not toggled with plugin enabled, as otherwise Blender will not
-          tolerate python-interaction-related changes between frames otherwise.
-        </li>
-      </ul>
-    </div>
-
-    <div class="faq-item gmstyling">
-      <div class="faq_border">
-        <h2 class="faq-question faq_titltt">My keyframes/drivers don't work anymore</h2>
-        <i class="faq-icon fa fa-angle-down"></i>
-      </div>
-      <ul class="faq-answer">
-        <li>
-          Unfortunately this is a known blender bug that can't be solved yet. By default plugins properties aren't supported by the driver/keyframe system of blender, 
-          we can animate the properties, but blender won't send the appropriate update signal. We did fix this first buggy behavior within our plugin! 
-          But unfortunately there's another buggy blender behavior you will face: deleting any scatter will create issue with your animation, once you animate a plugin property, you cannot delete <b>any</b> scatters or you might lose your animation data. 
-          Unfortunately there's no way around it, it happens because blender register the keyframes/drivers by the order of creation of the scatter. 
+          header render menu (Blender can be unstable when this option is not toggled with any plugins enabled (Blender can be worry of python interaction between frames during final render).
         </li>
       </ul>
     </div>
@@ -313,7 +267,7 @@
       <ul class="faq-answer">
         <li>
           It is very likely that you have a <b>modifier</b> on one of your
-          surfaces that is changing its topology only in the render. In most
+          surfaces that is changing the mesh topology during the render. In most
           cases, the culprit is a <b>subdivision modifier!</b>
         </li>
         <ul>
@@ -322,10 +276,9 @@
             within the render.
           </li>
           <li>
-            Note that if your emitting surface is very high-poly, you could use a
+            Note that if your surface is very high-poly, you could use a
             low-poly surface invisible on render only used for the scattering.
-            This trick will be needed if you'd like to work with materials that
-            have adaptive displacement enabled for example.
+            This trick will be needed if you'd like to work with materials with adaptive displacement.
           </li>
         </ul>
         <li>
@@ -333,52 +286,8 @@
           different viewport/render state?
         </li>
         <li>
-          Perhaps you have an optimization feature on one of your systems
-          enabled only for the viewport, therefore is impacting the
-          final-render?
-        </li>
-      </ul>
-    </div>
-
-    <div class="faq-item gmstyling">
-      <div class="faq_border">
-        <h2 class="faq-question faq_titltt">How to render my scene on a render farm?</h2>
-        <i class="faq-icon fa fa-angle-down"></i>
-      </div>
-      <ul class="faq-answer">
-        <li>
-          Because any scatter-system can be read & rendered on any other PC
-          without having the Geo-Scatter plugin installed, it shouldn't pose a
-          problem to render your scene. However, we do advise disabling any
-          display or visibility optimization just in case.
-        </li>
-        <li>
-          Note that any keyframe/driver animation will need our plugin to be
-          activated.
-        </li>
-        <li>
-          if you have any doubt, for a guaranteed result, use the <i>"export as
-          instance"</i> functionality available in our plugin extra panel, this will
-          non-destructively bake the scatter-system(s) as real Blender
-          instances.
-        </li>
-      </ul>
-    </div>
-
-    <div class="faq-item gmstyling">
-      <div class="faq_border">
-        <h2 class="faq-question faq_titltt">I cannot share my scatters with another collaborator/renderfarms</h2>
-        <i class="faq-icon fa fa-angle-down"></i>
-      </div>
-      <ul class="faq-answer">
-        <li>
-          Please, make sure you are not relying on keyframe and/or drivers on some of our plugin properties. If your collaborator is not using our plugin, then these properties won't exist, therefore the animation data relying on our plugin API will break.
-        </li>
-        <li>
-          Always make sure your collaborator or render farm is using the exact same version of blender you are using! otherwise nodegroups and/or shaders might break. 
-        </li>
-        <li>
-          Finally, make sure that you didn't link anything in your file! you can use the "Make Local" operator using the F3 operator menu search to abolish all possible link.
+          Perhaps you have an optimization feature in <span>Tweak > Visibility</span> on one of your system
+          enabled only for the viewport? The icons next to the visibility features dictates their status during viewport / rendered view / final render.
         </li>
       </ul>
     </div>
@@ -390,20 +299,20 @@
       </div>
       <ul class="faq-answer">
         <li>
-          Perhaps you are beginning in 3d & have false expectations about what
+          Are you beginning in 3d? Perhaps you have false expectations on what
           Blender/your computer is capable of doing. Unsure where to start? here
-          are some questions you should ask yourself:
+          are some questions you can overview:
         </li>
         <ul>
           <li>
             Is your computer able to handle large Blender 3D scenes? Did you ever
             work on large 3D scenes in Blender/Maya/3Dsmax in the past? Or perhaps
-            this is your first time creating large scenes? Perhaps the slowdown is
+            this is your first time creating environment scenes? Then perhaps the slowdowns you are facing are
             completely normal, your scene might just be really heavy for your
-            computer.
+            GPU to draw or for Blender to compute.
           </li>
           <li>
-            How many points are you initially scattering, more than a million? Is
+            How many points are you initially scattering? More than a million? Is
             your scatter area very large? <br />
             <b>Solution:</b> Use visibility optimization features, hide your
             unused scatter-system(s) in the viewport, and separate your
@@ -413,20 +322,20 @@
             Is there an extreme amount of triangles drawn on your screens? Blender
             is using rasterization to render the viewport, this rendering
             technique will scale depending on the number of triangles displayed.
-            See basics of computer graphics. <br />
+            Check our out optimization page for more useful information. <br />
             <b>Solution:</b> Use display optimization (display as point is the
-            fastest option). hide your unused scatter-system(s) in the viewport.
+            fastest option). Hide your unused scatter-system(s) in the viewport.
           </li>
           <li>
             Is the surface you are scattering upon high poly? perhaps with
             heavy-to-compute modifiers enabled? br
             <b>Solution:</b> Use a low poly invisible surface only used as a
             scattering surface, you can keep your high poly mesh for the
-            rendering.
+            final render.
           </li>
         </ul>
         <li>
-          Note that <b>some features might be slower than others!</b> For
+          Did you know that <b>some features might be slower than others!</b> For
           example:
         </li>
         <ul>
@@ -439,22 +348,148 @@
           <span>Tweak > Ecosystems</span> are computer intensive, especially when calculating
             proximity with high poly meshes.
           </li>
-          <li>
-            Display as convex-hull, bounding-box, or point-cloud might be more
-            computer-intensive, as these methods will be constructing the display
-            object on the fly.
-          </li>
         </ul>
         <li>
-          <b>If you believe your scene is unusually slow compared to a native
-            Blender environment scene, please contact us</b>
-          maybe you found a bug! Our plugin is/shall be highly optimized and we
-          did an abundance of research on the subject.
+          If you believe your scene is unusually slow compared to another similar Blender environment scene, please contact us maybe you found a bug!
+          Our plugin is/should be highly optimized and we did an abundance of research on the subject. Note that an easy way to see if the slowdowns are related to our
+           plugin, is to disable the plugin in your addon preferences and see if the slowdowns persist.
         </li>
       </ul>
     </div>
 
 </div>
+
+<div class="titleheader">
+  <h1>FAQ</h1>
+  <p>List of common questions</p>
+</div>
+
+<div class="article_content">
+
+  <div class="faq-item gmstyling">
+    <div class="faq_border">
+      <h2 class="faq-question faq_titltt">
+        How can I locate the original instance object?
+      </h2>
+      <i class="faq-icon fa fa-angle-down"></i>
+    </div>
+    <ul class="faq-answer">
+      <li>
+        If you're unsure where the instances you are scattering are located in
+        your scene, go in <span>NPanel > Geo-Scatter > Tweaking > Instancing</span> and
+        click on the select icon next to your object name to select the objects in your scene.
+        Alternatively, you can hold <span>ALT</span> while clicking on the select icon to recenter the view
+        around the selection. From there you will be able to edit the object in edit mode or change
+        the object materials for example.
+      </li>
+    </ul>
+  </div>
+  
+    <div class="faq-item gmstyling">
+      <div class="faq_border">
+        <h2 class="faq-question faq_titltt">
+          Is your product compatible with other renderers such as Octane?
+        </h2>
+        <i class="faq-icon fa fa-angle-down"></i>
+      </div>
+      <ul class="faq-answer">
+        <li>
+          Yes indeed, if you are scattering objects compatible with a third party render engine, it shall work as expected!
+        </li>
+      </ul>
+    </div>
+
+    <div class="faq-item gmstyling">
+      <div class="faq_border">
+        <h2 class="faq-question faq_titltt">
+          Geo-Scatter comes with an asset-library?
+        </h2>
+        <i class="faq-icon fa fa-angle-down"></i>
+      </div>
+      <ul class="faq-answer">
+        <li>
+          No, our product is a scattering plugin tailored for 3d professionals. In the past we used to bundled a vegetation library compatible with our biome-system, now this library is free and is called 'plant-library' listed on the biome page.
+        </li>
+      </ul>
+    </div>
+
+    <div class="faq-item gmstyling">
+      <div class="faq_border">
+        <h2 class="faq-question faq_titltt">
+          Which assets are compatible with Geo-Scatter?
+        </h2>
+        <i class="faq-icon fa fa-angle-down"></i>
+      </div>
+      <ul class="faq-answer">
+        <li>
+          Geo-scatter is designed to <b>work with any assets you want to</b>, it is designed to work either with your blender 3Dviewport selection, or your selected assets in your blender asset-browser editor. Some asset-makers propose premade environments called biome packs, but that doens't mean only their assets are compatible with our plugin of course. 
+          Additionally, you are able to create and share your own biomes with any asset's you'd like.
+        </li>
+      </ul>
+    </div>
+
+  <div class="faq-item gmstyling">
+    <div class="faq_border">
+      <h2 class="faq-question faq_titltt">How to share my scene to a render farm or to a collaborator?</h2>
+      <i class="faq-icon fa fa-angle-down"></i>
+    </div>
+    <ul class="faq-answer">
+      <li>
+        First of all, make sure the Blender version your collaborator or render farm is using is the exact same version as yours!
+      </li>
+      <li>
+        Be aware of any linked data or images in your blend file. If you have linked any objects or collections or materials in your scene, your render-farm or collaborator might have missing libraires from their ends.
+      </li>
+      <li>
+        If your collaborator/render farm also has installed the same version of Geo-Scatter or Biome-Reader they should be able to read your scatters with no issues.<br>If not:
+      </li>
+      <ul><ul>
+        <li>
+          When you scatter something with our plugin, it will append a geometry-node modifier on a newly created 'scatter_obj'. Therefore your renderfarm or friends should be able to read your scatter with no problems, except for the following exceptions:
+        </li>
+        <ul>
+        <li>
+          When animating any of our plugin interface properties via keyframes or drivers, it will require our plugin to be installed and activated to be animated. 
+          If you want to ship animated scatters to a render node or collaborator that doesn't have our plugin installed, you will need to animate the equivalent 
+          properties of the Geometry-node engine located on your 'scatter_obj' objects.
+        </li>
+        <li>
+          If you are using features related to the active camera, please set the camera update method to 'real-time' before sharing your .blend file. 
+        </li>
+        <li>
+          If you are using features related to the active camera and your camera has animated lenses or resolution, you will either need to disable the related feature altogether, 
+          or animate the camera info matrix values in the Geometry-node modifier of the equivalent 'scatter_obj'
+        </li>
+        <li>
+          Note that any display or visibility features that are automatically being turned off during rendered view won't work if our plugin isn't installed.
+        </li>
+      </ul></ul>
+    </ul>
+    <li>
+      if you have any doubt, for a guaranteed result, use the <i>"export as instance"</i> functionality available in our plugin extra panel, this will bake the scatter-system(s) as real Blender instances. Unfortunately any kind of animated effects won't be supported.
+    </li>
+    </ul>
+  </div>
+
+  <div class="faq-item gmstyling">
+    <div class="faq_border">
+      <h2 class="faq-question faq_titltt">
+        Your plugin is a GPL script so i can legally share/use it for free right?
+      </h2>
+      <i class="faq-icon fa fa-angle-down"></i>
+    </div>
+    <ul class="faq-answer">
+      <li>
+        <b>No</b>. Our 'plugin' isn't technically one. When you use our Geo-Scatter product, you are using a Geometry-node object 
+        licensed under a EULA similar to Royalty free (license is available <a href="https://geoscatter.com/legal.html" target="_blank">here</a>). If you wish to share our python GPL scripts (mainly used to draw an interface)
+        you can, however you'll need to make sure to remove our copyright file located at <span>PluginFolder \ blends \ engine.blend</span> from your redistributed projects. Additionally, Geo-Scatter® is a protected trademarked,
+        you'll need to avoid using or mentioning the Geo-Scatter® brand in your redistributed projects as well. More information available on our <a href="https://geoscatter.com/legal.html" target="_blank">legal page</a>.
+      </li>
+    </ul>
+  </div>
+
+
+  </div>
 
 <div class="end_page_spacing"></div>
 <!-- -------------------------------------------------------------------------------------------------------------- -->

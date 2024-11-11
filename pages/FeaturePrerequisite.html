@@ -32,11 +32,11 @@
 
       <h2>ABC's of Blender</h2>
       <p>
-        Do you understand what is a vertex? what is a UV map and how to create
+        Do you understand what is a vertex, what is a 'Mesh'? What is a UVMap and how to create
         simple UV's? How to add/remove modifiers? What is the normal direction of
         a face and its implications on shading? Why you can't
-        <a href="https://www.youtube.com/watch?v=pMIwthFmr-Q" target="_blank">paint a vertex group</a>
-        correctly on an N-gon? &nbsp;Great! Let's get started then!&nbsp;
+        <a href="https://www.youtube.com/watch?v=pMIwthFmr-Q" target="_blank">a vertex attribute</a>
+        correctly on a low poly object? Great! Let's get started then!
       </p>
     </div>
 
@@ -45,11 +45,10 @@
 
       <h2>Apply Scales</h2>
       <p>
-        Let's say you created a plane in your scene, resized it, and would like to
-        start a scatter on this plane. If so, do not forget to apply the scale of
-        your object with the <span>CTRL+A</span> shortcut. <br />
-        This is a step that all Blender users know, and that few beginners might
-        miss. Please, if you are a beginner, do not forget about applying scales!
+        Let's say you created a plane in your scene, then resized it, and you'd like to
+        scatter objects on this plane. If you do so, do not forget to apply the scale of
+        your plane with the <span>CTRL+A</span> shortcut, depending if you intend your scatter's to follow your plane 3D transforms, or not.
+        This is a step that all Blender users know, and that a lot of beginners are unfortunately missing.
       </p>
     </div>
 
@@ -59,10 +58,9 @@
       <h2>Properties Descriptions</h2>
       <p>
         Did you know that you can hover on almost any Blender sliders, toggles, or
-        drop down items to read their description? We pack a lot of information in
-        the properties descriptions. Taking time to hover in order to gather
-        information is always a good reflex. If you feel that some items need more
-        or better descriptions, don't hesitate to contact us.
+        drop down items to read their description? We wrote a lot of information in
+        these descriptions. Taking time to hover in order to read these descriptions is a good reflex to have!<br><br>No need to see a tutorial or this doc website if all the info you need is already described in there!
+        If you feel that some of our items need better descriptions, don't hesitate to contact us and we'll improve them!
       </p>
     </div>
 
@@ -75,9 +73,8 @@
         collaborator gave you a blend file saved in Blender 3.2, then please avoid
         reading, and <b>never</b> save, this blend file in Blender 3.1 or lower.
         Please follow this simple rule, otherwise,
-        <b>you will run into issues.</b> Some data structures (such as
-        shader/geometry nodes or modifiers) are relying on newly added features,
-        and will not be recognized.
+        <b>you will run into issues.</b><br><br>The blender C++ codes of some data structures, such as
+        shader/geometry nodes or modifiers, might change from one version to another, and old blender version might not recorgnize these structure embedded in your .Blend file.
       </p>
     </div>
 
@@ -86,11 +83,11 @@
 
       <h2>Basics of Shading</h2>
       <p>
-        Do you wish to change the color of a scattered item? Great! This can be
-        done natively in Blender shader editor! To do so you will simply need to
-        select the scattered item in your scene (this can be easily done by going
-        in your instance list, and clicking on the select icon) and open a new
-        Blender shader editor.
+        Do you wish to change the color or shader of a plant your scattered? Great! This can be
+        done natively in Blender shader editor, our plugin does not interact with any shaders!
+        To change the shaders of the objects you scattered, you will first need to select your object in your scene (this can be easily done by going
+        in your instance list, and clicking on the select icon), then open a new Blender shader editor and edit the material.
+        <br><br>This assumes that you know the basics of material editing in blender and you know how to navigate in a shader nodetree.
       </p>
       <h3 class="flex_bottomalign">Pro Tip:</h3>
       <p>
@@ -109,15 +106,15 @@
       <h2>What are Instances</h2>
       <p>
         Scattering is based on the technology of instancing! What is instancing?
-        well, it is the idea of re-using the data of your object in order to
+        Well, instancing is the idea of re-using the data of your object in your computer memory order to
         vastly save on memory and performance.
       </p>
       <br />
       <p>
         It is important to understand the implication of re-using the same mesh
         data, while it is giving us massive benefits in terms of performance, we
-        will not be able to run a physic collision or wind simulation on instanced
-        objects meshes that way unless we make each object unique.
+        will not be able to run a physic collision or wind simulation that will change the individual meshes of your objects.
+        If you want to do so, you'll need to have unique objects with unique meshes.
       </p>
       <br />
       <p>
@@ -127,8 +124,7 @@
         call the upward direction of an instance (+Z) the instance "normal", and
         the forward direction (+Y) the instance "tangent". For example, if you'd
         like your instance's upward direction to follow your emitting surface
-        inclination, you will need to align your instance's normals toward the
-        surface faces normals.
+        inclination, you will need to align your instance's normals toward the normal of your surface face's.
       </p>
     </div>
 
@@ -150,35 +146,31 @@
         Please keep in mind that software such as Blender, Max, or Maya aren't
         games! Games engines are specifically designed to stream polygons at a
         smooth framerate thanks to many tricks happening in the background, most
-        of these tricks do <b>not</b> make sense in any 3D creation software where
-        the rendering is occurring on a dedicated step of the process, with the
-        power of the path tracing algorithm.
+        of these tricks do <b>not</b> make sense in any 3D creation suite such as blender, where
+        the rendering is occurring on a dedicated step of the process, with the power of the path tracing algorithm (such as Cycles render).
       </p>
     </div>
 
     <div class="flex_singlecard gmstyling card2x">
       <img src="../img/pre8.jpg" alt="" />
 
-      <h2>Large Landscape Expectations</h2>
+      <h2>Expectation for Large Landscape</h2>
       <p>
         Working on large-scale landscapes can be tricky in Blender, or any other
         3D creation suite! There are a few habits experienced environmental
-        artists acquired in their careers that perhaps beginner 3D artists do not
+        artists acquired in their careers that perhaps beginner 3D artists don't
         have from the get-go.
       </p>
       <br />
       <p>
-        For example, the scattered tiny elements (such as grass) should only be
-        present in the foreground of your landscape shot, far-away vistas do not
-        need such detail that a good texture could provide, they will only slow
-        you down.
+        For example, always hide scatter-layers you aren't working on. Avoid displaying the hi-res object in the 3Dviewport. Use camera optimization features smartly if you are working with large terrains, as you don't want to generate billions of tiny instances of grass on large areas where you might just get away with a grass material for example.
       </p>
       <br />
       <h3 class="flex_bottomalign">Pro Tip:</h3>
       <p>
         If you need tips on how to manage performance, please make sure to read
         the page on
-        <a href="#" data-doc="#FeatureOptimization">optimization</a>.&nbsp;
+        <a href="#" data-doc="#FeatureOptimization">optimization</a>. Where we overview all display and visibility optimization features.
       </p>
     </div>
 
@@ -187,12 +179,10 @@
 
         <h2>Batch Operation</h2>
         <p>
-          In Blender, the properties of an active object can be batch applied to the
-          properties of the selection by pressing the
+          In Blender, the property of an active object can be batch applied to the property of the selected objects by pressing the
           <span>ALT</span> key while tweaking the value. This native behavior has
-          been smartly implemented in our plugin. You can batch-change the
-          selected scatter-system properties by holding <span>ALT</span> when adjusting your
-          settings, assigning masks or items, or enabling features!
+          been smartly re-implemented through our plugin interface. You can batch-change the
+          selected scatter-system properties by holding <span>ALT</span> when adjusting one of your slider, toggle, or when assigning a mask or item!
         </p>
         <h3>Warnings:</h3>
         <p>
@@ -225,25 +215,18 @@
               this can be done by pressing <span>CTRL</span> while drag-and-dropping in the outliner.
             </li>
             <li>
-              You can create new "collection-instance" objects from these
-              collections, the origin of the collection-instance object is the origin
-              of the scene. These objects can be scattered.
+              You can create new "collection-instance" objects your outliner 
+              collections, in blender 'Add' menu. The origin of the collection-instance object is the origin
+              of the scene. Yes, these objects can be scattered.
             </li>
           </ul>
-        </p>
-        <h3>Pro Tip:</h3>
-        <p>
-          When you add/remove an object in Geo-Scatter "instancing" panel, in the
-          background our plugin will interact with a scatter-system instancing
-          collection, these collections are by default stored in the main
-          "Geo-Scatter" collection, this collection should remain closed & untouched.
         </p>
         <h3>Warnings:</h3>
         <p>
           If you want to move objects in the outliner that are already linked in
           other collections, be careful! Because Blender will automatically unlink
           the object from the other collections if you do not hold <span>CTRL</span>. This is a
-          native behavior you need to watch for when managing your collections.
+          native behavior you need to watch for when moving objects in your outliner editor.
         </p>
     </div>
 
@@ -252,27 +235,20 @@
 
         <h2>Bounding Boxes</h2>
         <p>
-          Blender beginners are often confused with this native Blender feature.
-          In Blender, it is possible to display your object as a bounding box only
-          in the rasterized viewport, not in the render ( this is a per-object
-          property located in
-          <span>Properties Editor > Object > viewport display > Display As</span>  ).
-        </p>
-        <p>
-          This is useful for trees for example, where we do not want to see the
-          full resolution object within the rasterized viewport, as they often
-          come with way too many polygons and it might slow us down while working,
-          as you may know, rasterized viewport performances slowdowns when dealing
-          with a lot of triangles!
+          Beginners are often confused with the 'Bounding Box' feature of Blender.
+          With this option, you'll display your objects as a wired bounding box only
+          in the rasterized viewport & not in the render. This is a per-object
+          property located in <span>Properties Editor > Object > viewport display > Display As</span>.
+          <br><br>
+          This option is useful for heavy-poly objects, where we do not want to see the
+          full resolution object within the 3Dviewport as displaying too many polygons in a rasterized view will slow our GPU while working!
         </p>
         <h3 class="flex_bottomalign">Reminder:</h3>
         <ul>
           <li>
             If you scattered an item with a bounding box, you can easily select
-            the scattered item in the instance subpanel, by clicking on the select icon.
-          </li>
-          <li>
-            Don't forget about the <span>ALT</span> feature, it works everywhere in Blender.
+            the scattered item in the instance subpanel, by clicking on the select icon. 
+            Additionally in the plugin manager 'lister' interface, you will find a button to batch change all bounding-box properties of the objects you are scattering.
           </li>
         </ul>
     </div>
@@ -282,13 +258,12 @@
 
         <h2>Flowmaps</h2>
         <p>
-          Flowmaps are directional pieces of information (vectors) contained in an image
+          Flowmaps are directional information (vectors) contained in an image
           texture or in a vertex-color layer. The Red/Green channels are
           representing directions in the tangent XY space. The vectors ranging
-          from -1 to 1 are remapped between 0 & 1 in order to fit into color
+          from -1 to 1 are remapped between 0 & 1 in order to fit into a RGB color
           information.
-        </p>
-        <p>
+          <br><br>
           Flowmaps cannot be painted natively in Blender, the
           <a href="https://clemensbeute.gumroad.com/l/heZDT" target="_blank">flowmap painter addon</a>
           by Clemens Beute is needed. When you use this plugin with Geo-Scatter, make
@@ -298,6 +273,15 @@
         </p>
     </div>
 
+    <div class="flex_singlecard gmstyling card2x">
+      <img src="../img/assetb.jpg" alt="" />
+
+        <h2>Using the Asset Browser</h2>
+        <p>
+          Our plugin heavily benefit and sometimes rely on blender asset-browser. In the 'Create' panel you can scatter the selected assets from your browser, and with the biome system, most biome packs will assume that you have the assets already installed in your asset browser. 
+          So you should know how to install a .blend containing assets in your asset browser library! If you don't check out the <a href="#" data-doc="#FeatureInstallation">installation page</a>.
+        </p>
+    </div>
   </div>
 </div>
 
