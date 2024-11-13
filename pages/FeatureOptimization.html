@@ -35,9 +35,9 @@
       </p>
       <br>
       <p>
-        It is time to adjust your expectation if this is the case! Performances
+        It is time to adjust your expectation if you assume it is the case! Performances
         are heavily dependent on your utilization and on the software & hardware
-        you are using. Please remember, a 3D package, is not supposed to be a video-game-like experience
+        you are using. Please remember, a 3D package, is not supposed to be a video-game-like experience.
       </p>
     </div>
 
@@ -52,7 +52,7 @@
       <p>
         Blender (& its 3D DCC siblings such as Max/ Maya/ Modo), is <b>not</b> a
         real-time application, it is a digital content creation tool (alias DCC),
-        where rendering is done separately during a dedicated part of the process.
+        where rendering is done separately during a dedicated part of the process (when you click on F12 to execute your final render).
       </p>
       <br>
       <p>
@@ -67,14 +67,14 @@
     <div class="flex_singlecard optimizationtext card3x">
       <p>
         You might assume that the best solution to make Blender viewport faster is
-        using game-engine-like optimization tricks!
+        using game-engine-like optimization tricks, right?
       </p>
       <br>
       <p>
         I'm sorry to inform you that this is a common misconception.
         Distance-based LOD for example, is one of such technology quite demanded
         by Blender users. Implementing such an inconvenient trick does not make
-        much sense in a non-real-time rendering app.
+        much sense in a non-real-time rendering app. Most likely, you'll experience slowdonws and more memory expenses.
       </p>
       <br>
       <p>
@@ -106,13 +106,13 @@
         options) of Blender are running on a rendering algorithm called
         "Rasterization". It's the same technology used by Eevee or games. This
         algorithm is extremely fast to compute, however, it does not scale well
-        with high polycount. On the contrary, ray-tracers such as CyclesX do not
+        with high polycount. On the contrary, ray-tracers such as Cycles or Octane do not
         care about polycount that much. Such ray-tracing algorithms scale
         depending on the number of rays bouncing in the scene, they can handle
         renders with multiple billions of tris with ease (see
-        <a href="https://youtu.be/Qf5dho10OfI?t=560" target="_blank">cg geek demo</a>) however, ray tracers are not a
+        <a href="https://youtu.be/Qf5dho10OfI?t=560" target="_blank">this demo on youtube</a>) however, ray tracers are not a
         viable solution for working in the
-        viewport yet (except in ClarisseIFX for example) so we'll need to be
+        viewport yet so we'll need to be
         careful about what we decide to display.
       </p>
       <br>
@@ -122,15 +122,20 @@
         displaying 100.000 instances, and become completely frozen around 500.000
         instances. (Reminder: to get informed about your scene object-count,
         enable the statistics overlay in the viewport header -> overlay menu ).
-        CyclesX ray-traced rendered view will just do fine!
+        However, Cycles ray-traced rendered view will just do fine if we disable the overlay drawing option.
       </p>
       <br>
-      <h3>Pro Tip:</h3>
+      <h3>Tip: Slow Overlays</h3>
       <p>
         Be aware that enabling the viewport overlay effect has an
         impact on the performance as it is doing rasterization in the background.
         Also, note that the viewport shadows or ambient occlusion options make
-        Blender considerably slower!
+        Blender considerably slower! 
+      </p>
+        <h3>Tip: Slow Navigation</h3>
+      <p>
+        Another possible slowdown you can experience is when navigating.
+        Blender 'Auto Depth' navigation option can be slow to calculate when working with billions of triangles.
       </p>
     </div>
 
@@ -157,12 +162,12 @@
         example.
       </p>
       <br>
-      <h3>Pro Tip:</h3>
+      <h3>Tip: Use Separate Emitter</h3>
       <p>
         Note that using a dedicated
         <a href="#"
           data-doc="#FeatureScattering&article_non_linear_workflow">empty emitter </a>will make things faster to compute on big scenes for Blender when
-        tweaking slider's.
+        tweaking slider's. When you change a property of a surface used for scattering for example, even if this property does nothing, blender will register an update signal.
       </p>
 
       <br><br><br>
@@ -338,29 +343,55 @@
     <p>Avoid overloading your viewport with too many generated points!</p>
 </div>
 
-<div class="article_content gmstyling">
-  <p>
-    Since Scatter 5.3 we introduced a new "Max Amount" feature directly
-    integrated per scatter-system(s). If you'd like to have an extra layer of
-    real-time security while working on larger scenes, please enable this
-    feature in order to guarantee that your instance count will never exceed the
-    chosen threshold.
-  </p>
+<div class="article_content">
+  <div class="medial_textr gmstyling">
+  
+      <div class="medial card2x">
+        <div class="gif"><video controls autoplay loop muted playsinline><source src="../mp4/demomaxload.mp4" type="video/mp4"></video></div>
+        <br>
+      </div>
+  
+      <div class="textr card2x">
+        <h2>Maximal Amount</h2>
+        <p>
+          If you'd like to have an extra layer of security while working on larger scenes, enable this
+          feature. It will guarantee that your instance count will never exceed the instance count threshold. 
+          Please note that this feature only act after the points were generated, if you distribute 500 millions items, 
+          it will still create slowdown, even if these items were removed and not visible in your scene.
+          <br>
+          <br>
+          In the example hereby, once our scatter reached 10.000 instances, it was automatically hidden on your viewport. You can choose to either totally shutdown, or to limit the number of total items visible.
+        </p>
+      </div>
+      
+  </div>  
 </div>
 
 <!-- title -->
 
 <div class="titleheader">
     <h1>Density Reduction</h1>
-    <p>Optimize your workflow by reducing the density of the generated points</p>
+    <p>Optimize your workload by reducing the density of the generated points</p>
 </div>
 
-<div class="article_content gmstyling">
-  <p>
-    In the visibility category, a removal rate slider is available to reduce
-    what's visible within the viewport. The final render will not be affected,
-    except if you want it to (see visibility features below).
-  </p>
+<div class="article_content">
+  <div class="medial_textr gmstyling">
+  
+      <div class="medial card2x">
+        <div class="gif"><video controls autoplay loop muted playsinline><source src="../mp4/demoremper.mp4" type="video/mp4"></video></div>
+        <br>
+      </div>
+  
+      <div class="textr card2x">
+        <h2>Reduce Visibility</h2>
+        <p>
+          In the visibility category, a removal rate slider is available to reduce
+          what's visible within the viewport. The final render will not be affected,
+          except if you want it to (see visibility features below).
+        </p>
+      </div>
+      
+  </div>  
 </div>
 
 <!-- title -->
@@ -413,27 +444,49 @@
           recalculation might become sluggish in some scenes. If you start hitting
           such a slowdown, you can change the camera update behavior.
         </p>
-        <br />
+        <br>
         <p>
           In the example hereby, the update method is set on 'Halt' mode, the
-          update will only trigger when the camera has stopped moving.
+          update will only trigger when the camera has stopped moving. If you wish the camera updates to be calculated in real time, 
+          choose the 'Realtime' option & we'll use blender 'Active Camera' node instead of relying on our plugin to send the camera transforms information.
         </p>
+    </div>
+
+    <div class="flex_singlecard gmstyling card2x">
+      <h2>Efficient Distribution Option</h2>
+      <p>
+        If this option is not enabled, the instances will first be distributed on the integrality of your terrain, and then only be culled if not
+        in the camera culling frustrum cone/distance threshold.
+      <br>
+      <br>
+        If the option is enabled (it should by default), the Scatter-engine will first compute a preliminary culling based on which faces of your surfaces
+        are contained within the camera culling frustrum cone/distance threshold, then a secondary more precise culling will occur. 
+      <br>
+      <br>
+        If you are working with extremely large terrains containing a decent amount of even topology to work with, this feature will saves you a lot of performances.
+      </p>
+  </div>
+
+    <div class="flex_singlecard gmstyling card2x">
+      <h2>Alt-for-Batch Reminder</h2>
+      <p>
+        These features are to be activated per scatter-system, this grants you the
+        ability to precisely choose the level of optimization depending on your system. Remember, If you'd
+        like to batch-apply settings on all the selected scatter-systems, the
+        <a href="#"
+          data-doc="#FeatureOffset&section_falling_animation">ALT-for-batch</a>
+        behavior is here for you, it's the official method to batch apply settings to many items simultaneously in Blender. 
+        
+        <br>
+        <br>
+        Optionally in your upper right corner, you can access a menu
+        by clicking on the gearwheel icon, where you'll be able to apply your settings to the desired scatters.
+      </p>
     </div>
 
   </div>
 </div>
 
-<div class="article_content gmstyling">
-  <h2>Reminder:</h2>
-  <p>
-    These features are to be activated per scatter-system, this grants you the
-    ability to precisely choose the level of optimization depending on your system. Remember, If you'd
-    like to batch-apply settings on all the selected scatter-systems, the
-    <a href="#"
-      data-doc="#FeatureOffset&section_falling_animation">ALT-for-batch</a>
-    behavior is here for you, it's the official method to batch apply settings to many items simultaneously in Blender.
-  </p>
-</div>
 
 <br>
 
@@ -483,11 +536,6 @@
           <li>
             <b>Point-Cloud:</b> Replace your instances with a generated group of points,
             ideal to have a good representation of the final render-shape.
-            this display method is quite promising, however,
-            <a href="https://developer.blender.org/T93245" target="_blank">T93245</a> 
-            <a href="https://developer.blender.org/T92963" target="_blank">T92963</a>
-            are important issues that need to be solved, right now this display
-            option is not as fast as it should be.
           </li>
         </ul>
 
@@ -498,24 +546,6 @@
   
 
 <div class="separator_line"></div>
-
-<div class="article_content">
-  <div class="medial_textr gmstyling">
-  
-      <div class="medial card2x">
-        <div class="gif"><video controls autoplay loop muted playsinline><source src="../mp4/CrispSpectacularInvisiblerail.mp4" type="video/mp4"></video></div>
-      </div>
-  
-      <div class="textr card2x">
-        <h2>Feature Visibility</h2>
-        <p>
-          This feature visibility is tweakable, it's possible to define if the display effect takes place only within the
-          viewport, turns off during render, or rendered view. By default, it will turn off during any rendering state.
-        </p>
-      </div>
-      
-  </div>  
-</div>
 
 <div class="article_content">
   <div class="medial_textr gmstyling">
@@ -555,11 +585,6 @@
           Here's a tip! In the header popover menu of the display feature, click on "show systems colors" to have an
           accurate representation of your scatter-system assigned color within the viewport! This operator will simply put
           the shading on "solid", and set the shading color on "object".
-        </p><br>
-        <h3>Known Issue:</h3>
-        <p>
-          points' drawing methods may produce unstable colors &nbsp;<a href="https://developer.blender.org/T93245"
-            target="_blank">T93245</a>
         </p>
       </div>
       

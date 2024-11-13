@@ -94,20 +94,24 @@
   <ul>
     <li>
       <p>
-          Ensure the plugin is compatible with your version of Blender. Compatibility details can be found in
-          <a href="#" data-doc="#Changelogs">the changelog page</a>.
+          Ensure your plugin version is <b>compatible</b> with the Blender version you are using.<br>Compatibility details can be found on the 
+          <a href="#" data-doc="#Changelogs">changelog page</a>.
       </p>
     </li>
-
     <li>
       <p>
-        <b>If you have Blender 4.2 or above:</b> And you're using Geo-Scatter 5.5 or above, you can now drag and drop the plugin <span>.zip</span> file directly into your Blender window.
-        Blender will then prompt you to install and activate it the plugin. The plugin will wait for you in the 'T' panel.
+          <b>Re-installation</b>: If this you already have a previous version or Geo-Scatter or Biome-Reader installed on your blender version, please first install these versions, restart blender, and proceed to follow the following installation steps. Please note that Biome-Reader and Geo-Scatter cannot be installed simultaneously.
+      </p>
+    </li>
+    <li>
+      <p>
+        <b>If you have Blender 4.2 or above and you're using Geo-Scatter 5.5 or above</b>:<br>You can drag and drop the plugin <span>.zip</span> file directly into your Blender window.
+        Blender will then prompt you to install and activate it the plugin. The plugin will wait for you in the 'T' panel of your 3Dviewport. You can also access the plugin manager interface in your blender addon preferences, search on 'Geo-Scatter' and click on 'Enter Manager'.
         <br><b>If you prefer manual installation, follow these steps:</b>
       </p>
     </li>
 
-    <ul>
+    <ul><ul>
         <li>
           <p>
             Open Blender Preferences by selecting <span>Main Header > Edit > Preferences</span> or by setting an editor type to 'Preferences'.
@@ -120,20 +124,18 @@
         </li>
         <li>
           <p>
-            Select the 'GeoScatter.zip' file and confirm. Blender will extract the plugin files to your addons directory.
+            Select the 'GeoScatter.zip' file and confirm. Blender will extract the plugin .zip content to the following path:
           </p>
           <ul>
-              <li>
-                <p>
-                  Extension path (<i>WinOS</i>): <span>C:\Users\%USERNAME%\Appdata\Roaming\Blender Foundation\Blender\X.X\extensions\user_default\</span><br>
-                  Legacy path (<i>WinOs</i>): <span>C:\Users\%USERNAME%\Appdata\Roaming\Blender Foundation\Blender\X.X\scripts\addons\</span><br>
-                  Extension path (<i>macOS</i>): <span>/Users/$USER/Library/Application Support/Blender/X.X/extensions/user_default/</span><br>
-                  Legacy path (<i>macOS</i>): <span>/Users/$USER/Library/Application Support/Blender/X.X/scripts/addons/</span><br>
-                  Extension path (<i>Linux</i>): <span>/home/$USER/.config/blender/X.X/extensions/user_default/</span><br>
-                  Legacy path (<i>Linux</i>): <span>/home/$USER/.config/blender/X.X/scripts/addons/</span><br>
-                  It may be useful to know about these paths for troubleshootings (consult the Blender manual for other OS paths). A total manual installation consists of unzipping your plugin content on such location by yourself.
-                </p>
-              </li>
+              <p>
+                Extension path (<i>WinOS</i>): <span>C:\Users\%USERNAME%\Appdata\Roaming\Blender Foundation\Blender\X.X\extensions\user_default\</span><br>
+                Legacy path (<i>WinOs</i>): <span>C:\Users\%USERNAME%\Appdata\Roaming\Blender Foundation\Blender\X.X\scripts\addons\</span><br>
+                Extension path (<i>macOS</i>): <span>/Users/$USER/Library/Application Support/Blender/X.X/extensions/user_default/</span><br>
+                Legacy path (<i>macOS</i>): <span>/Users/$USER/Library/Application Support/Blender/X.X/scripts/addons/</span><br>
+                Extension path (<i>Linux</i>): <span>/home/$USER/.config/blender/X.X/extensions/user_default/</span><br>
+                Legacy path (<i>Linux</i>): <span>/home/$USER/.config/blender/X.X/scripts/addons/</span><br>
+                It may be useful to know about these paths for troubleshootings (consult the Blender manual for other OS paths). A total manual installation consists of unzipping your plugin content on such location by yourself.
+              </p>
           </ul>
         </li>
         <li>
@@ -141,7 +143,7 @@
             In Blender's Add-ons preferences, search and enable Geo-Scatter. Click the arrow next to 'Enable' to access plugin settings.
           </p>
         </li>
-    </ul>
+    </ul></ul>
 
     <li>
       <p>
@@ -419,10 +421,9 @@
 
 <div class="article_content gmstyling">
 
-  <h2>Clean Installation</h2>
+  <h2>Clean Environment</h2>
   <p>
-    If you are encountering issues with our plugin, we might ask you to test our plugin on 
-    a clean installation of Blender, with no other plugins enabled.
+    If you are encountering errors with our plugin, we might ask you to test our plugin on a clean installation of Blender, with no other plugins enabled!
     <br>Here's how you can create your own portable virgin
     installation of Blender:
   </p>
@@ -434,19 +435,98 @@
       Unpack the <span>.zip</span> somewhere on your computer, the desktop for example.
     </li>
     <li>
-      Navigate inside the unpacked folder, go to the *version number* folder,
-      and add a new empty folder called <span>config</span>.
+      Now we will <b>make your installation portable</b>. Please navigate in the unpacked folder, where should see a <span>blender.exe</span> file. 
+      <ul>
+        <li>If you are using blender 4.2 or newer: Add a new empty folder named <span>portable</span> right next to <span>blender.exe</span>.</li>
+        <li>If you are blender 4.1 or older: Navigate to the *version number* folder, and add a new empty folder called <span>config</span>.</li>
+      </ul>
     </li>
     <li>
       Run the file called <span>blender.exe</span> to start your portable version. It will
-      be a clean environment to test your issues.
+      be a clean environment to test your issues. Normally none of your plugins shall be installed anymore.
     </li>
     <li>
-      Install our plugin via the addon preferences and see if the issue
-      persists.
+      Install our plugin and see if the issue persists.
     </li>
   </ul>
 </div>
+
+
+<div class="article_content gmstyling">
+  
+  <div class="center_img">
+    <img src="../img/exshowcons.jpg" alt="" />
+  </div>
+  <br>
+
+  <h2>Accessing the Console for Error Messages</h2>
+  <p>
+    If you encounter issues while using the Geo-Scatter plugin, viewing the console window can provide helpful error messages for us.<br>
+    Here’s how to open it on both Windows and macOS:
+  </p>
+
+  <h3>WindowsOS</h3>
+  <p>
+    <ul>
+    <li>1. Open Blender.<br></li>
+    <li>2. Go to the top menu and select <strong>Window &gt; Toggle System Console</strong>.<br></li>
+    <li>3. A console window will open, displaying error messages and debugging information that can help in diagnosing issues.</li>
+    </ul>
+  </p>
+  
+</div>
+
+
+<div class="article_content gmstyling">
+  
+  <h2>Starting Blender in Debug Mode</h2>
+  <p>
+    Running Blender in debug mode can provide detailed error messages, helping diagnose issues effectively, even in cases where Blender completely crashes. Here’s how to enable debug mode by opening Blender directly from the console:
+  </p>
+
+  <h3>WindowsOS</h3>
+  <p>
+    <ul>
+    <li>1. Open the Command Prompt by pressing <strong>Win + R</strong>, typing <span>cmd</span>, and pressing Enter.<br></li>
+    <li>2. In the Command Prompt, we’ll use <span>cd</span> to navigate to the folder where Blender’s executable (.exe) file is located.
+      <ul>
+          <li><strong>About <span>cd</span>:</strong> The <span>cd</span> command stands for "change directory." It allows you to move to a specified folder on your computer. For example, you can type:
+              <br><span>cd "C:\Program Files\Blender Foundation\Blender"</span><br>
+              This navigates directly to Blender’s installation folder if it’s installed at that path.
+          </li>
+          <li><strong>Changing drives:</strong> If Blender is installed on a different drive (e.g., D:), first type the drive letter followed by a colon (e.g., <span>D:</span>), then press Enter to switch to that drive. After that, use <span>cd</span> as usual to navigate to Blender’s folder.
+          </li>
+          <li><strong>Step-by-step navigation:</strong> You can also navigate step-by-step by typing <span>cd</span> followed by each folder name, like this:
+              <br><span>cd "C:\Program Files"</span><br>
+              then<br><span>cd "Blender Foundation\Blender"</span><br>
+          </li>
+          <li><strong>Going one directoty down:</strong> At any time, you can type <span>cd ..</span> to move down directories.
+          </li>
+      </ul>
+  </li>
+  
+    <li>3. Once in the Blender folder, run Blender in debug mode by typing:
+      <br><span>blender --debug</span><br></li>
+    <li>4. This will start Blender, and the Command Prompt will display detailed debugging information. If Blender crashes, the error messages will remain visible in the Command Prompt window.</li>
+    </ul>
+  </p>
+
+  <h3>MacOS</h3>
+  <p>
+    <ul>
+    <li>1. Open Terminal from your Applications &gt; Utilities folder.<br></li>
+    <li>2. In Terminal, type <span>open -a Blender --args --debug</span> and press Enter. This command starts Blender in debug mode, with the console output visible in Terminal.<br></li>
+    <li>3. If Blender crashes, error messages will remain visible in Terminal, allowing for easier troubleshooting.</li>
+    </ul>
+  </p>
+
+  <p>
+    Starting Blender in debug mode through the console helps capture any crash-related error messages, making it easier to provide detailed logs for support or troubleshoot persistent issues.
+  </p>
+
+</div>
+
+
 
 <div class="end_page_spacing"></div>
 <!-- -------------------------------------------------------------------------------------------------------------- -->

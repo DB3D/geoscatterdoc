@@ -72,7 +72,7 @@
 
 <div class="titleheader">
     <h1>Repulsion</h1>
-    <p>Avoid collision in-between scatter-layers</p>
+    <p>Avoid nearby proximity in-between scatter-layers</p>
 </div>
 
 
@@ -110,40 +110,38 @@
           recommended as it might be too performance intensive.
         </p>
       </div>
-
-      <div class="textr gmstyling card2x">
-        <h3>Limit Collision Option</h3>
-        <p>
-          A limit collision slider is available to limit spawn distance near your
-          affinity object.
-        </p>
-      </div>
       
   </div>  
 </div>
 
+
 <!-- title -->
 
 <div class="titleheader">
-    <h1>Dependencies</h1>
-    <p>Be warned, the ecosystem feature will create dependencies</p>
+  <h1>Density</h1>
+  <p>Scatter your instances only on dense or sparse areas</p>
 </div>
 
+
 <div class="article_content">
-  <div class="medial_textr gmstyling">
+  <div class="medial_textr_big gmstyling">
   
-      <div class="medial card2x">
-        <img src="../img/eco1.png" alt="" />
+      <div class="medial">
+        <div class="gif"><video controls autoplay loop muted playsinline><source src="../mp4/ecodens.mp4" type="video/mp4"></video></div>
       </div>
   
-      <div class="textr card2x">
-        <h2>Resulting Dependencies</h2>
+      <div class="textr card3x">
+        <h2>Ecosystem Density</h2>
         <p>
-          Note that if a dependent system chosen by one of our ecosystem features is
-          hidden, it is impossible for us to evaluate the distance field properly (the
-          data is hidden & therefore not available by our engine). Because of these reasons, 
-          hiding a system in the viewport could trigger a domino effect on the relying
-          system.
+          If you'd like your scatter-system to be spawn dynamically only in areas where other scatter are dense/scarse, 
+          choose the ecosystem density feature. In order to work, you will need to choose up to 3 systems upon where we 
+          will analyse their instances per square area density.
+        </p>
+        <br>
+        <h3>Sampled Area</h3>
+        <p>
+          For this feature to work perfectly, you will need to evaluate
+          the correct sample area size upon a number of instances will be counted to count the density value.
         </p>
       </div>
       
@@ -167,10 +165,9 @@
       <div class="textr card2x">
         <h2>Ecosystems & Biomes</h2>
         <p>
-          Like most features, all ecosystem settings can be exported within a .biome
+          Like most features, all ecosystem settings can be exported within a <span>.biome</span>
           format. Make sure that there are no dependencies issues, by selecting every
-          layer and their dependencies when doing the biome export! (Approximatively
-          20% of the 80 biomes from the default library are using these features).
+          layer and their dependencies when doing the biome export!
         </p>
       </div>
       

@@ -47,19 +47,19 @@
       <li>
         <b>New-Feature: </b> 3 new distribution methods
         <ul> 
-          <li>‘Bezier-Area’ Scatter within the inner area of a selected bezier object, then optionally project the distribution into your chosen surface(s). Because the distribution is generated first on a curve object, then projected on your surface(s) the workflow allows you to distribute on areas of extremely large terrains with no issues.</li>
-          <li>‘Bezier-Spline’ Scatter on a chosen spline, with various options and submethods available. Option to project on your chosen surface(s) also available. This distribution method is also available on the 'on creation' settings menu located in the creation panel: You are able to directly paint a curve spline mask for biomes if the paint method is set to draw spline.</li>
-          <li>‘Empties’ Choose a collection of empties, and instantiate objects on them. Option to project on your chosen surface(s) also available.</li>
+          <li>‘<a href="#" data-doc="#FeatureDistribution&section_bezier_area_distribution">Bezier-Area</a>’ Scatter within the inner area of a selected bezier object, then optionally project the distribution into your chosen surface(s). Because the distribution is generated first on a curve object, then projected on your surface(s) the workflow allows you to distribute on areas of extremely large terrains with no issues.</li>
+          <li>‘<a href="#" data-doc="#FeatureDistribution&section_bezier_spline_distribution">Bezier-Spline</a>’ Scatter on a chosen spline, with various options and submethods available. Option to project on your chosen surface(s) also available. This distribution method is also available on the 'on creation' settings menu located in the creation panel: You are able to directly paint a curve spline mask for biomes if the paint method is set to draw spline.</li>
+          <li>‘<a href="#" data-doc="#FeatureDistribution&section_empties_distribution">Empties</a>’ Choose a collection of empties, and instantiate objects on them. Option to project on your chosen surface(s) also available.</li>
         </ul>
       </li>
       <li>
-        <b>New-Feature:</b> Rework of the ‘In Volume’ distribution method. Now supporting random or grid distribution submethod.
+        <b>New-Feature:</b> Rework of the <a href="#" data-doc="#FeatureDistribution&section_volume_distribution">‘In Volume’ distribution</a> method. Now supporting random or grid distribution submethod.
       </li>
       <li>
         <b>New-Feature:</b> New 'Efficient Distribution' option available for the camera culling feature. Enabled by default, this option significantly boost your compute speed when working with large terrains.
       </li>
       <li>
-        <b>New-Feature:</b> New ecosystem density feature, scatter only on dense/scarce areas of chosen scatter-systems.
+        <b>New-Feature:</b> New <a href="#" data-doc="#FeatureEcosystem&section_density">ecosystem density</a> feature, scatter only on dense/scarce areas of chosen scatter-systems.
       </li>
       <li>
         <b>New-Feature:</b> New manual mode brushes
@@ -74,7 +74,7 @@
         </ul>
       </li>
       <li>
-        <b>New-Feature:</b> New 'smoothing' options, handy if you'd like your effects to not be influenced by the slightest mesh imperfection of your surface(s). Available for the 'rotation align normal/tangent downslope' and 'abiotic slope/orientation/curvature' features. 
+        <b>New-Feature:</b> New <a href="#" data-doc="#FeatureRotation&article_smoothing_option">'smoothing' options</a>, handy if you'd like your effects to not be influenced by the slightest mesh imperfection of your surface(s). Available for the 'rotation align normal/tangent downslope' and 'abiotic slope/orientation/curvature' features. 
       </li>
       <li>
         <b>New-Feature:</b> Enhanced and improved Wind-waves features with new options and sliders. You are now able to create wind patterns that also tilt on its sides instead of tilting unilaterally facing the general wind-wave texture direction.
@@ -86,7 +86,7 @@
         <b>New-Feature:</b> Automatic data-transfer of surfaces attributes when using these new distribution methods, also for manual mode distribution. (previously it was required of users to click on an operator to transfer the surface's attributes).
       </li>
       <li>
-        <b>New-Feature:</b> New methods for the align X/Y axis features, in order to align the rotation instances to the active camera.
+        <b>New-Feature:</b> New methods for the align Z/Y axis features, in order to align the rotation instances to the active camera.
       </li>
       <li>
         <b>New-Feature:</b> Improvement of the offset features. Now featuring new local/global spaces methods, seeds, and a reworked 'random' offset method, previously called 'noise animation'.
@@ -222,11 +222,11 @@
     </div>
     <ul class="faq-answer">
 
-      <p style="margin-left: -19px"><b>Blender Compatibility: </b>  Blender 4.0 & Blender 4.1</p>
+      <p style="margin-left: -19px"><b>Blender Compatibility: </b>  Blender 4.0 to Blender 4.2</p>
       
       <br>
       <li>
-        <b>Release-Notes: </b>This is a blender 4.0+ compatibility release<br />
+        <b>Release-Notes: </b>This is a blender 4.0+ compatibility release. Please note that installation on blender 4.2 needs to be manual. Prefer to use v5.5.<br />
       </li>
 
       <li>
@@ -346,7 +346,7 @@
       </li>
 
       <li>
-        <b>New-Feature: </b> New group implementation
+        <b>New-Feature: </b> New <a href="#" data-doc="#FeatureScattering&section_scatter_groups">group implementation</a>:
         <ul> 
           <li>Group or ungroup the selected scatter-system(s) in the system lister right drop-down menu.</li>
           <li>Organize your scatter layers by renaming and opening/closing a group interface</li>
@@ -421,16 +421,86 @@
   <h2>Compatibility Advices</h2>
   <br>
   <ul>
-    <li>✅ Please verify your Blender plugin compatibility before installing
+    <li>Please verify your Blender plugin compatibility before installing
       anything. Plugins are not compatible with any Blender versions.
     </li>
-    <li>✅ The best demeanor with any software is to stick working on your projects
+    <li>The best demeanor with any software is to stick working on your projects
       on the same version from start to end.
     </li>
-    <li>⛔ Never read a blend file from a higher version in a lower version of
-      Blender.<br/>It's called a forward compatibility error, saving might corrupt your file forever.
+    <li>Never read a blend file from a higher version in a lower version of
+      Blender. Saving new file in olrder version might corrupt your file forever.
     </li>
   </ul>
+
+  <br>
+  <h2>Compatibility Table</h2>
+
+  <p><table border="1">
+    <thead>
+      <tr>
+        <th> </th>
+        <th>b3.0</th>
+        <th>b3.1</th>
+        <th>b3.2</th>
+        <th>b3.3</th>
+        <th>b3.4</th>
+        <th>b3.5</th>
+        <th>b3.6</th>
+        <th>b4.0</th>
+        <th>b4.1</th>
+        <th>b4.2</th>
+        <th>b4.3</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>5.5</td>
+        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>✔</td><td>✔</td>
+      </tr>
+      <tr>
+        <td>5.4.2</td>
+        <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td>✔</td><td>✔</td><td>✔</td><td></td>
+      </tr>
+      <tr>
+        <td>5.4.1</td>
+        <td></td><td></td><td></td><td>✔</td><td>✔</td><td>✔</td><td>✔</td><td></td><td></td><td></td><td></td>
+      </tr>
+      <tr>
+        <td>5.4</td>
+        <td></td><td></td><td></td><td>✔</td><td>✔</td><td>✔</td><td>✔</td><td></td><td></td><td></td><td></td>
+      </tr>
+      <tr>
+        <td>5.3.2</td>
+        <td></td><td></td><td></td><td>✔</td><td>✔</td><td></td><td></td><td></td><td></td><td></td><td></td>
+      </tr>
+      <tr>
+        <td>5.3.1</td>
+        <td></td><td></td><td></td><td>✔</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+      </tr>
+      <tr>
+        <td>5.3</td>
+        <td></td><td></td><td></td><td>✔</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+      </tr>
+      <tr>
+        <td>5.2.1</td>
+        <td></td><td></td><td>✔</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+      </tr>
+      <tr>
+        <td>5.2</td>
+        <td></td><td></td><td>✔</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+      </tr>
+      <tr>
+        <td>5.1</td>
+        <td></td><td>✔</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+      </tr>
+      <tr>
+        <td>5.0</td>
+        <td>✔</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+      </tr>
+    </tbody>
+  </table>
+  </p>
+
 </div>
 
 <!-- title -->

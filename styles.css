@@ -156,6 +156,39 @@
   padding: 0 5px;
 }
 
+.article_content table {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  border-collapse: collapse;
+  border: 1px solid grey;
+  border-radius: 8px;
+  font-weight: normal;
+  overflow: hidden; /* Ensures rounded corners apply to the whole table */
+  table-layout: fixed;
+}
+.article_content table th,
+.article_content table td {
+  width: 100%;
+  max-width: 100%;
+  padding: 0.5%;
+  border: 1px solid grey;
+  text-align: center;
+  text-overflow: ellipsis; 
+  word-wrap: break-word;
+}
+/* .article_content table th {
+  background-color: #f7f7f7;
+  color: #333;
+  border-bottom: 2px solid #bbb;
+} */
+/* .article_content table td {
+  background-color: #f9f9f9;
+}
+.article_content table tr:nth-child(even) td {
+  background-color: #ececec;
+} */
+
 /* all gif from gfycat  */
 
 .gif{
@@ -170,6 +203,29 @@
 .gif video{
   background: #000000;
 }
+.gif video:fullscreen {
+  padding: 0 25%;
+  border-radius: 1%;
+  background-color: rgb(0 0 0 / 50%);
+}
+.gif video:fullscreen::backdrop {
+  background: transparent;
+}
+
+
+
+/* Hide video controls by default */
+
+.gif video::-webkit-media-controls {display: block !important;}
+.gif video::-moz-media-controls {display: block !important;}
+.gif video::-ms-media-controls {display: block !important;}
+
+/* Show back controls on hover */
+
+.gif video:hover::-webkit-media-controls {display: flex !important;}
+.gif video:hover::-moz-media-controls {display: flex !important;}
+.gif video:hover::-ms-media-controls {display: flex !important;}
+
 
 /* separator line*/
 

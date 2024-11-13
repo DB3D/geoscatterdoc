@@ -38,13 +38,12 @@
         <h3>Operation Coefficient:</h3>
         <p>
           Right below the density and seed properties is the
-          <i>"Operation Coefficient"</i> layout, these settings will let you
-          quickly multiply/ divide/ add/ subtract the density by a given factor.
+          <i>"Operation Coefficient"</i> layout, this interface will let you
+          quickly multiply/ divide/ add/ subtract the density by a given factor. You can also hold <span>ALT</span> while clicking to batch apply the coefitient to the selected systems, a very effective way to batch change your distributions densities.
         </p>
         <h3 class="flex_bottomalign">Default Alignment:</h3>
         <p>
-          The default normal/tangent alignments of instances for this distribution
-          method will be the surface's Z and Y axis.
+          The default normal/tangent axes of your instances will be your surfaces local Z and Y axes.
         </p>
     </div>
 
@@ -134,10 +133,10 @@
         </p>
         <h3 class="flex_bottomalign">Default Alignment:</h3>
         <p>
-          By default, the normal of the instances will be aligned toward the face's
-          normal direction, and the default tangent alignment will be based on the
-          adjacents vertices ID, therefore the alignment will stay stable even
-          when rotating a face.
+          By default, the normal axis of your instances will be aligned toward the face's
+          normal direction, and the default tangent axis will be aligned on the
+          adjacents edge, therefore the alignment will stay stable even
+          when rotating a face in edit mode.
         </p>
     </div>
 
@@ -146,8 +145,7 @@
 
       <h2>Exclusive Scale Feature</h2>
         <p>
-          When choosing the face distribution method, a new option will be available in the scale category, 
-          useful to scale the instances according to their emitting face area.
+          When choosing the face distribution method, a new <span>Scale > Face Size Influence</span> feature will be available, useful to scale the instances according to their emitting face area.
         </p>
     </div>
 
@@ -161,10 +159,9 @@
         </p>
         <h3>Default Alignment:</h3>
         <p>
-          By default, the normal/tangent of the instances will be aligned toward
+          By default, the normal/tangent axes of your instances will be aligned toward
           the direction of the edges, depending on your position mode. All default
-          alignments are stable, relative to the edges, even when moving or
-          extruding the mesh.
+          alignments are stable, relative to the edges, even when extruding a vertex in edit mode for example.
         </p>
     </div>
 
@@ -173,13 +170,7 @@
 
         <h2>Exclusive Scale Feature</h2>
         <p>
-          When choosing the edge distribution method, a new option will be available in the scale category, 
-          useful to scale the instances according to their emitting edges length.
-        </p>
-        <p>
-          There are 3 scaling methods available, "Frozen Scale" will reset
-          all scales to 1.0, "Dynamic Scale" will adjust the scale starting
-          from 1.0 depending on range threshold, and 'Default Scale'.
+          When choosing the edge distribution method, a new <span>Scale > Edge Length Influence</span> feature will be available, useful to scale the instances according to their emitting edges length.
         </p>
     </div>
 
@@ -191,8 +182,7 @@
         <p>Simply distribute one instance per mesh-vertex.</p>
         <h3>Default Alignment:</h3>
         <p>
-          The default normal/tangent alignments of instances will be the surface's
-          Z and Y axis.
+          The default normal/tangent axes of your instances will be your surfaces local Z and Y axes.
         </p>
     </div>
 
@@ -203,7 +193,7 @@
 
 <div class="titleheader">
     <h1>Volume Distribution</h1>
-    <p>Distribute points inside a volume</p>
+    <p>Distribute inside a volume</p>
 </div>
 
 <div class="article_content">
@@ -214,15 +204,12 @@
 
         <h2>Volume Distribution</h2>
         <p>
-          The volume distribution method will generate points inside the
-          surface(s) volume. The distribution algorithm is based on the normal
-          directions and is biased toward the Zaxis. The limit distance option is also
-          available for this distribution method.
+          The volume distribution method will generate instances inside the volume of the geometries selected in <span>Tweak > Surface</span>.
+          You are able to choose a 'grid' distribution sub-method, change the distribution density and seed, and change the distribution space to local/global space.
         </p>
         <h3 class="flex_bottomalign">Default Alignment:</h3>
         <p>
-          The default normal/tangent alignments of instances will be the surfaces
-          Z and Y axis.
+          The default normal/tangent axes of your instances will be your surfaces local Z and Y axes.
         </p>
     </div>
 
@@ -233,9 +220,7 @@
         <p>Some feature(s) are not available for this distribution method:</p>
         <ul>
           <li>Mask>Vertex Group</li>
-          <li>
-            Mask>Color-Attribute
-          </li>
+          <li>Mask>Color-Attribute</li>
           <li>Mask>Image</li>
           <li>Mask>Material</li>
           <li>Abiotic>Slope</li>
@@ -243,8 +228,18 @@
           <li>Abiotic>Curvature</li>
           <li>Abiotic>Border</li>
           <li>Visibility>Area-Preview</li>
-          <li>Any Feature relying on UV space or vertex-colors will be inconsistent</li>
+          <li>Any Feature relying on surface datas might be inconsistent</li>
         </ul>
+    </div>
+
+    <div class="flex_singlecard gmstyling card2x">
+      <div class="gif"><video controls autoplay loop muted playsinline><source src="../mp4/exvol.mp4" type="video/mp4"></video></div>
+
+        <h2>Grid Local vs Global</h2>
+        <p>
+          Here's an example with the 'grid' volume distribution sub-method. With this distribution, the instanciated cubes will be placed on a orderly manner following a 3D grid pattern.
+           As we can see in the video, choosing global space will compute a stable grid on a stable world space, and selecting a local space, the distribution will stay stable even when changing Suzzanne transforms.
+        </p>
     </div>
 
   </div>    
@@ -275,23 +270,22 @@
     <div class="flex_singlecard gmstyling card2x">
       <div class="gif"><video controls autoplay loop muted playsinline><source src="../mp4/DependableGrandAlpaca.mp4" type="video/mp4"></video></div>
 
-        <h2>Default Tangent Alignment</h2>
+        <h2>Default Alignment</h2>
         <p>
-          If the tangent alignment feature is disabled, the default tangent
-          alignment of your children will be the direction from the parent clump
+          If the <span>Rotation > Align Tangent</span> feature is disabled, the default tangent
+          alignment of your clump children will be the direction toward the parent clump
           center. This is very useful for plants, as the leaves or branches will
-          need to be aligned as such.
+          need to be aligned as such. The default normal axis of your instances will be the normal axis of your surfaces.
         </p>
     </div>
 
     <div class="flex_singlecard gmstyling card2x">
       <div class="gif"><video controls autoplay loop muted playsinline><source src="../mp4/ImpoliteFrighteningHammerheadbird.mp4" type="video/mp4"></video></div>
 
-        <h2>Exclusive Scale Feature</h2>
+        <h2>Exclusive Clump Scale Feature</h2>
         <p>
-          When choosing the clump distribution mode, a new scale falloff feature
-          will be available in the scale subpanel. The scale will be driven by
-          your falloff distance.
+          When choosing the clump distribution mode, a new <span>Scale > Clump Scale</span>
+          feature available in the <span>Tweak</span> panel. The scale will be driven by your falloff distance.
         </p>
         <br>
     </div>
@@ -299,17 +293,16 @@
     <div class="flex_singlecard gmstyling card2x">
       <div class="gif"><video controls autoplay loop muted playsinline><source src="../mp4/RadiantLoathsomeHyrax.mp4" type="video/mp4"></video></div>
 
-        <h2>Exclusive Rotation Feature</h2>
+        <h2>Exclusive Clump Rotation Feature</h2>
         <p>
-          A new normal influence slider will appear in the rotation subpanel, to
-          tilt your children's normal direction toward/outward clumps center.
+          A new normal influence slider will appear in the <span>Rotation > Align Normal</span> interface, useful to tilt your children's normal direction toward/outward clumps center.
         </p>
     </div>
 
     <div class="flex_singlecard gmstyling card2x">
       <div class="gif"><video controls autoplay loop muted playsinline><source src="../mp4/LeftFaintChupacabra.mp4" type="video/mp4"></video></div>
 
-        <h2>Exclusive Instancing Feature</h2>
+        <h2>Exclusive Clump Instancing Feature</h2>
         <p>
           It's possible to assign the instances per clump! If the instance picking
           method is set to cluster, a new toggle will be available, exclusively
@@ -436,7 +429,7 @@
       </p>
       <br>
       <h3 class="flex_bottomalign">Default Alignment:</h3>
-      <p>The default normal/tangent alignments of instances will be the surface's Z and Y axis.</p>
+      <p>The default normal/tangent axes of your instances will be your surfaces local Z and Y axes.</p>
     </div>
 
     <div class="flex_singlecard gmstyling card2x">
@@ -472,29 +465,238 @@
   <div class="flex_cards_section">
       
     <div class="flex_singlecard gmstyling card2x">
+      <div class="gif"><video controls autoplay loop muted playsinline><source src="../mp4/exman.mp4" type="video/mp4"></video></div>
       <h2 style="padding-top: 0;">How to Use</h2>
-      <p>Scatter a new system, then in tweaking>distribution, change the distribution method to "manual". You will be able
-        to enter the dedicated manual mode environment. Note that all settings of the procedural distribution can also
-        have an influence on the point created in manual mode.</p>
+      <p>In <span>Tweak > Distribution</span>, change the distribution method to "manual". You will then be able
+        to enter the dedicated manual mode workfspace where you will find a toolshelf on your left with various distribution or tweaking brushes.</p>
     </div>
 
     <div class="flex_singlecard gmstyling card2x">
+      
+      <h2 style="padding-top: 0;">Procedural Workflow</h2>
+      <p>
+        Note that all settings of the procedural distribution workflow can also have an influence on the point created in manual mode. You are able to manually place and define instances scale and rotation, then 
+        use procedural features to affect your instances.
+      </p>
+
+      <br>
+      
       <h2 style="padding-top: 0;">Default Alignment</h2>
-      <p>The default alignments will vary depending on your brush rotation settings, each point is encoded with its own
+      <p>
+        The default alignments will vary depending on your brush rotation settings, each point is encoded with its own
         rotation and alignment information.
       </p>
+
+      <br>
+
+      <h2 style="padding-top: 0;">Discover the Workflow</h2>
+      <p>
+        Please consult the dedicated <a href="#" data-doc="#FeatureManualmode">manual mode
+          page</a> for more information about this whole new workflow.
+        </p>
       </div>
 
   </div>
 </div>
 
-<div class="article_content gmstyling" style="margin-top: 0;">
-  <h3>
-    Please consult the <a href="#" data-doc="#FeatureManualmode">manual mode
-      page</a> for information about this distribution method.
-    </h3>
+<!-- title -->
+
+<div class="titleheader">
+  <h1>Bezier Area Distribution</h1>
+  <p>Distribute instances on a closed bezier area.</p>
 </div>
+
+<div class="article_content">
+  <div class="flex_cards_section">
+
+  <div class="flex_singlecard gmstyling card2x">
+    <div class="gif"><video controls autoplay loop muted playsinline><source src="../mp4/exbezarea.mp4" type="video/mp4"></video></div>
+
+      <h2>Bezier-Area Distribution</h2>
+      <p>
+        The 'Bezier-Area' distribution algorithm places instances across the imaginary surface of a chosen bezier area. 
+      </p>
+
+      <h3>Project on Surfaces</h3>
+      <p>
+        By default, 
+        the distribution will then be projected onto your specified scatter-surface(s) from <span>Tweak > Surfaces</span> however you have the 
+        option to leave the distribution attached to your spline, independently from your surfaces.
+      </p>
+
+      <h3 class="flex_bottomalign">Pro Tip:</h3>
+      <p>
+        You can close a bezier spline if by clicking on the <span>Cyclic U</span> option located in <span>Properties > Curve > Active Spline</span>.
+      </p>
+
+    </div>
+    
+    <div class="flex_singlecard gmstyling card2x">
+
+      <h2>Exclusive Proximity Feature</h2> 
+      <p>
+        A new <span>Proximity > Bezier-Area Border</span> feature will be available when choosing this distribution method, ideal if you'd like to offset your distribution relative to the distance from your bezier-area border.
+      </p>
+      <br>
+
+      <h2 style="padding-top: 0;">Default Alignment</h2>
+      <p>
+        The default normal/tangent axes of your instances will by default align to the local Z/Y axes of your curve object.
+      </p>
+
+      <h2>Features Compatibility</h2>
+      <p>Please note that some procedural features or options dependent on the datas of your surfaces may not function or be available if the 'Project on Surface(s)' option is disabled.</p>
+
+      <h2>Performance Benefits</h2>
+      <p>
+        By first distributing locally on your curve, then proceed to project your distribution on your surfaces will allow you to distribute instances on extremely large terrains with no impact on performances.
+      </p>
+
+    </div>
+
+  </div>
+</div>
+<!-- title -->
+
+<div class="titleheader">
+  <h1>Bezier Spline Distribution</h1>
+  <p>Distribute instances on a bezier spline.</p>
+</div>
+
+
+<div class="article_content">
+  <div class="flex_cards_section">
+
+  <div class="flex_singlecard gmstyling card2x">
+    <div class="gif"><video controls autoplay loop muted playsinline><source src="../mp4/exspli.mp4" type="video/mp4"></video></div>
+    <h2>Bezier-Spline Distribution</h2>
+    <p>
+      The 'Bezier-Spline' distribution algorithm places instances directly upon/around the splines of a chosen bezier curve. 
+    </p>
+
+    <h3>Project on Surfaces</h3>
+    <p>
+      By default, the distribution will then be projected onto your specified scatter-surface(s) from <span>Tweak > Surfaces</span> however you have the 
+      option to leave the distribution attached to your spline, independently from your surfaces.
+    </p>
+
+    <h3 class="flex_bottomalign">Pro Tip:</h3>
+    <p>
+      You can edit your splines in edit mode, change their radius and tilt properties with the tools available in the left-side toolshelf.
+    </p>
+
+  </div>
   
+  <div class="flex_singlecard gmstyling card2x">
+
+    <h2>Exclusive Radius Feature</h2> 
+    <p>
+      A new <span>Scale > Spline Radius Influence</span> feature will be available when choosing this distribution method, useful if you'd like your instances scale to vary according to your curve radius.
+    </p>
+    <br>
+
+    <h2 style="padding-top: 0;">Default Alignment</h2>
+    <p>
+      By default your instances will by be aligned to your curve normal and tangent axes.
+    </p>
+
+    <h2>Features Compatibility</h2>
+    <p>Please note that some procedural features or options dependent on the datas of your surfaces may not function or be available if the 'Project on Surface(s)' option is disabled.</p>
+
+  </div>
+
+  <div class="flex_singlecard gmstyling card2x">
+    <div class="gif"><video controls autoplay loop muted playsinline><source src="../mp4/exsplibi.mp4" type="video/mp4"></video></div>
+    <h2>Draw Scatter Workflow</h2> 
+    <p>
+      Drawing instances along a spline, then projecting these instances on your surfaces is a versatile and useful trick you should add to your environment artist toolset!
+      Once set up you can start to draw a curve carelessly across your surfaces from the native blender 'draw freehand spline' tool in curve edit mode. 
+      <br>
+    </p>
+    <h3>Compatible with Biomes</h3> 
+    <p>
+      Best of all, the biome system along as all operators of the <span>Create</span> panel disposes of direct bezier-area or bezier-spline drawing actions. 
+      You will save time by enabling the option, especially with the biome system, as you'll be able to project whole biomes from projected curves drawn on the fly. 
+      To so, go in the popover 'On Creation' menu located next to the large scatter buttons, then choose the <span>Paint Mask > Bezier</span> options.
+    </p>
+    <h3 class="flex_bottomalign">Pro Tip:</h3>
+    <p>
+      In the gif example we are drawing a biome with 7 various folower layers all assigned to the same curve. We are using the <span>ALT</span> key to batch tweak the bezier width property to all 7 scatters at once.
+    </p>
+
+  </div>
+
+  <div class="flex_singlecard gmstyling card2x">
+
+    <h2>Advanced options</h2>
+    <p>
+      This distribution offers you a lot of fine-tuning abilities:
+      <ul>
+        <li>You are able to choose a distribution subtype, either distribute directly on the spline, or create a pathway area following the spline.</li>
+        <li>You can precisely define your spline incline direction: Should your distribution follow the curve tilt, should it follow another direction depending on your local/global transforms? Or even follow the same incline direction of the nearest terrain?</li>
+        <li>Like most distribution methods you are able to define your distribution space, and use the limit collision option</li>
+        <li>If you are using the 'Pathway Area' submethod:</li>
+        <ul>
+          <li>You can control your pathway area width, transition and falloff.</li>
+          <li>You are able to influence your pathway width depending on your spline radius attribute.</li>
+        </ul>
+        <li>If you are using the 'On spline' submethod:</li>
+        <ul>
+          <li>By default the instances will be evenly distributed along your spline, however you have the option to randomize/spread their locations along or on the side of their spline.</li>
+          <li>You are able to create 'rows' dupplicatas of your instances on the sides of your spline.</li>
+        </ul>
+      </ul>
+
+    </p>
+
+  </div>
+
+  </div>
+</div>
+<!-- title -->
+
+<div class="titleheader">
+  <h1>Empties Distribution</h1>
+  <p>Distribute instances on empties located in a given collection.</p>
+</div>
+
+<div class="article_content">
+  <div class="flex_cards_section">
+      
+    <div class="flex_singlecard gmstyling card2x">
+      <div class="gif"><video controls autoplay loop muted playsinline><source src="../mp4/exempt.mp4" type="video/mp4"></video></div>
+      <h2>Empties Distribution</h2>
+      <p>
+        The 'Empties' distribution method assigns instances to empties contained within a selected collection. By default, your instances will inherit the orientation and scale of the empties.
+        <br>
+        <br>
+        This distribution method is quite useful if you'd prefer to use Geo-Scatter to handle your traditional  'manually placed' object instances on your scene. 
+        It will offer you a good flexibility of manually placing objects as you are used to with <span>ALT + D</span> in your scene, while leveraging the useful features and management capabilities of Geo-Scatter.
+      </p>
+    </div>
+
+    <div class="flex_singlecard gmstyling card2x">
+
+      <h2>Project on Surfaces</h2> 
+      <p>
+        Like the spline or bezier area distribution methods, this distribution can also be projected onto your specified scatter-surface(s) from <span>Tweak > Surfaces</span>. By default your instances 
+        will be tied to your empties transforms, however it might be a good idea to have them procedurally snapped on your surfaces</p>
+      <br>
+
+      <h2>Exclusive Emtpies Features</h2> 
+      <p>
+        A new <span>Scale > Empties Scale Influence</span> feature will be available when choosing this distribution method, enabled by default.
+      </p>
+      <br>
+
+      <h2>Features Compatibility</h2>
+      <p>Please note that some procedural features or options dependent on the datas of your surfaces may not function or be available if the 'Project on Surface(s)' option is disabled.</p>
+
+    </div>
+
+  </div>
+</div>
+
 
 
 <div class="end_page_spacing"></div>
