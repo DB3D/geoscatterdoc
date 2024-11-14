@@ -64,13 +64,12 @@
       <li>
         <b>New-Feature:</b> New manual mode brushes
         <ul> 
-          <li>‘Line’ distribution brush. Draw points at regular interval along a straight line projected from the global Z axis.</li>
-          <li>‘Lasso Delete’ removal brush. A new lasso deletion brush.</li>
-          <li>‘Push’ translation brush. Push manually distributed instances around depending on the direction of your brush-strokes.</li>
-          <li>‘Split’ translation brush. Create a pathway between manually distributed instances. Press CTRL for the reverse effect.</li>
-          <li>‘Attract’ translation brush. Attract manually distributed instances together. Press CTRL for the reverse effect.</li>
-          <li>‘Turbulence’ translation brush. Randomly push the location of manually distributed instances around, great if you'd like to create a random.</li>
-          <li>‘Relax’ translation brush improvement. The relax algorithm is much faster and better at offsetting manually distributed instances at equidistant locations.</li>
+          <li>‘<a href="#" data-doc="#FeatureManualmode&article_line_brush">Line</a>’ distribution brush. Draw points at regular interval along a straight line projected from the global Z axis.</li>
+          <li>‘<a href="#" data-doc="#FeatureManualmode&article_lasso_eraser_brush">Lasso Delete</a>’ removal brush. A new lasso deletion brush.</li>
+          <li>‘<a href="#" data-doc="#FeatureManualmode&article_push_brush">Push</a>’ translation brush. Push manually distributed instances around depending on the direction of your brush-strokes.</li>
+          <li>‘<a href="#" data-doc="#FeatureManualmode&article_split_brush">Split</a>’ translation brush. Create a pathway between manually distributed instances. Press CTRL for the reverse effect.</li>
+          <li>‘<a href="#" data-doc="#FeatureManualmode&article_attract_brush">Attract</a>’ translation brush. Attract manually distributed instances together. Press CTRL for the reverse effect.</li>
+          <li>‘<a href="#" data-doc="#FeatureManualmode&article_turbulence_brush">Turbulence</a>’ translation brush. Randomly push the location of manually distributed instances around, great if you'd like to create a random.</li>
         </ul>
       </li>
       <li>
@@ -80,7 +79,7 @@
         <b>New-Feature:</b> Enhanced and improved Wind-waves features with new options and sliders. You are now able to create wind patterns that also tilt on its sides instead of tilting unilaterally facing the general wind-wave texture direction.
       </li>
       <li>
-        <b>New-Feature:</b> New proximity simulation imprint option for the proximity repel features. Create an imprint effect from passing colliders. (This option requires an animation running).
+        <b>New-Feature:</b> New proximity <a href="#" data-doc="#FeatureProximity&article_imprint_simulation">imprint simulation option</a> for the proximity repel features. Create an imprint effect from passing colliders. (This option requires an animation running).
       </li>
       <li>
         <b>New-Feature:</b> Automatic data-transfer of surfaces attributes when using these new distribution methods, also for manual mode distribution. (previously it was required of users to click on an operator to transfer the surface's attributes).
@@ -95,7 +94,7 @@
         <b>New-Feature:</b> For features relying on the active camera (such as camera visibility) the camera update behavior drop-down enum now features a new ‘real-time’ option. When choosing this option, the Geometry-node scatter engine will use the recently added 'Active Camera' input node instead of relying on our plugin constantly feeding camera transforms information. So use this feature if you'd like to send your .blend file to a cloud render.
       </li>
       <li>
-        <b>New-Feature: </b> Better in-between files scatter's management
+        <b>New-Feature: </b> Better <a href="#" data-doc="#FeatureExtra&article_passive_data_management">passive data management</a>:
         <ul> 
           <li>We now support appending/linking scatters from other .blend files. To do so, simply append or link scatter_obj or emitters from your other files.</li>
           <li>We now support duplicating scenes containing scatters. Behavior when scattering across multiple scenes is improved.</li>
@@ -121,7 +120,7 @@
         <b>Improvement:</b> Better error notification and management-system for missing scatter_obj or emitters or else. You'll get notified & directly proposed a solution if a problem were to occur.
       </li>
       <li>
-        <b>Improvement:</b> New default user-interface look consisting of checkbox buttons with icons. If you don’t like this style, disable ‘use toggles with icons’ in the plugin preferences.
+        <b>Improvement:</b> New default <a href="#" data-doc="#FeatureExtra&article_customize_your_ui">user-interface look</a> consisting of checkbox buttons with icons. If you don’t like this style, disable ‘use toggles with icons’ in the plugin preferences.
       </li>
       <li>
         <b>Improvement:</b> Scattering the selected assets will now consider the selection across all possible open asset-browser editors instead of picking the first one found.
@@ -131,6 +130,9 @@
       </li>
       <li>
         <b>Improvement:</b> The visibility frustrum culling feature now supports blender horizontal or vertical sensor fit method camera data options.
+      </li>
+      <li>
+        <b>Improvement:</b> Manual mode ‘Relax’ translation brush improvement. The relax algorithm is much faster and better at offsetting manually distributed instances at equidistant locations.
       </li>
       <li>
         <b>Improvement:</b> The Copy/paste systems operation located in system lister drop-down menu now supports manual mode scatters as well.

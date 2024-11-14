@@ -50,11 +50,10 @@
         encoded within a newly created mesh. Painting with a manual distribution
         brush will define new points in space, with specific rotation, scale, and
         instance attributes.
-      </p>
-      <p>
+        <br>
+        <br>
         Once the points are defined and encoded, they will be processed in the
-        scatter engine, like any other distribution mode, for instancing and
-        enabling all various procedural effects.
+        scatter engine.
       </p>
     </div>
 
@@ -87,7 +86,7 @@
     </div>
 
     <div class="flex_singlecard gmstyling card3x">
-      <img src="../img/mode6.jpg" alt="" />
+      <div class="gif"><video controls autoplay loop muted playsinline><source src="../mp4/gesturedemo.mp4" type="video/mp4"></video></div>
       <h2>Gesture Gizmo</h2>
       <p>
         Just like native Blender, each brush has its own gesture gizmos that are called
@@ -129,7 +128,6 @@
 
     <div class="flex_singlecard gmstyling card3x">
         <div class="gif"><video controls autoplay loop muted playsinline><source src="../mp4/JointAmusedAnole.mp4" type="video/mp4"></video></div>
-
         <h2>Dot Brush</h2>
         <p>
           Create a single instance per LMB. Instance initial rotation and scale
@@ -140,7 +138,6 @@
 
     <div class="flex_singlecard gmstyling card3x">
         <div class="gif"><video controls autoplay loop muted playsinline><source src="../mp4/AdeptMiniatureIndiancow.mp4" type="video/mp4"></video></div>
-
         <h2>Pose Brush</h2>
         <p>
           Create a single instance interactively, LMB to set instance location,
@@ -152,7 +149,6 @@
 
     <div class="flex_singlecard gmstyling card3x">
         <div class="gif"><video controls autoplay loop muted playsinline><source src="../mp4/NarrowWeakBlackrussianterrier.mp4" type="video/mp4"></video></div>
-
         <h2>Path Brush</h2>
         <p>
           Creates instances along mouse trail at given a distance interval. Extra
@@ -163,7 +159,6 @@
 
     <div class="flex_singlecard gmstyling card3x">
         <div class="gif"><video controls autoplay loop muted playsinline><source src="../mp4/DemandingFreshArthropods.mp4" type="video/mp4"></video></div>
-
         <h2>Chain Brush</h2>
         <p>
           the chain brush is similar to the path brush with the specificity that
@@ -171,9 +166,17 @@
         </p>
     </div>
 
+    
+    <div class="flex_singlecard gmstyling card3x">
+      <div class="gif"><video controls autoplay loop muted playsinline><source src="../mp4/linebrush.mp4" type="video/mp4"></video></div>
+      <h2>Line Brush</h2>
+      <p>
+        The line brush will distribute instances at regular interface along a line. An divergence option will be available to randomize the spread along the line.
+      </p>
+  </div>
+
     <div class="flex_singlecard gmstyling card3x">
         <div class="gif"><video controls autoplay loop muted playsinline><source src="../mp4/NiftyVariableIaerismetalmark.mp4" type="video/mp4"></video></div>
-
         <h2>Spatter Brush</h2>
         <p>
           Similar to the path brush, with an added randomness offset per stroke.
@@ -182,7 +185,6 @@
 
     <div class="flex_singlecard gmstyling card3x">
         <div class="gif"><video controls autoplay loop muted playsinline><source src="../mp4/PleasingGrossBarasingha.mp4" type="video/mp4"></video></div>
-
         <h2>Spray Brush</h2>
         <p>
           This brush behaves like a real aerial spray, the nozzle is represented
@@ -192,7 +194,6 @@
 
     <div class="flex_singlecard gmstyling card3x">
         <div class="gif"><video controls autoplay loop muted playsinline><source src="../mp4/HonoredAccomplishedBasilisk.mp4" type="video/mp4"></video></div>
-
         <h2>Spray Align Brush</h2>
         <p>
           The Align Spray brush is a variation of the spray brush, with the added
@@ -201,14 +202,22 @@
     </div>
 
     <div class="flex_singlecard gmstyling card3x">
-        <div class="gif"><video controls autoplay loop muted playsinline><source src="../mp4/IcyGrimIberiannase.mp4" type="video/mp4"></video></div>
-
+        <div class="gif"><video controls autoplay loop muted playsinline><source src="../mp4/demolasso.mp4" type="video/mp4"></video></div>
         <h2>Lasso Fill Brush</h2>
         <p>
           The lasso fill brush is useful to distribute a chosen density of
           instances inside the drawn area.
         </p>
     </div>
+
+    <div class="flex_singlecard gmstyling card3x">
+      <div class="gif"><video controls autoplay loop muted playsinline><source src="../mp4/clonebrush.mp4" type="video/mp4"></video></div>
+      <h2>Clone Brush</h2>
+      <p>
+        With the clone brush, you'll first need to sample an area with the sample shortcut, then each click will copy the points locations/rotations/scales and instancing ids to the locations of your brushstrokes.
+        Note that this brush will work best if you are using manual mode instancing ID. 
+      </p>
+  </div>
 
   </div>
 </div>
@@ -225,18 +234,24 @@
 
     <div class="flex_singlecard gmstyling card3x">
       <div class="gif"><video controls autoplay loop muted playsinline><source src="../mp4/ArtisticEuphoricIguanodon.mp4" type="video/mp4"></video></div>
-
       <h2>Eraser Brush</h2>
       <p>Removes instances inside brush radius at a given probability rate.</p>
     </div>
 
     <div class="flex_singlecard gmstyling card3x">
       <div class="gif"><video controls autoplay loop muted playsinline><source src="../mp4/DapperOfficialCopperhead.mp4" type="video/mp4"></video></div>
-
       <h2>Dilute Brush</h2>
       <p>
         Removes instances inside the brush radius at a given probability rate, until
         reaching a minimal distance between points.
+      </p>
+    </div>
+
+    <div class="flex_singlecard gmstyling card3x">
+      <div class="gif"><video controls autoplay loop muted playsinline><source src="../mp4/lassoerase.mp4" type="video/mp4"></video></div>
+      <h2>Lasso Eraser Brush</h2>
+      <p>
+        Removes instances inside the area radius of a drawn lasso.
       </p>
     </div>
 
@@ -283,7 +298,7 @@
     </div>
 
     <div class="flex_singlecard gmstyling card3x">
-      <div class="gif"><video controls autoplay loop muted playsinline><source src="../mp4/TepidGenerousFoxterrier.mp4" type="video/mp4"></video></div>
+      <div class="gif"><video controls autoplay loop muted playsinline><source src="../mp4/freemovebrush.mp4" type="video/mp4"></video></div>
       <h2>Free Move Brush</h2>
       <p>
         Freely move the points inside your brush radius in 3D space.
@@ -293,7 +308,7 @@
     </div>
 
     <div class="flex_singlecard gmstyling card3x">
-      <div class="gif"><video controls autoplay loop muted playsinline><source src="../mp4/WeeklyInsignificantFruitfly.mp4" type="video/mp4"></video></div>
+      <div class="gif"><video controls autoplay loop muted playsinline><source src="../mp4/dropdownbrush.mp4" type="video/mp4"></video></div>
       <h2>Drop Down Brush</h2>
       <p>Drop down detached points to the surface(s) below.</p>
     </div>
@@ -301,15 +316,48 @@
     <div class="flex_singlecard gmstyling card3x">
       <div class="gif"><video controls autoplay loop muted playsinline><source src="../mp4/ScientificPresentAmericanmarten.mp4" type="video/mp4"></video></div>
       <h2>Manipulator</h2>
-      <p>Translate/Rotate/Rescale the selected point.</p>
+      <p>Translate/Rotate/Rescale the selected point. First select the object to manipulate, then use the shortcut to swap to your regular transform gizmo.</p>
     </div>
 
     <div class="flex_singlecard gmstyling card3x">
-      <div class="gif"><video controls autoplay loop muted playsinline><source src="../mp4/KindCriminalGyrfalcon.mp4" type="video/mp4"></video></div>
+      <div class="gif"><video controls autoplay loop muted playsinline><source src="../mp4/attractbrush.mp4" type="video/mp4"></video></div>
+      <h2>Attract Brush</h2>
+      <p>
+        The attract brush will attract or repulse your distribution depending if you are using the <span>CTRL</span> shortcut while clicking.
+      </p>
+    </div>
+
+    <div class="flex_singlecard gmstyling card3x">
+      <div class="gif"><video controls autoplay loop muted playsinline><source src="../mp4/pushbrush.mp4" type="video/mp4"></video></div>
+      <h2>Push Brush</h2>
+      <p>
+        The push brush will push your instances along your surface depending on your stroke direction. If you hold <span>CTRL</span> while clicking, the brush will 
+        use a stright line shape to push your instances around instead of a circle.
+      </p>
+    </div>
+
+    <div class="flex_singlecard gmstyling card3x">
+      <div class="gif"><video controls autoplay loop muted playsinline><source src="../mp4/splitbrush.mp4" type="video/mp4"></video></div>
+      <h2>Split Brush</h2>
+      <p>
+        The split brush is ideal for creating a path in your distribution as it will push your instances to the brush stroke sides. If you hold <span>CTRL</span>
+        it will do the opposite.
+      </p>
+    </div>
+
+    <div class="flex_singlecard gmstyling card3x">
+      <div class="gif"><video controls autoplay loop muted playsinline><source src="../mp4/turbulencebrush.mp4" type="video/mp4"></video></div>
+      <h2>Turbulence Brush</h2>
+      <p>
+        The turbulence brush will randomly move your instances along their surfaces.
+      </p>
+    </div>
+
+    <div class="flex_singlecard gmstyling card3x">
+      <div class="gif"><video controls autoplay loop muted playsinline><source src="../mp4/relaxbrush.mp4" type="video/mp4"></video></div>
       <h2>Relax Brush</h2>
       <p>
-        The relax brush will smooth the position of the points. This brush is
-        working in 2.5D space.
+        The relax brush will smooth the position of the points creating a more uniform looking distribution with equally distance neighbors.
       </p>
     </div>
 
@@ -457,54 +505,20 @@
 <!-- title -->
 
 <div class="titleheader">
-    <h1>Convert Operation</h1>
-    <p>Bring your regular scatter to manual mode</p>
-</div>
-
-<div class="article_content">
-  <div class="medial_textr gmstyling">
-  
-      <div class="medial card2x">
-        <img src="../img/mode7.jpg" alt="" />
-      </div>
-  
-      <div class="textr card2x">
-        <h2>Convert Operation</h2>
-        <p>
-          In the distribution header menu, there is an operator available to convert
-          your procedurally generated points to manual mode. This operator is
-          semi-destructive, as it will turn off most procedural features ( you can
-          return to procedural distribution mode and turn them on afterward if
-          needed ). 
-          <br />
-          <br />
-          Manual mode can handle smoothly up to 50.000 points depending on your
-          computer, so do not try to convert more than 500k instances, it is not
-          designed for such workload. It also does not make sense to destructively
-          control such a large number of elements, perhaps you are looking for a
-          specific procedural feature, more adequate to your situation?
-        </p>
-      </div>
-      
-  </div>  
-</div>
-
-<!-- title -->
-
-<div class="titleheader">
   <h1>Header Options</h1>
   <p>the header of manual mode had a few handy options!</p>
 </div>
 
 <div class="article_content" style="padding-bottom: 0;">
-  <div class="medial_textr">
+  <div class="medial_textr gmstyling">
   
-      <div class="medial gmstyling cardlarge">
+      <div class="medial card2x">
         <img src="../img/mode8.jpg" alt="" />
-        <br>
-        <br>
+      </div>
+
+        <div class="textr card2x">
         <h2>Header Options</h2>
-        <p>There are a few extra features available in the manual mode header:</p>
+        <p>There are important options available in the manual mode header:</p>
         <ul>
           <li>
             <p>
@@ -530,7 +544,7 @@
               </li>
               <li>
                 <p>
-                  Intersect points to surface (in case if your surface(s)
+                  Re-assign/drop points to their surfaces (in case if your surface(s)
                   mesh(es) have been edited, please run this operator to
                   refresh the positions of the points)
                 </p>
@@ -546,14 +560,48 @@
           <li>
             <p>
               In the Systems header menu, you are able to quickly swap between
-              manual scatter-systems or add a new manual system. The future
-              instances will be the selected asset of your asset browser.
+              existing manual scatters or add a new manual system with instances from your asset browser.
             </p>
           </li>
         </ul>
       </div>
   
   </div>  
+</div>
+
+<!-- title -->
+
+<div class="titleheader">
+  <h1>Convert Operation</h1>
+  <p>Bring your regular scatter to manual mode</p>
+</div>
+
+<div class="article_content">
+<div class="medial_textr gmstyling">
+
+    <div class="medial card2x">
+      <img src="../img/mode7.jpg" alt="" />
+    </div>
+
+    <div class="textr card2x">
+      <h2>Convert Operation</h2>
+      <p>
+        In the distribution header menu, there is an operator available to convert
+        your procedurally generated points to manual mode. This operator is
+        semi-destructive, as it will turn off most procedural features ( you can
+        return to procedural distribution mode and turn them on afterward if
+        needed ). 
+        <br />
+        <br />
+        Manual mode can handle smoothly up to 50.000 points depending on your
+        computer, so do not try to convert more than 500k instances, it is not
+        designed for such workload. It also does not make sense to destructively
+        control such a large number of elements, perhaps you are looking for a
+        specific procedural feature, more adequate to your situation?
+      </p>
+    </div>
+    
+</div>  
 </div>
 
 <!-- title -->

@@ -30,14 +30,13 @@
 
         <h2>Repel Feature</h2>
         <p>
-          The "Repel" feature will procedurally influence your scatter density/scale or rotation when near a defined distance threshold from
-            a set of objects defined in a chosen collection. 
+          The "Repel" feature will procedurally influence your scatter density or instances scales and rotations when located near objects from a chosen collection. 
         </p>
         <br>
+        <h3>Proximity Contact</h3>
         <p>
           By default, the proximity contact will be the faces of the chosen object's mesh. 
-          If your assets are too high poly it might be a 
-          good idea to change the proximity contact option, it's the drop down menu located on the right, next to the collection pointer.
+          If your assets are too high poly it might be a  good idea to change the proximity contact option on the drop-down menu located on the right, next to the collection pointer.
         </p>
     </div>
 
@@ -51,10 +50,10 @@
         located inside or outside the volume area.
       </p>
       <br>
-      <h3 style="padding-top: 0;">Reminder:</h3>
+      <h3>Reminder</h3>
       <p>
         Note that if you only care about culling points located inside a volume,
-         a more simplistic "Object Boolean" feature is available in the culling mask category
+         a more simplistic <span>Culling Masks > Boolean</span> feature is available. It is advised to first overview if your need can be filled with Culling masks features before using the repel functionality.
       </p>
     </div>
 
@@ -71,21 +70,20 @@
     </div>
 
     <div class="textr card3x">
-      <h2>Clean Grass Border</h2>
+      <h2>Clean Grass Border Example</h2>
       <p>
         If you are working with a grass clump model to cover large areas and a tinier grass model to fill the
-        gaps between small areas, you can use the repel feature as demonstrated <a href="#" data-doc="#Examples">here</a>, here's the workflow:
+        gaps between small areas, you can use the repel feature for the trick demonstrated <a href="#" data-doc="#Examples">here</a>, here's the idea:
       </p>
       <br>
       <ul>
         <li>
-          Scatter the clumps model on a dedicated scatter system, then enable the "Proximity>Repel" feature and
-          choose your pavement collision collection.
+          Scatter the clumps model on a dedicated scatter system, then enable the <span>Proximity > Repel</span> feature and
+          choose your pavement collection.
         </li>
         <li>
           Do the same with a new system dedicated to the tiny grass models, but this time reverse the influence by clicking on the double arrow button, then use
-          the "Consider Volume" option to also cull points located inside the
-          object volume.
+          the "<i>Consider Volume</i>" option to also cull points located inside pavements volumes.
         </li>
       </ul>
     </div>
@@ -93,59 +91,61 @@
 </div>  
 </div>
 
-<!-- title -->
-
-<div class="titleheader">
-    <h1>Lean Near Functionality</h1>
-    <p>Fake physics interaction easily</p>
-</div>
 
 <div class="article_content">
-  <div class="flex_cards_section">
-
-    <div class="flex_singlecard gmstyling card2x">
-      <h2 style="padding-top:0;">Influence Rotations</h2>
-      <p>
-        The Repel feature is also able to procedurally orient the scattered points normal and tangent orientations toward the given objects located near the designated distance threshold.
-      </p>
-    </div>
-
-      <div class="flex_singlecard gmstyling card2x">
+    <div class="medial_textr_big gmstyling">
+    
+        <div class="medial">
           <div class="gif"><video controls autoplay loop muted playsinline><source src="../mp4/InformalEqualGnu.mp4" type="video/mp4"></video></div>
-      </div>
-
-      <div class="flex_singlecard gmstyling card2x">
-        <h2 style="padding-top:0;">Use Cases</h2>
-        <p>
-          The ability to tilt your scatter's orientation near designated objects is useful if you'd like to fake interaction with objects without doing
-          destructive time-consuming soft-bodies simulation. If a more precise
-          simulation is needed, you will need to export your scatter-systems as a
-          mesh in order to use the simulation method of your choice (soft-bodies
-          simulations are out of the scope of a scattering tool relying on the
-          technology of instancing).
-        </p>
-      </div>
-
-      <div class="flex_singlecard gmstyling card2x">
-        <h2 style="padding-top:0;">Previously Called</h2>
-        <p>
-          Please note that the proximity features were originally called 
-          "Cull Near" and "Lean Near" in older versions of our plugin. 
-          Since Geo-Scatter5.3 we merged both functionalities into two all-in-one "repel" slots.
-        </p>
-      </div>
-
-      <div class="flex_singlecard gmstyling card2x">
-        <h2 style="padding-top:0;">Soft Bodies Misconceptions</h2>
-        <p>
-          Please do not expect your scattered objects to accurately bend their geometries around your animated objects! That's not possible in blender without breaking the principle of instancing.
-          <br><br>If you'd like to achieve such a simulation, you will need to export your scatter as instances in the "Extra>Export" panel, proceed to join all of these instances into one merged mesh with <span>CTRL+J</span>, then start a soft-body simulation on this mesh. This workflow is not supported by our plugin.
-        </p>
-      </div>
+          <br>
+          <br>
+        </div>
+    
+        <div class="textr card3x">
+          <h2>Influence Rotation</h2>
+          <p>
+            You have the option to influence your scattered instances normal and tangent axes toward the selected objects.
+          </p>
+          <br>
+          <h3>Fake Collision</h3>
+          <p>
+            The ability to tilt instances when near objects is useful if you'd like to <b>fake a collision interaction</b> without doing expensive simulations.
+            If more precise simulations are needed, you'll need to export your scatters as a real blender instances, then run a blender simulation method of your choice.
+          </p>
+          <br>
+          <h3>Previous Name</h3>
+          <p>
+            Note that the repel functionalities use to be named  "<i>Cull Near</i>" and "<i>Lean Near</i>" in older versions of our plugin.
+          </p>
+        </div>
 
   </div>
 </div>
 
+<div class="article_content">
+  <div class="medial_textr_big gmstyling">
+  
+      <div class="medial">
+        <div class="gif"><video controls autoplay loop muted playsinline><source src="../mp4/imprint.mp4" type="video/mp4"></video></div>
+        <br>
+        <br>
+      </div>
+  
+      <div class="textr card3x">
+        <h2>Imprint Simulation</h2>
+        <p>
+          You have the option to simulate an imprint being left behind the moving objects in your collection when running an animation. 
+          Please note that this feature will require you to run the timeline playback with animated objects.
+        </p>
+        <br>
+        <h3>Fade Away Effect</h3>
+        <p>
+          When using the fade away option, the imprints will slowly restore themselves to their initial shape during a timing of your choice.
+        </p>
+      </div>
+
+</div>
+</div>
 
 
 <!-- title -->
