@@ -765,6 +765,12 @@ h2:hover .header-anchor {
   font-family: 'Source Sans Pro', sans-serif;
   border-top: 1px solid var(--border_color);
 }
+.faq-answer b {
+  font-weight: 600;
+  background-color: rgba(128, 128, 128, 0.1);
+  padding: 1px 4px;
+  border-radius: 6px;
+}
 .faq-answer p {
   font-size: 16px;
 }
@@ -778,9 +784,6 @@ h2:hover .header-anchor {
 .faq-answer img {
   margin: 25px 12%;
   width: 80%;
-}
-.faq-answer b {
-  font-weight: 700;
 }
 
 /* image containter stuff ? */
