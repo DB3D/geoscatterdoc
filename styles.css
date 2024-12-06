@@ -17,7 +17,8 @@
   --span_font: #000000;
   --span_color: #f0f0f0;
   /* elements */
-  --button_color: #303033;
+  --button_color: #e5e5eb;
+  --button_text: black;
   --lamp_color: #3b3b3ba8;
   --separator_color: #e7e7e7;
   --anchor_color:#3b3b3ba8;
@@ -47,6 +48,7 @@
   --span_color: #ffffff26;
   /* elements */
   --button_color: #303033;
+  --button_text: rgba(225, 223, 219, 1);
   --lamp_color: #ffffffef;
   --separator_color: #1e1e1ebf;
   --anchor_color: #ffffffef;
@@ -325,7 +327,7 @@
   height: auto;
 }
 .feature_card a {
-  color: rgba(225, 223, 219, 1);
+  color: var(--button_text);
   background-color: var(--button_color);
   font-family: "Source Sans Pro", sans-serif;
   margin: 1rem 0px !important;
@@ -340,6 +342,9 @@
   font-family: "Source Sans Pro", sans-serif;
   line-height: 23px;
   text-align: center;
+}
+.feature_card a:hover {
+  text-decoration: underline;
 }
 
 /* image on the left, text on the right layout type */
@@ -414,7 +419,7 @@
 .example_page_txtstyling .download_blend,
 .example_page_txtstyling .download_blend a {
   /*needed to override general article content a */
-  color: white; 
+  color: var(--button_text);
   display: block; 
   text-align: center;
 }
@@ -426,12 +431,13 @@
   border-radius: 12px;
   margin: 10px 0 0 0;
   justify-content: center;
-  color: white;
-  background-color: var(--button_color);;
+  color: var(--button_text);
+  background-color: var(--button_color);
 }
 .download_blend:hover {
   background-color: rgb(255, 110, 57);
   color: white;
+  text-decoration: underline;
 }
 
 /* didn't get it */
