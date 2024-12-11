@@ -125,7 +125,33 @@
 <script src="nav.js"></script>
 <script src="theme.js"></script>
 
-<!-- -------------------------------------------------------------------------------------------------------------- -->
+<!-- Communicate scroll event to parent page -->
+<script>
+$("#main_page_frame").on('load', function () {
+    var iframeContent = $(this).contents(); // Access iframe content
 
+    // Add scroll event listener to the iframe content
+    iframeContent.on('scroll', function () { 
+        // console.log("Nested iframe is scrolling!");
+
+        // Notify the parent window about the scroll event
+        const scrollTop = iframeContent.scrollTop();
+        const scrollHeight = iframeContent[0].scrollHeight;
+        const clientHeight = iframeContent[0].clientHeight;
+
+        parent.postMessage(
+            {
+                type: 'nestedIframeScroll',
+                scrollTop: scrollTop,
+                scrollHeight: scrollHeight,
+                clientHeight: clientHeight
+            },
+            '*' // Replace '*' with the parent's origin for better security
+        );
+    });
+});
+</script>
+
+<!-- -------------------------------------------------------------------------------------------------------------- -->
 </body>
 </html>
